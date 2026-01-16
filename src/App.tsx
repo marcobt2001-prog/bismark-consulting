@@ -3,9 +3,10 @@ import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
-import ServicesPage from './pages/ServicesPage';
-import CaseStudiesPage from './pages/CaseStudiesPage';
-import CaseStudyDetailPage from './pages/CaseStudyDetailPage';
+import BismarkMethodPage from './pages/BismarkMethodPage';
+import IndustriesPage from './pages/IndustriesPage';
+import WalkthroughPage from './pages/WalkthroughPage';
+import ContactPage from './pages/ContactPage';
 
 function App() {
   return (
@@ -15,9 +16,10 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/case-studies" element={<CaseStudiesPage />} />
-          <Route path="/case-studies/:id" element={<CaseStudyDetailPage />} />
+          <Route path="/method" element={<BismarkMethodPage />} />
+          <Route path="/industries" element={<IndustriesPage />} />
+          <Route path="/walkthrough" element={<WalkthroughPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </main>
       <Footer />
