@@ -6,12 +6,15 @@ import {
   Layers,
   BarChart3,
   RefreshCw,
+  TrendingUp,
   Hand,
   Brain,
   MessageSquare,
   CheckCircle2,
   ChevronDown,
-  Award
+  Award,
+  Building2,
+  Cog
 } from 'lucide-react';
 
 const BismarkMethodPage = () => {
@@ -230,17 +233,20 @@ const BismarkMethodPage = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
-            <h2 className="font-display text-4xl md:text-5xl text-navy-900 mb-8 text-center">
-              Two Interconnected Components
-            </h2>
+            <div className="text-center mb-12">
+              <h2 className="font-display text-4xl md:text-5xl text-navy-900 mb-6">
+                TWO INTERCONNECTED COMPONENTS
+              </h2>
+              <div className="bg-gold-600 h-1 w-24 mx-auto mb-8" />
 
-            <p className="text-xl text-gray-700 leading-relaxed mb-12 text-center">
-              The Bismark Method is built on two interconnected components: Transformative Leadership Mastery (TLM) and The 5 Pillars.
-            </p>
+              <p className="text-xl text-gray-700 leading-relaxed">
+                The Bismark Method is built on two interconnected components: Transformative Leadership Mastery (TLM) and The 5 Pillars.
+              </p>
+            </div>
 
             {/* Hand Metaphor - Prominent Callout */}
             {/* TODO: Add hand imagery - palm = TLM, 5 fingers = 5 Pillars */}
-            <div className="bg-gradient-to-br from-gold-50 to-gold-100 border-4 border-gold-600 p-8 md:p-12 shadow-xl">
+            <div className="bg-gray-50 border-2 border-gray-200 rounded-lg p-8 hover:border-gold-600 transition-colors">
               <div className="flex flex-col items-center text-center">
                 <Hand className="w-20 h-20 text-gold-600 mb-6" />
                 <p className="text-2xl md:text-3xl text-navy-900 leading-relaxed font-light">
@@ -256,13 +262,11 @@ const BismarkMethodPage = () => {
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
-          <div className="max-w-5xl mx-auto mb-16 text-center">
-            <h2 className="font-display text-4xl md:text-6xl text-navy-900 mb-4">
-              Transformative Leadership Mastery
+          <div className="text-center mb-16">
+            <h2 className="font-display text-4xl md:text-5xl text-navy-900 mb-6">
+              TRANSFORMATIVE LEADERSHIP MASTERY
             </h2>
-            <p className="text-2xl text-gray-600 font-light">
-              Component 1: Leadership Foundation
-            </p>
+            <div className="bg-gold-600 h-1 w-24 mx-auto mb-8" />
           </div>
 
           {/* Intro Paragraph */}
@@ -274,7 +278,7 @@ const BismarkMethodPage = () => {
 
           {/* Quote Callout */}
           <div className="max-w-4xl mx-auto mb-16">
-            <div className="bg-gold-600 p-8 md:p-10 border-l-4 border-navy-900 shadow-lg">
+            <div className="bg-gold-600 p-6 rounded-lg">
               <p className="text-2xl md:text-3xl text-navy-900 italic font-light text-center">
                 "It Doesn't Matter What We Cover. It Matters What We Discover."
               </p>
@@ -290,51 +294,82 @@ const BismarkMethodPage = () => {
               The 3 Core Principles
             </h3>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* Principle 1 */}
-              <div className="bg-white border-l-4 border-gold-600 p-8 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="flex items-center justify-center w-16 h-16 bg-gold-600 text-white rounded-full mb-6 mx-auto">
-                  <span className="font-display text-2xl font-bold">1</span>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Principle 01 */}
+              <div className="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-gold-600 transition-colors group">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-gold-600 transition-colors">
+                    <Brain className="w-6 h-6 text-gold-600 group-hover:text-navy-900 transition-colors" />
+                  </div>
+                  <div className="font-display text-3xl text-gold-600">01</div>
                 </div>
-                <h4 className="font-display text-xl text-navy-900 mb-4 text-center leading-tight">
+                <h3 className="font-display text-xl text-navy-900 mb-3">
                   How People Perform Correlates to How Situations Occur to Them
-                </h4>
-                <div className="space-y-3 text-gray-700">
-                  <p>Actions are always consistent with perception</p>
-                  <p className="font-semibold text-navy-900">The Occurring (Perceptions) → Actions → Results</p>
-                  <p className="italic text-sm">
+                </h3>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Actions are always consistent with perception. The occurring (how situations show up to people) determines their actions, which determine results.
+                </p>
+                <div className="space-y-2 text-sm text-gray-600">
+                  <p className="flex items-start gap-2">
+                    <span className="text-gold-600">•</span>
+                    The Occurring (Perceptions) → Actions → Results
+                  </p>
+                  <p className="flex items-start gap-2">
+                    <span className="text-gold-600">•</span>
                     "Top management's job is to design context rather than invent content"
                   </p>
                 </div>
               </div>
 
-              {/* Principle 2 */}
-              <div className="bg-white border-l-4 border-gold-600 p-8 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="flex items-center justify-center w-16 h-16 bg-gold-600 text-white rounded-full mb-6 mx-auto">
-                  <span className="font-display text-2xl font-bold">2</span>
+              {/* Principle 02 */}
+              <div className="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-gold-600 transition-colors group">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-gold-600 transition-colors">
+                    <MessageSquare className="w-6 h-6 text-gold-600 group-hover:text-navy-900 transition-colors" />
+                  </div>
+                  <div className="font-display text-3xl text-gold-600">02</div>
                 </div>
-                <h4 className="font-display text-xl text-navy-900 mb-4 text-center leading-tight">
+                <h3 className="font-display text-xl text-navy-900 mb-3">
                   How a Situation Occurs Arises in Language
-                </h4>
-                <div className="space-y-3 text-gray-700">
-                  <p>Foreground conversation (what's said) vs. Background conversation (what's unsaid)</p>
-                  <p className="font-semibold text-navy-900">The unsaid—reactive, habitual, past-based—has the real power and impact</p>
-                  <p>Two types of language: <span className="font-semibold">Descriptive</span> (past-based) vs. <span className="font-semibold">Committed</span> (future-based)</p>
+                </h3>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Language creates reality. Foreground conversation (what's said) vs. Background conversation (what's unsaid). The unsaid—reactive, habitual, past-based—has the real power and impact.
+                </p>
+                <div className="space-y-2 text-sm text-gray-600">
+                  <p className="flex items-start gap-2">
+                    <span className="text-gold-600">•</span>
+                    <span><span className="font-semibold">Descriptive language:</span> past-based, explains what happened</span>
+                  </p>
+                  <p className="flex items-start gap-2">
+                    <span className="text-gold-600">•</span>
+                    <span><span className="font-semibold">Committed language:</span> future-based, creates what's possible</span>
+                  </p>
                 </div>
               </div>
 
-              {/* Principle 3 */}
-              <div className="bg-white border-l-4 border-gold-600 p-8 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="flex items-center justify-center w-16 h-16 bg-gold-600 text-white rounded-full mb-6 mx-auto">
-                  <span className="font-display text-2xl font-bold">3</span>
+              {/* Principle 03 */}
+              <div className="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-gold-600 transition-colors group md:col-span-2 lg:col-span-1">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-gold-600 transition-colors">
+                    <Target className="w-6 h-6 text-gold-600 group-hover:text-navy-900 transition-colors" />
+                  </div>
+                  <div className="font-display text-3xl text-gold-600">03</div>
                 </div>
-                <h4 className="font-display text-xl text-navy-900 mb-4 text-center leading-tight">
+                <h3 className="font-display text-xl text-navy-900 mb-3">
                   Future-Based Language Transforms How Situations Occur
-                </h4>
-                <div className="space-y-3 text-gray-700">
-                  <p><span className="font-semibold text-navy-900">Descriptive language:</span> explanations, justifications, complaints, predictions</p>
-                  <p><span className="font-semibold text-navy-900">Committed language:</span> declarations, promises, requests, taking a stand</p>
-                  <p className="italic">Committed language makes things possible AND makes things happen</p>
+                </h3>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Committed language makes things possible AND makes things happen. It shifts the occurring, which shifts actions, which shifts results.
+                </p>
+                <div className="space-y-2 text-sm text-gray-600">
+                  <p className="flex items-start gap-2">
+                    <span className="text-gold-600">•</span>
+                    Declarations, promises, requests, taking a stand
+                  </p>
+                  <p className="flex items-start gap-2">
+                    <span className="text-gold-600">•</span>
+                    Creates new context that enables breakthrough performance
+                  </p>
                 </div>
               </div>
             </div>
@@ -350,7 +385,7 @@ const BismarkMethodPage = () => {
               {tlmConcepts.map((concept, index) => (
                 <div
                   key={index}
-                  className="bg-white border-2 border-gray-300 overflow-hidden transition-all duration-300 hover:border-gold-600"
+                  className="bg-white border-2 border-gray-200 rounded-lg overflow-hidden transition-all duration-300 hover:border-gold-600"
                 >
                   <button
                     onClick={() => toggleAccordion(index)}
@@ -396,13 +431,11 @@ const BismarkMethodPage = () => {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
-          <div className="max-w-5xl mx-auto mb-16 text-center">
-            <h2 className="font-display text-4xl md:text-6xl text-navy-900 mb-4">
-              The 5 Pillars
+          <div className="text-center mb-16">
+            <h2 className="font-display text-4xl md:text-5xl text-navy-900 mb-6">
+              THE 5 PILLARS
             </h2>
-            <p className="text-2xl text-gray-600 font-light">
-              Component 2: Operational Framework
-            </p>
+            <div className="bg-gold-600 h-1 w-24 mx-auto mb-8" />
           </div>
 
           {/* Intro Paragraph */}
@@ -412,69 +445,84 @@ const BismarkMethodPage = () => {
             </p>
           </div>
 
-          {/* The 5 Pillars - Cards with Navy Accents */}
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Pillar 1 */}
-            <div className="bg-white border-l-4 border-navy-900 p-8 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="flex items-center justify-center w-16 h-16 bg-navy-900 text-gold-600 rounded-full mb-6 mx-auto">
-                <Users className="w-8 h-8" />
+          {/* The 5 Pillars */}
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Pillar 01 */}
+            <div className="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-gold-600 transition-colors group">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-gold-600 transition-colors">
+                  <Users className="w-6 h-6 text-gold-600 group-hover:text-navy-900 transition-colors" />
+                </div>
+                <div className="font-display text-3xl text-gold-600">01</div>
               </div>
-              <h4 className="font-display text-2xl text-navy-900 mb-4 text-center">
+              <h3 className="font-display text-xl text-navy-900 mb-3">
                 Customer Profile
-              </h4>
-              <p className="text-gray-700 leading-relaxed">
+              </h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
                 We show you how to generate Process Generated Information (PGI) about how your customers interact with your processes and understand how potential changes impact your customer base.
               </p>
             </div>
 
-            {/* Pillar 2 */}
-            <div className="bg-white border-l-4 border-navy-900 p-8 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="flex items-center justify-center w-16 h-16 bg-navy-900 text-gold-600 rounded-full mb-6 mx-auto">
-                <Layers className="w-8 h-8" />
+            {/* Pillar 02 */}
+            <div className="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-gold-600 transition-colors group">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-gold-600 transition-colors">
+                  <Layers className="w-6 h-6 text-gold-600 group-hover:text-navy-900 transition-colors" />
+                </div>
+                <div className="font-display text-3xl text-gold-600">02</div>
               </div>
-              <h4 className="font-display text-2xl text-navy-900 mb-4 text-center">
+              <h3 className="font-display text-xl text-navy-900 mb-3">
                 Process Design & Engineering
-              </h4>
-              <p className="text-gray-700 leading-relaxed">
+              </h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
                 Improvements occur at the process level. Our curriculum transforms your internal subject matter experts into bona-fide process designers.
               </p>
             </div>
 
-            {/* Pillar 3 */}
-            <div className="bg-white border-l-4 border-navy-900 p-8 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="flex items-center justify-center w-16 h-16 bg-navy-900 text-gold-600 rounded-full mb-6 mx-auto">
-                <Target className="w-8 h-8" />
+            {/* Pillar 03 */}
+            <div className="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-gold-600 transition-colors group">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-gold-600 transition-colors">
+                  <Building2 className="w-6 h-6 text-gold-600 group-hover:text-navy-900 transition-colors" />
+                </div>
+                <div className="font-display text-3xl text-gold-600">03</div>
               </div>
-              <h4 className="font-display text-2xl text-navy-900 mb-4 text-center">
+              <h3 className="font-display text-xl text-navy-900 mb-3">
                 Organizational Strategy
-              </h4>
-              <p className="text-gray-700 leading-relaxed">
+              </h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
                 We show you how to analyze and modify the organizational structure to match your process design to ensure service level agreements are met at optimal cost to serve.
               </p>
             </div>
 
-            {/* Pillar 4 */}
-            <div className="bg-white border-l-4 border-navy-900 p-8 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="flex items-center justify-center w-16 h-16 bg-navy-900 text-gold-600 rounded-full mb-6 mx-auto">
-                <BarChart3 className="w-8 h-8" />
+            {/* Pillar 04 */}
+            <div className="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-gold-600 transition-colors group">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-gold-600 transition-colors">
+                  <BarChart3 className="w-6 h-6 text-gold-600 group-hover:text-navy-900 transition-colors" />
+                </div>
+                <div className="font-display text-3xl text-gold-600">04</div>
               </div>
-              <h4 className="font-display text-2xl text-navy-900 mb-4 text-center">
+              <h3 className="font-display text-xl text-navy-900 mb-3">
                 Measurement
-              </h4>
-              <p className="text-gray-700 leading-relaxed">
+              </h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
                 We show you how to create a management operating system that measures how well your design and organizational structure are working to serve your customers.
               </p>
             </div>
 
-            {/* Pillar 5 */}
-            <div className="bg-white border-l-4 border-navy-900 p-8 shadow-lg hover:shadow-xl transition-shadow md:col-span-2 lg:col-span-1">
-              <div className="flex items-center justify-center w-16 h-16 bg-navy-900 text-gold-600 rounded-full mb-6 mx-auto">
-                <RefreshCw className="w-8 h-8" />
+            {/* Pillar 05 */}
+            <div className="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-gold-600 transition-colors group md:col-span-2 lg:col-span-1">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-gold-600 transition-colors">
+                  <RefreshCw className="w-6 h-6 text-gold-600 group-hover:text-navy-900 transition-colors" />
+                </div>
+                <div className="font-display text-3xl text-gold-600">05</div>
               </div>
-              <h4 className="font-display text-2xl text-navy-900 mb-4 text-center">
+              <h3 className="font-display text-xl text-navy-900 mb-3">
                 Continuous Improvement
-              </h4>
-              <p className="text-gray-700 leading-relaxed">
+              </h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
                 We show you how to separate signals from noise in launching further improvement efforts and ensure internal capability to sustain and maximize your own results.
               </p>
             </div>
@@ -482,14 +530,159 @@ const BismarkMethodPage = () => {
         </div>
       </section>
 
-      {/* SECTION 6: THE GUARANTEE */}
+      {/* SECTION 6: LEARN AND DO APPROACH */}
+      <section className="py-24 bg-navy-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="font-display text-4xl md:text-5xl mb-6">
+              THE "LEARN AND DO" APPROACH
+            </h2>
+            <div className="bg-gold-600 h-1 w-24 mx-auto mb-8" />
+            <p className="text-xl text-gray-300">
+              Knowledge transfer happens during implementation, not after
+            </p>
+          </div>
+
+          {/* Two Cards: LEARN and DO */}
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 mb-16">
+            {/* LEARN Card */}
+            <div className="bg-white text-navy-900 p-8 rounded-lg">
+              <div className="flex items-center justify-center w-16 h-16 bg-gold-600 text-white rounded-full mb-6 mx-auto">
+                <Brain className="w-8 h-8" />
+              </div>
+              <h3 className="font-display text-3xl text-gold-600 mb-4 text-center">
+                LEARN
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                We teach your internal teams the methodology—not through theoretical training sessions, but through real application on your actual operations.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-gold-600 flex-shrink-0 mt-1" />
+                  <span className="text-gray-700">Curriculum tailored to your operations</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-gold-600 flex-shrink-0 mt-1" />
+                  <span className="text-gray-700">Applied learning on real problems</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-gold-600 flex-shrink-0 mt-1" />
+                  <span className="text-gray-700">Certification as practitioners</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* DO Card */}
+            <div className="bg-white text-navy-900 p-8 rounded-lg">
+              <div className="flex items-center justify-center w-16 h-16 bg-gold-600 text-white rounded-full mb-6 mx-auto">
+                <Cog className="w-8 h-8" />
+              </div>
+              <h3 className="font-display text-3xl text-gold-600 mb-4 text-center">
+                DO
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Your teams implement the improvements themselves, under our guidance. By the end of 16 weeks, they've both transformed operations and learned how to do it again.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-gold-600 flex-shrink-0 mt-1" />
+                  <span className="text-gray-700">Real operational transformation</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-gold-600 flex-shrink-0 mt-1" />
+                  <span className="text-gray-700">Ownership from day one</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-gold-600 flex-shrink-0 mt-1" />
+                  <span className="text-gray-700">Sustainable internal capability</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Timeline Callout */}
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gold-600 text-navy-900 p-6 rounded-lg">
+              <div className="flex items-center justify-center gap-4 mb-6">
+                <TrendingUp className="w-12 h-12" />
+                <h3 className="font-display text-3xl">16-Week Engagement</h3>
+              </div>
+              <p className="text-lg leading-relaxed text-center">
+                By the end of our engagement, your internal teams are certified practitioners who can sustain results, identify new opportunities, and lead future improvements—without ongoing consultant dependency.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 7: WHY IT WORKS */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
-          <div className="max-w-4xl mx-auto mb-16 text-center">
-            <h2 className="font-display text-4xl md:text-6xl text-navy-900 mb-8">
-              The Guarantee
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="font-display text-4xl md:text-5xl text-navy-900 mb-6">
+              WHY IT WORKS
             </h2>
+            <div className="bg-gold-600 h-1 w-24 mx-auto mb-8" />
+            <p className="text-xl text-gray-700">
+              Three principles that make results sustainable
+            </p>
+          </div>
+
+          {/* Three Numbered Cards */}
+          <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+            {/* Card 1 */}
+            <div className="bg-white p-8 rounded-lg border-2 border-gray-200 hover:border-gold-600 transition-colors">
+              <div className="flex items-center justify-center w-16 h-16 bg-navy-900 text-gold-600 rounded-full mb-6 mx-auto">
+                <span className="font-display text-3xl font-bold">1</span>
+              </div>
+              <h3 className="font-display text-2xl text-navy-900 mb-4 text-center">
+                Systematic
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                Not ad-hoc fixes or best practices borrowed from other companies. A complete methodology designed to work as an integrated system.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white p-8 rounded-lg border-2 border-gray-200 hover:border-gold-600 transition-colors">
+              <div className="flex items-center justify-center w-16 h-16 bg-navy-900 text-gold-600 rounded-full mb-6 mx-auto">
+                <span className="font-display text-3xl font-bold">2</span>
+              </div>
+              <h3 className="font-display text-2xl text-navy-900 mb-4 text-center">
+                Transferable
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                Your teams learn by doing. By the end, they don't just have better operations—they know how to improve operations, independently.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-white p-8 rounded-lg border-2 border-gray-200 hover:border-gold-600 transition-colors">
+              <div className="flex items-center justify-center w-16 h-16 bg-navy-900 text-gold-600 rounded-full mb-6 mx-auto">
+                <span className="font-display text-3xl font-bold">3</span>
+              </div>
+              <h3 className="font-display text-2xl text-navy-900 mb-4 text-center">
+                Measurable
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                Clear metrics, transparent progress, and outcomes that are verified before we guarantee them. Results aren't promised—they're proven.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 8: THE GUARANTEE */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h2 className="font-display text-4xl md:text-5xl text-navy-900 mb-6">
+              THE GUARANTEE
+            </h2>
+            <div className="bg-gold-600 h-1 w-24 mx-auto mb-8" />
           </div>
 
           {/* Opening Paragraph - Value Proposition */}
@@ -499,31 +692,46 @@ const BismarkMethodPage = () => {
             </p>
           </div>
 
-          {/* Explanation Paragraph */}
-          <div className="max-w-5xl mx-auto mb-16">
-            <div className="bg-white border-4 border-navy-900 p-8 md:p-10 shadow-xl">
-              <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                The guarantee isn't a marketing promise. It's a structural outcome. When leadership is transformed through TLM and operations are redesigned through the 5 Pillars, results don't depend on us staying—they're built into how your organization now operates. <span className="font-semibold text-navy-900">That's why we can guarantee it.</span>
+          {/* Three Styled Boxes */}
+          <div className="max-w-5xl mx-auto space-y-8">
+            {/* Box 1: Why We Can Guarantee */}
+            <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-gold-600 transition-colors">
+              <h3 className="font-display text-2xl text-navy-900 mb-4">
+                Why We Can Guarantee It
+              </h3>
+              <p className="text-xl text-gray-700 leading-relaxed">
+                The guarantee isn't a marketing promise. It's a structural outcome. When leadership is transformed through TLM and operations are redesigned through the 5 Pillars, results don't depend on us staying—they're built into how your organization now operates.
               </p>
             </div>
-          </div>
 
-          {/* Alternative Path - Respectful, Honest */}
-          <div className="max-w-5xl mx-auto mb-16">
-            <div className="bg-white border-2 border-gray-300 p-8 md:p-10 shadow-lg">
+            {/* Box 2: Full Method = Guaranteed Results */}
+            <div className="bg-navy-900 text-white p-8 rounded-lg">
+              <h3 className="font-display text-2xl text-gold-600 mb-4">
+                Full Method = Guaranteed Results
+              </h3>
+              <p className="text-xl text-gray-300 leading-relaxed">
+                When you engage with both components—TLM and the 5 Pillars—you get certified internal practitioners, transformed operations, and a guarantee. That's the complete Bismark Method.
+              </p>
+            </div>
+
+            {/* Box 3: Pillars Alone */}
+            <div className="bg-gray-100 border-2 border-gray-200 rounded-lg p-8 hover:border-gold-600 transition-colors">
+              <h3 className="font-display text-2xl text-navy-900 mb-4">
+                Pillars Alone: Powerful, But Incomplete
+              </h3>
               <p className="text-xl text-gray-700 leading-relaxed">
-                Some clients choose to engage with the 5 Pillars alone—and we're glad to work that way. You'll still get operational transformation and trained internal practitioners. What we can't do in that case is guarantee the results will sustain, because without the leadership foundation, the structural support isn't there. <span className="font-semibold text-navy-900">It's not a lesser engagement—it's an incomplete methodology, by design.</span>
+                Some clients choose to engage with the 5 Pillars alone—and we're glad to work that way. You'll still get operational transformation and trained internal practitioners. What we can't do in that case is guarantee the results will sustain, because without the leadership foundation, the structural support isn't there. <span className="font-semibold">It's not a lesser engagement—it's an incomplete methodology, by design.</span>
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 7: CTA */}
+      {/* SECTION 9: CTA */}
       <section className="py-20 bg-navy-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-display text-4xl md:text-5xl mb-6">
-            See The Bismark Method in Action
+            SEE THE BISMARK METHOD IN ACTION
           </h2>
           <p className="text-2xl text-gray-300 mb-10">
             Schedule a free walkthrough of your operations
@@ -531,7 +739,7 @@ const BismarkMethodPage = () => {
 
           <Link
             to="/walkthrough"
-            className="inline-block bg-gold-600 text-navy-900 px-12 py-5 font-display text-xl font-semibold hover:bg-gold-500 transition-colors shadow-lg"
+            className="inline-block bg-gold-600 text-navy-900 px-12 py-5 font-display text-xl font-semibold hover:bg-gold-500 transition-colors"
           >
             Schedule a Walkthrough
           </Link>
