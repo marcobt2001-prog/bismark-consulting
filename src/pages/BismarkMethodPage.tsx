@@ -5,17 +5,14 @@ import {
   Target,
   Layers,
   BarChart3,
-  RefreshCw,
   TrendingUp,
   Hand,
   Brain,
   MessageSquare,
-  CheckCircle2,
   ChevronDown,
   Award,
   Building2,
-  Cog,
-  ArrowRight
+  Cog
 } from 'lucide-react';
 
 const BismarkMethodPage = () => {
