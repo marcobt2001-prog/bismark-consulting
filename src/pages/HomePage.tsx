@@ -3,13 +3,13 @@ import { ArrowRight, CheckCircle2, TrendingUp, Users, Award, Target } from 'luci
 
 const HomePage = () => {
   const stats = [
-    { value: '20+', label: 'Years of Excellence', description: 'Proven methodology since 1998' },
-    { value: '$1B+', label: 'Client Savings', description: 'Guaranteed, measurable results' },
-    { value: '1,600+', label: 'Apprentices Trained', description: 'Knowledge transfer at scale' },
-    { value: '80+', label: 'Clients Transformed', description: 'Fortune 500 to mid-market' }
+    { value: '20+', label: 'Years of sustained results' },
+    { value: '$1B+', label: 'In client value delivered' },
+    { value: '1,600+', label: 'Apprentices trained in the Method' },
+    { value: '80+', label: 'Operations transformed' }
   ];
 
-  const methodPrinciples = [
+  const methodPillars = [
     {
       number: '01',
       title: 'Customer Profile',
@@ -45,24 +45,27 @@ const HomePage = () => {
   const industries = [
     {
       title: 'Insurance',
-      operations: ['Underwriting', 'Claims', 'Subrogation', 'Policy Administration'],
-      impact: '40% faster cycle times, 60% cost reduction'
+      operations: ['Underwriting', 'Claims', 'Subrogation', 'Policy Administration']
     },
     {
       title: 'Banking',
-      operations: ['Loan Origination', 'Foreclosures & Repossessions'],
-      impact: '50% faster approvals, 35% cost savings'
+      operations: ['Loan Origination', 'Foreclosures & Repossessions']
     },
     {
       title: 'Response Centers',
-      operations: ['Inbound/Outbound Calling', 'After-Call Work', 'Forecasting & Scheduling'],
-      impact: '30% handle time reduction, 45% improved FCR'
+      operations: ['Inbound/Outbound Calling', 'After-Call Work', 'Forecasting & Scheduling']
     }
+  ];
+
+  const insights = [
+    { title: "Why We Won't Guarantee Your Results (Unless You Do This)" },
+    { title: 'A Pillar Deep Dive: Process Design & Engineering' },
+    { title: 'The Pattern Every Struggling Operation Shares' }
   ];
 
   return (
     <div className="bg-white">
-      {/* Hero Section */}
+      {/* SECTION 1 — HERO */}
       <section className="relative bg-navy-900 text-white py-32 md:py-40 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 opacity-90" />
         <div className="absolute inset-0 opacity-10">
@@ -72,19 +75,15 @@ const HomePage = () => {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block mb-8">
-              <span className="bg-gold-600 text-navy-900 px-4 py-2 font-display text-sm tracking-wider">
-                OPERATIONAL EXCELLENCE SINCE 1998
-              </span>
-            </div>
-
             <h1 className="font-display text-5xl md:text-7xl lg:text-8xl mb-8 tracking-wide leading-tight">
-              WE GUARANTEE OUR RESULTS
+              YOUR OPERATIONS SHOULD BE RUNNING BETTER. YOU KNOW IT.
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed">
-              The Bismark Method transforms operations in insurance, banking, and response
-              centers with measurable, sustainable results. We don't just consult—we guarantee.
+              Failed initiatives. Rising costs. Results that don't stick. You've seen the
+              pattern — and traditional consulting only made it worse. The Bismark Method is a
+              systematic, guaranteed approach to transforming high-volume, transaction-intensive
+              operations. Your team learns it, owns it, and the results compound long after we leave.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -106,8 +105,8 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Stats Grid */}
-      <section className="py-20 bg-gray-50 border-b-4 border-gold-600">
+      {/* SECTION 2 — CREDIBILITY BAR */}
+      <section className="py-16 bg-gray-50 border-b-4 border-gold-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -115,11 +114,8 @@ const HomePage = () => {
                 <div className="font-display text-5xl md:text-6xl text-navy-900 mb-2">
                   {stat.value}
                 </div>
-                <div className="font-display text-lg md:text-xl text-gold-600 mb-2">
-                  {stat.label}
-                </div>
                 <div className="text-sm text-gray-600">
-                  {stat.description}
+                  {stat.label}
                 </div>
               </div>
             ))}
@@ -127,7 +123,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Problem Section */}
+      {/* SECTION 3 — WHY TRADITIONAL CONSULTING FAILS */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
@@ -138,7 +134,7 @@ const HomePage = () => {
               <div className="bg-gold-600 h-1 w-24 mx-auto mb-8" />
               <p className="text-xl text-gray-700 leading-relaxed">
                 Most consulting engagements deliver short-term results that evaporate the
-                moment consultants leave. The problem isn't the analysis—it's the approach.
+                moment consultants leave. The problem isn't the analysis — it's the approach.
               </p>
             </div>
 
@@ -182,70 +178,88 @@ const HomePage = () => {
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-gold-600 flex-shrink-0 mt-0.5" />
-                    <span>Systematic methodology proven across 80+ clients</span>
+                    <span>Systematic methodology proven across 80+ operations</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-gold-600 flex-shrink-0 mt-0.5" />
-                    <span>Guaranteed, measurable outcomes</span>
+                    <span>Guaranteed, measurable outcomes — tied to a structural commitment</span>
                   </li>
                 </ul>
               </div>
             </div>
 
             <div className="bg-gold-600 p-8 rounded-lg text-center">
-              <p className="text-2xl text-navy-900 font-medium">
-                The difference isn't what we know. It's what your team will know when we're done.
+              <p className="text-2xl text-navy-900 font-medium italic">
+                "The difference isn't what we know. It's what your team will know when we're done."
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Method Preview */}
-      <section className="py-20 bg-gray-50">
+      {/* SECTION 4 — THE BISMARK METHOD (The Hand) */}
+      <section className="py-20 bg-navy-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-display text-4xl md:text-5xl text-navy-900 mb-6">
+            <h2 className="font-display text-4xl md:text-5xl mb-6">
               THE BISMARK METHOD
             </h2>
             <div className="bg-gold-600 h-1 w-24 mx-auto mb-8" />
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Five interconnected principles that transform operations into high-performing,
-              self-sustaining systems
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Think of it as a hand. The palm is TLM — Transformation Leadership Mastery — the
+              foundation that everything else depends on. The five fingers are the pillars that
+              deliver results. Without the palm, the fingers can't grip anything.
             </p>
           </div>
 
+          {/* TLM Card */}
+          <div className="max-w-4xl mx-auto mb-12">
+            <div className="bg-navy-800 border-2 border-gold-600 rounded-lg p-8 md:p-10">
+              <h3 className="font-display text-2xl text-gold-600 mb-4">
+                THE PALM: TLM — TRANSFORMATION LEADERSHIP MASTERY
+              </h3>
+              <p className="text-gray-300 leading-relaxed">
+                TLM is what makes the Bismark Method fundamentally different. It transforms your
+                leadership team into operational architects — people who don't just manage processes
+                but design, measure, and continuously improve them. TLM is also why we can guarantee
+                results. No other consulting firm ties their guarantee to a structural commitment. We
+                do — because we know it works.
+              </p>
+            </div>
+          </div>
+
+          {/* Five Pillars */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {methodPrinciples.map((principle, index) => (
+            {methodPillars.map((pillar, index) => (
               <div
                 key={index}
-                className="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-gold-600 transition-colors group"
+                className="bg-navy-800 border-2 border-gray-700 rounded-lg p-6 hover:border-gold-600 transition-colors group"
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-gold-600 transition-colors">
-                    <principle.icon className="w-6 h-6 text-gold-600 group-hover:text-navy-900 transition-colors" />
+                    <pillar.icon className="w-6 h-6 text-gold-600 group-hover:text-navy-900 transition-colors" />
                   </div>
                   <div className="font-display text-3xl text-gold-600">
-                    {principle.number}
+                    {pillar.number}
                   </div>
                 </div>
-                <h3 className="font-display text-xl text-navy-900 mb-3">
-                  {principle.title}
+                <h3 className="font-display text-xl mb-3">
+                  {pillar.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {principle.description}
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  {pillar.description}
                 </p>
               </div>
             ))}
 
-            <div className="bg-navy-900 text-white rounded-lg p-6 flex items-center justify-center md:col-span-2 lg:col-span-1">
+            <div className="bg-navy-800 border-2 border-gray-700 rounded-lg p-6 flex items-center justify-center hover:border-gold-600 transition-colors md:col-span-2 lg:col-span-1">
               <div className="text-center">
                 <p className="font-display text-2xl mb-4">LEARN MORE</p>
                 <Link
                   to="/method"
                   className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-6 py-3 font-display hover:bg-gold-500 transition-colors"
                 >
-                  THE COMPLETE METHOD
+                  LEARN THE COMPLETE METHOD
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
@@ -254,17 +268,91 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Industries Preview */}
+      {/* SECTION 5 — HOW IT COMES TOGETHER */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-display text-4xl md:text-5xl text-navy-900 mb-6">
-              INDUSTRIES WE TRANSFORM
+              FROM FIRST LOOK TO GUARANTEED RESULTS
+            </h2>
+            <div className="bg-gold-600 h-1 w-24 mx-auto mb-8" />
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-gray-50 border-2 border-gray-200 rounded-lg p-8 hover:border-gold-600 transition-colors">
+              <div className="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center mb-4">
+                <span className="font-display text-xl text-gold-600">1</span>
+              </div>
+              <h3 className="font-display text-xl text-navy-900 mb-2">
+                THE WALKTHROUGH
+              </h3>
+              <span className="inline-block bg-gold-600 text-navy-900 px-3 py-1 text-xs font-display mb-4">
+                FREE
+              </span>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                2-4 days on-site. We touch all five pillars at the surface — observing,
+                analyzing, interviewing. You experience our rigor firsthand. No obligation.
+              </p>
+            </div>
+
+            <div className="bg-gray-50 border-2 border-gray-200 rounded-lg p-8 hover:border-gold-600 transition-colors">
+              <div className="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center mb-4">
+                <span className="font-display text-xl text-gold-600">2</span>
+              </div>
+              <h3 className="font-display text-xl text-navy-900 mb-4">
+                DISCOVERY & PROPOSAL
+              </h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                We go deep. Targeted analysis with quantified opportunities. A detailed engagement
+                proposal built on what we actually found — not a template.
+              </p>
+            </div>
+
+            <div className="bg-gray-50 border-2 border-gray-200 rounded-lg p-8 hover:border-gold-600 transition-colors">
+              <div className="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center mb-4">
+                <span className="font-display text-xl text-gold-600">3</span>
+              </div>
+              <h3 className="font-display text-xl text-navy-900 mb-4">
+                ENGAGEMENT WITH GUARANTEE
+              </h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Commit to TLM and we guarantee the results. Your team learns the method, owns the
+                outcomes, and the results compound year over year.
+              </p>
+            </div>
+          </div>
+
+          <div className="max-w-3xl mx-auto text-center mb-8">
+            <p className="text-gray-700 leading-relaxed">
+              The guarantee isn't a sales tactic. It's a structural commitment — from both sides.
+              No TLM, no guarantee. We can still engage, but TLM is what makes the results stick.
+            </p>
+          </div>
+
+          <div className="text-center">
+            <Link
+              to="/walkthrough"
+              className="inline-flex items-center justify-center gap-2 bg-gold-600 text-navy-900 px-8 py-4 font-display text-lg hover:bg-gold-500 transition-colors"
+            >
+              START WITH A WALKTHROUGH
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 6 — INDUSTRIES */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-display text-4xl md:text-5xl text-navy-900 mb-6">
+              WHERE THE METHOD HAS BEEN PROVEN
             </h2>
             <div className="bg-gold-600 h-1 w-24 mx-auto mb-8" />
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Deep expertise in high-volume, transaction-intensive operations where
-              process precision drives competitive advantage
+              The Bismark Method works wherever high-volume, process-dependent operations drive
+              performance. These are the verticals where we've delivered the deepest results — but
+              the methodology isn't limited to them.
             </p>
           </div>
 
@@ -272,12 +360,13 @@ const HomePage = () => {
             {industries.map((industry, index) => (
               <div
                 key={index}
-                className="bg-gray-50 border-2 border-gray-200 rounded-lg p-8 hover:border-gold-600 transition-colors"
+                className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-gold-600 transition-colors"
               >
                 <h3 className="font-display text-2xl text-navy-900 mb-4">
                   {industry.title}
                 </h3>
-                <ul className="space-y-2 mb-6">
+                <p className="font-display text-sm text-gold-600 mb-4 tracking-wider">OPERATIONS</p>
+                <ul className="space-y-2">
                   {industry.operations.map((operation, opIndex) => (
                     <li key={opIndex} className="flex items-start gap-2 text-gray-700">
                       <div className="w-1.5 h-1.5 bg-gold-600 rounded-full mt-2 flex-shrink-0" />
@@ -285,11 +374,6 @@ const HomePage = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="bg-gold-600 p-4 rounded">
-                  <p className="text-navy-900 font-medium text-sm">
-                    {industry.impact}
-                  </p>
-                </div>
               </div>
             ))}
           </div>
@@ -306,213 +390,124 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Walkthrough CTA */}
+      {/* SECTION 7 — INSIGHTS */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-display text-4xl md:text-5xl text-navy-900 mb-6">
+              PERSPECTIVES ON OPERATIONS
+            </h2>
+            <div className="bg-gold-600 h-1 w-24 mx-auto mb-8" />
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Over 20 years of transforming operations. Here's what we've learned.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {insights.map((article, index) => (
+              <div
+                key={index}
+                className="bg-gray-50 border-2 border-gray-200 rounded-lg p-8 hover:border-gold-600 transition-colors"
+              >
+                <span className="inline-block bg-gray-200 text-gray-500 px-3 py-1 text-xs font-display mb-4">
+                  COMING SOON
+                </span>
+                <h3 className="font-display text-xl text-navy-900 leading-snug">
+                  {article.title}
+                </h3>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <a
+              href="#"
+              className="inline-flex items-center gap-2 bg-navy-900 text-white px-8 py-4 font-display text-lg hover:bg-navy-800 transition-colors"
+            >
+              VIEW ALL INSIGHTS
+              <ArrowRight className="w-5 h-5" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 8 — WALKTHROUGH CTA */}
       <section className="py-20 bg-navy-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="font-display text-4xl md:text-5xl mb-6">
-                SEE IT FOR YOURSELF
-              </h2>
-              <div className="bg-gold-600 h-1 w-24 mx-auto mb-8" />
-              <p className="text-xl text-gray-300 leading-relaxed">
-                The best testimonial doesn't come from other companies. It comes from you,
-                after experiencing the Bismark Method firsthand.
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="font-display text-4xl md:text-5xl mb-6">
+              SEE IT FOR YOURSELF
+            </h2>
+            <div className="bg-gold-600 h-1 w-24 mx-auto mb-8" />
+            <p className="text-xl text-gray-300 leading-relaxed mb-8">
+              The best proof doesn't come from other companies. It comes from you, after
+              experiencing the Bismark Method firsthand. We invest 2-4 days on-site at your
+              operations — analyzing data, observing processes, interviewing stakeholders — and
+              present preliminary findings with quantified opportunities.
+            </p>
+
+            <div className="bg-navy-800 border-2 border-gold-600 rounded-lg p-8 mb-8">
+              <p className="font-display text-2xl text-gold-600 mb-2">
+                Cost: $0 in consulting fees.
+              </p>
+              <p className="text-gray-300">
+                You cover travel-related expenses.
               </p>
             </div>
 
-            <div className="bg-navy-800 border-2 border-gold-600 rounded-lg p-8 md:p-12 mb-8">
-              <h3 className="font-display text-2xl text-gold-600 mb-6 text-center">
-                THE WALKTHROUGH EXPERIENCE
-              </h3>
+            <p className="text-gray-300 leading-relaxed mb-10">
+              We're confident enough in our rigor, expertise, and methodology that we let the work
+              speak for itself. Our clients call it the most rigorous vendor interview they've ever
+              experienced.
+            </p>
 
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
-                <div>
-                  <h4 className="font-display text-lg mb-3">WHAT WE DO</h4>
-                  <ul className="space-y-2 text-gray-300">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-gold-600 flex-shrink-0 mt-0.5" />
-                      <span>2-4 days on-site at your operations</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-gold-600 flex-shrink-0 mt-0.5" />
-                      <span>Analyze data, observe processes, interview stakeholders</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-gold-600 flex-shrink-0 mt-0.5" />
-                      <span>Present preliminary findings with quantified opportunities</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-gold-600 flex-shrink-0 mt-0.5" />
-                      <span>Deliver detailed engagement proposal</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className="font-display text-lg mb-3">WHAT IT COSTS</h4>
-                  <div className="bg-gold-600 p-6 rounded-lg text-center">
-                    <p className="font-display text-5xl text-navy-900 mb-2">$0</p>
-                    <p className="text-navy-900 font-medium">Completely free</p>
-                    <p className="text-navy-800 text-sm mt-2">No obligation to engage</p>
-                  </div>
-                  <p className="text-gray-300 text-sm mt-4 leading-relaxed">
-                    We invest 2-4 days because we're confident you'll see the difference
-                    in our rigor, expertise, and methodology.
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-gold-600 p-6 rounded-lg text-center mb-6">
-                <blockquote className="text-xl md:text-2xl text-navy-900 font-medium">
-                  "Our clients call it the most rigorous vendor interview they've ever experienced."
-                </blockquote>
-              </div>
-
-              <div className="text-center">
-                <Link
-                  to="/walkthrough"
-                  className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-8 py-4 font-display text-lg hover:bg-gold-500 transition-colors"
-                >
-                  REQUEST YOUR WALKTHROUGH
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* About Preview */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="inline-block mb-6">
-                  <span className="bg-navy-900 text-gold-600 px-4 py-2 font-display text-sm tracking-wider">
-                    ABOUT BISMARK CONSULTING
-                  </span>
-                </div>
-                <h2 className="font-display text-4xl md:text-5xl text-navy-900 mb-6">
-                  FOUNDED ON RESULTS, BUILT ON RIGOR
-                </h2>
-                <div className="bg-gold-600 h-1 w-24 mb-8" />
-
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  Founded in 1998 by Luis Telleria, Bismark Consulting was born from a simple
-                  observation: traditional consulting creates dependency, not capability.
-                </p>
-
-                <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                  For over 20 years, we've refined a systematic methodology that transforms
-                  operations while transferring knowledge. Our clients don't just get better
-                  results—they become better operators.
-                </p>
-
-                <div className="space-y-4 mb-8">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <CheckCircle2 className="w-6 h-6 text-gold-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-display text-lg text-navy-900">GUARANTEED RESULTS</h3>
-                      <p className="text-gray-600 text-sm">Every engagement includes specific, measurable guarantees</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <CheckCircle2 className="w-6 h-6 text-gold-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-display text-lg text-navy-900">KNOWLEDGE TRANSFER</h3>
-                      <p className="text-gray-600 text-sm">1,600+ apprentices trained in the Bismark Method</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <CheckCircle2 className="w-6 h-6 text-gold-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-display text-lg text-navy-900">SUSTAINED IMPACT</h3>
-                      <p className="text-gray-600 text-sm">Results that compound year over year, not fade</p>
-                    </div>
-                  </div>
-                </div>
-
-                <Link
-                  to="/about"
-                  className="inline-flex items-center gap-2 bg-navy-900 text-white px-8 py-4 font-display text-lg hover:bg-navy-800 transition-colors"
-                >
-                  LEARN MORE ABOUT US
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </div>
-
-              <div className="bg-navy-900 text-white p-8 md:p-12 rounded-lg">
-                <blockquote className="text-2xl md:text-3xl font-medium mb-8 leading-relaxed">
-                  "We don't create PowerPoint decks. We create capability."
-                </blockquote>
-                <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 bg-gold-600 rounded-full flex items-center justify-center">
-                    <Users className="w-8 h-8 text-navy-900" />
-                  </div>
-                  <div>
-                    <p className="font-display text-lg">Luis Telleria</p>
-                    <p className="text-gray-400">Founder, Bismark Consulting</p>
-                  </div>
-                </div>
-
-                <div className="mt-12 pt-8 border-t border-gray-700">
-                  <div className="grid grid-cols-2 gap-8">
-                    <div>
-                      <div className="font-display text-4xl text-gold-600 mb-2">$1B+</div>
-                      <div className="text-sm text-gray-400">Client Value Delivered</div>
-                    </div>
-                    <div>
-                      <div className="font-display text-4xl text-gold-600 mb-2">80+</div>
-                      <div className="text-sm text-gray-400">Clients Transformed</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="py-20 bg-navy-900 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-display text-4xl md:text-5xl mb-6">
-            READY TO TRANSFORM YOUR OPERATIONS?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Start with a free walkthrough. No sales pitch, just rigorous analysis and
-            preliminary findings that demonstrate what's possible.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/walkthrough"
               className="inline-flex items-center justify-center gap-2 bg-gold-600 text-navy-900 px-8 py-4 font-display text-lg hover:bg-gold-500 transition-colors"
             >
-              SCHEDULE A WALKTHROUGH
+              SCHEDULE YOUR WALKTHROUGH
               <ArrowRight className="w-5 h-5" />
             </Link>
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 font-display text-lg hover:bg-white hover:text-navy-900 transition-colors"
-            >
-              CONTACT US
-            </Link>
           </div>
-          <p className="text-sm text-gray-400 mt-8">
-            Minimum engagement: $1M+ | Typical ROI: 5-10x in year one
-          </p>
         </div>
       </section>
+
+      {/* SECTION 9 — ABOUT/FOUNDER */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-navy-900 text-white p-8 md:p-12 rounded-lg mb-8">
+              <blockquote className="text-2xl md:text-3xl font-medium mb-4 leading-relaxed italic">
+                "We don't create PowerPoint decks. We create capability."
+              </blockquote>
+              <p className="text-gold-600 font-display">
+                — Luis Telleria, Founder
+              </p>
+            </div>
+
+            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              Founded in 1998, Bismark Consulting was born from a simple observation: traditional
+              consulting creates dependency, not capability. For over 20 years, we've refined a
+              systematic methodology that transforms operations while transferring knowledge.
+            </p>
+
+            <Link
+              to="/about"
+              className="inline-flex items-center gap-2 bg-navy-900 text-white px-8 py-4 font-display text-lg hover:bg-navy-800 transition-colors"
+            >
+              LEARN MORE ABOUT US
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Version Comparison Link */}
+      <div className="py-4 text-center bg-gray-100 border-t border-gray-200">
+        <Link to="/homepage-old" className="text-xs text-gray-400 hover:text-gray-600 underline">
+          View Previous Homepage Version
+        </Link>
+      </div>
     </div>
   );
 };

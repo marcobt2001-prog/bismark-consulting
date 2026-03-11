@@ -7,6 +7,7 @@ import BismarkMethodPage from './pages/BismarkMethodPage';
 import IndustriesPage from './pages/IndustriesPage';
 import WalkthroughPage from './pages/WalkthroughPage';
 import ContactPage from './pages/ContactPage';
+import HomePageOld from './pages/HomePageOld';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/industries" element={<IndustriesPage />} />
           <Route path="/walkthrough" element={<WalkthroughPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/homepage-old" element={<HomePageOld />} />
         </Routes>
       </main>
       <Footer />
