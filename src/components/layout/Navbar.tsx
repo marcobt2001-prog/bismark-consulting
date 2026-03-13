@@ -8,15 +8,17 @@ export default function Navbar() {
   const location = useLocation();
 
   const navigation = [
-    { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'The Bismark Method', href: '/method' },
     { name: 'Industries', href: '/industries' },
     { name: 'The Walkthrough', href: '/walkthrough' },
+    { name: 'Insights', href: '/insights' },
+    { name: 'FAQ', href: '/faq' },
     { name: 'Contact', href: '/contact' },
   ];
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) =>
+    location.pathname === path || (path !== '/' && location.pathname.startsWith(path + '/'));
 
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">

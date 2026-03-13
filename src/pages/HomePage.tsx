@@ -1,71 +1,19 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle2, TrendingUp, Users, Award, Target } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { getRandomPairings } from '../data/industryRotation';
 
 const HomePage = () => {
-  const stats = [
-    { value: '20+', label: 'Years of sustained results' },
-    { value: '$1B+', label: 'In client value delivered' },
-    { value: '1,600+', label: 'Apprentices trained in the Method' },
-    { value: '80+', label: 'Operations transformed' }
-  ];
+  const [pairings, setPairings] = useState<{ industry: string; operation: string }[]>([]);
 
-  const methodPillars = [
-    {
-      number: '01',
-      title: 'Customer Profile',
-      description: 'Generate Precise Generalized Information about customer-process interactions',
-      icon: Users
-    },
-    {
-      number: '02',
-      title: 'Process Design & Engineering',
-      description: 'Transform SMEs into process designers who build scalable, efficient operations',
-      icon: Target
-    },
-    {
-      number: '03',
-      title: 'Organizational Strategy',
-      description: 'Align structure with process design for maximum operational efficiency',
-      icon: TrendingUp
-    },
-    {
-      number: '04',
-      title: 'Measurement',
-      description: 'Create management operating systems with metrics that drive decisions',
-      icon: Award
-    },
-    {
-      number: '05',
-      title: 'Continuous Improvement',
-      description: 'Separate signals from noise to sustain and compound results over time',
-      icon: CheckCircle2
-    }
-  ];
-
-  const industries = [
-    {
-      title: 'Insurance',
-      operations: ['Underwriting', 'Claims', 'Subrogation', 'Policy Administration']
-    },
-    {
-      title: 'Banking',
-      operations: ['Loan Origination', 'Foreclosures & Repossessions']
-    },
-    {
-      title: 'Response Centers',
-      operations: ['Inbound/Outbound Calling', 'After-Call Work', 'Forecasting & Scheduling']
-    }
-  ];
-
-  const insights = [
-    { title: "Why We Won't Guarantee Your Results (Unless You Do This)" },
-    { title: 'A Pillar Deep Dive: Process Design & Engineering' },
-    { title: 'The Pattern Every Struggling Operation Shares' }
-  ];
+  useEffect(() => {
+    setPairings(getRandomPairings(5));
+  }, []);
 
   return (
     <div className="bg-white">
-      {/* SECTION 1 — HERO */}
+
+      {/* ===================== SECTION 1 — HERO ===================== */}
       <section className="relative bg-navy-900 text-white py-32 md:py-40 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 opacity-90" />
         <div className="absolute inset-0 opacity-10">
@@ -74,19 +22,28 @@ const HomePage = () => {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl">
             <h1 className="font-display text-5xl md:text-7xl lg:text-8xl mb-8 tracking-wide leading-tight">
-              YOUR OPERATIONS SHOULD BE RUNNING BETTER. YOU KNOW IT.
+              YOUR OPERATION IS UNDERPERFORMING. YOU ALREADY KNOW IT. THE QUESTION IS WHAT TO DO ABOUT IT.
             </h1>
 
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed">
-              Failed initiatives. Rising costs. Results that don't stick. You've seen the
-              pattern — and traditional consulting only made it worse. The Bismark Method is a
-              systematic, guaranteed approach to transforming high-volume, transaction-intensive
-              operations. Your team learns it, owns it, and the results compound long after we leave.
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+              Bismark Consulting transforms high-volume, transaction-intensive operations — and guarantees the results. We've been doing it since 1998.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="space-y-6 text-gray-300 leading-relaxed mb-10">
+              <p>
+                You've tried the internal task force. You've brought in the Big Four. You've launched the Lean initiative, the Six Sigma program, the digital transformation. Some of it helped — for a while. Then the consultants left, the momentum faded, and the operation drifted back to where it started. Or worse.
+              </p>
+              <p>
+                That's not a people problem. It's not a technology problem. It's a methodology problem. The approach most firms use — diagnose, recommend, leave — is structurally designed to produce temporary results. Knowledge doesn't transfer. Leadership doesn't shift. And without both, improvement doesn't sustain.
+              </p>
+              <p>
+                The Bismark Method was built to solve all three — simultaneously. Your team learns our methodology by doing real work on your operation, under our guidance. They don't just implement changes — they become the people who know how to design, measure, and continuously improve the operation long after we leave.
+              </p>
+            </div>
+
+            <div>
               <Link
                 to="/walkthrough"
                 className="inline-flex items-center justify-center gap-2 bg-gold-600 text-navy-900 px-8 py-4 font-display text-lg hover:bg-gold-500 transition-colors"
@@ -94,420 +51,419 @@ const HomePage = () => {
                 SCHEDULE A WALKTHROUGH
                 <ArrowRight className="w-5 h-5" />
               </Link>
-              <Link
-                to="/method"
-                className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 font-display text-lg hover:bg-white hover:text-navy-900 transition-colors"
-              >
-                LEARN THE METHOD
-              </Link>
+              <p className="text-sm text-gray-400 mt-4">
+                Complimentary. On-site. 3–5 days. No consulting fees.
+              </p>
+              <p className="text-xs text-gray-500 mt-1">
+                * Travel-related expenses apply.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 2 — CREDIBILITY BAR */}
-      <section className="py-16 bg-gray-50 border-b-4 border-gold-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="font-display text-5xl md:text-6xl text-navy-900 mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-gray-600">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 3 — WHY TRADITIONAL CONSULTING FAILS */}
+      {/* ===================== SECTION 2 — THE PROBLEM WE SOLVE ===================== */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="font-display text-4xl md:text-5xl text-navy-900 mb-6">
-                WHY TRADITIONAL CONSULTING FAILS
-              </h2>
-              <div className="bg-gold-600 h-1 w-24 mx-auto mb-8" />
-              <p className="text-xl text-gray-700 leading-relaxed">
-                Most consulting engagements deliver short-term results that evaporate the
-                moment consultants leave. The problem isn't the analysis — it's the approach.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-gray-50 border-l-4 border-red-600 p-6">
-                <h3 className="font-display text-xl text-navy-900 mb-3">
-                  TRADITIONAL CONSULTING
-                </h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-red-600 mt-1">×</span>
-                    <span>Outsourced thinking, no knowledge transfer</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-red-600 mt-1">×</span>
-                    <span>Results fade within months of departure</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-red-600 mt-1">×</span>
-                    <span>Generic frameworks without operational rigor</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-red-600 mt-1">×</span>
-                    <span>No accountability for sustained outcomes</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-navy-900 text-white border-l-4 border-gold-600 p-6">
-                <h3 className="font-display text-xl mb-3">
-                  THE BISMARK METHOD
-                </h3>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-gold-600 flex-shrink-0 mt-0.5" />
-                    <span>Learn and do: your team becomes the experts</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-gold-600 flex-shrink-0 mt-0.5" />
-                    <span>Results compound year over year</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-gold-600 flex-shrink-0 mt-0.5" />
-                    <span>Systematic methodology proven across 80+ operations</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-gold-600 flex-shrink-0 mt-0.5" />
-                    <span>Guaranteed, measurable outcomes — tied to a structural commitment</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="bg-gold-600 p-8 rounded-lg text-center">
-              <p className="text-2xl text-navy-900 font-medium italic">
-                "The difference isn't what we know. It's what your team will know when we're done."
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 4 — THE BISMARK METHOD (The Hand) */}
-      <section className="py-20 bg-navy-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-display text-4xl md:text-5xl mb-6">
-              THE BISMARK METHOD
+          <div className="max-w-4xl">
+            <h2 className="font-display text-4xl md:text-5xl text-navy-900 mb-12">
+              THREE REASONS OPERATIONAL TRANSFORMATIONS FAIL. WE DESIGNED A METHOD THAT ELIMINATES ALL THREE.
             </h2>
-            <div className="bg-gold-600 h-1 w-24 mx-auto mb-8" />
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Think of it as a hand. The palm is TLM — Transformation Leadership Mastery — the
-              foundation that everything else depends on. The five fingers are the pillars that
-              deliver results. Without the palm, the fingers can't grip anything.
-            </p>
-          </div>
 
-          {/* TLM Card */}
-          <div className="max-w-4xl mx-auto mb-12">
-            <div className="bg-navy-800 border-2 border-gold-600 rounded-lg p-8 md:p-10">
-              <h3 className="font-display text-2xl text-gold-600 mb-4">
-                THE PALM: TLM — TRANSFORMATION LEADERSHIP MASTERY
-              </h3>
-              <p className="text-gray-300 leading-relaxed">
-                TLM is what makes the Bismark Method fundamentally different. It transforms your
-                leadership team into operational architects — people who don't just manage processes
-                but design, measure, and continuously improve them. TLM is also why we can guarantee
-                results. No other consulting firm ties their guarantee to a structural commitment. We
-                do — because we know it works.
-              </p>
-            </div>
-          </div>
-
-          {/* Five Pillars */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {methodPillars.map((pillar, index) => (
-              <div
-                key={index}
-                className="bg-navy-800 border-2 border-gray-700 rounded-lg p-6 hover:border-gold-600 transition-colors group"
-              >
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-gold-600 transition-colors">
-                    <pillar.icon className="w-6 h-6 text-gold-600 group-hover:text-navy-900 transition-colors" />
-                  </div>
-                  <div className="font-display text-3xl text-gold-600">
-                    {pillar.number}
-                  </div>
-                </div>
-                <h3 className="font-display text-xl mb-3">
-                  {pillar.title}
-                </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  {pillar.description}
+            <div className="space-y-8 mb-12">
+              <div className="border-l-4 border-gold-600 pl-6">
+                <h3 className="font-display text-xl text-navy-900 mb-3">THE KNOWLEDGE DOESN'T TRANSFER.</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Traditional consulting firms send smart people to analyze your operation, build a set of recommendations, and hand them off. Your team gets a deliverable — but not the thinking behind it. When conditions change, they can't adapt the solution because they didn't build it. The expertise walks out the door with the consultants.
                 </p>
               </div>
-            ))}
 
-            <div className="bg-navy-800 border-2 border-gray-700 rounded-lg p-6 flex items-center justify-center hover:border-gold-600 transition-colors md:col-span-2 lg:col-span-1">
-              <div className="text-center">
-                <p className="font-display text-2xl mb-4">LEARN MORE</p>
-                <Link
-                  to="/method"
-                  className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-6 py-3 font-display hover:bg-gold-500 transition-colors"
-                >
-                  LEARN THE COMPLETE METHOD
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
+              <div className="border-l-4 border-gold-600 pl-6">
+                <h3 className="font-display text-xl text-navy-900 mb-3">THE LEADERSHIP DOESN'T SHIFT.</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Most engagements treat leadership development and operational improvement as separate workstreams — if they address leadership at all. But operational transformation requires leaders who think differently about how work gets designed, measured, and managed. Without that shift, every improvement is temporary. The operation reverts to its prior state because the management system hasn't changed.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-gold-600 pl-6">
+                <h3 className="font-display text-xl text-navy-900 mb-3">THE IMPROVEMENT DOESN'T SUSTAIN.</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Even when a consulting engagement produces real gains, those gains typically erode within 12–18 months. The reason is structural: the organization hasn't built the capability to continuously improve on its own. Without that capability — the skills, the systems, the management discipline — entropy wins. Results decay. And the cycle starts over.
+                </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* SECTION 5 — HOW IT COMES TOGETHER */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-display text-4xl md:text-5xl text-navy-900 mb-6">
-              FROM FIRST LOOK TO GUARANTEED RESULTS
-            </h2>
-            <div className="bg-gold-600 h-1 w-24 mx-auto mb-8" />
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-gray-50 border-2 border-gray-200 rounded-lg p-8 hover:border-gold-600 transition-colors">
-              <div className="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center mb-4">
-                <span className="font-display text-xl text-gold-600">1</span>
-              </div>
-              <h3 className="font-display text-xl text-navy-900 mb-2">
-                THE WALKTHROUGH
-              </h3>
-              <span className="inline-block bg-gold-600 text-navy-900 px-3 py-1 text-xs font-display mb-4">
-                FREE
-              </span>
-              <p className="text-gray-700 text-sm leading-relaxed">
-                2-4 days on-site. We touch all five pillars at the surface — observing,
-                analyzing, interviewing. You experience our rigor firsthand. No obligation.
-              </p>
-            </div>
-
-            <div className="bg-gray-50 border-2 border-gray-200 rounded-lg p-8 hover:border-gold-600 transition-colors">
-              <div className="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center mb-4">
-                <span className="font-display text-xl text-gold-600">2</span>
-              </div>
-              <h3 className="font-display text-xl text-navy-900 mb-4">
-                DISCOVERY & PROPOSAL
-              </h3>
-              <p className="text-gray-700 text-sm leading-relaxed">
-                We go deep. Targeted analysis with quantified opportunities. A detailed engagement
-                proposal built on what we actually found — not a template.
-              </p>
-            </div>
-
-            <div className="bg-gray-50 border-2 border-gray-200 rounded-lg p-8 hover:border-gold-600 transition-colors">
-              <div className="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center mb-4">
-                <span className="font-display text-xl text-gold-600">3</span>
-              </div>
-              <h3 className="font-display text-xl text-navy-900 mb-4">
-                ENGAGEMENT WITH GUARANTEE
-              </h3>
-              <p className="text-gray-700 text-sm leading-relaxed">
-                Commit to TLM and we guarantee the results. Your team learns the method, owns the
-                outcomes, and the results compound year over year.
-              </p>
-            </div>
-          </div>
-
-          <div className="max-w-3xl mx-auto text-center mb-8">
-            <p className="text-gray-700 leading-relaxed">
-              The guarantee isn't a sales tactic. It's a structural commitment — from both sides.
-              No TLM, no guarantee. We can still engage, but TLM is what makes the results stick.
+            <p className="text-gray-700 leading-relaxed mb-8">
+              The Bismark Method addresses all three simultaneously — not sequentially, not optionally. That's why we can guarantee results.
             </p>
-          </div>
 
-          <div className="text-center">
             <Link
-              to="/walkthrough"
-              className="inline-flex items-center justify-center gap-2 bg-gold-600 text-navy-900 px-8 py-4 font-display text-lg hover:bg-gold-500 transition-colors"
+              to="/method"
+              className="inline-flex items-center gap-2 text-navy-900 font-display hover:text-gold-600 transition-colors"
             >
-              START WITH A WALKTHROUGH
+              LEARN ABOUT THE BISMARK METHOD
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* SECTION 6 — INDUSTRIES */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-display text-4xl md:text-5xl text-navy-900 mb-6">
-              WHERE THE METHOD HAS BEEN PROVEN
-            </h2>
-            <div className="bg-gold-600 h-1 w-24 mx-auto mb-8" />
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              The Bismark Method works wherever high-volume, process-dependent operations drive
-              performance. These are the verticals where we've delivered the deepest results — but
-              the methodology isn't limited to them.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {industries.map((industry, index) => (
-              <div
-                key={index}
-                className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-gold-600 transition-colors"
-              >
-                <h3 className="font-display text-2xl text-navy-900 mb-4">
-                  {industry.title}
-                </h3>
-                <p className="font-display text-sm text-gold-600 mb-4 tracking-wider">OPERATIONS</p>
-                <ul className="space-y-2">
-                  {industry.operations.map((operation, opIndex) => (
-                    <li key={opIndex} className="flex items-start gap-2 text-gray-700">
-                      <div className="w-1.5 h-1.5 bg-gold-600 rounded-full mt-2 flex-shrink-0" />
-                      <span className="text-sm">{operation}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <Link
-              to="/industries"
-              className="inline-flex items-center gap-2 bg-navy-900 text-white px-8 py-4 font-display text-lg hover:bg-navy-800 transition-colors"
-            >
-              VIEW ALL INDUSTRIES & OPERATIONS
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 7 — INSIGHTS */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-display text-4xl md:text-5xl text-navy-900 mb-6">
-              PERSPECTIVES ON OPERATIONS
-            </h2>
-            <div className="bg-gold-600 h-1 w-24 mx-auto mb-8" />
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Over 20 years of transforming operations. Here's what we've learned.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {insights.map((article, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 border-2 border-gray-200 rounded-lg p-8 hover:border-gold-600 transition-colors"
-              >
-                <span className="inline-block bg-gray-200 text-gray-500 px-3 py-1 text-xs font-display mb-4">
-                  COMING SOON
-                </span>
-                <h3 className="font-display text-xl text-navy-900 leading-snug">
-                  {article.title}
-                </h3>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 bg-navy-900 text-white px-8 py-4 font-display text-lg hover:bg-navy-800 transition-colors"
-            >
-              VIEW ALL INSIGHTS
-              <ArrowRight className="w-5 h-5" />
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 8 — WALKTHROUGH CTA */}
+      {/* ===================== SECTION 3 — THE METHOD OVERVIEW ===================== */}
       <section className="py-20 bg-navy-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl">
             <h2 className="font-display text-4xl md:text-5xl mb-6">
-              SEE IT FOR YOURSELF
+              A PROVEN METHODOLOGY. A GUARANTEED OUTCOME.
             </h2>
-            <div className="bg-gold-600 h-1 w-24 mx-auto mb-8" />
+
             <p className="text-xl text-gray-300 leading-relaxed mb-8">
-              The best proof doesn't come from other companies. It comes from you, after
-              experiencing the Bismark Method firsthand. We invest 2-4 days on-site at your
-              operations — analyzing data, observing processes, interviewing stakeholders — and
-              present preliminary findings with quantified opportunities.
+              The Bismark Method is built on two interdependent components working together across a 16-week engagement.
             </p>
 
-            <div className="bg-navy-800 border-2 border-gold-600 rounded-lg p-8 mb-8">
-              <p className="font-display text-2xl text-gold-600 mb-2">
-                Cost: $0 in consulting fees.
+            <div className="mb-10">
+              <h3 className="font-display text-2xl text-gold-600 mb-4">
+                TLM — TRANSFORMATION LEADERSHIP MASTERY
+              </h3>
+              <p className="text-gray-300 leading-relaxed">
+                TLM is the foundation — the palm of the hand. It transforms your leadership team into operational architects through six core concepts: The Power of Context, Two Modes of Listening, Integrity vs. Sincerity, 5 Types of Conversations, 5-Step Transformation Model, and 7 Commitments to Breaking Down Barriers. These aren't theoretical frameworks — they're practical tools your leaders apply immediately to how they manage, communicate, and drive accountability across the operation.
               </p>
-              <p className="text-gray-300">
-                You cover travel-related expenses.
-              </p>
+            </div>
+
+            <div className="mb-10">
+              <h3 className="font-display text-2xl text-gold-600 mb-4">
+                THE FIVE PILLARS
+              </h3>
+              <ol className="space-y-4">
+                <li className="flex items-start gap-4">
+                  <span className="font-display text-2xl text-gold-600 flex-shrink-0">1.</span>
+                  <span className="font-display text-xl text-gold-400">Customer Profile</span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <span className="font-display text-2xl text-gold-600 flex-shrink-0">2.</span>
+                  <span className="font-display text-xl text-gold-400">Process Design & Engineering</span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <span className="font-display text-2xl text-gold-600 flex-shrink-0">3.</span>
+                  <span className="font-display text-xl text-gold-400">Organizational Strategy</span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <span className="font-display text-2xl text-gold-600 flex-shrink-0">4.</span>
+                  <span className="font-display text-xl text-gold-400">Measurement</span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <span className="font-display text-2xl text-gold-600 flex-shrink-0">5.</span>
+                  <span className="font-display text-xl text-gold-400">Continuous Improvement</span>
+                </li>
+              </ol>
             </div>
 
             <p className="text-gray-300 leading-relaxed mb-10">
-              We're confident enough in our rigor, expertise, and methodology that we let the work
-              speak for itself. Our clients call it the most rigorous vendor interview they've ever
-              experienced.
+              Your team doesn't watch us do this — they learn it by doing it, under our guidance. We call it the apprentice model. Your subject-matter experts work side by side with our consultants, building the skills and systems they'll own permanently. By the end of the engagement, your team doesn't need us. That's the point.
             </p>
 
-            <Link
-              to="/walkthrough"
-              className="inline-flex items-center justify-center gap-2 bg-gold-600 text-navy-900 px-8 py-4 font-display text-lg hover:bg-gold-500 transition-colors"
-            >
-              SCHEDULE YOUR WALKTHROUGH
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 9 — ABOUT/FOUNDER */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-navy-900 text-white p-8 md:p-12 rounded-lg mb-8">
-              <blockquote className="text-2xl md:text-3xl font-medium mb-4 leading-relaxed italic">
-                "We don't create PowerPoint decks. We create capability."
-              </blockquote>
-              <p className="text-gold-600 font-display">
-                — Luis Telleria, Founder
+            <div className="bg-navy-800 border-l-4 border-gold-600 p-8 mb-10">
+              <h4 className="font-display text-xl text-gold-600 mb-3">THE GUARANTEE</h4>
+              <p className="text-gray-300 leading-relaxed">
+                When a client commits to the full method — TLM plus all five pillars — Bismark guarantees measurable, sustained results. Consulting fees during the guarantee period are waived if targets aren't met. That's not a marketing line. It's the contractual structure of every full engagement.
               </p>
             </div>
 
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              Founded in 1998, Bismark Consulting was born from a simple observation: traditional
-              consulting creates dependency, not capability. For over 20 years, we've refined a
-              systematic methodology that transforms operations while transferring knowledge.
-            </p>
-
             <Link
-              to="/about"
-              className="inline-flex items-center gap-2 bg-navy-900 text-white px-8 py-4 font-display text-lg hover:bg-navy-800 transition-colors"
+              to="/method"
+              className="inline-flex items-center gap-2 text-gold-600 font-display hover:text-gold-400 transition-colors"
             >
-              LEARN MORE ABOUT US
+              EXPLORE THE BISMARK METHOD
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Version Comparison Link */}
-      <div className="py-4 text-center bg-gray-100 border-t border-gray-200">
-        <Link to="/homepage-old" className="text-xs text-gray-400 hover:text-gray-600 underline">
-          View Previous Homepage Version
-        </Link>
-      </div>
+      {/* ===================== SECTION 4 — INDUSTRY ROTATION DISPLAY ===================== */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-4xl md:text-5xl text-navy-900 mb-12">
+            PROVEN ACROSS INDUSTRIES. APPLIED AT THE PROCESS LEVEL.
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-12">
+            {pairings.map((pairing, index) => (
+              <div
+                key={index}
+                className="bg-white border-2 border-gray-200 p-6 hover:border-gold-600 transition-colors"
+              >
+                <p className="font-display text-xs tracking-wider text-gray-500 mb-3">
+                  {pairing.industry.toUpperCase()}
+                </p>
+                <p className="font-display text-lg text-navy-900">
+                  {pairing.operation}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-gray-700 leading-relaxed mb-8 max-w-4xl">
+            The Bismark Method works because operational excellence follows patterns, not industry boundaries. Claims adjudication in insurance and loan underwriting in banking are variations of the same archetype — authorization and verification under volume and time pressure. We see the pattern. We transform the process. We guarantee the result.
+          </p>
+
+          <Link
+            to="/industries"
+            className="inline-flex items-center gap-2 text-navy-900 font-display hover:text-gold-600 transition-colors"
+          >
+            EXPLORE ALL INDUSTRIES
+            <ArrowRight className="w-5 h-5" />
+          </Link>
+        </div>
+      </section>
+
+      {/* ===================== SECTION 5 — THE ENGAGEMENT JOURNEY ===================== */}
+      <section className="py-20 bg-navy-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl">
+            <h2 className="font-display text-4xl md:text-5xl mb-12">
+              FROM FIRST CONVERSATION TO GUARANTEED RESULTS — HERE'S HOW IT WORKS.
+            </h2>
+
+            {/* Step 1 */}
+            <div className="mb-16">
+              <p className="font-display text-sm tracking-wider text-gold-600 mb-2">STEP 1</p>
+              <h3 className="font-display text-3xl mb-2">THE WALKTHROUGH</h3>
+              <p className="font-display text-lg text-gray-400 mb-6">Complimentary. On-site. 3–5 days.</p>
+
+              <div className="space-y-4 text-gray-300 leading-relaxed mb-6">
+                <p>
+                  The Walkthrough isn't a sales pitch. It's a working engagement — compressed, on-site, and designed to give both sides a clear-eyed view of the operation's current state. Our team spends 3–5 days embedded in your operation: observing workflows, interviewing frontline staff and leadership, analyzing process data, and mapping how work actually moves through the system.
+                </p>
+                <p>
+                  At the end, we present what we found — not a generic deck, but a specific, evidence-based assessment of where your operation is underperforming and why. We quantify the opportunities. We identify the root causes. And we outline what a full engagement would look like if you decide to move forward.
+                </p>
+                <p>
+                  There's no obligation. Many of our longest client relationships started with a Walkthrough that surprised both sides — the operation had more opportunity than anyone expected.
+                </p>
+              </div>
+
+              <p className="text-sm text-gray-500 mb-6">
+                Consulting fees waived. Travel-related expenses apply.
+              </p>
+
+              <div className="bg-navy-800 p-6 mb-6">
+                <p className="font-display text-sm tracking-wider text-gold-600 mb-3">WHO IT'S FOR:</p>
+                <ul className="space-y-2 text-gray-300">
+                  <li className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 bg-gold-600 rounded-full mt-2 flex-shrink-0" />
+                    <span>Operations leaders who suspect their operation is underperforming but lack a clear diagnosis</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 bg-gold-600 rounded-full mt-2 flex-shrink-0" />
+                    <span>Executives evaluating whether a full transformation engagement is warranted</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 bg-gold-600 rounded-full mt-2 flex-shrink-0" />
+                    <span>Organizations that have tried other approaches and want to see a fundamentally different methodology in action</span>
+                  </li>
+                </ul>
+              </div>
+
+              <Link
+                to="/walkthrough"
+                className="inline-flex items-center gap-2 text-gold-600 font-display hover:text-gold-400 transition-colors"
+              >
+                LEARN MORE ABOUT THE WALKTHROUGH
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+
+            {/* Step 2 */}
+            <div className="mb-16">
+              <p className="font-display text-sm tracking-wider text-gold-600 mb-2">STEP 2</p>
+              <h3 className="font-display text-3xl mb-6">DISCOVERY OR DIRECT-TO-IMPLEMENTATION</h3>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-white text-navy-900 border-2 border-gray-200 p-6">
+                  <h4 className="font-display text-xl text-navy-900 mb-3">DISCOVERY PHASE</h4>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    A deeper diagnostic engagement — typically 2–4 weeks — where we quantify opportunities, map process architectures in detail, and build a comprehensive engagement proposal. Discovery is recommended when the operation is large, complex, or spans multiple sites. It produces the baseline data and transformation roadmap that the full engagement is built on.
+                  </p>
+                </div>
+                <div className="bg-white text-navy-900 border-2 border-gray-200 p-6">
+                  <h4 className="font-display text-xl text-navy-900 mb-3">RAPID DEPLOYMENT</h4>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    For operations where the Walkthrough findings are clear enough to move directly into implementation. The scope, targets, and engagement structure are defined based on Walkthrough data, and the 16-week engagement begins without an intermediate discovery phase. This path is common for focused, single-process transformations.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div>
+              <p className="font-display text-sm tracking-wider text-gold-600 mb-2">STEP 3</p>
+              <h3 className="font-display text-3xl mb-2">THE ENGAGEMENT — WITH GUARANTEE</h3>
+              <p className="font-display text-lg text-gray-400 mb-6">16 weeks. Four phases. Four weeks each.</p>
+
+              <div className="space-y-6 mb-8">
+                <div className="border-l-4 border-gold-600 pl-6">
+                  <p className="font-display text-lg text-gold-600 mb-1">PHASE 1 — FOUNDATION</p>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    Baseline measurement, team formation, TLM launch, and initial process mapping. Your team begins learning the methodology immediately — not in a classroom, but on the operation floor.
+                  </p>
+                </div>
+                <div className="border-l-4 border-gold-600 pl-6">
+                  <p className="font-display text-lg text-gold-600 mb-1">PHASE 2 — DESIGN</p>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    Process redesign across all five pillars. Customer profiles are built, processes are re-engineered, organizational structures are aligned, measurement systems are created, and continuous improvement protocols are established.
+                  </p>
+                </div>
+                <div className="border-l-4 border-gold-600 pl-6">
+                  <p className="font-display text-lg text-gold-600 mb-1">PHASE 3 — IMPLEMENTATION</p>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    New processes go live. Your team leads the implementation with our consultants in a coaching role. Results begin showing against baseline metrics. Management operating systems are activated.
+                  </p>
+                </div>
+                <div className="border-l-4 border-gold-600 pl-6">
+                  <p className="font-display text-lg text-gold-600 mb-1">PHASE 4 — SUSTAINMENT</p>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    Results are validated, continuous improvement cycles are tested, and your team demonstrates independent ownership of the new operation. By the end of Phase 4, your team runs the operation — and the methodology — without us.
+                  </p>
+                </div>
+              </div>
+
+              <p className="text-gray-300 leading-relaxed">
+                When a client commits to TLM and all five pillars, Bismark guarantees the results. If targets aren't met during the guarantee period, consulting fees are waived. That guarantee is contractual — not promotional. It exists because the method works, and because we're willing to stake our fees on it.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===================== SECTION 6 — WHY BISMARK ===================== */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl">
+            <h2 className="font-display text-4xl md:text-5xl text-navy-900 mb-12">
+              WHAT MAKES THIS DIFFERENT FROM EVERY OTHER CONSULTING ENGAGEMENT YOU'VE BEEN THROUGH.
+            </h2>
+
+            <div className="space-y-8">
+              <div className="border-l-4 border-gold-600 pl-6">
+                <h3 className="font-display text-xl text-navy-900 mb-3">WE DON'T DELIVER A PLAYBOOK AND LEAVE.</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Your team builds the playbook — under our guidance, using our methodology, on your operation. They learn process design, measurement, and continuous improvement by doing it. When we leave, the capability stays because your people own it.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-gold-600 pl-6">
+                <h3 className="font-display text-xl text-navy-900 mb-3">WE DON'T SEPARATE LEADERSHIP DEVELOPMENT FROM OPERATIONAL WORK.</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  TLM isn't a workshop bolted onto the side of a process engagement. It's the foundation that makes the process work stick. Leaders learn to think differently about context, accountability, and communication — and they apply it in real time to the transformation they're leading.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-gold-600 pl-6">
+                <h3 className="font-display text-xl text-navy-900 mb-3">WE DON'T HEDGE ON OUTCOMES.</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  When a client commits to the full method, we guarantee the results — contractually. Consulting fees during the guarantee period are waived if targets aren't met. We can make that guarantee because the method is proven, and because TLM ensures your leadership team has the capability to sustain what we build together.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-gold-600 pl-6">
+                <h3 className="font-display text-xl text-navy-900 mb-3">WE DON'T NEED YOUR INDUSTRY EXPERIENCE TO TRANSFORM YOUR OPERATION.</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Operational excellence follows patterns, not industry boundaries. The methodology we apply to claims adjudication in insurance is structurally the same as what we apply to loan underwriting in banking or order fulfillment in logistics. Your subject-matter experts bring the domain knowledge. We bring the methodology. Together, we redesign the operation.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-gold-600 pl-6">
+                <h3 className="font-display text-xl text-navy-900 mb-3">WE PROVE IT BEFORE YOU COMMIT.</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  The Walkthrough is a complimentary, on-site engagement — 3–5 days of real analysis on your operation. No pitch decks, no generic frameworks. You see our rigor, our methodology, and our findings before you decide whether to engage. Most clients tell us it's the most thorough vendor evaluation they've ever experienced.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===================== SECTION 7 — WHO WE WORK WITH ===================== */}
+      <section className="py-20 bg-navy-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl">
+            <h2 className="font-display text-4xl md:text-5xl mb-8">
+              BUILT FOR LEADERS WHO OWN OPERATIONAL OUTCOMES.
+            </h2>
+
+            <p className="text-gray-300 leading-relaxed mb-6">
+              The Bismark Method is designed for senior operations leaders — VPs, SVPs, COOs, and division heads — who are directly accountable for the performance of high-volume, transaction-intensive operations. These are leaders who know their operation should be performing better, who have the authority to commit to a transformation, and who are willing to invest in building lasting capability rather than buying temporary fixes.
+            </p>
+            <p className="text-gray-300 leading-relaxed">
+              Our clients have typically cycled through internal initiatives, Lean/Six Sigma programs, or traditional consulting engagements — and found that results either never materialized or didn't sustain. They're looking for something structurally different. That's what the Bismark Method delivers.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ===================== SECTION 8 — INSIGHTS PLACEHOLDER ===================== */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-4xl md:text-5xl text-navy-900 mb-12">
+            PERSPECTIVES ON OPERATIONAL TRANSFORMATION.
+          </h2>
+
+          <div className="bg-gray-100 border-2 border-gray-200 flex items-center justify-center" style={{ minHeight: '200px' }}>
+            <div className="text-center px-4">
+              <p className="font-display text-2xl text-gray-500 mb-2">INSIGHTS — COMING SOON</p>
+              <p className="text-gray-400 text-sm">
+                Articles and perspectives on operational transformation. Content launching soon.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8">
+            <Link
+              to="/insights"
+              className="inline-flex items-center gap-2 text-navy-900 font-display hover:text-gold-600 transition-colors"
+            >
+              VISIT INSIGHTS
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ===================== SECTION 9 — CTA ===================== */}
+      <section className="py-20 bg-navy-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="font-display text-4xl md:text-5xl mb-8">
+              SEE WHAT WE SEE. SCHEDULE YOUR WALKTHROUGH.
+            </h2>
+
+            <p className="text-gray-300 leading-relaxed mb-6">
+              The best way to evaluate the Bismark Method isn't a brochure or a reference call — it's watching us work on your operation. The Walkthrough is a complimentary, on-site engagement where our team spends 3–5 days embedded in your operation, analyzing processes, interviewing your people, and identifying quantified opportunities for improvement.
+            </p>
+            <p className="text-gray-300 leading-relaxed mb-10">
+              There's no obligation to move forward. But every client who has engaged us started here — and most will tell you the Walkthrough alone changed how they saw their operation.
+            </p>
+
+            {/* TODO: Replace with Calendly widget embed */}
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center gap-2 bg-gold-600 text-navy-900 px-8 py-4 font-display text-lg hover:bg-gold-500 transition-colors"
+            >
+              SCHEDULE A DISCOVERY CALL
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+
+            <p className="text-gray-400 text-sm mt-6">
+              Prefer email?{' '}
+              <a href="mailto:info@bismarkconsulting.com" className="text-gold-600 hover:text-gold-400 underline transition-colors">
+                info@bismarkconsulting.com
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ===================== SECTION 10 — FOOTER (site-wide component) ===================== */}
     </div>
   );
 };
