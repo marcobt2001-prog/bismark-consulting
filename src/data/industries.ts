@@ -24,7 +24,7 @@ export const industries: Industry[] = [
   {
     slug: 'banking-lending',
     name: 'Banking & Lending',
-    descriptor: 'Loan origination, servicing, default management, and asset recovery \u2014 where every handoff is a risk event and every delay costs yield.',
+    descriptor: 'Account opening through collections, recovery, and regulatory compliance',
     processCount: 16,
     activeArchetypes: [
       'Intake', 'Verification', 'Authorization', 'Fulfillment',
@@ -65,7 +65,7 @@ The Bismark Method exposes these patterns by mapping every process against its a
   {
     slug: 'distribution-logistics',
     name: 'Distribution & Logistics',
-    descriptor: 'Warehousing, transportation, and last-mile delivery \u2014 where every minute of delay multiplies across thousands of shipments.',
+    descriptor: 'Receiving dock through last-mile delivery and freight settlement',
     processCount: 14,
     activeArchetypes: [
       'Intake', 'Scheduling', 'Fulfillment', 'Processing',
@@ -104,7 +104,7 @@ The Bismark Method maps these operations at the archetype level \u2014 exposing 
   {
     slug: 'enterprise-technology',
     name: 'Enterprise Technology',
-    descriptor: 'SaaS delivery, implementation, support, and renewal \u2014 where customer retention is an operational outcome, not a sales activity.',
+    descriptor: 'Account provisioning through incident response and support operations',
     processCount: 14,
     activeArchetypes: [
       'Intake', 'Verification', 'Authorization', 'Fulfillment',
@@ -142,7 +142,7 @@ The Bismark Method maps every customer-facing operation against its archetypes \
   {
     slug: 'financial-processors',
     name: 'Financial Processors',
-    descriptor: 'Payment networks, transaction clearing, and merchant services \u2014 where microseconds matter and error rates are measured in basis points.',
+    descriptor: 'Payment processing, credit reporting, servicing, and reconciliation',
     processCount: 16,
     activeArchetypes: [
       'Intake', 'Verification', 'Authorization', 'Fulfillment',
@@ -183,7 +183,7 @@ The Bismark Method maps every process against its archetypes \u2014 exposing whe
   {
     slug: 'food-production',
     name: 'Food Production',
-    descriptor: 'Processing, packaging, and distribution of food products \u2014 where compliance is non-negotiable and spoilage is measured in hours.',
+    descriptor: 'Ingredient intake through shelf life and regulatory compliance',
     processCount: 14,
     activeArchetypes: [
       'Intake', 'Scheduling', 'Fulfillment', 'Processing',
@@ -221,7 +221,7 @@ The Bismark Method maps food production at the archetype level \u2014 exposing w
   {
     slug: 'industrial-technology',
     name: 'Industrial Technology',
-    descriptor: 'Equipment manufacturing, field service, and aftermarket operations \u2014 where uptime is the product and complexity is the constant.',
+    descriptor: 'Equipment manufacturing through field service and maintenance contracts',
     processCount: 14,
     activeArchetypes: [
       'Intake', 'Scheduling', 'Fulfillment', 'Processing',
@@ -259,7 +259,7 @@ The Bismark Method maps these interconnected operations at the archetype level \
   {
     slug: 'insurance',
     name: 'Insurance',
-    descriptor: 'Underwriting, claims, policy administration, and subrogation \u2014 where every decision is a risk decision and every process touches the balance sheet.',
+    descriptor: 'Policy application through claims payment, subrogation, and reinsurance',
     processCount: 16,
     activeArchetypes: [
       'Intake', 'Verification', 'Authorization', 'Fulfillment',
@@ -302,7 +302,7 @@ The Bismark Method maps every insurance operation against its archetypes \u2014 
   {
     slug: 'manufacturing',
     name: 'Manufacturing',
-    descriptor: 'Discrete and process manufacturing \u2014 where OEE tells the story, changeovers set the rhythm, and scrap is profit walking out the door.',
+    descriptor: 'Production planning through final quality release',
     processCount: 16,
     activeArchetypes: [
       'Intake', 'Verification', 'Scheduling', 'Fulfillment',
@@ -343,7 +343,7 @@ The Bismark Method maps every manufacturing process against its archetypes \u201
   {
     slug: 'mining-metals',
     name: 'Mining & Metals',
-    descriptor: 'Extraction, processing, and refining operations \u2014 where the resource is fixed, the environment is harsh, and every inefficiency compounds against geology.',
+    descriptor: 'Exploration through refining, maintenance, and environmental compliance',
     processCount: 14,
     activeArchetypes: [
       'Intake', 'Verification', 'Scheduling', 'Processing',
@@ -383,7 +383,7 @@ The Bismark Method maps these operations at the archetype level \u2014 exposing 
   {
     slug: 'oil-gas',
     name: 'Oil & Gas',
-    descriptor: 'Upstream, midstream, and downstream operations \u2014 where commodity prices are fixed, and operational cost is the only variable you control.',
+    descriptor: 'Upstream exploration through downstream distribution and regulatory reporting',
     processCount: 14,
     activeArchetypes: [
       'Intake', 'Authorization', 'Scheduling', 'Processing',

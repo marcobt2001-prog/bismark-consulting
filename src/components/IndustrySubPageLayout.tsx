@@ -23,19 +23,9 @@ export default function IndustrySubPageLayout({ industry }: Props) {
           <h1 className="font-display text-5xl md:text-7xl mb-6 tracking-wide">
             {industry.name.toUpperCase()}
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl leading-relaxed mb-8">
+          <p className="text-xl text-gray-300 max-w-3xl leading-relaxed">
             {industry.descriptor}
           </p>
-          <div className="flex flex-wrap gap-3">
-            {industry.activeArchetypes.map((archetype) => (
-              <span
-                key={archetype}
-                className="border border-gold-600 text-gold-600 px-3 py-1 text-sm font-medium"
-              >
-                {archetype}
-              </span>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -63,7 +53,7 @@ export default function IndustrySubPageLayout({ industry }: Props) {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-4xl md:text-5xl text-navy-900 mb-6">
-            PROCESS MAP: {industry.name.toUpperCase()} OPERATIONS
+            PROCESSES: {industry.name.toUpperCase()} OPERATIONS
           </h2>
           <div className="bg-gold-600 h-1 w-24 mb-12" />
 
@@ -76,19 +66,9 @@ export default function IndustrySubPageLayout({ industry }: Props) {
                 <h3 className="font-display text-xl text-navy-900 font-bold mb-3">
                   {process.name}
                 </h3>
-                <p className="text-gray-700 leading-relaxed mb-4">
+                <p className="text-gray-700 leading-relaxed">
                   {process.description}
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  {process.archetypes.map((archetype) => (
-                    <span
-                      key={archetype}
-                      className="border border-gold-600 text-gold-700 px-2 py-0.5 text-xs font-medium"
-                    >
-                      {archetype}
-                    </span>
-                  ))}
-                </div>
               </div>
             ))}
           </div>
