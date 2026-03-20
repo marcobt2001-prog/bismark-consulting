@@ -112,78 +112,84 @@ const HomePage = () => {
       {/* ===================== SECTION 3 — THE METHOD OVERVIEW ===================== */}
       <section className="py-20 bg-navy-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl">
-            <h2 className="font-display text-4xl md:text-5xl mb-6">
-              A PROVEN METHODOLOGY. A GUARANTEED OUTCOME.
-            </h2>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
 
-            <p className="text-xl text-gray-300 leading-relaxed mb-8">
-              The Bismark Method is built on two interdependent components working together across a 16-week engagement.
-            </p>
+            {/* LEFT COLUMN — all existing text content */}
+            <div>
+              <h2 className="font-display text-4xl md:text-5xl mb-6">
+                A PROVEN METHODOLOGY. A GUARANTEED OUTCOME.
+              </h2>
 
-            <div className="mb-10">
-              <h3 className="font-display text-2xl text-gold-600 mb-4">
-                TLM — TRANSFORMATIVE LEADERSHIP MASTERY
-              </h3>
-              <p className="text-gray-300 leading-relaxed">
-                TLM is the foundation — the palm of the hand. It transforms your leadership team into operational architects through six core concepts: The Power of Context, Two Modes of Listening, Integrity vs. Sincerity, 5 Types of Conversations, 5-Step Transformation Model, and 7 Commitments to Breaking Down Barriers. These aren't theoretical frameworks — they're practical tools your leaders apply immediately to how they manage, communicate, and drive accountability across the operation.
+              <p className="text-xl text-gray-300 leading-relaxed mb-8">
+                The Bismark Method is built on two interdependent components working together across a 16-week engagement.
               </p>
+
+              <div className="mb-10">
+                <h3 className="font-display text-2xl text-gold-600 mb-4">
+                  TLM — TRANSFORMATIVE LEADERSHIP MASTERY
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  TLM is the foundation — the palm of the hand. It transforms your leadership team into operational architects through six core concepts: The Power of Context, Two Modes of Listening, Integrity vs. Sincerity, 5 Types of Conversations, 5-Step Transformation Model, and 7 Commitments to Breaking Down Barriers. These aren't theoretical frameworks — they're practical tools your leaders apply immediately to how they manage, communicate, and drive accountability across the operation.
+                </p>
+              </div>
+
+              <div className="mb-10">
+                <h3 className="font-display text-2xl text-gold-600 mb-4">
+                  THE FIVE PILLARS
+                </h3>
+                <ol className="space-y-4">
+                  <li className="flex items-start gap-4">
+                    <span className="font-display text-2xl text-gold-600 flex-shrink-0">1.</span>
+                    <span className="font-display text-xl text-gold-400">Customer Profile</span>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <span className="font-display text-2xl text-gold-600 flex-shrink-0">2.</span>
+                    <span className="font-display text-xl text-gold-400">Process Design & Engineering</span>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <span className="font-display text-2xl text-gold-600 flex-shrink-0">3.</span>
+                    <span className="font-display text-xl text-gold-400">Organizational Strategy</span>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <span className="font-display text-2xl text-gold-600 flex-shrink-0">4.</span>
+                    <span className="font-display text-xl text-gold-400">Measurement</span>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <span className="font-display text-2xl text-gold-600 flex-shrink-0">5.</span>
+                    <span className="font-display text-xl text-gold-400">Continuous Improvement</span>
+                  </li>
+                </ol>
+              </div>
+
+              <p className="text-gray-300 leading-relaxed mb-10">
+                Your team doesn't watch us do this — they learn it by doing it, under our guidance. We call it the apprentice model. Your subject-matter experts work side by side with our consultants, building the skills and systems they'll own permanently. By the end of the engagement, your team doesn't need us. That's the point.
+              </p>
+
+              <div className="bg-navy-800 border-l-4 border-gold-600 p-8 mb-10">
+                <h4 className="font-display text-xl text-gold-600 mb-3">THE GUARANTEE</h4>
+                <p className="text-gray-300 leading-relaxed">
+                  When a client commits to the full method — TLM plus all five pillars — Bismark guarantees measurable, sustained results. Consulting fees during the guarantee period are waived if targets aren't met. That's not a marketing line. It's the contractual structure of every full engagement.
+                </p>
+              </div>
+
+              <Link
+                to="/method"
+                className="inline-flex items-center gap-2 text-gold-600 font-display hover:text-gold-400 transition-colors"
+              >
+                EXPLORE THE BISMARK METHOD
+                <ArrowRight className="w-5 h-5" />
+              </Link>
             </div>
 
-            <div className="mb-10">
-              <h3 className="font-display text-2xl text-gold-600 mb-4">
-                THE FIVE PILLARS
-              </h3>
-              <ol className="space-y-4">
-                <li className="flex items-start gap-4">
-                  <span className="font-display text-2xl text-gold-600 flex-shrink-0">1.</span>
-                  <span className="font-display text-xl text-gold-400">Customer Profile</span>
-                </li>
-                <li className="flex items-start gap-4">
-                  <span className="font-display text-2xl text-gold-600 flex-shrink-0">2.</span>
-                  <span className="font-display text-xl text-gold-400">Process Design & Engineering</span>
-                </li>
-                <li className="flex items-start gap-4">
-                  <span className="font-display text-2xl text-gold-600 flex-shrink-0">3.</span>
-                  <span className="font-display text-xl text-gold-400">Organizational Strategy</span>
-                </li>
-                <li className="flex items-start gap-4">
-                  <span className="font-display text-2xl text-gold-600 flex-shrink-0">4.</span>
-                  <span className="font-display text-xl text-gold-400">Measurement</span>
-                </li>
-                <li className="flex items-start gap-4">
-                  <span className="font-display text-2xl text-gold-600 flex-shrink-0">5.</span>
-                  <span className="font-display text-xl text-gold-400">Continuous Improvement</span>
-                </li>
-              </ol>
-            </div>
-
-            <div className="mt-12 flex justify-center">
+            {/* RIGHT COLUMN — image only */}
+            <div className="flex justify-center items-center">
               <img
                 src={handFivePillarsImg}
-                alt="The Bismark Method — TLM as the palm, the Five Pillars as the fingers"
-                className="w-full max-w-2xl"
+                alt="The Bismark Method — Transformative Leadership Mastery as the palm, the Five Pillars as the fingers"
+                className="w-full max-w-md"
               />
             </div>
 
-            <p className="text-gray-300 leading-relaxed mb-10">
-              Your team doesn't watch us do this — they learn it by doing it, under our guidance. We call it the apprentice model. Your subject-matter experts work side by side with our consultants, building the skills and systems they'll own permanently. By the end of the engagement, your team doesn't need us. That's the point.
-            </p>
-
-            <div className="bg-navy-800 border-l-4 border-gold-600 p-8 mb-10">
-              <h4 className="font-display text-xl text-gold-600 mb-3">THE GUARANTEE</h4>
-              <p className="text-gray-300 leading-relaxed">
-                When a client commits to the full method — TLM plus all five pillars — Bismark guarantees measurable, sustained results. Consulting fees during the guarantee period are waived if targets aren't met. That's not a marketing line. It's the contractual structure of every full engagement.
-              </p>
-            </div>
-
-            <Link
-              to="/method"
-              className="inline-flex items-center gap-2 text-gold-600 font-display hover:text-gold-400 transition-colors"
-            >
-              EXPLORE THE BISMARK METHOD
-              <ArrowRight className="w-5 h-5" />
-            </Link>
           </div>
         </div>
       </section>
