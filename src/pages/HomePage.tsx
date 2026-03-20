@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { getRandomPairings } from '../data/industryRotation';
+import handFivePillarsImg from '../assets/image004.jpg';
 
 const HomePage = () => {
   const [pairings, setPairings] = useState<{ industry: string; operation: string }[]>([]);
@@ -155,6 +156,14 @@ const HomePage = () => {
                   <span className="font-display text-xl text-gold-400">Continuous Improvement</span>
                 </li>
               </ol>
+            </div>
+
+            <div className="mt-12 flex justify-center">
+              <img
+                src={handFivePillarsImg}
+                alt="The Bismark Method — TLM as the palm, the Five Pillars as the fingers"
+                className="w-full max-w-2xl"
+              />
             </div>
 
             <p className="text-gray-300 leading-relaxed mb-10">
