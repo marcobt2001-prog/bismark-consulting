@@ -24,6 +24,20 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-19 — Five Pillars heading inside grid, 1fr/auto columns, 160px image
+**Files Modified:**
+- src/pages/HomePage.tsx
+- CHANGELOG.md
+
+**Files Created:**
+- (none)
+
+**Files Deleted:**
+- (none)
+
+**Summary:**
+Moved the "THE FIVE PILLARS" heading inside the left grid column alongside the list. Changed grid to grid-cols-[1fr_auto] with items-start alignment and set the image to a fixed 160px width.
+
 ### 2026-03-19 — Asymmetric grid and constrained image in Five Pillars layout
 **Files Modified:**
 - src/pages/HomePage.tsx

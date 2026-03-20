@@ -130,14 +130,13 @@ const HomePage = () => {
               </p>
             </div>
 
-            <h3 className="font-display text-2xl text-gold-600 mb-4">
-              THE FIVE PILLARS
-            </h3>
+            <div className="grid grid-cols-[1fr_auto] gap-8 items-start mt-10">
 
-            <div className="grid md:grid-cols-[2fr_1fr] gap-12 items-center mt-10">
-
-              {/* LEFT — Five Pillars list */}
+              {/* LEFT — heading + list together */}
               <div>
+                <h3 className="font-display text-2xl text-gold-600 mb-4">
+                  THE FIVE PILLARS
+                </h3>
                 <ol className="space-y-4">
                   <li className="flex items-start gap-4">
                     <span className="font-display text-2xl text-gold-600 flex-shrink-0">1.</span>
@@ -162,12 +161,12 @@ const HomePage = () => {
                 </ol>
               </div>
 
-              {/* RIGHT — Hand metaphor image */}
-              <div className="flex justify-center">
+              {/* RIGHT — image only */}
+              <div className="flex items-start pt-1">
                 <img
                   src={handFivePillarsImg}
                   alt="The Bismark Method — Transformative Leadership Mastery as the palm, the Five Pillars as the fingers"
-                  className="w-full max-w-[210px] mx-auto"
+                  className="w-[160px]"
                 />
               </div>
 
