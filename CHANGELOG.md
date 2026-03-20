@@ -24,6 +24,20 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-19 — Scale Five Pillars image to match left column height
+**Files Modified:**
+- src/pages/HomePage.tsx
+- CHANGELOG.md
+
+**Files Created:**
+- (none)
+
+**Files Deleted:**
+- (none)
+
+**Summary:**
+Changed Five Pillars grid to equal columns with items-stretch so the image fills the same height as the left column content.
+
 ### 2026-03-19 — Five Pillars heading inside grid, 1fr/auto columns, 160px image
 **Files Modified:**
 - src/pages/HomePage.tsx

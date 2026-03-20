@@ -130,7 +130,7 @@ const HomePage = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-[1fr_auto] gap-8 items-start mt-10">
+            <div className="grid grid-cols-2 gap-8 items-stretch mt-10">
 
               {/* LEFT — heading + list together */}
               <div>
@@ -162,11 +162,11 @@ const HomePage = () => {
               </div>
 
               {/* RIGHT — image only */}
-              <div className="flex items-start pt-1">
+              <div className="flex items-center justify-center">
                 <img
                   src={handFivePillarsImg}
                   alt="The Bismark Method — Transformative Leadership Mastery as the palm, the Five Pillars as the fingers"
-                  className="w-[160px]"
+                  className="w-full h-full object-contain"
                 />
               </div>
 
