@@ -24,6 +24,20 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-19 — Asymmetric grid and constrained image in Five Pillars layout
+**Files Modified:**
+- src/pages/HomePage.tsx
+- CHANGELOG.md
+
+**Files Created:**
+- (none)
+
+**Files Deleted:**
+- (none)
+
+**Summary:**
+Changed the Five Pillars/image grid to an asymmetric 2fr/1fr split and capped the image width at 210px to prevent it from dominating the layout.
+
 ### 2026-03-19 — Five Pillars list and image side-by-side in Section 3
 **Files Modified:**
 - src/pages/HomePage.tsx

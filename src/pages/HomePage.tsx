@@ -134,7 +134,7 @@ const HomePage = () => {
               THE FIVE PILLARS
             </h3>
 
-            <div className="grid md:grid-cols-2 gap-12 items-center mt-10">
+            <div className="grid md:grid-cols-[2fr_1fr] gap-12 items-center mt-10">
 
               {/* LEFT — Five Pillars list */}
               <div>
@@ -167,7 +167,7 @@ const HomePage = () => {
                 <img
                   src={handFivePillarsImg}
                   alt="The Bismark Method — Transformative Leadership Mastery as the palm, the Five Pillars as the fingers"
-                  className="w-full max-w-md"
+                  className="w-full max-w-[210px] mx-auto"
                 />
               </div>
 
