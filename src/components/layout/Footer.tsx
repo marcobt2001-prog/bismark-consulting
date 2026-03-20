@@ -7,9 +7,11 @@ export default function Footer() {
       { name: 'About', href: '/about' },
       { name: 'The Bismark Method', href: '/method' },
       { name: 'Industries', href: '/industries' },
+      { name: 'FAQ', href: '/faq' },
     ],
     services: [
       { name: 'The Walkthrough', href: '/walkthrough' },
+      { name: 'Insights', href: '/insights' },
       { name: 'Contact', href: '/contact' },
     ],
   };
@@ -63,10 +65,10 @@ export default function Footer() {
         <div className="border-t border-navy-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Bismark Consulting. All rights reserved.
+              © {new Date().getFullYear()} Bismark Consulting Group. All rights reserved.
             </p>
             <p className="text-gray-400 text-sm mt-4 md:mt-0">
-              Founded 1998 | 20+ Years of Sustained Results
+              Founded 1998 | 25+ Years of Sustained Results
             </p>
           </div>
         </div>

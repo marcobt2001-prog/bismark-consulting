@@ -174,7 +174,7 @@ const WalkthroughPage = () => {
             </div>
 
             <p className="text-lg text-gray-700 leading-relaxed text-center max-w-4xl mx-auto">
-              We've conducted these assessments for over 20 years. We've never completed one without identifying significant, quantifiable improvement opportunities. Not because we're looking for problems &mdash; because operational complexity always creates them.
+              We've conducted these assessments for over 25 years. We've never completed one without identifying significant, quantifiable improvement opportunities. Not because we're looking for problems &mdash; because operational complexity always creates them.
             </p>
           </div>
         </div>
@@ -370,7 +370,7 @@ const WalkthroughPage = () => {
             <div className="space-y-4">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-8 py-4 font-display text-lg hover:bg-gold-700 transition-colors"
+                className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-8 py-4 font-display text-lg hover:bg-gold-500 transition-colors"
               >
                 SCHEDULE YOUR DISCOVERY CALL
                 <ArrowRight className="w-5 h-5" />

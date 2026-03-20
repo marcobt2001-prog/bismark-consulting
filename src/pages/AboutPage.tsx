@@ -9,7 +9,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 opacity-90" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="font-display text-5xl md:text-7xl mb-8 tracking-wide">
-            ABOUT BISMARK CONSULTING
+            ABOUT BISMARK CONSULTING GROUP
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-3xl leading-relaxed">
             We didn&rsquo;t start with a methodology. We started with a problem no one in consulting wanted to talk about.
@@ -27,7 +27,7 @@ export default function AboutPage() {
 
           <div className="max-w-3xl space-y-6 text-lg text-gray-300 leading-relaxed">
             <p>
-              In 1998, Luis Telleria-Xucla founded Bismark Consulting as a contractor-for-hire, providing hands-on operational expertise to companies that needed help running their operations better. He worked inside gold mines in Peru, inside financial services companies processing millions of transactions, inside food production facilities and energy utilities and tire manufacturing plants. He worked in the United States, Canada, and South Africa. He worked across more industries than most consultants see in a career &mdash; not because he was chasing breadth, but because the problems kept looking the same.
+              In 1998, Luis Telleria-Xucla founded Bismark Consulting Group as a contractor-for-hire, providing hands-on operational expertise to companies that needed help running their operations better. He worked inside gold mines in Peru, inside financial services companies processing millions of transactions, inside food production facilities and energy utilities and tire manufacturing plants. He worked in the United States, Canada, and South Africa. He worked across more industries than most consultants see in a career &mdash; not because he was chasing breadth, but because the problems kept looking the same.
             </p>
             <p>
               The throughput problem at the mine looked like the turnaround-time problem at the insurer. The supply chain mess at the food company looked like the cost structure problem at the bank. Different industries, different jargon, different org charts &mdash; but the same operational patterns underneath, and the same reason improvement efforts kept failing.
@@ -39,7 +39,7 @@ export default function AboutPage() {
               Luis spent nearly a decade watching this cycle repeat &mdash; sometimes from the outside, sometimes from inside engagements where he could see the decay beginning before the final report was even delivered. The insight that eventually became The Bismark Method didn&rsquo;t arrive as a single moment. It accumulated across hundreds of operations, on three continents, in industries that had nothing in common except the way they broke down.
             </p>
             <p>
-              By 2007, Luis had seen enough. He rebuilt Bismark Consulting from the ground up around a single premise: if the client&rsquo;s team doesn&rsquo;t learn to do the work themselves, the results will never survive the consultant&rsquo;s departure. That premise became The Bismark Method &mdash; a structured engagement where the consultant&rsquo;s job isn&rsquo;t to fix the operation but to make the client&rsquo;s own people capable of fixing it, sustaining it, and improving it independently.
+              By 2007, Luis had seen enough. He rebuilt Bismark Consulting Group from the ground up around a single premise: if the client&rsquo;s team doesn&rsquo;t learn to do the work themselves, the results will never survive the consultant&rsquo;s departure. That premise became The Bismark Method &mdash; a structured engagement where the consultant&rsquo;s job isn&rsquo;t to fix the operation but to make the client&rsquo;s own people capable of fixing it, sustaining it, and improving it independently.
             </p>
             <p>
               It&rsquo;s the reason Bismark still guarantees results nearly two decades later. Not because the methodology is clever &mdash; but because the people who do the work are the people who stay.
@@ -107,7 +107,7 @@ export default function AboutPage() {
                 He started his career in operations, not consulting. That matters. Before he ever advised a client, he worked inside the operations themselves &mdash; learning how things actually run, where they actually break, and why the people closest to the work usually know more about both than anyone in a conference room.
               </p>
               <p>
-                When he founded Bismark Consulting in 1998, he brought that orientation with him. Over the next decade, he worked across mining, financial services, energy, chemicals, food production, insurance, banking, automotive, metals, pulp and paper, and contract electronics &mdash; in the United States, Canada, Peru, and South Africa. He is fluent in English and Spanish and conversationally proficient in Portuguese, which has allowed him to work directly with teams across Latin America, North America, and Africa without translators or intermediaries.
+                When he founded Bismark Consulting Group in 1998, he brought that orientation with him. Over the next decade, he worked across mining, financial services, energy, chemicals, food production, insurance, banking, automotive, metals, pulp and paper, and contract electronics &mdash; in the United States, Canada, Peru, and South Africa. He is fluent in English and Spanish and conversationally proficient in Portuguese, which has allowed him to work directly with teams across Latin America, North America, and Africa without translators or intermediaries.
               </p>
               <p>
                 That range of experience is what made The Bismark Method possible. The patterns Luis saw repeating across industries &mdash; the same failure modes, the same structural gaps, the same reasons results didn&rsquo;t sustain &mdash; are what the methodology was built to solve. He didn&rsquo;t design a framework and look for places to apply it. He watched operations fail in the same ways for a decade, then built a framework around what he&rsquo;d learned about why.
@@ -155,13 +155,26 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 6 — TESTIMONIAL PLACEHOLDER */}
+      {/* SECTION 6 — BRIDGE CTA */}
       <section className="py-16 border-t border-navy-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="border-2 border-dashed border-navy-700 rounded-lg py-16 px-8">
-            <p className="text-gray-500 text-center font-display text-sm tracking-wider">
-              [Testimonial &mdash; to be added]
+          <div className="max-w-3xl">
+            <h2 className="font-display text-3xl md:text-4xl text-white mb-6">
+              THE FASTEST WAY TO UNDERSTAND HOW WE WORK IS TO WATCH US DO IT.
+            </h2>
+            <p className="text-lg text-gray-300 leading-relaxed mb-8">
+              The Walkthrough is a complimentary 3&ndash;5 day on-site engagement where our
+              team embeds in your operation, analyzes your processes, and delivers real
+              findings before any engagement begins. It&rsquo;s the most direct evidence of
+              the methodology &mdash; and every client who has engaged us started there.
             </p>
+            <Link
+              to="/walkthrough"
+              className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-8 py-4 font-display text-lg hover:bg-gold-500 transition-colors"
+            >
+              LEARN ABOUT THE WALKTHROUGH
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </div>
         </div>
       </section>

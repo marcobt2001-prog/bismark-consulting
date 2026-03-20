@@ -28,7 +28,7 @@ const HomePage = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Bismark Consulting transforms high-volume, transaction-intensive operations — and guarantees the results. We've been doing it since 1998.
+              Bismark Consulting Group transforms high-volume, transaction-intensive operations — and guarantees the results. We've been doing it since 1998.
             </p>
 
             <div className="space-y-6 text-gray-300 leading-relaxed mb-10">
@@ -122,7 +122,7 @@ const HomePage = () => {
 
             <div className="mb-10">
               <h3 className="font-display text-2xl text-gold-600 mb-4">
-                TLM — TRANSFORMATION LEADERSHIP MASTERY
+                TLM — TRANSFORMATIVE LEADERSHIP MASTERY
               </h3>
               <p className="text-gray-300 leading-relaxed">
                 TLM is the foundation — the palm of the hand. It transforms your leadership team into operational architects through six core concepts: The Power of Context, Two Modes of Listening, Integrity vs. Sincerity, 5 Types of Conversations, 5-Step Transformation Model, and 7 Commitments to Breaking Down Barriers. These aren't theoretical frameworks — they're practical tools your leaders apply immediately to how they manage, communicate, and drive accountability across the operation.

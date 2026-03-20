@@ -38,7 +38,7 @@ export default function Navbar() {
             ))}
             <Link
               to="/walkthrough"
-              className="bg-gold-600 text-white px-6 py-2 rounded-md text-sm font-semibold hover:bg-gold-700 transition-colors"
+              className="bg-gold-600 text-navy-900 px-6 py-2 text-sm font-semibold hover:bg-gold-500 transition-colors"
             >
               Schedule a Walkthrough
             </Link>
@@ -69,7 +69,7 @@ export default function Navbar() {
             <Link
               to="/walkthrough"
               onClick={() => setIsOpen(false)}
-              className="block w-full text-center bg-gold-600 text-white px-6 py-2 rounded-md text-base font-semibold hover:bg-gold-700 mt-4"
+              className="block w-full text-center bg-gold-600 text-navy-900 px-6 py-2 text-base font-semibold hover:bg-gold-500 mt-4"
             >
               Schedule a Walkthrough
             </Link>

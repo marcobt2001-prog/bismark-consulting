@@ -39,7 +39,7 @@ const CaseStudyDetailPage = () => {
       ],
       testimonial: {
         quote:
-          'Bismark Consulting transformed our claims operation from a cost center into a competitive advantage. Their team\'s deep insurance expertise and hands-on approach delivered results beyond our expectations.',
+          'Bismark Consulting Group transformed our claims operation from a cost center into a competitive advantage. Their team\'s deep insurance expertise and hands-on approach delivered results beyond our expectations.',
         author: 'Chief Operating Officer',
         company: 'Regional Insurance Provider',
       },

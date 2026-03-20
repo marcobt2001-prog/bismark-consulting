@@ -154,7 +154,7 @@ const ContactPage = () => {
               {/* Company Info */}
               <div className="bg-gray-50 border-2 border-gray-200 rounded-lg p-8">
                 <h3 className="font-display text-2xl text-navy-900 mb-6">
-                  BISMARK CONSULTING
+                  BISMARK CONSULTING GROUP
                 </h3>
 
                 <div className="space-y-4 mb-8">
@@ -172,24 +172,11 @@ const ContactPage = () => {
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <Phone className="w-5 h-5 text-gold-600 flex-shrink-0 mt-1" />
-                    <div>
-                      <p className="text-sm text-gray-600 mb-1">Phone</p>
-                      <a
-                        href="tel:+1234567890"
-                        className="text-navy-900 hover:text-gold-600 transition-colors font-medium"
-                      >
-                        [Phone Number]
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
                     <MapPin className="w-5 h-5 text-gold-600 flex-shrink-0 mt-1" />
                     <div>
                       <p className="text-sm text-gray-600 mb-1">Headquarters</p>
                       <p className="text-navy-900 font-medium">
-                        [City, State]
+                        Miami, Florida
                       </p>
                       <p className="text-sm text-gray-600 mt-1">
                         We work on-site nationwide
@@ -203,7 +190,7 @@ const ContactPage = () => {
                       <p className="text-sm text-gray-600 mb-1">Founded</p>
                       <p className="text-navy-900 font-medium">1998</p>
                       <p className="text-sm text-gray-600 mt-1">
-                        20+ years of operational excellence
+                        25+ years of operational excellence
                       </p>
                     </div>
                   </div>
@@ -216,15 +203,12 @@ const ContactPage = () => {
                   <p className="text-gray-700">
                     Monday - Friday: 8:00 AM - 6:00 PM EST
                   </p>
-                  <p className="text-sm text-gray-600 mt-2">
-                    For urgent matters, please call our main line.
-                  </p>
                 </div>
               </div>
 
               {/* Schedule Walkthrough CTA */}
               <div className="bg-navy-900 text-white rounded-lg p-8">
-                <div className="w-16 h-16 bg-gold-600 rounded-full flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gold-600 flex items-center justify-center mb-6">
                   <Calendar className="w-8 h-8 text-navy-900" />
                 </div>
 
@@ -279,7 +263,7 @@ const ContactPage = () => {
             </h2>
             <div className="bg-gold-600 h-1 w-24 mx-auto mb-8" />
             <p className="text-xl text-gray-700 leading-relaxed mb-12">
-              While headquartered in [Location], we serve clients nationwide and
+              While headquartered in Miami, Florida, we serve clients nationwide and
               internationally. The Bismark Method requires on-site engagement, and
               we travel to you.
             </p>
@@ -356,7 +340,7 @@ const ContactPage = () => {
               <p className="text-gray-700 leading-relaxed">
                 Yes. We guarantee specific, measurable outcomes defined during the discovery
                 phase. Our fees are structured to align with results delivery, and we've
-                delivered on our guarantees for 20+ years.
+                delivered on our guarantees for 25+ years.
               </p>
             </div>
           </div>
@@ -370,8 +354,8 @@ const ContactPage = () => {
             READY TO START THE CONVERSATION?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Whether you choose to send a message or schedule a call, you'll speak with
-            experienced operational consultants who understand your challenges.
+            Whether you choose to send a message or schedule a walkthrough,
+            you'll connect with an experienced Bismark Consulting Group operational consultant.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -384,13 +368,6 @@ const ContactPage = () => {
             >
               SEND A MESSAGE
               <ArrowRight className="w-5 h-5" />
-            </a>
-            <a
-              href="tel:+1234567890"
-              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 font-display text-lg hover:bg-white hover:text-navy-900 transition-colors"
-            >
-              CALL US NOW
-              <Phone className="w-5 h-5" />
             </a>
           </div>
         </div>

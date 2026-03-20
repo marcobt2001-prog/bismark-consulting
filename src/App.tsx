@@ -9,7 +9,6 @@ import WalkthroughPage from './pages/WalkthroughPage';
 import FAQPage from './pages/FAQPage';
 import ContactPage from './pages/ContactPage';
 import InsightsPage from './pages/InsightsPage';
-import HomePageOld from './pages/HomePageOld';
 import BankingLendingPage from './pages/industries/BankingLendingPage';
 import DistributionLogisticsPage from './pages/industries/DistributionLogisticsPage';
 import EnterpriseTechnologyPage from './pages/industries/EnterpriseTechnologyPage';
@@ -45,7 +44,6 @@ function App() {
           <Route path="/insights" element={<InsightsPage />} />
           <Route path="/faq" element={<FAQPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/homepage-old" element={<HomePageOld />} />
         </Routes>
       </main>
       <Footer />
