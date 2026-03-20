@@ -24,6 +24,20 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-19 — Five Pillars list and image side-by-side in Section 3
+**Files Modified:**
+- src/pages/HomePage.tsx
+- CHANGELOG.md
+
+**Files Created:**
+- (none)
+
+**Files Deleted:**
+- (none)
+
+**Summary:**
+Restructured Section 3 so the Five Pillars ordered list and the hand metaphor image sit side by side in a nested two-column grid, with TLM content and remaining text above and below.
+
 ### 2026-03-19 — Converted Section 3 to two-column layout with image
 **Files Modified:**
 - src/pages/HomePage.tsx
