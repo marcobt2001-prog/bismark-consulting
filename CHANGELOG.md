@@ -24,6 +24,19 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-22 — Recreate ScrollToTop with useLayoutEffect
+**Files Modified:**
+- src/main.tsx
+
+**Files Created:**
+- src/components/ScrollToTop.tsx
+
+**Files Deleted:**
+- (none)
+
+**Summary:**
+Recreated ScrollToTop component using useLayoutEffect for synchronous scroll reset before paint, wired into BrowserRouter in main.tsx alongside existing scrollRestoration = 'manual'.
+
 ### 2026-03-22 — Replace custom scroll components with native scrollRestoration API
 **Files Modified:**
 - src/main.tsx
