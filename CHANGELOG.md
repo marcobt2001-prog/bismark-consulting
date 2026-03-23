@@ -24,6 +24,19 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-22 — Add ScrollToTop utility component
+**Files Modified:**
+- src/main.tsx
+
+**Files Created:**
+- src/components/ScrollToTop.tsx
+
+**Files Deleted:**
+- (none)
+
+**Summary:**
+Added a ScrollToTop component that resets scroll position to the top on every route change, wired into BrowserRouter in main.tsx.
+
 ### 2026-03-19 — Scale Five Pillars image to match left column height
 **Files Modified:**
 - src/pages/HomePage.tsx
