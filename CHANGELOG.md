@@ -24,6 +24,21 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-23 — Add AI teaser page at /ai
+**Files Modified:**
+- src/App.tsx
+- src/components/layout/Navbar.tsx
+- src/components/layout/Footer.tsx
+
+**Files Created:**
+- src/pages/AIPage.tsx
+
+**Files Deleted:**
+- (none)
+
+**Summary:**
+Created a teaser page announcing Bismark's proprietary AI system in development. Added /ai route, navbar link between FAQ and Contact, and footer link in the company group.
+
 ### 2026-03-23 — Resize hand illustration to align with Five Pillars list
 **Files Modified:**
 - src/pages/HomePage.tsx

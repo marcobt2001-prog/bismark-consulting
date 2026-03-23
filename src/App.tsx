@@ -19,6 +19,7 @@ import InsuranceIndustryPage from './pages/industries/InsurancePage';
 import ManufacturingPage from './pages/industries/ManufacturingPage';
 import MiningMetalsPage from './pages/industries/MiningMetalsPage';
 import OilGasPage from './pages/industries/OilGasPage';
+import AIPage from './pages/AIPage';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
           <Route path="/insights" element={<InsightsPage />} />
           <Route path="/faq" element={<FAQPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/ai" element={<AIPage />} />
 
         </Routes>
       </main>

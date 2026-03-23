@@ -15,6 +15,7 @@ export default function Navbar() {
     { name: 'The Walkthrough', href: '/walkthrough' },
     { name: 'Insights', href: '/insights' },
     { name: 'FAQ', href: '/faq' },
+    { name: 'AI', href: '/ai' },
     { name: 'Contact', href: '/contact' },
   ];
 

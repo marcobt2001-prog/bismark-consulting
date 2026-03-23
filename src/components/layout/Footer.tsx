@@ -8,6 +8,7 @@ export default function Footer() {
       { name: 'The Bismark Method', href: '/method' },
       { name: 'Industries', href: '/industries' },
       { name: 'FAQ', href: '/faq' },
+      { name: 'AI', href: '/ai' },
     ],
     services: [
       { name: 'The Walkthrough', href: '/walkthrough' },
