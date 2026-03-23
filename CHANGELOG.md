@@ -24,6 +24,19 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-22 — Use instant scroll behavior in ScrollToTop
+**Files Modified:**
+- src/components/ScrollToTop.tsx
+
+**Files Created:**
+- (none)
+
+**Files Deleted:**
+- (none)
+
+**Summary:**
+Changed ScrollToTop to use `behavior: 'instant'` to bypass the global smooth scroll CSS rule on route changes.
+
 ### 2026-03-22 — Add ScrollToTop utility component
 **Files Modified:**
 - src/main.tsx
