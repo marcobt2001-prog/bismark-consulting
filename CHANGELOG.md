@@ -24,6 +24,32 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-22 — Revert to ScrollLink approach
+**Files Modified:**
+- src/main.tsx
+- src/components/layout/Navbar.tsx
+- src/components/layout/Footer.tsx
+- src/components/layout/Logo.tsx
+- src/components/IndustrySubPageLayout.tsx
+- src/components/home/CaseStudies.tsx
+- src/components/home/Services.tsx
+- src/pages/AboutPage.tsx
+- src/pages/BismarkMethodPage.tsx
+- src/pages/FAQPage.tsx
+- src/pages/HomePage.tsx
+- src/pages/IndustriesPage.tsx
+- src/pages/WalkthroughPage.tsx
+- CHANGELOG.md
+
+**Files Created:**
+- (none)
+
+**Files Deleted:**
+- src/components/ScrollToTop.tsx
+
+**Summary:**
+Reverted two commits (scrollRestoration API and useLayoutEffect ScrollToTop) to restore the ScrollLink wrapper approach from commit 1b1b0ef.
+
 ### 2026-03-22 — Replace ScrollToTop with ScrollLink wrapper component
 **Files Modified:**
 - src/main.tsx
