@@ -15,5 +15,5 @@ export default function TransitionPage() {
     });
   }, []);
 
-  return null;
+  return <div className="min-h-screen bg-white" />;
 }
