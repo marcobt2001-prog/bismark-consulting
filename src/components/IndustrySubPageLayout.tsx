@@ -1,4 +1,4 @@
-import ScrollLink from './ScrollLink';
+import { Link } from 'react-router-dom';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
 import type { Industry } from '../data/industries';
 import { industries } from '../data/industries';
@@ -105,13 +105,13 @@ export default function IndustrySubPageLayout({ industry }: Props) {
             where we examine your operations with the same rigor we bring to a
             full engagement.
           </p>
-          <ScrollLink
+          <Link
             to="/walkthrough"
             className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-12 py-5 font-display text-xl hover:bg-gold-500 transition-colors"
           >
             Schedule a Walkthrough
             <ArrowRight className="w-5 h-5" />
-          </ScrollLink>
+          </Link>
         </div>
       </section>
 
@@ -121,32 +121,32 @@ export default function IndustrySubPageLayout({ industry }: Props) {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-6">
               {prevIndustry && (
-                <ScrollLink
+                <Link
                   to={`/industries/${prevIndustry.slug}`}
                   className="flex items-center gap-2 text-navy-700 hover:text-gold-600 transition-colors font-medium"
                 >
                   <ArrowLeft className="w-4 h-4" />
                   {prevIndustry.name}
-                </ScrollLink>
+                </Link>
               )}
             </div>
 
-            <ScrollLink
+            <Link
               to="/industries"
               className="text-navy-700 hover:text-gold-600 transition-colors font-medium"
             >
               &larr; Back to Industries
-            </ScrollLink>
+            </Link>
 
             <div className="flex items-center gap-6">
               {nextIndustry && (
-                <ScrollLink
+                <Link
                   to={`/industries/${nextIndustry.slug}`}
                   className="flex items-center gap-2 text-navy-700 hover:text-gold-600 transition-colors font-medium"
                 >
                   {nextIndustry.name}
                   <ArrowRight className="w-4 h-4" />
-                </ScrollLink>
+                </Link>
               )}
             </div>
           </div>

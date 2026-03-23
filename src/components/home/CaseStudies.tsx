@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import ScrollLink from '../ScrollLink';
+import { Link } from 'react-router-dom';
 import { ArrowRight, TrendingUp } from 'lucide-react';
 
 const CaseStudies = () => {
@@ -138,13 +138,13 @@ const CaseStudies = () => {
                   ))}
                 </div>
 
-                <ScrollLink
+                <Link
                   to="/case-studies"
                   className="inline-flex items-center text-white font-semibold group-hover:text-accent-300 transition-colors"
                 >
                   Read full case study
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={16} />
-                </ScrollLink>
+                </Link>
               </div>
 
               {/* Hover overlay */}
@@ -159,13 +159,13 @@ const CaseStudies = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-12"
         >
-          <ScrollLink
+          <Link
             to="/case-studies"
             className="inline-flex items-center px-8 py-4 bg-primary-950 text-white font-semibold rounded-md hover:bg-primary-900 transition-colors duration-200 group"
           >
             View All Case Studies
             <TrendingUp className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-          </ScrollLink>
+          </Link>
         </motion.div>
       </div>
     </section>

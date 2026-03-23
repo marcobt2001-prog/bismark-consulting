@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import ScrollLink from '../components/ScrollLink';
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { getRandomPairings } from '../data/industryRotation';
 import handFivePillarsImg from '../assets/image004.jpg';
@@ -45,13 +45,13 @@ const HomePage = () => {
             </div>
 
             <div>
-              <ScrollLink
+              <Link
                 to="/walkthrough"
                 className="inline-flex items-center justify-center gap-2 bg-gold-600 text-navy-900 px-8 py-4 font-display text-lg hover:bg-gold-500 transition-colors"
               >
                 SCHEDULE A WALKTHROUGH
                 <ArrowRight className="w-5 h-5" />
-              </ScrollLink>
+              </Link>
               <p className="text-sm text-gray-400 mt-4">
                 Complimentary. On-site. 3–5 days. No consulting fees.
               </p>
@@ -98,13 +98,13 @@ const HomePage = () => {
               The Bismark Method addresses all three simultaneously — not sequentially, not optionally. That's why we can guarantee results.
             </p>
 
-            <ScrollLink
+            <Link
               to="/method"
               className="inline-flex items-center gap-2 text-navy-900 font-display hover:text-gold-600 transition-colors"
             >
               LEARN ABOUT THE BISMARK METHOD
               <ArrowRight className="w-5 h-5" />
-            </ScrollLink>
+            </Link>
           </div>
         </div>
       </section>
@@ -183,13 +183,13 @@ const HomePage = () => {
               </p>
             </div>
 
-            <ScrollLink
+            <Link
               to="/method"
               className="inline-flex items-center gap-2 text-gold-600 font-display hover:text-gold-400 transition-colors"
             >
               EXPLORE THE BISMARK METHOD
               <ArrowRight className="w-5 h-5" />
-            </ScrollLink>
+            </Link>
           </div>
         </div>
       </section>
@@ -221,13 +221,13 @@ const HomePage = () => {
             The Bismark Method works because operational excellence follows patterns, not industry boundaries. Claims adjudication in insurance and loan underwriting in banking are variations of the same archetype — authorization and verification under volume and time pressure. We see the pattern. We transform the process. We guarantee the result.
           </p>
 
-          <ScrollLink
+          <Link
             to="/industries"
             className="inline-flex items-center gap-2 text-navy-900 font-display hover:text-gold-600 transition-colors"
           >
             EXPLORE ALL INDUSTRIES
             <ArrowRight className="w-5 h-5" />
-          </ScrollLink>
+          </Link>
         </div>
       </section>
 
@@ -279,13 +279,13 @@ const HomePage = () => {
                 </ul>
               </div>
 
-              <ScrollLink
+              <Link
                 to="/walkthrough"
                 className="inline-flex items-center gap-2 text-gold-600 font-display hover:text-gold-400 transition-colors"
               >
                 LEARN MORE ABOUT THE WALKTHROUGH
                 <ArrowRight className="w-5 h-5" />
-              </ScrollLink>
+              </Link>
             </div>
 
             {/* Step 2 */}
@@ -433,13 +433,13 @@ const HomePage = () => {
           </div>
 
           <div className="mt-8">
-            <ScrollLink
+            <Link
               to="/insights"
               className="inline-flex items-center gap-2 text-navy-900 font-display hover:text-gold-600 transition-colors"
             >
               VISIT INSIGHTS
               <ArrowRight className="w-5 h-5" />
-            </ScrollLink>
+            </Link>
           </div>
         </div>
       </section>
@@ -460,13 +460,13 @@ const HomePage = () => {
             </p>
 
             {/* TODO: Replace with Calendly widget embed */}
-            <ScrollLink
+            <Link
               to="/contact"
               className="inline-flex items-center justify-center gap-2 bg-gold-600 text-navy-900 px-8 py-4 font-display text-lg hover:bg-gold-500 transition-colors"
             >
               SCHEDULE A DISCOVERY CALL
               <ArrowRight className="w-5 h-5" />
-            </ScrollLink>
+            </Link>
 
             <p className="text-gray-400 text-sm mt-6">
               Prefer email?{' '}
