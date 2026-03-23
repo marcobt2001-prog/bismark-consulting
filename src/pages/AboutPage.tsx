@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import luisPhoto from '../assets/[PHOTO-LUIS-TELLERIA-XUCLA].jpg';
 import OriginMap from '../components/visuals/OriginMap';
 import ConsultingFailureCycle from '../components/visuals/ConsultingFailureCycle';
 
@@ -97,11 +98,13 @@ export default function AboutPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
-            {/* Headshot Placeholder */}
-            <div className="flex items-center justify-center border-2 border-navy-700 bg-navy-800 rounded-lg" style={{ minHeight: '500px', aspectRatio: '4/5' }}>
-              <p className="text-gray-500 font-display text-sm tracking-wider text-center px-8">
-                [Photo &mdash; Luis Telleria-Xucla]
-              </p>
+            {/* Headshot */}
+            <div className="rounded-lg overflow-hidden" style={{ aspectRatio: '4/5' }}>
+              <img
+                src={luisPhoto}
+                alt="Luis Telleria-Xucla — Founder & Managing Director, Bismark Consulting Group"
+                className="w-full h-full object-cover"
+              />
             </div>
 
             {/* Bio Copy */}
