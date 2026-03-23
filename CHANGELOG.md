@@ -24,6 +24,22 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-22 — Add TransitionPage and TransitionLink for scroll-then-navigate
+**Files Modified:**
+- src/App.tsx
+- src/components/layout/Navbar.tsx
+- src/components/layout/Footer.tsx
+
+**Files Created:**
+- src/pages/TransitionPage.tsx
+- src/components/TransitionLink.tsx
+
+**Files Deleted:**
+- (none)
+
+**Summary:**
+Added a /go transition route that scrolls to top before navigating, and a TransitionLink wrapper component. Navbar and Footer now use TransitionLink instead of ScrollLink.
+
 ### 2026-03-22 — Revert to ScrollLink approach
 **Files Modified:**
 - src/main.tsx
