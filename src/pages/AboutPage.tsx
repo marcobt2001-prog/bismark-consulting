@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import luisPhoto from '../assets/[PHOTO-LUIS-TELLERIA-XUCLA].jpg';
+import luisPhoto from '../assets/luis-telleria-xucla.jpg';
 import OriginMap from '../components/visuals/OriginMap';
 import ConsultingFailureCycle from '../components/visuals/ConsultingFailureCycle';
 
