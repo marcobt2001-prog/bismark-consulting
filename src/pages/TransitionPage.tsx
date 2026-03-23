@@ -7,9 +7,12 @@ export default function TransitionPage() {
   const to = searchParams.get('to') || '/';
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-    const timer = setTimeout(() => navigate(to, { replace: true }), 20);
-    return () => clearTimeout(timer);
+    requestAnimationFrame(() => {
+      window.scrollTo(0, 0);
+      requestAnimationFrame(() => {
+        navigate(to, { replace: true });
+      });
+    });
   }, []);
 
   return null;

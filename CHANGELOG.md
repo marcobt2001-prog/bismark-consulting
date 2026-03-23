@@ -24,6 +24,19 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-22 — Use requestAnimationFrame in TransitionPage instead of setTimeout
+**Files Modified:**
+- src/pages/TransitionPage.tsx
+
+**Files Created:**
+- (none)
+
+**Files Deleted:**
+- (none)
+
+**Summary:**
+Replaced setTimeout-based navigation in TransitionPage with nested requestAnimationFrame calls for more reliable scroll-then-navigate timing.
+
 ### 2026-03-22 — Add TransitionPage and TransitionLink for scroll-then-navigate
 **Files Modified:**
 - src/App.tsx
