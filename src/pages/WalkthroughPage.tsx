@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import ScrollLink from '../components/ScrollLink';
 import { ArrowRight, Users, BarChart3, FileSearch, Presentation, Calendar, Building, TrendingUp, BookOpen, Clock, Shield, Database, Brain } from 'lucide-react';
 
 const WalkthroughPage = () => {
@@ -296,9 +296,9 @@ const WalkthroughPage = () => {
 
           <p className="text-gray-700 leading-relaxed text-center max-w-4xl mx-auto">
             The method is built around operational processes, not industry labels. If your organization runs claims processing, policy administration, customer service operations, payment processing, loan origination, compliance workflows, or contact center operations &mdash; the walkthrough will find value.{' '}
-            <Link to="/industries" className="text-gold-600 hover:text-gold-700 font-medium">
+            <ScrollLink to="/industries" className="text-gold-600 hover:text-gold-700 font-medium">
               Industries & Services &rarr;
-            </Link>
+            </ScrollLink>
           </p>
         </div>
       </section>
@@ -368,13 +368,13 @@ const WalkthroughPage = () => {
             </div>
 
             <div className="space-y-4">
-              <Link
+              <ScrollLink
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-8 py-4 font-display text-lg hover:bg-gold-500 transition-colors"
               >
                 SCHEDULE YOUR DISCOVERY CALL
                 <ArrowRight className="w-5 h-5" />
-              </Link>
+              </ScrollLink>
 
               <p className="text-sm text-gray-600">
                 Prefer email? Reach us at{' '}

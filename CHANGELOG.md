@@ -24,31 +24,6 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
-### 2026-03-22 — Replace custom scroll components with native scrollRestoration API
-**Files Modified:**
-- src/main.tsx
-- src/components/layout/Navbar.tsx
-- src/components/layout/Footer.tsx
-- src/components/layout/Logo.tsx
-- src/components/IndustrySubPageLayout.tsx
-- src/components/home/CaseStudies.tsx
-- src/components/home/Services.tsx
-- src/pages/AboutPage.tsx
-- src/pages/BismarkMethodPage.tsx
-- src/pages/FAQPage.tsx
-- src/pages/HomePage.tsx
-- src/pages/IndustriesPage.tsx
-- src/pages/WalkthroughPage.tsx
-
-**Files Created:**
-- (none)
-
-**Files Deleted:**
-- src/components/ScrollLink.tsx
-
-**Summary:**
-Removed ScrollLink wrapper component and reverted all files back to standard react-router-dom `<Link>`. Added `window.history.scrollRestoration = 'manual'` in main.tsx as the sole scroll management mechanism.
-
 ### 2026-03-22 — Replace ScrollToTop with ScrollLink wrapper component
 **Files Modified:**
 - src/main.tsx

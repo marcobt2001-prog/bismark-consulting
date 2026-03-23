@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import ScrollLink from '../ScrollLink';
 import Logo from './Logo';
 
 export default function Footer() {
@@ -34,12 +34,12 @@ export default function Footer() {
             <ul className="space-y-2">
               {navigation.company.map((item) => (
                 <li key={item.name}>
-                  <Link
+                  <ScrollLink
                     to={item.href}
                     className="text-gray-400 hover:text-gold-400 text-sm transition-colors"
                   >
                     {item.name}
-                  </Link>
+                  </ScrollLink>
                 </li>
               ))}
             </ul>
@@ -50,12 +50,12 @@ export default function Footer() {
             <ul className="space-y-2">
               {navigation.services.map((item) => (
                 <li key={item.name}>
-                  <Link
+                  <ScrollLink
                     to={item.href}
                     className="text-gray-400 hover:text-gold-400 text-sm transition-colors"
                   >
                     {item.name}
-                  </Link>
+                  </ScrollLink>
                 </li>
               ))}
             </ul>

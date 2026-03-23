@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import ScrollLink from '../components/ScrollLink';
 import {
   ArrowRight,
   Users,
@@ -122,12 +122,12 @@ const BismarkMethodPage = () => {
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-10">
             The Bismark Method is a 16-week &ldquo;Learn and Do&rdquo; engagement that transforms your internal teams into the people who improve your operations &mdash; not consultants who do it for you. When it&rsquo;s done right, we guarantee the results.
           </p>
-          <Link
+          <ScrollLink
             to="/walkthrough"
             className="inline-block bg-gold-600 text-navy-900 px-10 py-4 font-display text-lg hover:bg-gold-500 transition-colors"
           >
             Schedule a Walkthrough
-          </Link>
+          </ScrollLink>
         </div>
       </section>
 
@@ -561,21 +561,21 @@ const BismarkMethodPage = () => {
             The Walkthrough is a complimentary 3&ndash;5 day on-site assessment where we evaluate your operations and show you exactly where The Bismark Method would apply. No theory. No pitch deck. Just your operations, examined with the same rigor we bring to a full engagement.
           </p>
 
-          <Link
+          <ScrollLink
             to="/walkthrough"
             className="inline-block bg-gold-600 text-navy-900 px-12 py-5 font-display text-xl hover:bg-gold-500 transition-colors mb-6"
           >
             Schedule a Walkthrough
-          </Link>
+          </ScrollLink>
 
           <div>
-            <Link
+            <ScrollLink
               to="/walkthrough"
               className="text-gold-600 hover:text-gold-500 font-display text-sm tracking-wider inline-flex items-center gap-2"
             >
               Learn more about The Walkthrough
               <ArrowRight className="w-4 h-4" />
-            </Link>
+            </ScrollLink>
           </div>
         </div>
       </section>
