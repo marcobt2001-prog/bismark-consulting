@@ -24,6 +24,34 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-22 — Fix scroll-to-top: remove smooth scroll CSS, clean up all workarounds
+**Files Modified:**
+- src/index.css
+- src/App.tsx
+- src/components/layout/Navbar.tsx
+- src/components/layout/Footer.tsx
+- src/components/layout/Logo.tsx
+- src/components/IndustrySubPageLayout.tsx
+- src/components/home/CaseStudies.tsx
+- src/components/home/Services.tsx
+- src/pages/HomePage.tsx
+- src/pages/AboutPage.tsx
+- src/pages/BismarkMethodPage.tsx
+- src/pages/FAQPage.tsx
+- src/pages/IndustriesPage.tsx
+- src/pages/WalkthroughPage.tsx
+
+**Files Created:**
+- src/components/ScrollToTop.tsx
+
+**Files Deleted:**
+- src/components/ScrollLink.tsx
+- src/components/TransitionLink.tsx
+- src/pages/TransitionPage.tsx
+
+**Summary:**
+Removed `scroll-behavior: smooth` from index.css (the root cause), deleted all previous scroll workarounds (ScrollLink, TransitionLink, TransitionPage, /go route), reverted all Link imports to react-router-dom, and added a clean ScrollToTop component using useLayoutEffect in App.tsx.
+
 ### 2026-03-22 — Render white background div in TransitionPage instead of null
 **Files Modified:**
 - src/pages/TransitionPage.tsx

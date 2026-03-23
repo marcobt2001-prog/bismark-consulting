@@ -19,11 +19,12 @@ import InsuranceIndustryPage from './pages/industries/InsurancePage';
 import ManufacturingPage from './pages/industries/ManufacturingPage';
 import MiningMetalsPage from './pages/industries/MiningMetalsPage';
 import OilGasPage from './pages/industries/OilGasPage';
-import TransitionPage from './pages/TransitionPage';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <div className="min-h-screen bg-white">
+      <ScrollToTop />
       <Navbar />
       <main>
         <Routes>
@@ -45,7 +46,7 @@ function App() {
           <Route path="/insights" element={<InsightsPage />} />
           <Route path="/faq" element={<FAQPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/go" element={<TransitionPage />} />
+
         </Routes>
       </main>
       <Footer />

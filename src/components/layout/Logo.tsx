@@ -1,8 +1,8 @@
-import ScrollLink from '../ScrollLink';
+import { Link } from 'react-router-dom';
 
 export default function Logo() {
   return (
-    <ScrollLink to="/" className="block">
+    <Link to="/" className="block">
       <div className="flex flex-col leading-none">
         <span className="font-display text-4xl md:text-5xl tracking-wider text-navy-900">
           BISMARK
@@ -11,6 +11,6 @@ export default function Logo() {
           CONSULTING
         </span>
       </div>
-    </ScrollLink>
+    </Link>
   );
 }
