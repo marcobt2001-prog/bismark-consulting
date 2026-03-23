@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import ScrollLink from '../components/ScrollLink';
 import { ArrowRight } from 'lucide-react';
 
 export default function AboutPage() {
@@ -168,13 +168,13 @@ export default function AboutPage() {
               findings before any engagement begins. It&rsquo;s the most direct evidence of
               the methodology &mdash; and every client who has engaged us started there.
             </p>
-            <Link
+            <ScrollLink
               to="/walkthrough"
               className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-8 py-4 font-display text-lg hover:bg-gold-500 transition-colors"
             >
               LEARN ABOUT THE WALKTHROUGH
               <ArrowRight className="w-5 h-5" />
-            </Link>
+            </ScrollLink>
           </div>
         </div>
       </section>
@@ -189,13 +189,13 @@ export default function AboutPage() {
             The best way to understand how we work is to experience it firsthand. Our complimentary Walkthrough puts Bismark coaches on-site in your operation for 3&ndash;5 days &mdash; long enough to show you what we see, how we think, and what&rsquo;s possible.
           </p>
 
-          <Link
+          <ScrollLink
             to="/walkthrough"
             className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-12 py-5 font-display text-xl hover:bg-gold-500 transition-colors"
           >
             Learn About the Walkthrough
             <ArrowRight className="w-5 h-5" />
-          </Link>
+          </ScrollLink>
         </div>
       </section>
     </div>

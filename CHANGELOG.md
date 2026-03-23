@@ -24,6 +24,31 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-22 — Replace ScrollToTop with ScrollLink wrapper component
+**Files Modified:**
+- src/main.tsx
+- src/components/layout/Navbar.tsx
+- src/components/layout/Footer.tsx
+- src/components/layout/Logo.tsx
+- src/components/IndustrySubPageLayout.tsx
+- src/components/home/CaseStudies.tsx
+- src/components/home/Services.tsx
+- src/pages/AboutPage.tsx
+- src/pages/BismarkMethodPage.tsx
+- src/pages/FAQPage.tsx
+- src/pages/HomePage.tsx
+- src/pages/IndustriesPage.tsx
+- src/pages/WalkthroughPage.tsx
+
+**Files Created:**
+- src/components/ScrollLink.tsx
+
+**Files Deleted:**
+- src/components/ScrollToTop.tsx
+
+**Summary:**
+Replaced the ScrollToTop effect-based approach with a ScrollLink wrapper component that scrolls to top instantly before navigating. All internal `<Link>` usages swapped to `<ScrollLink>` across 12 files.
+
 ### 2026-03-22 — Use instant scroll behavior in ScrollToTop
 **Files Modified:**
 - src/components/ScrollToTop.tsx

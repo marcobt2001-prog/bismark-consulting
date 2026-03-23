@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import ScrollLink from '../components/ScrollLink';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { faqClusters } from '../data/faq';
 
@@ -101,13 +101,13 @@ const FAQPage = () => {
             pitch &mdash; it&rsquo;s the same rigor in miniature.
           </p>
 
-          <Link
+          <ScrollLink
             to="/contact"
             className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-8 py-4 font-display text-lg hover:bg-gold-500 transition-colors"
           >
             SCHEDULE A DISCOVERY CALL
             <ArrowRight className="w-5 h-5" />
-          </Link>
+          </ScrollLink>
 
           <p className="text-sm text-gray-400 mt-6">
             Prefer email? Reach us at{' '}

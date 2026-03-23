@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import ScrollLink from '../ScrollLink';
 import { Menu, X } from 'lucide-react';
 import Logo from './Logo';
 
@@ -28,20 +29,20 @@ export default function Navbar() {
 
           <div className="hidden md:flex md:items-center md:space-x-8">
             {navigation.map((item) => (
-              <Link
+              <ScrollLink
                 key={item.name}
                 to={item.href}
                 className={'text-sm font-medium transition-colors ' + (isActive(item.href) ? 'text-gold-600' : 'text-navy-700 hover:text-gold-600')}
               >
                 {item.name}
-              </Link>
+              </ScrollLink>
             ))}
-            <Link
+            <ScrollLink
               to="/walkthrough"
               className="bg-gold-600 text-navy-900 px-6 py-2 text-sm font-semibold hover:bg-gold-500 transition-colors"
             >
               Schedule a Walkthrough
-            </Link>
+            </ScrollLink>
           </div>
 
           <button
@@ -57,22 +58,22 @@ export default function Navbar() {
         <div className="md:hidden bg-white border-t">
           <div className="px-4 pt-2 pb-4 space-y-1">
             {navigation.map((item) => (
-              <Link
+              <ScrollLink
                 key={item.name}
                 to={item.href}
                 onClick={() => setIsOpen(false)}
                 className={'block px-3 py-2 rounded-md text-base font-medium ' + (isActive(item.href) ? 'bg-gold-50 text-gold-600' : 'text-navy-700 hover:bg-gray-50')}
               >
                 {item.name}
-              </Link>
+              </ScrollLink>
             ))}
-            <Link
+            <ScrollLink
               to="/walkthrough"
               onClick={() => setIsOpen(false)}
               className="block w-full text-center bg-gold-600 text-navy-900 px-6 py-2 text-base font-semibold hover:bg-gold-500 mt-4"
             >
               Schedule a Walkthrough
-            </Link>
+            </ScrollLink>
           </div>
         </div>
       )}

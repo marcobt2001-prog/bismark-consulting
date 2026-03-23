@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Link } from 'react-router-dom';
+import ScrollLink from '../ScrollLink';
 import { TrendingUp, Settings, Zap, Briefcase, ArrowRight } from 'lucide-react';
 
 const Services = () => {
@@ -99,13 +99,13 @@ const Services = () => {
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   {service.description}
                 </p>
-                <Link
+                <ScrollLink
                   to={service.link}
                   className="inline-flex items-center text-accent-600 font-semibold group-hover:text-accent-700 transition-colors"
                 >
                   Learn more
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={16} />
-                </Link>
+                </ScrollLink>
               </motion.div>
             );
           })}

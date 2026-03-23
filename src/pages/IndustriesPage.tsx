@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import ScrollLink from '../components/ScrollLink';
 import { ArrowRight } from 'lucide-react';
 import { industries } from '../data/industries';
 
@@ -149,7 +149,7 @@ const IndustriesPage = () => {
 
           <div className="grid md:grid-cols-2 gap-6">
             {industries.map((industry) => (
-              <Link
+              <ScrollLink
                 key={industry.slug}
                 to={`/industries/${industry.slug}`}
                 className="block border-2 p-8 transition-all border-gray-200 hover:border-gold-600"
@@ -163,7 +163,7 @@ const IndustriesPage = () => {
                 <p className="text-sm font-medium text-navy-700">
                   {industry.processCount} processes
                 </p>
-              </Link>
+              </ScrollLink>
             ))}
           </div>
         </div>
@@ -184,13 +184,13 @@ const IndustriesPage = () => {
             operations examined with the same rigor we bring to a full
             engagement.
           </p>
-          <Link
+          <ScrollLink
             to="/walkthrough"
             className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-12 py-5 font-display text-xl hover:bg-gold-500 transition-colors"
           >
             Schedule a Walkthrough
             <ArrowRight className="w-5 h-5" />
-          </Link>
+          </ScrollLink>
         </div>
       </section>
     </div>
