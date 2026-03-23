@@ -24,6 +24,19 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-23 — Resize hand illustration to align with Five Pillars list
+**Files Modified:**
+- src/pages/HomePage.tsx
+
+**Files Created:**
+- (none)
+
+**Files Deleted:**
+- (none)
+
+**Summary:**
+Constrained the hand image height to match the pillar list (max-h-[320px]), made the grid responsive (stacks on mobile), and vertically centered both columns.
+
 ### 2026-03-22 — Fix scroll-to-top: remove smooth scroll CSS, clean up all workarounds
 **Files Modified:**
 - src/index.css

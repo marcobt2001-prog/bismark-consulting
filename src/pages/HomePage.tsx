@@ -130,7 +130,7 @@ const HomePage = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-8 items-stretch mt-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-10">
 
               {/* LEFT — heading + list together */}
               <div>
@@ -166,7 +166,7 @@ const HomePage = () => {
                 <img
                   src={handFivePillarsImg}
                   alt="The Bismark Method — Transformative Leadership Mastery as the palm, the Five Pillars as the fingers"
-                  className="w-full h-full object-contain"
+                  className="h-auto w-auto max-h-[320px] max-w-[250px] md:max-w-full mx-auto object-contain"
                 />
               </div>
 
