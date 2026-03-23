@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import luisPhoto from '../assets/[PHOTO-LUIS-TELLERIA-XUCLA].jpg';
+import luisPhoto from '../assets/luis-telleria-xucla.jpg';
 
 export default function AboutPage() {
   return (
