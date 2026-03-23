@@ -3,7 +3,6 @@ import {
   ArrowRight,
   Users,
   BarChart3,
-  Hand,
   Award,
   Building2,
   Cog,
@@ -13,6 +12,9 @@ import {
   CheckCircle2,
   Eye
 } from 'lucide-react';
+import HandMethodDiagram from '../components/visuals/HandMethodDiagram';
+import PillarStaircase from '../components/visuals/PillarStaircase';
+import WeeklyRhythmTimeline from '../components/visuals/WeeklyRhythmTimeline';
 
 const BismarkMethodPage = () => {
   const pillars = [
@@ -154,10 +156,8 @@ const BismarkMethodPage = () => {
 
             <div className="bg-gray-50 border-2 border-gray-200 rounded-lg p-8 md:p-12 hover:border-gold-600 transition-colors">
               <div className="flex flex-col items-center text-center">
-                <div className="w-20 h-20 bg-navy-900 flex items-center justify-center mb-6">
-                  <Hand className="w-10 h-10 text-gold-600" />
-                </div>
-                <p className="text-xl md:text-2xl text-navy-900 leading-relaxed font-light">
+                <HandMethodDiagram />
+                <p className="text-xl md:text-2xl text-navy-900 leading-relaxed font-light mt-8">
                   Think of it as a hand. The 5 Pillars are the fingers &mdash; they do the work, they touch the operations, they execute. Transformative Leadership Mastery is the palm &mdash; it connects everything, gives the fingers stability and coordination. <span className="font-semibold">A hand without a palm is just disconnected digits. You need both.</span>
                 </p>
               </div>
@@ -290,6 +290,9 @@ const BismarkMethodPage = () => {
             <h3 className="font-display text-2xl text-navy-900 mb-4">
               WHY THE ORDER IS NON-NEGOTIABLE
             </h3>
+
+            <PillarStaircase />
+
             <p className="text-gray-700 leading-relaxed mb-4">
               Most organizations &mdash; especially those with internal improvement teams &mdash; instinctively start with the org chart. They restructure teams before understanding how customers actually experience their processes, and before the processes themselves have been redesigned. The result is predictable: rework, misalignment, and a cycle of reorganizations that never quite solve the underlying problem.
             </p>
@@ -315,6 +318,8 @@ const BismarkMethodPage = () => {
               The Bismark Method isn&rsquo;t a workshop series. It&rsquo;s a 16-week operating rhythm that your team lives inside of.
             </p>
           </div>
+
+          <WeeklyRhythmTimeline />
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-gold-600 transition-colors">
