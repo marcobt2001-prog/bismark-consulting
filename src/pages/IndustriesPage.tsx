@@ -1,69 +1,8 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { industries } from '../data/industries';
-
-const archetypeDefinitions = [
-  {
-    name: 'Intake',
-    definition:
-      'Something enters the system and needs to move. The first touch \u2014 capturing, logging, and routing incoming work so it can be acted on.',
-  },
-  {
-    name: 'Verification',
-    definition:
-      'Confirming that what came in is what it claims to be. Identity checks, document validation, eligibility determination, specification compliance \u2014 the gate between receipt and action.',
-  },
-  {
-    name: 'Authorization',
-    definition:
-      'A decision is made: yes, no, or not yet. Approval routing, credit decisioning, underwriting, release authority \u2014 the process that commits the organization to act.',
-  },
-  {
-    name: 'Scheduling',
-    definition:
-      'Allocating time and capacity to work. Production scheduling, maintenance windows, dispatch planning, route sequencing \u2014 converting demand into an executable plan.',
-  },
-  {
-    name: 'Fulfillment',
-    definition:
-      'The work gets done and something goes out the door. Order picking, shipment dispatch, service delivery, assembly, installation \u2014 the execution of the commitment.',
-  },
-  {
-    name: 'Processing',
-    definition:
-      'Inputs become outputs. Manufacturing operations, refining, data transformation, batch runs \u2014 the conversion step where raw material becomes product.',
-  },
-  {
-    name: 'Monitoring',
-    definition:
-      'Watching what\u2019s moving and catching what isn\u2019t. Production tracking, pipeline flow, network uptime, well output, inventory levels \u2014 the ongoing visibility that enables intervention.',
-  },
-  {
-    name: 'Billing',
-    definition:
-      'Creating the financial obligation. Invoice generation, premium billing, subscription charges, usage metering \u2014 the process that translates work into revenue.',
-  },
-  {
-    name: 'Collection',
-    definition:
-      'Collecting what\u2019s owed. Payment posting, debt recovery, delinquency management, payment arrangement processing \u2014 closing the financial loop.',
-  },
-  {
-    name: 'Reconciliation',
-    definition:
-      'Making two sets of records agree. Bank reconciliation, payment matching, inventory counts, settlement balancing \u2014 the process that proves accuracy.',
-  },
-  {
-    name: 'Exception Handling',
-    definition:
-      'When the process breaks, something has to catch it. Billing disputes, shipment errors, claim denials, service failures \u2014 the recovery path for work that didn\u2019t follow the normal flow.',
-  },
-  {
-    name: 'Recovery',
-    definition:
-      'Getting back what\u2019s been lost or owed. Repossession, foreclosure, subrogation, insurance recovery, asset liquidation \u2014 the process that recaptures value after a default or loss.',
-  },
-];
+import ArchetypeIconSet from '../components/visuals/ArchetypeIconSet';
+import CrossIndustryMatrix from '../components/visuals/CrossIndustryMatrix';
 
 const IndustriesPage = () => {
   return (
@@ -107,23 +46,7 @@ const IndustriesPage = () => {
             needs.
           </p>
 
-          <div className="space-y-0">
-            {archetypeDefinitions.map((archetype) => (
-              <div
-                key={archetype.name}
-                className="w-full text-left px-6 py-5 border-b border-gray-200 bg-white text-navy-900"
-              >
-                <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
-                  <h3 className="font-display text-xl flex-shrink-0 md:w-48 text-navy-900">
-                    {archetype.name}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-gray-600">
-                    {archetype.definition}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <ArchetypeIconSet />
 
           <p className="text-lg text-gray-700 max-w-4xl leading-relaxed mt-12">
             These 12 archetypes aren&rsquo;t a framework we impose on your
@@ -146,6 +69,8 @@ const IndustriesPage = () => {
             Select an industry to see its complete process map, active
             archetypes, and where The Bismark Method creates transformation.
           </p>
+
+          <CrossIndustryMatrix />
 
           <div className="grid md:grid-cols-2 gap-6">
             {industries.map((industry) => (

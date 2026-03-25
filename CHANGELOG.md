@@ -52,6 +52,33 @@ Created a teaser page announcing Bismark's proprietary AI system in development.
 **Summary:**
 Constrained the hand image height to match the pillar list (max-h-[320px]), made the grid responsive (stacks on mobile), and vertically centered both columns.
 
+### 2026-03-22 — Add visual enhancements: diagrams, process flows, and placeholder wireframes
+**Files Modified:**
+- src/pages/HomePage.tsx
+- src/pages/AboutPage.tsx
+- src/pages/BismarkMethodPage.tsx
+- src/pages/WalkthroughPage.tsx
+- src/pages/IndustriesPage.tsx
+- src/pages/FAQPage.tsx
+
+**Files Created:**
+- src/components/visuals/EngagementPathway.tsx
+- src/components/visuals/ConsultingFailureCycle.tsx
+- src/components/visuals/HandMethodDiagram.tsx
+- src/components/visuals/PillarStaircase.tsx
+- src/components/visuals/WeeklyRhythmTimeline.tsx
+- src/components/visuals/WalkthroughProcessFlow.tsx
+- src/components/visuals/ArchetypeIconSet.tsx
+- src/components/visuals/CrossIndustryMatrix.tsx
+- src/components/visuals/OriginMap.tsx
+- src/components/visuals/FAQSectionDivider.tsx
+
+**Files Deleted:**
+- (none)
+
+**Summary:**
+Created 10 custom SVG-based visual components (diagrams, process flows, icon grids, data matrix, placeholder wireframes) using the navy/gold design system and integrated them across 6 pages. Replaced the archetype text table on IndustriesPage with an icon grid, replaced the Hand icon on BismarkMethodPage with a hand-metaphor wireframe.
+
 ### 2026-03-22 — Fix scroll-to-top: remove smooth scroll CSS, clean up all workarounds
 **Files Modified:**
 - src/index.css

@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import luisPhoto from '../assets/luis-telleria-xucla.jpg';
+import OriginMap from '../components/visuals/OriginMap';
+import ConsultingFailureCycle from '../components/visuals/ConsultingFailureCycle';
 
 export default function AboutPage() {
   return (
@@ -46,6 +48,8 @@ export default function AboutPage() {
               It&rsquo;s the reason Bismark still guarantees results nearly two decades later. Not because the methodology is clever &mdash; but because the people who do the work are the people who stay.
             </p>
           </div>
+
+          <OriginMap />
         </div>
       </section>
 
@@ -71,6 +75,8 @@ export default function AboutPage() {
               This isn&rsquo;t a philosophical preference. It&rsquo;s a structural commitment. It&rsquo;s why the engagement is 16 weeks, not 16 months. It&rsquo;s why we require dedicated apprentices, not part-time participation. It&rsquo;s why we ask leadership to commit to Transformative Leadership Mastery as the condition for our guarantee. Every design decision in The Bismark Method exists to answer the same question: will this still be working two years after we leave?
             </p>
           </div>
+
+          <ConsultingFailureCycle />
         </div>
       </section>
 

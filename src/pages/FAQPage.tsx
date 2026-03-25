@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { faqClusters } from '../data/faq';
+import FAQSectionDivider from '../components/visuals/FAQSectionDivider';
 
 const FAQPage = () => {
   const [openItems, setOpenItems] = useState<Record<string, number | null>>({});
@@ -31,8 +32,9 @@ const FAQPage = () => {
       <section className="py-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-16">
-            {faqClusters.map((cluster) => (
+            {faqClusters.map((cluster, clusterIndex) => (
               <div key={cluster.id}>
+                {clusterIndex > 0 && <FAQSectionDivider />}
                 {/* Cluster heading */}
                 <div className="flex items-center gap-4 mb-8">
                   <div className="w-1 h-8 bg-gold-600 flex-shrink-0" />

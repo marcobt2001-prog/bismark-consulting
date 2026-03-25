@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { getRandomPairings } from '../data/industryRotation';
 import handFivePillarsImg from '../assets/image004.jpg';
+import EngagementPathway from '../components/visuals/EngagementPathway';
 
 const HomePage = () => {
   const [pairings, setPairings] = useState<{ industry: string; operation: string }[]>([]);
@@ -238,6 +239,8 @@ const HomePage = () => {
             <h2 className="font-display text-4xl md:text-5xl mb-12">
               FROM FIRST CONVERSATION TO GUARANTEED RESULTS — HERE'S HOW IT WORKS.
             </h2>
+
+            <EngagementPathway />
 
             {/* Step 1 */}
             <div className="mb-16">

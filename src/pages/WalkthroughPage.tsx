@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Users, BarChart3, FileSearch, Presentation, Calendar, Building, TrendingUp, BookOpen, Clock, Shield, Database, Brain } from 'lucide-react';
+import WalkthroughProcessFlow from '../components/visuals/WalkthroughProcessFlow';
 
 const WalkthroughPage = () => {
   const walkthroughPhases = [
@@ -189,6 +190,8 @@ const WalkthroughPage = () => {
             </h2>
             <div className="bg-gold-600 h-1 w-24 mx-auto mb-8" />
           </div>
+
+          <WalkthroughProcessFlow />
 
           <div className="grid gap-8 mb-12">
             {walkthroughPhases.map((step, index) => (
