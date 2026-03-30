@@ -378,8 +378,8 @@ const WalkthroughPage = () => {
             <div className="space-y-4">
               <p className="text-sm text-gray-600">
                 Prefer email? Reach us at{' '}
-                <a href="mailto:info@bismarkconsulting.com" className="text-gold-600 hover:text-gold-700 font-medium">
-                  info@bismarkconsulting.com
+                <a href="mailto:info@bismarkconsulting.net" className="text-gold-600 hover:text-gold-700 font-medium">
+                  info@bismarkconsulting.net
                 </a>
               </p>
             </div>

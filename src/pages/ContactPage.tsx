@@ -164,10 +164,10 @@ const ContactPage = () => {
                     <div>
                       <p className="text-sm text-gray-600 mb-1">Email</p>
                       <a
-                        href="mailto:info@bismarkconsulting.com"
+                        href="mailto:info@bismarkconsulting.net"
                         className="text-navy-900 hover:text-gold-600 transition-colors font-medium"
                       >
-                        info@bismarkconsulting.com
+                        info@bismarkconsulting.net
                       </a>
                     </div>
                   </div>

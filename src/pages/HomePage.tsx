@@ -472,8 +472,8 @@ const HomePage = () => {
 
             <p className="text-gray-400 text-sm mt-6">
               Prefer email?{' '}
-              <a href="mailto:info@bismarkconsulting.com" className="text-gold-600 hover:text-gold-400 underline transition-colors">
-                info@bismarkconsulting.com
+              <a href="mailto:info@bismarkconsulting.net" className="text-gold-600 hover:text-gold-400 underline transition-colors">
+                info@bismarkconsulting.net
               </a>
             </p>
           </div>

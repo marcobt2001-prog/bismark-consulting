@@ -109,10 +109,10 @@ const FAQPage = () => {
           <p className="text-sm text-gray-400 mt-6">
             Prefer email? Reach us at{' '}
             <a
-              href="mailto:info@bismarkconsulting.com"
+              href="mailto:info@bismarkconsulting.net"
               className="text-gold-600 hover:text-gold-500 font-medium"
             >
-              info@bismarkconsulting.com
+              info@bismarkconsulting.net
             </a>
           </p>
         </div>

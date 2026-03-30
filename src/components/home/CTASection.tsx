@@ -38,7 +38,7 @@ const CTASection = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <a
-              href="mailto:contact@bismarkconsulting.com"
+              href="mailto:contact@bismarkconsulting.net"
               className="inline-flex items-center px-8 py-4 bg-accent-500 text-white font-semibold rounded-md hover:bg-accent-600 transition-all duration-200 shadow-lg hover:shadow-xl group"
             >
               <Mail className="mr-2" size={20} />

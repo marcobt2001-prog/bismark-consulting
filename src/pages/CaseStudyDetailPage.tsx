@@ -181,7 +181,7 @@ const CaseStudyDetailPage = () => {
             Let's discuss how we can help transform your operations.
           </p>
           <a
-            href="mailto:contact@bismarkconsulting.com"
+            href="mailto:contact@bismarkconsulting.net"
             className="inline-flex items-center px-8 py-4 bg-accent-500 text-white font-semibold rounded-md hover:bg-accent-600 transition-colors"
           >
             Schedule a Consultation

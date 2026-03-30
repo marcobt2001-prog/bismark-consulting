@@ -24,6 +24,19 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-30 — Email domain update
+**Files Modified:**
+- src/pages/HomePage.tsx
+- src/pages/ContactPage.tsx
+- src/pages/WalkthroughPage.tsx
+- src/pages/FAQPage.tsx
+- src/pages/ServicesPage.tsx
+- src/pages/CaseStudyDetailPage.tsx
+- src/components/home/CTASection.tsx
+
+**Summary:**
+Changed email domain from bismarkconsulting.com to bismarkconsulting.net site-wide (11 occurrences across 7 files).
+
 ### 2026-03-30 — ContactPage, AboutPage, FAQPage targeted edits
 **Files Modified:**
 - src/pages/ContactPage.tsx
