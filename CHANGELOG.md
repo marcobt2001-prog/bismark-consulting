@@ -24,6 +24,23 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-30 — ContactPage, AboutPage, FAQPage targeted edits
+**Files Modified:**
+- src/pages/ContactPage.tsx
+- src/pages/AboutPage.tsx
+- src/pages/FAQPage.tsx
+
+**Files Created:**
+- (none)
+
+**Files Deleted:**
+- (none)
+
+**Summary:**
+- ContactPage: Updated reach text from "nationwide" to "nationally and internationally"
+- AboutPage: Removed headshot image, OriginMap, and ConsultingFailureCycle; converted founder section to single-column layout
+- FAQPage: Removed decorative gold bar dividers and rhombus section separators between FAQ clusters
+
 ### 2026-03-30 — Calendly Integration
 **Files Modified:**
 - src/pages/WalkthroughPage.tsx

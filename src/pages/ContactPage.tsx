@@ -180,7 +180,7 @@ const ContactPage = () => {
                         Miami, Florida
                       </p>
                       <p className="text-sm text-gray-600 mt-1">
-                        We work on-site nationwide
+                        We work on-site nationally and internationally
                       </p>
                     </div>
                   </div>

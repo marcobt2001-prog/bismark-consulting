@@ -1,8 +1,5 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import luisPhoto from '../assets/luis-telleria-xucla.jpg';
-import OriginMap from '../components/visuals/OriginMap';
-import ConsultingFailureCycle from '../components/visuals/ConsultingFailureCycle';
 
 export default function AboutPage() {
   return (
@@ -49,7 +46,6 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <OriginMap />
         </div>
       </section>
 
@@ -76,7 +72,6 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <ConsultingFailureCycle />
         </div>
       </section>
 
@@ -97,17 +92,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Headshot */}
-            <div className="rounded-lg overflow-hidden" style={{ aspectRatio: '4/5' }}>
-              <img
-                src={luisPhoto}
-                alt="Luis Telleria-Xucla — Founder & Managing Director, Bismark Consulting Group"
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            {/* Bio Copy */}
+          <div className="max-w-3xl">
             <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
               <p>
                 Luis was born in Nicaragua and raised in the United States. He studied Chemical Engineering at Washington University in St. Louis &mdash; a discipline that taught him to think in systems, measure what matters, and treat every process as something that can be understood, modeled, and improved.
