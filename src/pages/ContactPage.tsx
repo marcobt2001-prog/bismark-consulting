@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ArrowRight, Mail, Phone, MapPin, Calendar, Building } from 'lucide-react';
+import { InlineWidget } from 'react-calendly';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -220,22 +221,23 @@ const ContactPage = () => {
                   scheduling your complimentary on-site walkthrough.
                 </p>
 
-                {/* Calendly Placeholder */}
-                <div className="bg-navy-800 border-2 border-dashed border-navy-700 rounded-lg p-8 mb-6 text-center">
-                  <p className="text-gray-400 mb-2">
-                    [Calendly Scheduling Widget]
-                  </p>
-                  <p className="text-sm text-gray-500">
-                    Book a 30-minute discovery call
-                  </p>
+                <div className="mb-6">
+                  <InlineWidget
+                    url="https://calendly.com/bismarkconsulting-info/walkthrough"
+                    styles={{ height: '500px' }}
+                    pageSettings={{
+                      backgroundColor: 'ffffff',
+                      hideEventTypeDetails: false,
+                      hideLandingPageDetails: false,
+                      primaryColor: 'b8860b',
+                      textColor: '1a2332',
+                    }}
+                  />
                 </div>
 
-                <a
-                  href="#"
-                  className="block w-full bg-gold-600 text-navy-900 px-6 py-3 font-display text-center hover:bg-gold-500 transition-colors"
-                >
-                  OPEN CALENDAR
-                </a>
+                <p className="text-sm text-gray-400 text-center">
+                  Or schedule directly above — pick any time that works for you.
+                </p>
               </div>
 
               {/* Engagement Note */}

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Users, BarChart3, FileSearch, Presentation, Calendar, Building, TrendingUp, BookOpen, Clock, Shield, Database, Brain } from 'lucide-react';
+import { InlineWidget } from 'react-calendly';
 import WalkthroughProcessFlow from '../components/visuals/WalkthroughProcessFlow';
 
 const WalkthroughPage = () => {
@@ -360,25 +361,21 @@ const WalkthroughPage = () => {
               <Calendar className="w-10 h-10 text-gold-600" />
             </div>
 
-            {/* Calendly Placeholder */}
-            <div className="bg-gray-50 border-2 border-dashed border-gray-300 rounded-lg p-12 mb-8">
-              <p className="text-gray-500 mb-4">
-                [Calendly scheduling widget will be embedded here]
-              </p>
-              <p className="text-sm text-gray-400">
-                Integration Point: Calendly embed for discovery call scheduling
-              </p>
+            <div className="mb-8">
+              <InlineWidget
+                url="https://calendly.com/bismarkconsulting-info/walkthrough"
+                styles={{ height: '700px' }}
+                pageSettings={{
+                  backgroundColor: 'ffffff',
+                  hideEventTypeDetails: false,
+                  hideLandingPageDetails: false,
+                  primaryColor: 'b8860b',
+                  textColor: '1a2332',
+                }}
+              />
             </div>
 
             <div className="space-y-4">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-8 py-4 font-display text-lg hover:bg-gold-500 transition-colors"
-              >
-                SCHEDULE YOUR DISCOVERY CALL
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-
               <p className="text-sm text-gray-600">
                 Prefer email? Reach us at{' '}
                 <a href="mailto:info@bismarkconsulting.com" className="text-gold-600 hover:text-gold-700 font-medium">

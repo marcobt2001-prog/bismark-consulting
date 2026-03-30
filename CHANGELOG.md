@@ -24,6 +24,22 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-30 — Calendly Integration
+**Files Modified:**
+- src/pages/WalkthroughPage.tsx
+- src/pages/ContactPage.tsx
+- src/pages/HomePage.tsx
+- package.json
+
+**Files Created:**
+- (none)
+
+**Files Deleted:**
+- (none)
+
+**Summary:**
+Embedded live Calendly scheduling widget on Walkthrough page (inline, 700px), Contact page (inline, 500px), and Home page CTA section (popup button). Removed all placeholder scheduling UI. Calendly URL: https://calendly.com/bismarkconsulting-info/walkthrough
+
 ### 2026-03-23 — Add AI teaser page at /ai
 **Files Modified:**
 - src/App.tsx
