@@ -24,6 +24,13 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-30 — Restored gold vertical bar accent on FAQ cluster headings
+**Files Modified:**
+- src/pages/FAQPage.tsx
+
+**Summary:**
+Restored the gold vertical bar (w-1 h-8 bg-gold-600) on each FAQ cluster heading with flex wrapper and gap-4 spacing.
+
 ### 2026-03-30 — Email domain update
 **Files Modified:**
 - src/pages/HomePage.tsx

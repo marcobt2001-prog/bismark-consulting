@@ -34,9 +34,12 @@ const FAQPage = () => {
             {faqClusters.map((cluster) => (
               <div key={cluster.id}>
                 {/* Cluster heading */}
-                <h2 className="font-display text-2xl text-navy-900 tracking-wider uppercase mb-8">
-                  {cluster.title}
-                </h2>
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-1 h-8 bg-gold-600 flex-shrink-0" />
+                  <h2 className="font-display text-2xl text-navy-900 tracking-wider uppercase">
+                    {cluster.title}
+                  </h2>
+                </div>
 
                 {/* Q&A accordion card */}
                 <div className="bg-white border-2 border-gray-200 rounded-lg overflow-hidden">
