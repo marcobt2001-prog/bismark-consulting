@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import IndustrySubPageLayout from '@/components/IndustrySubPageLayout';
 import { industries } from '@/data/industries';
 
+export const dynamic = 'force-static';
+
 export function generateStaticParams() {
   return industries.map((industry) => ({
     slug: industry.slug,

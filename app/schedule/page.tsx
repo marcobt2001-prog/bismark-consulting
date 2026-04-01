@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import SchedulePage from '@/views/SchedulePage';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: 'Schedule a Walkthrough | Bismark Consulting Group',
   description: 'Book a 30-45 minute discovery call to discuss your operational landscape and schedule your complimentary on-site walkthrough.',

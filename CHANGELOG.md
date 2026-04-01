@@ -24,6 +24,23 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-04-01 — Add force-static export to all app/ page routes
+**Files Modified:**
+- app/page.tsx
+- app/about/page.tsx
+- app/ai/page.tsx
+- app/contact/page.tsx
+- app/faq/page.tsx
+- app/industries/page.tsx
+- app/industries/[slug]/page.tsx
+- app/insights/page.tsx
+- app/method/page.tsx
+- app/schedule/page.tsx
+- app/walkthrough/page.tsx
+
+**Summary:**
+Added `export const dynamic = 'force-static'` to all 11 app/ page route files. Forces Next.js to statically generate every page at build time, ensuring full HTML content is served to search engines, social crawlers, and AI tools on first request.
+
 ### 2026-04-01 — Replace Calendly inline embeds with popup button
 **Files Modified:**
 - src/views/WalkthroughPage.tsx
