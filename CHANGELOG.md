@@ -24,6 +24,15 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-31 — Fix font loading for Next.js migration
+**Files Modified:**
+- app/layout.tsx
+- tailwind.config.js
+- src/index.css
+
+**Summary:**
+Fixed font loading for Next.js — added Google Fonts `<link>` tags for Inter and Bebas Neue in layout.tsx (replacing CSS @import that only loaded Inter). Removed stale @import from index.css. Bebas Neue was previously loaded via index.html which was deleted during migration. Tailwind content paths confirmed correct for both app/ and src/ directories.
+
 ### 2026-03-31 — Migrate from Vite + React Router (CSR) to Next.js App Router (SSG)
 **Summary:**
 - Migrated entire site from Vite + React Router (CSR) to Next.js App Router (SSG)
