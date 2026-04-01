@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { industries } from '../data/industries';
 import ArchetypeIconSet from '../components/visuals/ArchetypeIconSet';
-import CrossIndustryMatrix from '../components/visuals/CrossIndustryMatrix';
+import FindYourOperationMatrix from '../components/FindYourOperationMatrix';
 
 const IndustriesPage = () => {
   return (
@@ -70,7 +70,9 @@ const IndustriesPage = () => {
             archetypes, and where The Bismark Method creates transformation.
           </p>
 
-          <CrossIndustryMatrix />
+          <div className="mt-12 mb-12">
+            <FindYourOperationMatrix />
+          </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {industries.map((industry) => (

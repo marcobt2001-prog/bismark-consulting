@@ -24,6 +24,16 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-31 — Replace Find Your Operation matrix with dot-matrix component
+**Files Modified:**
+- src/views/IndustriesPage.tsx
+
+**Files Created:**
+- src/components/FindYourOperationMatrix.tsx
+
+**Summary:**
+Replaced Find Your Operation matrix — industries now on left column, archetypes across top row. New dot-matrix visual style with hover-to-gold interaction. Improved legibility with larger text and clearer active/inactive states.
+
 ### 2026-03-31 — Fix font loading for Next.js migration
 **Files Modified:**
 - app/layout.tsx
