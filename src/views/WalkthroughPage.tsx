@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { ArrowRight, Users, BarChart3, FileSearch, Presentation, Building, TrendingUp, BookOpen, Clock, Shield, Database, Brain } from 'lucide-react';
 
-import CalendlyEmbed from '../components/CalendlyEmbed';
+import CalendlyButton from '../components/CalendlyButton';
 import WalkthroughProcessFlow from '../components/visuals/WalkthroughProcessFlow';
 
 const WalkthroughPage = () => {
@@ -359,11 +359,16 @@ const WalkthroughPage = () => {
 
           <div className="text-center mb-8">
             <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
-              Select a time below to book your 30&ndash;45 minute discovery call.
+              Click below to choose a time that works for you.
             </p>
           </div>
 
-          <CalendlyEmbed url="https://calendly.com/bismarkconsulting-info/walkthrough" />
+          <div className="flex justify-center">
+            <CalendlyButton
+              label="SELECT A DATE & TIME"
+              className="inline-flex items-center justify-center gap-3 bg-gold-600 text-navy-900 px-10 py-5 font-display text-xl hover:bg-gold-500 transition-colors shadow-lg"
+            />
+          </div>
 
           <p className="text-sm text-gray-600 text-center mt-8">
             Prefer email? Reach us at{' '}

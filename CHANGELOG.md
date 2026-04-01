@@ -24,6 +24,17 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-04-01 — Replace Calendly inline embeds with popup button
+**Files Modified:**
+- src/views/WalkthroughPage.tsx
+- src/index.css
+
+**Files Deleted:**
+- src/components/CalendlyEmbed.tsx
+
+**Summary:**
+Removed the inline Calendly embed from /walkthrough. Replaced with CalendlyButton that opens the Calendly popup overlay on click. Deleted CalendlyEmbed.tsx (120 lines of MutationObserver/setInterval hacks). Removed dead .calendly-inline-widget CSS from index.css. Both /walkthrough and /schedule now show a clean CTA button; all existing popup buttons on other pages are unaffected.
+
 ### 2026-04-01 — SSR refactor: remove 'use client' from server-renderable page views
 **Files Modified:**
 - src/views/HomePage.tsx
