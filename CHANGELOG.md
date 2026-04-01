@@ -24,6 +24,25 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-04-01 — Codebase cleanup based on AUDIT.md
+**Files Deleted:**
+- src/components/visuals/ConsultingFailureCycle.tsx — orphaned, never imported
+- src/components/visuals/CrossIndustryMatrix.tsx — superseded by FindYourOperationMatrix, never imported
+- src/components/visuals/FAQSectionDivider.tsx — orphaned, never imported
+- src/assets/ directory — all images duplicated to public/images/ during migration
+- public/images/react.svg — Vite scaffold artifact, never referenced
+- eslint.config.js — referenced removed Vite plugin, replaced by Next.js built-in lint
+
+**Dependencies Removed:**
+- react-calendly — never imported in codebase
+- framer-motion — never imported in codebase
+
+**Files Modified:**
+- src/views/ContactPage.tsx — removed console.log from form handler
+
+**Summary:**
+Removed 3 orphaned visual components, legacy asset directory, dead npm dependencies, stale ESLint config, and a console.log in production code. Build passes with zero errors.
+
 ### 2026-03-31 — Restore Calendly embed on Walkthrough page
 **Files Modified:**
 - src/views/WalkthroughPage.tsx

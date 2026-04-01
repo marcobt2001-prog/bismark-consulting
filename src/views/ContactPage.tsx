@@ -15,7 +15,6 @@ const ContactPage = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Form submission logic will be implemented later
-    console.log('Form submitted:', formData);
     alert('Thank you for your message. We will be in touch shortly.');
   };
 
