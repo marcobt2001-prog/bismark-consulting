@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
 import type { Industry } from '../data/industries';
 import { industries } from '../data/industries';
@@ -106,7 +106,7 @@ export default function IndustrySubPageLayout({ industry }: Props) {
             full engagement.
           </p>
           <Link
-            to="/walkthrough"
+            href="/walkthrough"
             className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-12 py-5 font-display text-xl hover:bg-gold-500 transition-colors"
           >
             Schedule a Walkthrough
@@ -122,7 +122,7 @@ export default function IndustrySubPageLayout({ industry }: Props) {
             <div className="flex items-center gap-6">
               {prevIndustry && (
                 <Link
-                  to={`/industries/${prevIndustry.slug}`}
+                  href={`/industries/${prevIndustry.slug}`}
                   className="flex items-center gap-2 text-navy-700 hover:text-gold-600 transition-colors font-medium"
                 >
                   <ArrowLeft className="w-4 h-4" />
@@ -132,7 +132,7 @@ export default function IndustrySubPageLayout({ industry }: Props) {
             </div>
 
             <Link
-              to="/industries"
+              href="/industries"
               className="text-navy-700 hover:text-gold-600 transition-colors font-medium"
             >
               &larr; Back to Industries
@@ -141,7 +141,7 @@ export default function IndustrySubPageLayout({ industry }: Props) {
             <div className="flex items-center gap-6">
               {nextIndustry && (
                 <Link
-                  to={`/industries/${nextIndustry.slug}`}
+                  href={`/industries/${nextIndustry.slug}`}
                   className="flex items-center gap-2 text-navy-700 hover:text-gold-600 transition-colors font-medium"
                 >
                   {nextIndustry.name}

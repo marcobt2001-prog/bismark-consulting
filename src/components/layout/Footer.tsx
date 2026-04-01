@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import Logo from './Logo';
 
 export default function Footer() {
@@ -36,7 +36,7 @@ export default function Footer() {
               {navigation.company.map((item) => (
                 <li key={item.name}>
                   <Link
-                    to={item.href}
+                    href={item.href}
                     className="text-gray-400 hover:text-gold-400 text-sm transition-colors"
                   >
                     {item.name}
@@ -52,7 +52,7 @@ export default function Footer() {
               {navigation.services.map((item) => (
                 <li key={item.name}>
                   <Link
-                    to={item.href}
+                    href={item.href}
                     className="text-gray-400 hover:text-gold-400 text-sm transition-colors"
                   >
                     {item.name}

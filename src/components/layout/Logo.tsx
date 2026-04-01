@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export default function Logo() {
   return (
-    <Link to="/" className="block">
+    <Link href="/" className="block">
       <div className="flex flex-col leading-none">
         <span className="font-display text-4xl md:text-5xl tracking-wider text-navy-900">
           BISMARK

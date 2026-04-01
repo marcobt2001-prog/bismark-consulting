@@ -1,12 +1,14 @@
+'use client';
+
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import Logo from './Logo';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
   const navigation = [
     { name: 'About', href: '/about' },
@@ -20,7 +22,7 @@ export default function Navbar() {
   ];
 
   const isActive = (path: string) =>
-    location.pathname === path || (path !== '/' && location.pathname.startsWith(path + '/'));
+    pathname === path || (path !== '/' && pathname.startsWith(path + '/'));
 
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
@@ -32,14 +34,14 @@ export default function Navbar() {
             {navigation.map((item) => (
               <Link
                 key={item.name}
-                to={item.href}
+                href={item.href}
                 className={'text-sm font-medium transition-colors ' + (isActive(item.href) ? 'text-gold-600' : 'text-navy-700 hover:text-gold-600')}
               >
                 {item.name}
               </Link>
             ))}
             <Link
-              to="/walkthrough"
+              href="/walkthrough"
               className="bg-gold-600 text-navy-900 px-6 py-2 text-sm font-semibold hover:bg-gold-500 transition-colors"
             >
               Schedule a Walkthrough
@@ -61,7 +63,7 @@ export default function Navbar() {
             {navigation.map((item) => (
               <Link
                 key={item.name}
-                to={item.href}
+                href={item.href}
                 onClick={() => setIsOpen(false)}
                 className={'block px-3 py-2 rounded-md text-base font-medium ' + (isActive(item.href) ? 'bg-gold-50 text-gold-600' : 'text-navy-700 hover:bg-gray-50')}
               >
@@ -69,7 +71,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              to="/walkthrough"
+              href="/walkthrough"
               onClick={() => setIsOpen(false)}
               className="block w-full text-center bg-gold-600 text-navy-900 px-6 py-2 text-base font-semibold hover:bg-gold-500 mt-4"
             >

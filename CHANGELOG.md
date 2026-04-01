@@ -24,6 +24,48 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-31 — Migrate from Vite + React Router (CSR) to Next.js App Router (SSG)
+**Summary:**
+- Migrated entire site from Vite + React Router (CSR) to Next.js App Router (SSG)
+- Every page now pre-rendered as static HTML — crawlers and social previews get real content
+- Replaced 10 individual industry sub-page files with single dynamic [slug] route
+- Package name corrected from "apex-consulting" to "bismark-consulting"
+- Added SEO metadata (title + description) to every page route
+- Removed react-router-dom, Vite, and all Vite config files
+- Removed ScrollToTop component (Next.js handles scroll restoration natively)
+- Deleted orphaned legacy files: ServicesPage, CaseStudiesPage, CaseStudyDetailPage, and unused home components
+- Renamed src/pages to src/views to avoid Next.js pages directory conflict
+- Moved static assets to public/images/
+
+### 2026-03-31 — Migrate react-router-dom to Next.js routing
+**Files Modified:**
+- src/components/layout/Navbar.tsx
+- src/components/layout/Footer.tsx
+- src/components/layout/Logo.tsx
+- src/components/IndustrySubPageLayout.tsx
+- src/pages/HomePage.tsx
+- src/pages/AboutPage.tsx
+- src/pages/BismarkMethodPage.tsx
+- src/pages/IndustriesPage.tsx
+- src/pages/WalkthroughPage.tsx
+- src/pages/FAQPage.tsx
+- src/pages/AIPage.tsx
+- src/pages/CaseStudiesPage.tsx
+- src/pages/CaseStudyDetailPage.tsx
+- src/components/home/CaseStudies.tsx
+- src/components/home/Services.tsx
+- src/components/home/Hero.tsx
+- src/components/home/Industries.tsx
+- src/components/home/ClientLogos.tsx
+- src/components/home/Stats.tsx
+- src/components/home/CTASection.tsx
+
+**Files Deleted:**
+- src/components/ScrollToTop.tsx
+
+**Summary:**
+Replaced all react-router-dom imports with Next.js equivalents (next/link, next/navigation). Changed Link `to=` props to `href=`, replaced useLocation with usePathname, useNavigate with useRouter, and useParams with next/navigation useParams. Added 'use client' directive to all files using React hooks, framer-motion, react-calendly, or Next.js navigation hooks.
+
 ### 2026-03-30 — Restored gold vertical bar accent on FAQ cluster headings
 **Files Modified:**
 - src/pages/FAQPage.tsx

@@ -1,0 +1,13 @@
+var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/ai/page.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0wu92z.._.js")
+R.c("server/chunks/ssr/0~iu_next_dist_esm_build_templates_app-page_0mhu9nj.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0s5.2t~._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0e3imj5._.js")
+R.c("server/chunks/ssr/apex-consulting_0q9z8g_._.js")
+R.c("server/chunks/ssr/0~iu_next_dist_client_components_01iyspa._.js")
+R.c("server/chunks/ssr/0~iu_next_dist_client_components_builtin_forbidden_0b9kh.8.js")
+R.c("server/chunks/ssr/0~iu_next_dist_client_components_builtin_unauthorized_0zknkgz.js")
+R.c("server/chunks/ssr/0~iu_next_dist_client_components_builtin_global-error_03z0h0p.js")
+R.c("server/chunks/ssr/apex-consulting__next-internal_server_app_ai_page_actions_082-jns.js")
+R.m(12555)
+module.exports=R.m(12555).exports
