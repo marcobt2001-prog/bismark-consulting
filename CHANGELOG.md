@@ -24,6 +24,10 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-04-01 — Finalize SSR on main and delete nextjs-migration branch
+**Summary:**
+Finalized SSR on main. All pages server-render full HTML. Deleted nextjs-migration branch (local and remote). Verified via curl that homepage, about, and industries pages return real HTML content.
+
 ### 2026-04-01 — Switch from static export to Vercel SSR
 **Files Modified:**
 - next.config.ts — removed output: 'export' and images: { unoptimized: true }
