@@ -1,8 +1,6 @@
-'use client';
-
 import Link from 'next/link';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
-import { openCalendlyPopup } from '../utils/openCalendlyPopup';
+import CalendlyButton from './CalendlyButton';
 import type { Industry } from '../data/industries';
 import { industries } from '../data/industries';
 
@@ -108,13 +106,7 @@ export default function IndustrySubPageLayout({ industry }: Props) {
             where we examine your operations with the same rigor we bring to a
             full engagement.
           </p>
-          <button
-            onClick={openCalendlyPopup}
-            className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-12 py-5 font-display text-xl hover:bg-gold-500 transition-colors"
-          >
-            Schedule a Walkthrough
-            <ArrowRight className="w-5 h-5" />
-          </button>
+          <CalendlyButton label="Schedule a Walkthrough" className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-12 py-5 font-display text-xl hover:bg-gold-500 transition-colors" />
         </div>
       </section>
 

@@ -1,7 +1,4 @@
-'use client';
-
 import Link from 'next/link';
-import { openCalendlyPopup } from '../utils/openCalendlyPopup';
 import {
   ArrowRight,
   Users,
@@ -18,6 +15,7 @@ import {
 import HandMethodDiagram from '../components/visuals/HandMethodDiagram';
 import PillarStaircase from '../components/visuals/PillarStaircase';
 import WeeklyRhythmTimeline from '../components/visuals/WeeklyRhythmTimeline';
+import CalendlyButton from '../components/CalendlyButton';
 
 const BismarkMethodPage = () => {
   const pillars = [
@@ -127,12 +125,7 @@ const BismarkMethodPage = () => {
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-10">
             The Bismark Method is a 16-week &ldquo;Learn and Do&rdquo; engagement that transforms your internal teams into the people who improve your operations &mdash; not consultants who do it for you. When it&rsquo;s done right, we guarantee the results.
           </p>
-          <button
-            onClick={openCalendlyPopup}
-            className="inline-block bg-gold-600 text-navy-900 px-10 py-4 font-display text-lg hover:bg-gold-500 transition-colors"
-          >
-            Schedule a Walkthrough
-          </button>
+          <CalendlyButton label="Schedule a Walkthrough" className="inline-block bg-gold-600 text-navy-900 px-10 py-4 font-display text-lg hover:bg-gold-500 transition-colors" showArrow={false} />
         </div>
       </section>
 
@@ -569,12 +562,7 @@ const BismarkMethodPage = () => {
             The Walkthrough is a complimentary 3&ndash;5 day on-site assessment where we evaluate your operations and show you exactly where The Bismark Method would apply. No theory. No pitch deck. Just your operations, examined with the same rigor we bring to a full engagement.
           </p>
 
-          <button
-            onClick={openCalendlyPopup}
-            className="inline-block bg-gold-600 text-navy-900 px-12 py-5 font-display text-xl hover:bg-gold-500 transition-colors mb-6"
-          >
-            Schedule a Walkthrough
-          </button>
+          <CalendlyButton label="Schedule a Walkthrough" className="inline-block bg-gold-600 text-navy-900 px-12 py-5 font-display text-xl hover:bg-gold-500 transition-colors mb-6" showArrow={false} />
 
           <div>
             <Link

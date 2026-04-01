@@ -1,7 +1,4 @@
-'use client';
-
-import { ArrowRight } from 'lucide-react';
-import { openCalendlyPopup } from '../utils/openCalendlyPopup';
+import CalendlyButton from '../components/CalendlyButton';
 
 const SchedulePage = () => {
   return (
@@ -23,13 +20,7 @@ const SchedulePage = () => {
           </div>
 
           <div className="text-center">
-            <button
-              onClick={openCalendlyPopup}
-              className="inline-flex items-center gap-3 bg-gold-600 text-navy-900 px-12 py-5 font-display text-xl hover:bg-gold-500 transition-colors"
-            >
-              SELECT A TIME
-              <ArrowRight className="w-5 h-5" />
-            </button>
+            <CalendlyButton label="SELECT A TIME" className="inline-flex items-center gap-3 bg-gold-600 text-navy-900 px-12 py-5 font-display text-xl hover:bg-gold-500 transition-colors" />
           </div>
 
           <p className="text-sm text-gray-600 text-center mt-10">

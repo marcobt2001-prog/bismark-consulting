@@ -24,6 +24,23 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-04-01 — SSR refactor: remove 'use client' from server-renderable page views
+**Files Modified:**
+- src/views/HomePage.tsx
+- src/views/AIPage.tsx
+- src/views/BismarkMethodPage.tsx
+- src/views/IndustriesPage.tsx
+- src/views/SchedulePage.tsx
+- src/views/FAQPage.tsx
+- src/components/IndustrySubPageLayout.tsx
+
+**Files Created:**
+- src/components/CalendlyButton.tsx
+- src/components/FAQAccordion.tsx
+
+**Summary:**
+Removed 'use client' from all server-renderable page views. Interactive pieces (FAQ accordion, Calendly popup buttons) extracted into isolated client components. Server-rendered pages now emit full HTML content for Google, social crawlers, and AI tools to index.
+
 ### 2026-04-01 — Convert all schedule buttons to Calendly popup
 **Files Created:**
 - src/utils/openCalendlyPopup.ts
