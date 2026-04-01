@@ -6,17 +6,6 @@ interface CalendlyEmbedProps {
   url: string;
 }
 
-declare global {
-  interface Window {
-    Calendly?: {
-      initInlineWidget: (opts: {
-        url: string;
-        parentElement: HTMLElement;
-      }) => void;
-    };
-  }
-}
-
 export default function CalendlyEmbed({ url }: CalendlyEmbedProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const widgetRef = useRef<HTMLDivElement>(null);

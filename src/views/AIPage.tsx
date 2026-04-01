@@ -1,5 +1,7 @@
-import Link from 'next/link';
+'use client';
+
 import { ArrowRight, Shield, Eye, Zap } from 'lucide-react';
+import { openCalendlyPopup } from '../utils/openCalendlyPopup';
 
 export default function AIPage() {
   return (
@@ -95,13 +97,13 @@ export default function AIPage() {
           <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-10">
             Every Bismark AI deployment begins with the Bismark Method. The Walkthrough is where that journey starts &mdash; a complimentary 3&ndash;5 day on-site assessment of your operation.
           </p>
-          <Link
-            href="/schedule"
+          <button
+            onClick={openCalendlyPopup}
             className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-12 py-5 font-display text-xl hover:bg-gold-500 transition-colors"
           >
             Schedule a Walkthrough
             <ArrowRight className="w-5 h-5" />
-          </Link>
+          </button>
         </div>
       </section>
     </div>

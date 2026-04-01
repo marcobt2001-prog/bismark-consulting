@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import Logo from './Logo';
+import { openCalendlyPopup } from '../../utils/openCalendlyPopup';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,12 +41,12 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <Link
-              href="/schedule"
+            <button
+              onClick={openCalendlyPopup}
               className="bg-gold-600 text-navy-900 px-6 py-2 text-sm font-semibold hover:bg-gold-500 transition-colors"
             >
               Schedule a Walkthrough
-            </Link>
+            </button>
           </div>
 
           <button
@@ -70,13 +71,12 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <Link
-              href="/schedule"
-              onClick={() => setIsOpen(false)}
+            <button
+              onClick={() => { setIsOpen(false); openCalendlyPopup(); }}
               className="block w-full text-center bg-gold-600 text-navy-900 px-6 py-2 text-base font-semibold hover:bg-gold-500 mt-4"
             >
               Schedule a Walkthrough
-            </Link>
+            </button>
           </div>
         </div>
       )}

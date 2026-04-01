@@ -24,6 +24,27 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-04-01 — Convert all schedule buttons to Calendly popup
+**Files Created:**
+- src/utils/openCalendlyPopup.ts
+- src/types/global.d.ts
+
+**Files Modified:**
+- app/layout.tsx — load Calendly script/CSS globally
+- src/components/layout/Navbar.tsx
+- src/views/HomePage.tsx
+- src/views/FAQPage.tsx
+- src/views/ContactPage.tsx
+- src/views/AIPage.tsx
+- src/views/BismarkMethodPage.tsx
+- src/views/IndustriesPage.tsx
+- src/views/SchedulePage.tsx
+- src/components/IndustrySubPageLayout.tsx
+- src/components/CalendlyEmbed.tsx — removed duplicate global type declaration
+
+**Summary:**
+Converted all "Schedule a Walkthrough" buttons site-wide to open Calendly popup directly — no page navigation. Calendly script loaded globally in layout.tsx. Created shared openCalendlyPopup utility. Inline embed on /walkthrough page unchanged. /schedule page simplified to popup button.
+
 ### 2026-03-31 — Add openGraph metadata to all page routes
 **Files Modified:**
 - app/page.tsx

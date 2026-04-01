@@ -1,4 +1,7 @@
-import CalendlyEmbed from '../components/CalendlyEmbed';
+'use client';
+
+import { ArrowRight } from 'lucide-react';
+import { openCalendlyPopup } from '../utils/openCalendlyPopup';
 
 const SchedulePage = () => {
   return (
@@ -19,11 +22,15 @@ const SchedulePage = () => {
             </p>
           </div>
 
-          <p className="text-lg text-gray-600 text-center mb-8">
-            Select a time below to book your 30&ndash;45 minute discovery call.
-          </p>
-
-          <CalendlyEmbed url="https://calendly.com/bismarkconsulting-info/walkthrough" />
+          <div className="text-center">
+            <button
+              onClick={openCalendlyPopup}
+              className="inline-flex items-center gap-3 bg-gold-600 text-navy-900 px-12 py-5 font-display text-xl hover:bg-gold-500 transition-colors"
+            >
+              SELECT A TIME
+              <ArrowRight className="w-5 h-5" />
+            </button>
+          </div>
 
           <p className="text-sm text-gray-600 text-center mt-10">
             Prefer email? Reach us at{' '}

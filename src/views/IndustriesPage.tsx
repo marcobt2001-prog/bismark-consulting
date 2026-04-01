@@ -1,5 +1,8 @@
+'use client';
+
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { openCalendlyPopup } from '../utils/openCalendlyPopup';
 import { industries } from '../data/industries';
 import ArchetypeIconSet from '../components/visuals/ArchetypeIconSet';
 import FindYourOperationMatrix from '../components/FindYourOperationMatrix';
@@ -111,13 +114,13 @@ const IndustriesPage = () => {
             operations examined with the same rigor we bring to a full
             engagement.
           </p>
-          <Link
-            href="/schedule"
+          <button
+            onClick={openCalendlyPopup}
             className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-12 py-5 font-display text-xl hover:bg-gold-500 transition-colors"
           >
             Schedule a Walkthrough
             <ArrowRight className="w-5 h-5" />
-          </Link>
+          </button>
         </div>
       </section>
     </div>

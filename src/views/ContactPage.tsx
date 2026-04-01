@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { ArrowRight, Mail, Phone, MapPin, Building } from 'lucide-react';
-import Link from 'next/link';
+import { openCalendlyPopup } from '../utils/openCalendlyPopup';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -216,12 +216,12 @@ const ContactPage = () => {
                 <p className="text-gray-700 text-sm mb-6">
                   Schedule a walkthrough directly and we&rsquo;ll discuss your complimentary on-site assessment.
                 </p>
-                <Link
-                  href="/schedule"
+                <button
+                  onClick={openCalendlyPopup}
                   className="block w-full bg-gold-600 text-navy-900 px-6 py-4 font-display text-center text-lg hover:bg-gold-500 transition-colors"
                 >
                   SCHEDULE A WALKTHROUGH
-                </Link>
+                </button>
               </div>
 
               {/* Engagement Note */}

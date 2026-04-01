@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import { ArrowRight, ChevronDown } from 'lucide-react';
+import { openCalendlyPopup } from '../utils/openCalendlyPopup';
 import { faqClusters } from '../data/faq';
 
 const FAQPage = () => {
@@ -103,13 +103,13 @@ const FAQPage = () => {
             pitch &mdash; it&rsquo;s the same rigor in miniature.
           </p>
 
-          <Link
-            href="/schedule"
+          <button
+            onClick={openCalendlyPopup}
             className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-8 py-4 font-display text-lg hover:bg-gold-500 transition-colors"
           >
             SCHEDULE A WALKTHROUGH
             <ArrowRight className="w-5 h-5" />
-          </Link>
+          </button>
 
           <p className="text-sm text-gray-400 mt-6">
             Prefer email? Reach us at{' '}
