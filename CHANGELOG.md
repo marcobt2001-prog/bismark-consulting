@@ -24,6 +24,16 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-04-01 — Switch from static export to Vercel SSR
+**Files Modified:**
+- next.config.ts — removed output: 'export' and images: { unoptimized: true }
+- src/views/BismarkMethodPage.tsx — removed unnecessary 'use client'
+- src/views/WalkthroughPage.tsx — removed unnecessary 'use client'
+- src/views/SchedulePage.tsx — removed unnecessary 'use client'
+
+**Summary:**
+Switched from static export (output: 'export') to Vercel SSR. Pages now server-render full HTML content — crawlers, social previews, and non-JS readers get complete page markup. App-level page files are server components; client interactivity (forms, accordions, Calendly) hydrates after initial load. Removed 'use client' from 3 view files that had no hooks or client-side dependencies.
+
 ### 2026-04-01 — Codebase cleanup based on AUDIT.md
 **Files Deleted:**
 - src/components/visuals/ConsultingFailureCycle.tsx — orphaned, never imported

@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import { ArrowRight, Users, BarChart3, FileSearch, Presentation, Building, TrendingUp, BookOpen, Clock, Shield, Database, Brain } from 'lucide-react';
 

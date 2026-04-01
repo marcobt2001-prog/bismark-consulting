@@ -1,5 +1,3 @@
-'use client';
-
 import CalendlyEmbed from '../components/CalendlyEmbed';
 
 const SchedulePage = () => {
