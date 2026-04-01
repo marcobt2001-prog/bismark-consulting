@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { getRandomPairings } from '../data/industryRotation';
@@ -8,11 +8,7 @@ const handFivePillarsImg = '/images/image004.jpg';
 import EngagementPathway from '../components/visuals/EngagementPathway';
 
 const HomePage = () => {
-  const [pairings, setPairings] = useState<{ industry: string; operation: string }[]>([]);
-
-  useEffect(() => {
-    setPairings(getRandomPairings(5));
-  }, []);
+  const [pairings] = useState<{ industry: string; operation: string }[]>(() => getRandomPairings(5));
 
   return (
     <div className="bg-white">

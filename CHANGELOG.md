@@ -24,6 +24,13 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-04-01 — Fix HomePage industry rotation for SSR
+**Files Modified:**
+- src/views/HomePage.tsx
+
+**Summary:**
+Fixed HomePage industry rotation to render during SSR instead of client-side useEffect — pairings now appear in initial HTML for crawlers and link previews. Removed useEffect import (no longer needed).
+
 ### 2026-04-01 — Verify SSR rendering is working correctly
 **Summary:**
 Diagnosed and verified SSR rendering. All configuration is correct: no output: 'export', no 'use client' in app/ files, no rendering gates. curl tests confirm all pages (/, /about, /industries) return full HTML with real content — titles, meta descriptions, nav, headings, and body text. Crawlers and social previews receive complete page markup.
