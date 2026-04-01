@@ -24,6 +24,10 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-04-01 — Verify SSR rendering is working correctly
+**Summary:**
+Diagnosed and verified SSR rendering. All configuration is correct: no output: 'export', no 'use client' in app/ files, no rendering gates. curl tests confirm all pages (/, /about, /industries) return full HTML with real content — titles, meta descriptions, nav, headings, and body text. Crawlers and social previews receive complete page markup.
+
 ### 2026-04-01 — Finalize SSR on main and delete nextjs-migration branch
 **Summary:**
 Finalized SSR on main. All pages server-render full HTML. Deleted nextjs-migration branch (local and remote). Verified via curl that homepage, about, and industries pages return real HTML content.
