@@ -24,6 +24,13 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-31 — Restore Calendly embed on Walkthrough page
+**Files Modified:**
+- src/views/WalkthroughPage.tsx
+
+**Summary:**
+Restored Calendly inline embed on the Walkthrough page — both /walkthrough and /schedule now have the calendar widget.
+
 ### 2026-03-31 — Create /schedule page and rewire all CTA buttons
 **Files Created:**
 - src/views/SchedulePage.tsx

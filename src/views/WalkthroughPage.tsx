@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { ArrowRight, Users, BarChart3, FileSearch, Presentation, Building, TrendingUp, BookOpen, Clock, Shield, Database, Brain } from 'lucide-react';
 
+import CalendlyEmbed from '../components/CalendlyEmbed';
 import WalkthroughProcessFlow from '../components/visuals/WalkthroughProcessFlow';
 
 const WalkthroughPage = () => {
@@ -358,21 +359,20 @@ const WalkthroughPage = () => {
             </p>
           </div>
 
-          <div className="text-center">
-            <Link
-              href="/schedule"
-              className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-10 py-5 font-display text-xl hover:bg-gold-500 transition-colors"
-            >
-              SCHEDULE A WALKTHROUGH
-              <ArrowRight className="w-6 h-6" />
-            </Link>
-            <p className="text-sm text-gray-600 mt-6">
-              Prefer email? Reach us at{' '}
-              <a href="mailto:info@bismarkconsulting.net" className="text-gold-600 hover:text-gold-700 font-medium">
-                info@bismarkconsulting.net
-              </a>
+          <div className="text-center mb-8">
+            <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+              Select a time below to book your 30&ndash;45 minute discovery call.
             </p>
           </div>
+
+          <CalendlyEmbed url="https://calendly.com/bismarkconsulting-info/walkthrough" />
+
+          <p className="text-sm text-gray-600 text-center mt-8">
+            Prefer email? Reach us at{' '}
+            <a href="mailto:info@bismarkconsulting.net" className="text-gold-600 hover:text-gold-700 font-medium">
+              info@bismarkconsulting.net
+            </a>
+          </p>
         </div>
       </section>
 
