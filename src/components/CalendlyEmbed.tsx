@@ -7,12 +7,23 @@ interface CalendlyEmbedProps {
   minHeight?: number;
 }
 
+declare global {
+  interface Window {
+    Calendly?: {
+      initInlineWidget: (opts: {
+        url: string;
+        parentElement: HTMLElement;
+      }) => void;
+    };
+  }
+}
+
 export default function CalendlyEmbed({ url, minHeight = 700 }: CalendlyEmbedProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const widgetRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [scriptReady, setScriptReady] = useState(false);
 
-  // Lazy load: only load Calendly when the component scrolls into view
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -21,7 +32,7 @@ export default function CalendlyEmbed({ url, minHeight = 700 }: CalendlyEmbedPro
           observer.disconnect();
         }
       },
-      { rootMargin: '200px' }
+      { rootMargin: '300px' }
     );
 
     if (containerRef.current) {
@@ -31,32 +42,52 @@ export default function CalendlyEmbed({ url, minHeight = 700 }: CalendlyEmbedPro
     return () => observer.disconnect();
   }, []);
 
-  // Load the Calendly script once visible
   useEffect(() => {
     if (!isVisible) return;
 
-    const existingScript = document.querySelector(
+    if (!document.querySelector('link[href*="calendly"]')) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'https://assets.calendly.com/assets/external/widget.css';
+      document.head.appendChild(link);
+    }
+
+    if (window.Calendly) {
+      setScriptReady(true);
+      return;
+    }
+
+    const existing = document.querySelector(
       'script[src="https://assets.calendly.com/assets/external/widget.js"]'
     );
 
-    if (existingScript) {
-      setIsLoaded(true);
+    if (existing) {
+      existing.addEventListener('load', () => setScriptReady(true));
+      if (window.Calendly) setScriptReady(true);
       return;
     }
 
     const script = document.createElement('script');
     script.src = 'https://assets.calendly.com/assets/external/widget.js';
     script.async = true;
-    script.onload = () => setIsLoaded(true);
+    script.onload = () => setScriptReady(true);
     document.head.appendChild(script);
   }, [isVisible]);
 
-  // Build the Calendly URL with brand colors
-  const brandedUrl = `${url}?hide_gdpr_banner=1&background_color=ffffff&text_color=0c1742&primary_color=c9a227`;
+  useEffect(() => {
+    if (!scriptReady || !widgetRef.current || !window.Calendly) return;
+
+    const brandedUrl = `${url}?hide_gdpr_banner=1&background_color=ffffff&text_color=0c1742&primary_color=c9a227`;
+
+    window.Calendly.initInlineWidget({
+      url: brandedUrl,
+      parentElement: widgetRef.current,
+    });
+  }, [scriptReady, url]);
 
   return (
     <div ref={containerRef} style={{ minHeight: `${minHeight}px` }}>
-      {!isVisible || !isLoaded ? (
+      {!isVisible ? (
         <div
           className="flex flex-col items-center justify-center rounded-lg bg-gray-50 border border-gray-200"
           style={{ minHeight: `${minHeight}px` }}
@@ -72,9 +103,8 @@ export default function CalendlyEmbed({ url, minHeight = 700 }: CalendlyEmbedPro
         </div>
       ) : (
         <div
-          className="calendly-inline-widget"
-          data-url={brandedUrl}
-          style={{ minWidth: '320px', minHeight: `${minHeight}px`, width: '100%', height: '100%' }}
+          ref={widgetRef}
+          style={{ minWidth: '320px', minHeight: `${minHeight}px`, width: '100%' }}
         />
       )}
     </div>

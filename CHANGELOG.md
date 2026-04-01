@@ -24,6 +24,13 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-31 — Fix Calendly embed — use explicit initInlineWidget API
+**Files Modified:**
+- src/components/CalendlyEmbed.tsx
+
+**Summary:**
+Fixed Calendly embed that wasn't loading due to reliance on data-url auto-detection (fails in React). Replaced with explicit Calendly.initInlineWidget() call. Added widget.css stylesheet loading, global Window type declaration, and three-phase loading (observe → load script → init widget). Real event URL confirmed on both Walkthrough and Contact pages.
+
 ### 2026-03-31 — Fix Find Your Operation matrix layout
 **Files Modified:**
 - src/components/FindYourOperationMatrix.tsx
