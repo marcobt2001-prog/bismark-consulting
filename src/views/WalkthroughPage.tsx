@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { ArrowRight, Users, BarChart3, FileSearch, Presentation, Calendar, Building, TrendingUp, BookOpen, Clock, Shield, Database, Brain } from 'lucide-react';
-import { InlineWidget } from 'react-calendly';
+import CalendlyEmbed from '../components/CalendlyEmbed';
 import WalkthroughProcessFlow from '../components/visuals/WalkthroughProcessFlow';
 
 const WalkthroughPage = () => {
@@ -364,16 +364,9 @@ const WalkthroughPage = () => {
             </div>
 
             <div className="mb-8">
-              <InlineWidget
+              <CalendlyEmbed
                 url="https://calendly.com/bismarkconsulting-info/walkthrough"
-                styles={{ height: '700px' }}
-                pageSettings={{
-                  backgroundColor: 'ffffff',
-                  hideEventTypeDetails: false,
-                  hideLandingPageDetails: false,
-                  primaryColor: 'b8860b',
-                  textColor: '1a2332',
-                }}
+                minHeight={700}
               />
             </div>
 

@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import { PopupButton } from 'react-calendly';
 import { getRandomPairings } from '../data/industryRotation';
 const handFivePillarsImg = '/images/image004.jpg';
 import EngagementPathway from '../components/visuals/EngagementPathway';
@@ -465,14 +464,13 @@ const HomePage = () => {
               There's no obligation to move forward. But every client who has engaged us started here — and most will tell you the Walkthrough alone changed how they saw their operation.
             </p>
 
-            {typeof document !== 'undefined' && (
-              <PopupButton
-                url="https://calendly.com/bismarkconsulting-info/walkthrough"
-                rootElement={document.getElementById('__next') ?? document.body}
-                text="SCHEDULE A DISCOVERY CALL"
-                className="inline-flex items-center justify-center gap-2 bg-gold-600 text-navy-900 px-8 py-4 font-display text-lg hover:bg-gold-500 transition-colors"
-              />
-            )}
+            <Link
+              href="/walkthrough"
+              className="inline-flex items-center justify-center gap-2 bg-gold-600 text-navy-900 px-8 py-4 font-display text-lg hover:bg-gold-500 transition-colors"
+            >
+              SCHEDULE A DISCOVERY CALL
+              <ArrowRight className="w-5 h-5" />
+            </Link>
 
             <p className="text-gray-400 text-sm mt-6">
               Prefer email?{' '}

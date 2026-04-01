@@ -7,3 +7,8 @@
     @apply font-sans antialiased;
   }
 }
+
+/* Calendly overrides — prevent internal scrolling */
+.calendly-inline-widget iframe {
+  min-height: 700px !important;
+}

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { ArrowRight, Mail, Phone, MapPin, Calendar, Building } from 'lucide-react';
-import { InlineWidget } from 'react-calendly';
+import CalendlyEmbed from '../components/CalendlyEmbed';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -224,16 +224,9 @@ const ContactPage = () => {
                 </p>
 
                 <div className="mb-6">
-                  <InlineWidget
+                  <CalendlyEmbed
                     url="https://calendly.com/bismarkconsulting-info/walkthrough"
-                    styles={{ height: '500px' }}
-                    pageSettings={{
-                      backgroundColor: 'ffffff',
-                      hideEventTypeDetails: false,
-                      hideLandingPageDetails: false,
-                      primaryColor: 'b8860b',
-                      textColor: '1a2332',
-                    }}
+                    minHeight={660}
                   />
                 </div>
 

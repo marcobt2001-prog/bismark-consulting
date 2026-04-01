@@ -24,6 +24,19 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-31 — Implement Calendly inline embed with lazy loading
+**Files Modified:**
+- src/views/WalkthroughPage.tsx
+- src/views/ContactPage.tsx
+- src/views/HomePage.tsx
+- src/index.css
+
+**Files Created:**
+- src/components/CalendlyEmbed.tsx
+
+**Summary:**
+Implemented Calendly inline embed on Walkthrough and Contact pages. Lazy-loads on scroll for performance. Branded with navy/gold colors. Shows loading skeleton while Calendly script initializes. Set minimum height to prevent internal scrolling. Replaced react-calendly PopupButton on HomePage with a Link to the Walkthrough page. Removed all react-calendly imports.
+
 ### 2026-03-31 — Replace Find Your Operation matrix with dot-matrix component
 **Files Modified:**
 - src/views/IndustriesPage.tsx
