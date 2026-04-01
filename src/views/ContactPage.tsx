@@ -210,17 +210,14 @@ const ContactPage = () => {
               </div>
 
               {/* Schedule Walkthrough CTA */}
-              <div className="rounded-lg overflow-hidden">
+              <div>
                 <h3 className="font-display text-xl text-navy-900 mb-4">
                   BOOK A DISCOVERY CALL
                 </h3>
                 <p className="text-gray-700 text-sm mb-6">
                   Book a discovery call directly and we&rsquo;ll discuss scheduling your complimentary on-site walkthrough.
                 </p>
-                <CalendlyEmbed
-                  url="https://calendly.com/bismarkconsulting-info/walkthrough"
-                  minHeight={900}
-                />
+                <CalendlyEmbed url="https://calendly.com/bismarkconsulting-info/walkthrough" />
               </div>
 
               {/* Engagement Note */}

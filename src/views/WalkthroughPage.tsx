@@ -364,10 +364,7 @@ const WalkthroughPage = () => {
             </p>
           </div>
 
-          <CalendlyEmbed
-            url="https://calendly.com/bismarkconsulting-info/walkthrough"
-            minHeight={1000}
-          />
+          <CalendlyEmbed url="https://calendly.com/bismarkconsulting-info/walkthrough" />
 
           <p className="text-sm text-gray-600 text-center mt-8">
             Prefer email? Reach us at{' '}

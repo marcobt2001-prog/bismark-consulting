@@ -24,6 +24,16 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-31 — Fix Calendly embed — absolute iframe with MutationObserver
+**Files Modified:**
+- src/components/CalendlyEmbed.tsx
+- src/views/WalkthroughPage.tsx
+- src/views/ContactPage.tsx
+- src/index.css
+
+**Summary:**
+Fixed Calendly embed sizing — uses absolute-positioned iframe with MutationObserver to force full container fill. Fixed 900px container height. Eliminated all internal scrolling. Removed overflow-hidden from ContactPage wrapper. Simplified CSS overrides.
+
 ### 2026-03-31 — Fix Calendly embed sizing and layout
 **Files Modified:**
 - src/components/CalendlyEmbed.tsx

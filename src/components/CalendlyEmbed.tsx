@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from 'react';
 
 interface CalendlyEmbedProps {
   url: string;
-  minHeight?: number;
 }
 
 declare global {
@@ -18,7 +17,7 @@ declare global {
   }
 }
 
-export default function CalendlyEmbed({ url, minHeight = 1000 }: CalendlyEmbedProps) {
+export default function CalendlyEmbed({ url }: CalendlyEmbedProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const widgetRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -34,11 +33,7 @@ export default function CalendlyEmbed({ url, minHeight = 1000 }: CalendlyEmbedPr
       },
       { rootMargin: '300px' }
     );
-
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
-
+    if (containerRef.current) observer.observe(containerRef.current);
     return () => observer.disconnect();
   }, []);
 
@@ -60,7 +55,6 @@ export default function CalendlyEmbed({ url, minHeight = 1000 }: CalendlyEmbedPr
     const existing = document.querySelector(
       'script[src="https://assets.calendly.com/assets/external/widget.js"]'
     );
-
     if (existing) {
       existing.addEventListener('load', () => setScriptReady(true));
       if (window.Calendly) setScriptReady(true);
@@ -84,28 +78,38 @@ export default function CalendlyEmbed({ url, minHeight = 1000 }: CalendlyEmbedPr
       parentElement: widgetRef.current,
     });
 
-    // Listen for Calendly's resize events and expand the container to fit
-    const handleMessage = (e: MessageEvent) => {
-      if (e.data.event === 'calendly.page_height' && widgetRef.current) {
-        const iframe = widgetRef.current.querySelector('iframe');
-        if (iframe) {
-          iframe.style.height = e.data.payload.height + 'px';
-          iframe.style.minHeight = e.data.payload.height + 'px';
-        }
+    // Force iframe to fill container whenever Calendly creates or resizes it
+    const forceIframeHeight = () => {
+      if (!widgetRef.current) return;
+      const iframe = widgetRef.current.querySelector('iframe');
+      if (iframe) {
+        iframe.style.setProperty('height', '100%', 'important');
+        iframe.style.setProperty('min-height', '100%', 'important');
+        iframe.style.setProperty('position', 'absolute', 'important');
+        iframe.style.setProperty('top', '0', 'important');
+        iframe.style.setProperty('left', '0', 'important');
+        iframe.style.setProperty('width', '100%', 'important');
       }
     };
 
-    window.addEventListener('message', handleMessage);
-    return () => window.removeEventListener('message', handleMessage);
+    // Watch for the iframe being injected into the DOM
+    const mutationObserver = new MutationObserver(() => forceIframeHeight());
+    mutationObserver.observe(widgetRef.current, { childList: true, subtree: true });
+
+    // Also force on a short interval for the first few seconds (catches async resizes)
+    const interval = setInterval(forceIframeHeight, 200);
+    setTimeout(() => clearInterval(interval), 5000);
+
+    return () => {
+      mutationObserver.disconnect();
+      clearInterval(interval);
+    };
   }, [scriptReady, url]);
 
   return (
     <div ref={containerRef}>
       {!isVisible ? (
-        <div
-          className="flex flex-col items-center justify-center rounded-lg bg-gray-50 border border-gray-200"
-          style={{ minHeight: `${minHeight}px` }}
-        >
+        <div className="flex flex-col items-center justify-center bg-gray-50 border border-gray-200 rounded-lg" style={{ height: '900px' }}>
           <div className="animate-pulse flex flex-col items-center gap-4">
             <div className="w-16 h-16 bg-navy-900 rounded-lg flex items-center justify-center">
               <svg className="w-8 h-8 text-gold-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -118,7 +122,7 @@ export default function CalendlyEmbed({ url, minHeight = 1000 }: CalendlyEmbedPr
       ) : (
         <div
           ref={widgetRef}
-          style={{ minHeight: `${minHeight}px`, width: '100%' }}
+          style={{ position: 'relative', width: '100%', height: '900px', overflow: 'visible' }}
         />
       )}
     </div>
