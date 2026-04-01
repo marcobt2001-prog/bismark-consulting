@@ -24,6 +24,13 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-31 — Fix Find Your Operation matrix layout
+**Files Modified:**
+- src/components/FindYourOperationMatrix.tsx
+
+**Summary:**
+Fixed Find Your Operation matrix layout — now spans full section width using table-fixed layout. Removed horizontal scroll. Archetype columns distribute evenly across available space. Smaller dots and text on mobile for readability.
+
 ### 2026-03-31 — Implement Calendly inline embed with lazy loading
 **Files Modified:**
 - src/views/WalkthroughPage.tsx

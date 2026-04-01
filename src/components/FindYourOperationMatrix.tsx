@@ -22,20 +22,27 @@ export default function FindYourOperationMatrix() {
   const [hoveredRow, setHoveredRow] = useState<number | null>(null);
 
   return (
-    <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
-      <table className="w-max min-w-full border-collapse">
-        {/* Column headers — archetypes, rotated */}
+    <div>
+      <table className="w-full border-collapse table-fixed">
+        <colgroup>
+          {/* Industry name column — fixed width */}
+          <col className="w-[160px] sm:w-[200px]" />
+          {/* 12 archetype columns — share remaining space equally */}
+          {ALL_ARCHETYPES.map((_, i) => (
+            <col key={i} />
+          ))}
+        </colgroup>
+
         <thead>
           <tr>
-            {/* Empty corner cell for the industry names column */}
-            <th className="pb-2" />
+            <th />
             {ALL_ARCHETYPES.map((arch) => (
               <th
                 key={arch}
-                className="relative h-[120px] w-[44px] min-w-[44px] pb-2 align-bottom"
+                className="relative h-[110px] sm:h-[120px] align-bottom pb-2"
               >
                 <span
-                  className="absolute bottom-2 left-1/2 origin-bottom-left -rotate-[50deg] whitespace-nowrap text-[10.5px] font-semibold uppercase tracking-wide text-navy-900"
+                  className="absolute bottom-2 left-1/2 origin-bottom-left -rotate-[50deg] whitespace-nowrap text-[9px] sm:text-[10.5px] font-semibold uppercase tracking-wide text-navy-900"
                 >
                   {arch === 'Exception Handling' ? 'Exc. Handling' : arch}
                 </span>
@@ -61,31 +68,27 @@ export default function FindYourOperationMatrix() {
                 onMouseEnter={() => setHoveredRow(rowIdx)}
                 onMouseLeave={() => setHoveredRow(null)}
               >
-                {/* Industry name — left column */}
                 <td
                   className={
-                    'pr-3 sm:pr-4 text-right whitespace-nowrap text-xs font-semibold border-b transition-colors duration-100 ' +
+                    'pr-2 sm:pr-4 text-right text-[11px] sm:text-xs font-semibold border-b transition-colors duration-100 h-[40px] ' +
                     (isHovered
                       ? 'text-gold-600 border-gold-600/20'
                       : 'text-navy-900 border-gray-100')
                   }
-                  style={{ height: '40px' }}
                 >
                   {industry.name}
                 </td>
 
-                {/* Archetype cells */}
                 {ALL_ARCHETYPES.map((arch) => {
                   const isActive = industry.activeArchetypes.includes(arch);
                   return (
                     <td
                       key={arch}
-                      className="w-[44px] min-w-[44px] text-center align-middle border-b border-gray-100"
-                      style={{ height: '40px', padding: '10px 0' }}
+                      className="text-center align-middle border-b border-gray-100 h-[40px] py-2"
                     >
                       <span
                         className={
-                          'inline-block w-5 h-5 rounded-full transition-all duration-150 ' +
+                          'inline-block w-4 h-4 sm:w-5 sm:h-5 rounded-full transition-all duration-150 ' +
                           (isActive
                             ? isHovered
                               ? 'bg-gold-600 scale-110'
@@ -102,7 +105,6 @@ export default function FindYourOperationMatrix() {
         </tbody>
       </table>
 
-      {/* Legend */}
       <div className="flex items-center gap-5 mt-4 text-[11px] text-gray-500">
         <span className="flex items-center gap-1.5">
           <span className="inline-block w-3 h-3 rounded-full bg-navy-900" />
