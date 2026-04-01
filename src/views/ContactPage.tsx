@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { ArrowRight, Mail, Phone, MapPin, Calendar, Building } from 'lucide-react';
+import { ArrowRight, Mail, Phone, MapPin, Building } from 'lucide-react';
 import CalendlyEmbed from '../components/CalendlyEmbed';
 
 const ContactPage = () => {
@@ -210,29 +210,17 @@ const ContactPage = () => {
               </div>
 
               {/* Schedule Walkthrough CTA */}
-              <div className="bg-navy-900 text-white rounded-lg p-8">
-                <div className="w-16 h-16 bg-gold-600 flex items-center justify-center mb-6">
-                  <Calendar className="w-8 h-8 text-navy-900" />
-                </div>
-
-                <h3 className="font-display text-2xl mb-4">
-                  SCHEDULE A WALKTHROUGH
+              <div className="rounded-lg overflow-hidden">
+                <h3 className="font-display text-xl text-navy-900 mb-4">
+                  BOOK A DISCOVERY CALL
                 </h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  Skip the back-and-forth. Book a discovery call directly and we'll discuss
-                  scheduling your complimentary on-site walkthrough.
+                <p className="text-gray-700 text-sm mb-6">
+                  Book a discovery call directly and we&rsquo;ll discuss scheduling your complimentary on-site walkthrough.
                 </p>
-
-                <div className="mb-6">
-                  <CalendlyEmbed
-                    url="https://calendly.com/bismarkconsulting-info/walkthrough"
-                    minHeight={660}
-                  />
-                </div>
-
-                <p className="text-sm text-gray-400 text-center">
-                  Or schedule directly above — pick any time that works for you.
-                </p>
+                <CalendlyEmbed
+                  url="https://calendly.com/bismarkconsulting-info/walkthrough"
+                  minHeight={900}
+                />
               </div>
 
               {/* Engagement Note */}

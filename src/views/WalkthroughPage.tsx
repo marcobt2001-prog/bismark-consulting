@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowRight, Users, BarChart3, FileSearch, Presentation, Calendar, Building, TrendingUp, BookOpen, Clock, Shield, Database, Brain } from 'lucide-react';
+import { ArrowRight, Users, BarChart3, FileSearch, Presentation, Building, TrendingUp, BookOpen, Clock, Shield, Database, Brain } from 'lucide-react';
 import CalendlyEmbed from '../components/CalendlyEmbed';
 import WalkthroughProcessFlow from '../components/visuals/WalkthroughProcessFlow';
 
@@ -358,27 +358,23 @@ const WalkthroughPage = () => {
             </p>
           </div>
 
-          <div className="bg-white border-2 border-navy-900 rounded-lg p-8 md:p-12 text-center">
-            <div className="w-20 h-20 bg-navy-900 flex items-center justify-center mx-auto mb-6">
-              <Calendar className="w-10 h-10 text-gold-600" />
-            </div>
-
-            <div className="mb-8">
-              <CalendlyEmbed
-                url="https://calendly.com/bismarkconsulting-info/walkthrough"
-                minHeight={700}
-              />
-            </div>
-
-            <div className="space-y-4">
-              <p className="text-sm text-gray-600">
-                Prefer email? Reach us at{' '}
-                <a href="mailto:info@bismarkconsulting.net" className="text-gold-600 hover:text-gold-700 font-medium">
-                  info@bismarkconsulting.net
-                </a>
-              </p>
-            </div>
+          <div className="text-center mb-8">
+            <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+              Select a time below to book your 30&ndash;45 minute discovery call.
+            </p>
           </div>
+
+          <CalendlyEmbed
+            url="https://calendly.com/bismarkconsulting-info/walkthrough"
+            minHeight={1000}
+          />
+
+          <p className="text-sm text-gray-600 text-center mt-8">
+            Prefer email? Reach us at{' '}
+            <a href="mailto:info@bismarkconsulting.net" className="text-gold-600 hover:text-gold-700 font-medium">
+              info@bismarkconsulting.net
+            </a>
+          </p>
         </div>
       </section>
 

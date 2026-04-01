@@ -24,6 +24,16 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-31 — Fix Calendly embed sizing and layout
+**Files Modified:**
+- src/components/CalendlyEmbed.tsx
+- src/views/WalkthroughPage.tsx
+- src/views/ContactPage.tsx
+- src/index.css
+
+**Summary:**
+Fixed Calendly embed sizing — removed constraining bordered wrapper containers on both Walkthrough and Contact pages. Increased minimum height to 1000px. Added dynamic iframe resizing via Calendly postMessage events. Updated CSS overrides. Calendar now displays at full size with no internal scrolling.
+
 ### 2026-03-31 — Fix Calendly embed — use explicit initInlineWidget API
 **Files Modified:**
 - src/components/CalendlyEmbed.tsx

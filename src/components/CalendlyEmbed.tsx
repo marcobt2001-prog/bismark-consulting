@@ -18,7 +18,7 @@ declare global {
   }
 }
 
-export default function CalendlyEmbed({ url, minHeight = 700 }: CalendlyEmbedProps) {
+export default function CalendlyEmbed({ url, minHeight = 1000 }: CalendlyEmbedProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const widgetRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -83,10 +83,24 @@ export default function CalendlyEmbed({ url, minHeight = 700 }: CalendlyEmbedPro
       url: brandedUrl,
       parentElement: widgetRef.current,
     });
+
+    // Listen for Calendly's resize events and expand the container to fit
+    const handleMessage = (e: MessageEvent) => {
+      if (e.data.event === 'calendly.page_height' && widgetRef.current) {
+        const iframe = widgetRef.current.querySelector('iframe');
+        if (iframe) {
+          iframe.style.height = e.data.payload.height + 'px';
+          iframe.style.minHeight = e.data.payload.height + 'px';
+        }
+      }
+    };
+
+    window.addEventListener('message', handleMessage);
+    return () => window.removeEventListener('message', handleMessage);
   }, [scriptReady, url]);
 
   return (
-    <div ref={containerRef} style={{ minHeight: `${minHeight}px` }}>
+    <div ref={containerRef}>
       {!isVisible ? (
         <div
           className="flex flex-col items-center justify-center rounded-lg bg-gray-50 border border-gray-200"
@@ -104,7 +118,7 @@ export default function CalendlyEmbed({ url, minHeight = 700 }: CalendlyEmbedPro
       ) : (
         <div
           ref={widgetRef}
-          style={{ minWidth: '320px', minHeight: `${minHeight}px`, width: '100%' }}
+          style={{ minHeight: `${minHeight}px`, width: '100%' }}
         />
       )}
     </div>
