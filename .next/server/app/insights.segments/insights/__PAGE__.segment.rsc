@@ -1,5 +1,0 @@
-1:"$Sreact.fragment"
-2:I[63611,["/_next/static/chunks/0-v~7~lutoif3.js","/_next/static/chunks/0cjq6~5c3netv.js"],"OutletBoundary"]
-3:"$Sreact.suspense"
-0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"bg-white","children":["$","section",null,{"className":"py-32 md:py-40","children":["$","div",null,{"className":"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8","children":["$","div",null,{"className":"text-center","children":[["$","h1",null,{"className":"font-display text-4xl md:text-5xl text-navy-900 mb-6","children":"INSIGHTS — COMING SOON"}],["$","div",null,{"className":"bg-gold-600 h-1 w-24 mx-auto mb-8"}],["$","p",null,{"className":"text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed","children":"Articles and perspectives on operational transformation. Content launching soon."}]]}]}]}]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"JZFBvPRiCrOp_5IQLtmj_"}
-4:null
