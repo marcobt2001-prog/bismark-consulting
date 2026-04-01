@@ -112,7 +112,7 @@ const IndustriesPage = () => {
             engagement.
           </p>
           <Link
-            href="/walkthrough"
+            href="/schedule"
             className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-12 py-5 font-display text-xl hover:bg-gold-500 transition-colors"
           >
             Schedule a Walkthrough

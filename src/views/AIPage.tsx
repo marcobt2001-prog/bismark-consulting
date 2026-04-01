@@ -96,7 +96,7 @@ export default function AIPage() {
             Every Bismark AI deployment begins with the Bismark Method. The Walkthrough is where that journey starts &mdash; a complimentary 3&ndash;5 day on-site assessment of your operation.
           </p>
           <Link
-            href="/walkthrough"
+            href="/schedule"
             className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-12 py-5 font-display text-xl hover:bg-gold-500 transition-colors"
           >
             Schedule a Walkthrough

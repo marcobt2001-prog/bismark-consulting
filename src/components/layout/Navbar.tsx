@@ -41,7 +41,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/walkthrough"
+              href="/schedule"
               className="bg-gold-600 text-navy-900 px-6 py-2 text-sm font-semibold hover:bg-gold-500 transition-colors"
             >
               Schedule a Walkthrough
@@ -71,7 +71,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/walkthrough"
+              href="/schedule"
               onClick={() => setIsOpen(false)}
               className="block w-full text-center bg-gold-600 text-navy-900 px-6 py-2 text-base font-semibold hover:bg-gold-500 mt-4"
             >

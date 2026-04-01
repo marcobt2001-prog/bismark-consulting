@@ -127,7 +127,7 @@ const BismarkMethodPage = () => {
             The Bismark Method is a 16-week &ldquo;Learn and Do&rdquo; engagement that transforms your internal teams into the people who improve your operations &mdash; not consultants who do it for you. When it&rsquo;s done right, we guarantee the results.
           </p>
           <Link
-            href="/walkthrough"
+            href="/schedule"
             className="inline-block bg-gold-600 text-navy-900 px-10 py-4 font-display text-lg hover:bg-gold-500 transition-colors"
           >
             Schedule a Walkthrough
@@ -569,7 +569,7 @@ const BismarkMethodPage = () => {
           </p>
 
           <Link
-            href="/walkthrough"
+            href="/schedule"
             className="inline-block bg-gold-600 text-navy-900 px-12 py-5 font-display text-xl hover:bg-gold-500 transition-colors mb-6"
           >
             Schedule a Walkthrough

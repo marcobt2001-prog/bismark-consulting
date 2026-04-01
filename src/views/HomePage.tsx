@@ -49,7 +49,7 @@ const HomePage = () => {
 
             <div>
               <Link
-                href="/walkthrough"
+                href="/schedule"
                 className="inline-flex items-center justify-center gap-2 bg-gold-600 text-navy-900 px-8 py-4 font-display text-lg hover:bg-gold-500 transition-colors"
               >
                 SCHEDULE A WALKTHROUGH
@@ -465,10 +465,10 @@ const HomePage = () => {
             </p>
 
             <Link
-              href="/walkthrough"
+              href="/schedule"
               className="inline-flex items-center justify-center gap-2 bg-gold-600 text-navy-900 px-8 py-4 font-display text-lg hover:bg-gold-500 transition-colors"
             >
-              SCHEDULE A DISCOVERY CALL
+              SCHEDULE A WALKTHROUGH
               <ArrowRight className="w-5 h-5" />
             </Link>
 

@@ -98,16 +98,16 @@ const FAQPage = () => {
             STILL HAVE QUESTIONS?
           </h2>
           <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-3xl mx-auto">
-            The fastest way to get answers is a conversation. Book a 30&ndash;45 minute
+            The fastest way to get answers is a conversation. Schedule a 30&ndash;45 minute
             discovery call and bring every question on your list. This isn&rsquo;t a sales
             pitch &mdash; it&rsquo;s the same rigor in miniature.
           </p>
 
           <Link
-            href="/contact"
+            href="/schedule"
             className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-8 py-4 font-display text-lg hover:bg-gold-500 transition-colors"
           >
-            SCHEDULE A DISCOVERY CALL
+            SCHEDULE A WALKTHROUGH
             <ArrowRight className="w-5 h-5" />
           </Link>
 

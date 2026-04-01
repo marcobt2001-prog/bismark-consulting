@@ -24,6 +24,25 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-31 — Create /schedule page and rewire all CTA buttons
+**Files Created:**
+- src/views/SchedulePage.tsx
+- app/schedule/page.tsx
+
+**Files Modified:**
+- src/components/layout/Navbar.tsx
+- src/views/HomePage.tsx
+- src/views/WalkthroughPage.tsx
+- src/views/ContactPage.tsx
+- src/views/FAQPage.tsx
+- src/views/BismarkMethodPage.tsx
+- src/views/IndustriesPage.tsx
+- src/views/AIPage.tsx
+- src/components/IndustrySubPageLayout.tsx
+
+**Summary:**
+Created dedicated /schedule page with Calendly embed for streamlined booking. Rewired all "Schedule a Walkthrough" buttons site-wide to point to /schedule. Renamed all "Book a Discovery Call" / "Schedule a Discovery Call" buttons to "Schedule a Walkthrough". Removed Calendly embeds from Walkthrough and Contact pages (replaced with buttons linking to /schedule). The Walkthrough nav tab still points to the informational /walkthrough page.
+
 ### 2026-03-31 — Fix Calendly embed — absolute iframe with MutationObserver
 **Files Modified:**
 - src/components/CalendlyEmbed.tsx

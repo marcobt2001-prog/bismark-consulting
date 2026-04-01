@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { ArrowRight, Users, BarChart3, FileSearch, Presentation, Building, TrendingUp, BookOpen, Clock, Shield, Database, Brain } from 'lucide-react';
-import CalendlyEmbed from '../components/CalendlyEmbed';
+
 import WalkthroughProcessFlow from '../components/visuals/WalkthroughProcessFlow';
 
 const WalkthroughPage = () => {
@@ -351,27 +351,28 @@ const WalkthroughPage = () => {
           <div className="text-center mb-12">
             <p className="font-display text-sm text-gold-600 tracking-wider mb-4">START THE CONVERSATION</p>
             <h2 className="font-display text-4xl md:text-5xl text-navy-900 mb-6">
-              BOOK A DISCOVERY CALL
+              READY TO START?
             </h2>
             <p className="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
               The first step is a 30&ndash;45 minute call where we discuss your operational landscape, confirm mutual fit, and schedule your on-site walkthrough. This isn't a sales call &mdash; it's the same rigor in miniature. Come ready to talk about your operations, and we'll come ready to listen.
             </p>
           </div>
 
-          <div className="text-center mb-8">
-            <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
-              Select a time below to book your 30&ndash;45 minute discovery call.
+          <div className="text-center">
+            <Link
+              href="/schedule"
+              className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-10 py-5 font-display text-xl hover:bg-gold-500 transition-colors"
+            >
+              SCHEDULE A WALKTHROUGH
+              <ArrowRight className="w-6 h-6" />
+            </Link>
+            <p className="text-sm text-gray-600 mt-6">
+              Prefer email? Reach us at{' '}
+              <a href="mailto:info@bismarkconsulting.net" className="text-gold-600 hover:text-gold-700 font-medium">
+                info@bismarkconsulting.net
+              </a>
             </p>
           </div>
-
-          <CalendlyEmbed url="https://calendly.com/bismarkconsulting-info/walkthrough" />
-
-          <p className="text-sm text-gray-600 text-center mt-8">
-            Prefer email? Reach us at{' '}
-            <a href="mailto:info@bismarkconsulting.net" className="text-gold-600 hover:text-gold-700 font-medium">
-              info@bismarkconsulting.net
-            </a>
-          </p>
         </div>
       </section>
 

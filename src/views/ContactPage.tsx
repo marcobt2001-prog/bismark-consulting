@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { ArrowRight, Mail, Phone, MapPin, Building } from 'lucide-react';
-import CalendlyEmbed from '../components/CalendlyEmbed';
+import Link from 'next/link';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -212,12 +212,17 @@ const ContactPage = () => {
               {/* Schedule Walkthrough CTA */}
               <div>
                 <h3 className="font-display text-xl text-navy-900 mb-4">
-                  BOOK A DISCOVERY CALL
+                  SCHEDULE A WALKTHROUGH
                 </h3>
                 <p className="text-gray-700 text-sm mb-6">
-                  Book a discovery call directly and we&rsquo;ll discuss scheduling your complimentary on-site walkthrough.
+                  Schedule a walkthrough directly and we&rsquo;ll discuss your complimentary on-site assessment.
                 </p>
-                <CalendlyEmbed url="https://calendly.com/bismarkconsulting-info/walkthrough" />
+                <Link
+                  href="/schedule"
+                  className="block w-full bg-gold-600 text-navy-900 px-6 py-4 font-display text-center text-lg hover:bg-gold-500 transition-colors"
+                >
+                  SCHEDULE A WALKTHROUGH
+                </Link>
               </div>
 
               {/* Engagement Note */}
