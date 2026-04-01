@@ -6,6 +6,29 @@ import '@/index.css';
 export const metadata: Metadata = {
   title: 'Bismark Consulting Group | We Guarantee Our Results',
   description: 'Bismark Consulting Group transforms operations through the Transformative Leadership Mastery program. 25+ years, 1,600+ apprentices trained, 10 industries, 16-week engagements.',
+  metadataBase: new URL('https://bismark-consulting.vercel.app'),
+  openGraph: {
+    title: 'Bismark Consulting Group | We Guarantee Our Results',
+    description: 'Transforming high-volume operations since 1998. 25+ years, 1,600+ apprentices trained, 10 industries.',
+    url: 'https://bismark-consulting.vercel.app',
+    siteName: 'Bismark Consulting Group',
+    images: [
+      {
+        url: '/images/og-default.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Bismark Consulting Group — We Guarantee Our Results',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Bismark Consulting Group | We Guarantee Our Results',
+    description: 'Transforming high-volume operations since 1998. 25+ years, 1,600+ apprentices trained, 10 industries.',
+    images: ['/images/og-default.jpg'],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -15,6 +15,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${industry?.name ?? 'Industry'} | Bismark Consulting Group`,
     description: industry?.descriptor ?? '',
+    openGraph: {
+      title: `${industry?.name ?? 'Industry'} | Bismark Consulting Group`,
+      description: industry?.descriptor ?? '',
+      images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
+    },
   };
 }
 

@@ -24,6 +24,23 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-03-31 — Add openGraph metadata to all page routes
+**Files Modified:**
+- app/page.tsx
+- app/about/page.tsx
+- app/method/page.tsx
+- app/industries/page.tsx
+- app/industries/[slug]/page.tsx
+- app/walkthrough/page.tsx
+- app/faq/page.tsx
+- app/insights/page.tsx
+- app/contact/page.tsx
+- app/ai/page.tsx
+- app/schedule/page.tsx
+
+**Summary:**
+Added openGraph property (title, description, og:image) to the metadata export in all 11 page routes. Each openGraph title and description mirrors the existing page metadata. All pages share a default OG image at /images/og-default.jpg (1200x630). The dynamic industry [slug] route's generateMetadata also includes openGraph in its return object.
+
 ### 2026-04-01 — Fix HomePage industry rotation for SSR
 **Files Modified:**
 - src/views/HomePage.tsx
