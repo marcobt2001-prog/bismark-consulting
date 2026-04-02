@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { getRandomPairings } from '../data/industryRotation';
 import CalendlyButton from '../components/CalendlyButton';
-const handFivePillarsImg = '/images/image004.jpg';
 import EngagementPathway from '../components/visuals/EngagementPathway';
 import WireframePlaceholder from '../components/WireframePlaceholder';
 
@@ -164,12 +163,11 @@ const HomePage = () => {
                 </ol>
               </div>
 
-              {/* RIGHT — image only */}
-              <div className="flex items-center justify-center">
-                <img
-                  src={handFivePillarsImg}
-                  alt="The Bismark Method — Transformative Leadership Mastery as the palm, the Five Pillars as the fingers"
-                  className="h-auto w-auto max-h-[320px] max-w-[250px] md:max-w-full mx-auto object-contain"
+              {/* RIGHT — photo placeholder */}
+              <div>
+                <WireframePlaceholder
+                  label="Photo: Luis or leadership team in the field"
+                  aspectRatio="aspect-[3/4]"
                 />
               </div>
 

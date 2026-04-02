@@ -24,6 +24,16 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-04-01 — Add photo wireframe placeholders across remaining sections
+**Files Modified:**
+- src/views/AboutPage.tsx
+- src/views/HomePage.tsx
+- src/views/IndustriesPage.tsx
+- src/components/IndustrySubPageLayout.tsx
+
+**Summary:**
+Add photo wireframe placeholders: About page headshot (Luis portrait in 3-col grid with bio), Industry sub-page hero backgrounds (full background layer with dark overlay), Industries page full-width photo band below hero, Five Pillars section (hand illustration replaced with field photo placeholder). Removed unused handFivePillarsImg variable from HomePage.
+
 ### 2026-04-01 — Update logo to Cinzel serif font
 **Files Modified:**
 - src/components/layout/Logo.tsx

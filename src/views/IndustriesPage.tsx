@@ -25,13 +25,16 @@ const IndustriesPage = () => {
             industry.&rdquo; We need to see your operation &mdash; because
             we&rsquo;ve already seen the pattern underneath it.
           </p>
-          <WireframePlaceholder
-            label="Photo: Operations environment — wide industrial or professional setting"
-            aspectRatio="aspect-[21/9]"
-            className="mt-12 opacity-80"
-          />
         </div>
       </section>
+
+      <div className="w-full">
+        <WireframePlaceholder
+          label="Photo: Operations environment — wide industrial or professional setting"
+          aspectRatio="aspect-[21/9]"
+          className="w-full"
+        />
+      </div>
 
       {/* SECTION 2 — The Patterns Behind Every Operation */}
       <section className="py-20 bg-white">

@@ -20,19 +20,22 @@ export default function IndustrySubPageLayout({ industry }: Props) {
   return (
     <div className="bg-white">
       {/* Header Bar */}
-      <section className="bg-navy-900 text-white py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-navy-900 text-white py-16 md:py-20 relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <WireframePlaceholder
+            label={`Photo: ${industry.name} — operational setting`}
+            aspectRatio=""
+            className="w-full h-full"
+          />
+        </div>
+        <div className="absolute inset-0 z-10 bg-navy-900/75" />
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="font-display text-5xl md:text-7xl mb-6 tracking-wide">
             {industry.name.toUpperCase()}
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl leading-relaxed">
             {industry.descriptor}
           </p>
-          <WireframePlaceholder
-            label={`Photo: ${industry.name} — operational setting`}
-            aspectRatio="aspect-[21/9]"
-            className="mt-10 opacity-80"
-          />
         </div>
       </section>
 

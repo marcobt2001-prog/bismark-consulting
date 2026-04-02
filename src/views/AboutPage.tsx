@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import WireframePlaceholder from '../components/WireframePlaceholder';
 
 export default function AboutPage() {
   return (
@@ -83,14 +84,22 @@ export default function AboutPage() {
             MEET THE FOUNDER
           </h2>
 
-          <div className="mb-12">
-            <h3 className="font-display text-3xl text-white mb-2">
-              Luis Telleria-Xucla
-            </h3>
-            <p className="text-gold-600 font-display text-lg">
-              Founder &amp; Managing Director
-            </p>
-          </div>
+          <div className="grid md:grid-cols-3 gap-10 items-start">
+            <div>
+              <WireframePlaceholder
+                label="Photo: Luis Telleria-Xucla — Founder & Managing Director"
+                aspectRatio="aspect-[3/4]"
+              />
+            </div>
+            <div className="md:col-span-2">
+              <div className="mb-8">
+                <h3 className="font-display text-3xl text-white mb-2">
+                  Luis Telleria-Xucla
+                </h3>
+                <p className="text-gold-600 font-display text-lg">
+                  Founder &amp; Managing Director
+                </p>
+              </div>
 
           <div className="max-w-3xl">
             <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
@@ -109,6 +118,8 @@ export default function AboutPage() {
               <p>
                 Luis leads every Monday classroom session in every Bismark engagement and frequently leads the Transformative Leadership Mastery executive track as well. He remains the firm&rsquo;s lead practitioner and the architect of every client&rsquo;s transformation plan.
               </p>
+            </div>
+          </div>
             </div>
           </div>
 
