@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { getRandomPairings } from '../data/industryRotation';
 import CalendlyButton from '../components/CalendlyButton';
-import EngagementPathway from '../components/visuals/EngagementPathway';
 import WireframePlaceholder from '../components/WireframePlaceholder';
 
 const HomePage = () => {
@@ -240,17 +239,11 @@ const HomePage = () => {
               FROM FIRST CONVERSATION TO GUARANTEED RESULTS — HERE'S HOW IT WORKS.
             </h2>
 
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <EngagementPathway />
-              </div>
-              <div>
-                <WireframePlaceholder
-                  label="Photo: Leadership session or operations walk-through in progress"
-                  aspectRatio="aspect-[4/5]"
-                />
-              </div>
-            </div>
+            <WireframePlaceholder
+              label="Photo: Engagement pathway — from first conversation to results"
+              aspectRatio="aspect-[16/7]"
+              className="w-full"
+            />
 
             {/* Step 1 */}
             <div className="mb-16">

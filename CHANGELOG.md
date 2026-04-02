@@ -24,6 +24,15 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-04-02 — Replace HandMethodDiagram with real image, replace EngagementPathway with wireframe
+**Files Modified:**
+- src/views/BismarkMethodPage.tsx
+- src/views/HomePage.tsx
+- src/components/visuals/EngagementPathway.tsx
+
+**Summary:**
+Two Tracks, One Method section: replaced HandMethodDiagram placeholder with real hand image (image004.jpg) via next/image. Engagement Pathway section on HomePage: replaced SVG component with single wireframe placeholder, removed caption text from EngagementPathway component.
+
 ### 2026-04-01 — Fix logo sizing
 **Files Modified:**
 - src/components/layout/Logo.tsx

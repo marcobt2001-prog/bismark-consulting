@@ -75,10 +75,6 @@ export default function EngagementPathway() {
           <p className="font-display text-sm text-white tracking-wider">16-WEEK IMPLEMENTATION</p>
         </div>
       </div>
-
-      <p className="text-center text-gray-500 text-sm mt-6">
-        Every engagement starts with the Walkthrough. The data tells us which path comes next.
-      </p>
     </div>
   );
 }

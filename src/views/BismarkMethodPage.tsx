@@ -12,7 +12,7 @@ import {
   CheckCircle2,
   Eye
 } from 'lucide-react';
-import HandMethodDiagram from '../components/visuals/HandMethodDiagram';
+import Image from 'next/image';
 import PillarStaircase from '../components/visuals/PillarStaircase';
 import WeeklyRhythmTimeline from '../components/visuals/WeeklyRhythmTimeline';
 import CalendlyButton from '../components/CalendlyButton';
@@ -153,7 +153,13 @@ const BismarkMethodPage = () => {
 
             <div className="bg-gray-50 border-2 border-gray-200 rounded-lg p-8 md:p-12 hover:border-gold-600 transition-colors">
               <div className="flex flex-col items-center text-center">
-                <HandMethodDiagram />
+                <Image
+                  src="/images/image004.jpg"
+                  alt="The Bismark Method — Five Pillars and Transformative Leadership Mastery"
+                  width={520}
+                  height={520}
+                  className="object-contain mx-auto"
+                />
                 <p className="text-xl md:text-2xl text-navy-900 leading-relaxed font-light mt-8">
                   Think of it as a hand. The 5 Pillars are the fingers &mdash; they do the work, they touch the operations, they execute. Transformative Leadership Mastery is the palm &mdash; it connects everything, gives the fingers stability and coordination. <span className="font-semibold">A hand without a palm is just disconnected digits. You need both.</span>
                 </p>
