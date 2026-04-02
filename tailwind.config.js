@@ -37,6 +37,7 @@ export default {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         display: ['Bebas Neue', 'Arial', 'sans-serif'],
+        logo: ['Cinzel', 'Georgia', 'serif'],
       },
       spacing: {
         '128': '32rem',

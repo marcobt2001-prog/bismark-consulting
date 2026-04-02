@@ -5,26 +5,42 @@ interface LogoProps {
 }
 
 export default function Logo({ variant = 'light' }: LogoProps) {
-  if (variant === 'light') {
-    return (
-      <Link href="/" className="block">
-        <img
-          src="/images/bismark-logo-white-bg.svg"
-          alt="Bismark Consulting Group"
-          className="h-14 md:h-16 w-auto"
-        />
-      </Link>
-    );
-  }
+  const isDark = variant === 'dark';
+  const titleColor = isDark ? 'text-white' : 'text-navy-900';
+  const subtitleColor = isDark ? '#c9a227' : '#a17318';
 
   return (
     <Link href="/" className="block">
-      <div className="flex flex-col leading-none">
-        <span className="font-display text-4xl md:text-5xl tracking-wider text-white">
+      <div className="flex flex-col items-center" style={{ lineHeight: 1 }}>
+        <span
+          className={`font-logo ${titleColor}`}
+          style={{
+            fontWeight: 700,
+            fontSize: 'clamp(28px, 4vw, 40px)',
+            letterSpacing: '0.18em',
+          }}
+        >
           BISMARK
         </span>
-        <span className="font-sans text-sm md:text-base tracking-widest text-gray-400 -mt-1">
-          CONSULTING
+        <div
+          style={{
+            width: '85%',
+            height: '1px',
+            background: 'linear-gradient(90deg, transparent, #c9a227, transparent)',
+            margin: '4px 0',
+          }}
+        />
+        <span
+          className="font-logo"
+          style={{
+            fontWeight: 400,
+            fontSize: 'clamp(8px, 1.1vw, 11px)',
+            letterSpacing: '0.52em',
+            paddingLeft: '0.52em',
+            color: subtitleColor,
+          }}
+        >
+          CONSULTING GROUP
         </span>
       </div>
     </Link>

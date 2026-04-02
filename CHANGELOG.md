@@ -24,6 +24,20 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-04-01 — Update logo to Cinzel serif font
+**Files Modified:**
+- src/components/layout/Logo.tsx
+- app/layout.tsx
+- tailwind.config.js
+
+**Files Deleted:**
+- public/images/bismark-logo-white-bg.svg
+- public/vite.svg
+- public/images/OG_IMAGE_NEEDED.md
+
+**Summary:**
+Updated logo to Cinzel serif — BISMARK in Cinzel Bold 700 (navy), gold gradient divider, CONSULTING GROUP in Cinzel Regular 400 (gold). Added Cinzel to Google Fonts link and Tailwind font-logo utility. Both light (navbar) and dark (footer) variants use the same Cinzel markup with appropriate colors. Deleted old outlined SVG logo and Vite scaffold artifact.
+
 ### 2026-04-01 — Add photo wireframe placeholders across 6 sections
 **Files Created:**
 - src/components/WireframePlaceholder.tsx
