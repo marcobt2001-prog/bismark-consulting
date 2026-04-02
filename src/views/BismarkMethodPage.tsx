@@ -13,7 +13,7 @@ import {
   Eye
 } from 'lucide-react';
 import Image from 'next/image';
-import PillarStaircase from '../components/visuals/PillarStaircase';
+import PillarSequenceFlow from '../components/visuals/PillarSequenceFlow';
 import WeeklyRhythmTimeline from '../components/visuals/WeeklyRhythmTimeline';
 import CalendlyButton from '../components/CalendlyButton';
 import WireframePlaceholder from '../components/WireframePlaceholder';
@@ -294,7 +294,7 @@ const BismarkMethodPage = () => {
               WHY THE ORDER IS NON-NEGOTIABLE
             </h3>
 
-            <PillarStaircase />
+            <PillarSequenceFlow />
 
             <p className="text-gray-700 leading-relaxed mb-4">
               Most organizations &mdash; especially those with internal improvement teams &mdash; instinctively start with the org chart. They restructure teams before understanding how customers actually experience their processes, and before the processes themselves have been redesigned. The result is predictable: rework, misalignment, and a cycle of reorganizations that never quite solve the underlying problem.

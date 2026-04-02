@@ -24,6 +24,16 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-04-02 — Replace PillarStaircase with PillarSequenceFlow horizontal diagram
+**Files Created:**
+- src/components/visuals/PillarSequenceFlow.tsx
+
+**Files Modified:**
+- src/views/BismarkMethodPage.tsx
+
+**Summary:**
+Replaced PillarStaircase with a new horizontal flow diagram showing 5 numbered pillar nodes connected by gold arrows. Red callout between Pillar 02 and 03 reads "Most firms start here" to communicate why the sequence is non-negotiable.
+
 ### 2026-04-02 — Replace HandMethodDiagram with real image, replace EngagementPathway with wireframe
 **Files Modified:**
 - src/views/BismarkMethodPage.tsx
