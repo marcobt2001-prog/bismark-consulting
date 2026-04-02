@@ -196,7 +196,7 @@ const BismarkMethodPage = () => {
                 The curriculum is built on three core principles &mdash; how performance follows perception, how reality arises in language, and how committed language transforms what&rsquo;s possible. Through these, your leaders work through concepts including:
               </p>
 
-              <div className="flex flex-wrap gap-3 mb-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
                 {[
                   'The Power of Context',
                   'Two Modes of Listening',
@@ -205,12 +205,17 @@ const BismarkMethodPage = () => {
                   'The 5-Step Transformation Model',
                   '7 Commitments to Breaking Down Barriers'
                 ].map((concept, index) => (
-                  <span
+                  <div
                     key={index}
-                    className="bg-white border border-gray-300 text-navy-900 px-4 py-2 text-sm font-medium"
+                    className="bg-white border-l-4 border-gold-600 px-6 py-4"
                   >
-                    {concept}
-                  </span>
+                    <p className="font-display text-xs tracking-widest text-gold-600 mb-1">
+                      {String(index + 1).padStart(2, '0')}
+                    </p>
+                    <p className="font-display text-base text-navy-900 tracking-wide">
+                      {concept}
+                    </p>
+                  </div>
                 ))}
               </div>
             </div>

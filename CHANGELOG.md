@@ -24,6 +24,13 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-04-02 — Redesign TLM concepts list as numbered card grid
+**Files Modified:**
+- src/views/BismarkMethodPage.tsx
+
+**Summary:**
+Replaced pill/chip layout for 6 TLM concepts with a 2-column numbered card grid. Each card has a gold left border, zero-padded numeral (01–06), and concept name in display font.
+
 ### 2026-04-02 — Increase CONSULTING GROUP subtitle size in logo
 **Files Modified:**
 - src/components/layout/Logo.tsx
