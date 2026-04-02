@@ -24,6 +24,14 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-04-01 — Update Logo component to use outlined SVG
+**Files Modified:**
+- src/components/layout/Logo.tsx
+- src/components/layout/Footer.tsx
+
+**Summary:**
+Updated Logo component to render the outlined SVG from /images/bismark-logo-white-bg.svg in the navbar (light variant). Added variant prop: 'light' (default, SVG image) for white backgrounds, 'dark' (white text) for the navy footer. Footer now uses variant="dark" with white/gray text colors.
+
 ### 2026-04-01 — Convert logo SVG text to outlined vector paths
 **Files Modified:**
 - public/images/bismark-logo-white-bg.svg
