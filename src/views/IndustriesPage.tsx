@@ -3,6 +3,7 @@ import CalendlyButton from '../components/CalendlyButton';
 import { industries } from '../data/industries';
 import ArchetypeIconSet from '../components/visuals/ArchetypeIconSet';
 import FindYourOperationMatrix from '../components/FindYourOperationMatrix';
+import WireframePlaceholder from '../components/WireframePlaceholder';
 
 const IndustriesPage = () => {
   return (
@@ -24,6 +25,11 @@ const IndustriesPage = () => {
             industry.&rdquo; We need to see your operation &mdash; because
             we&rsquo;ve already seen the pattern underneath it.
           </p>
+          <WireframePlaceholder
+            label="Photo: Operations environment — wide industrial or professional setting"
+            aspectRatio="aspect-[21/9]"
+            className="mt-12 opacity-80"
+          />
         </div>
       </section>
 

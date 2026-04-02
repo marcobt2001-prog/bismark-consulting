@@ -3,6 +3,7 @@ import { ArrowRight, Users, BarChart3, FileSearch, Presentation, Building, Trend
 
 import CalendlyButton from '../components/CalendlyButton';
 import WalkthroughProcessFlow from '../components/visuals/WalkthroughProcessFlow';
+import WireframePlaceholder from '../components/WireframePlaceholder';
 
 const WalkthroughPage = () => {
   const walkthroughPhases = [
@@ -201,34 +202,44 @@ const WalkthroughPage = () => {
                 key={index}
                 className="bg-white border-2 border-gray-200 rounded-lg p-8 md:p-10 hover:border-gold-600 transition-colors"
               >
-                <div className="flex flex-col md:flex-row gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-20 h-20 bg-navy-900 flex items-center justify-center">
-                      <step.icon className="w-10 h-10 text-gold-600" />
-                    </div>
+                <div className="grid md:grid-cols-2 gap-10 items-start">
+                  <div className={index % 2 === 1 ? 'md:order-last' : ''}>
+                    <WireframePlaceholder
+                      aspectRatio="aspect-[3/4]"
+                      label={`Photo: ${step.title} — field/operations context`}
+                    />
                   </div>
-
-                  <div className="flex-1">
-                    <div className="flex items-center gap-4 mb-3">
-                      <span className="font-display text-sm text-gold-600 bg-gold-50 px-3 py-1">
-                        {step.phase}
-                      </span>
-                      <h3 className="font-display text-2xl md:text-3xl text-navy-900">
-                        {step.title}
-                      </h3>
-                    </div>
-
-                    <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                      {step.description}
-                    </p>
-
-                    <div className="grid md:grid-cols-2 gap-3">
-                      {step.activities.map((activity, idx) => (
-                        <div key={idx} className="flex items-start gap-2">
-                          <div className="w-1.5 h-1.5 bg-gold-600 rounded-full mt-2 flex-shrink-0" />
-                          <span className="text-gray-600 text-sm">{activity}</span>
+                  <div>
+                    <div className="flex flex-col md:flex-row gap-6">
+                      <div className="flex-shrink-0">
+                        <div className="w-20 h-20 bg-navy-900 flex items-center justify-center">
+                          <step.icon className="w-10 h-10 text-gold-600" />
                         </div>
-                      ))}
+                      </div>
+
+                      <div className="flex-1">
+                        <div className="flex items-center gap-4 mb-3">
+                          <span className="font-display text-sm text-gold-600 bg-gold-50 px-3 py-1">
+                            {step.phase}
+                          </span>
+                          <h3 className="font-display text-2xl md:text-3xl text-navy-900">
+                            {step.title}
+                          </h3>
+                        </div>
+
+                        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                          {step.description}
+                        </p>
+
+                        <div className="grid md:grid-cols-2 gap-3">
+                          {step.activities.map((activity, idx) => (
+                            <div key={idx} className="flex items-start gap-2">
+                              <div className="w-1.5 h-1.5 bg-gold-600 rounded-full mt-2 flex-shrink-0" />
+                              <span className="text-gray-600 text-sm">{activity}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

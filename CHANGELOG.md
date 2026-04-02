@@ -24,6 +24,20 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-04-01 — Add photo wireframe placeholders across 6 sections
+**Files Created:**
+- src/components/WireframePlaceholder.tsx
+
+**Files Modified:**
+- src/views/BismarkMethodPage.tsx
+- src/views/WalkthroughPage.tsx
+- src/views/IndustriesPage.tsx
+- src/components/IndustrySubPageLayout.tsx
+- src/views/HomePage.tsx
+
+**Summary:**
+Created reusable WireframePlaceholder component with camera icon and label. Added placeholders across 6 sections: Weekly Rhythm cards on Method page (3), Walkthrough phases in alternating 2-column grid (4), Industries hero (wide), Industry sub-page heroes (dynamic), HomePage "Problem We Solve" section (full background with dark overlay), and EngagementPathway section (side panel).
+
 ### 2026-04-01 — Update Logo component to use outlined SVG
 **Files Modified:**
 - src/components/layout/Logo.tsx

@@ -16,6 +16,7 @@ import HandMethodDiagram from '../components/visuals/HandMethodDiagram';
 import PillarStaircase from '../components/visuals/PillarStaircase';
 import WeeklyRhythmTimeline from '../components/visuals/WeeklyRhythmTimeline';
 import CalendlyButton from '../components/CalendlyButton';
+import WireframePlaceholder from '../components/WireframePlaceholder';
 
 const BismarkMethodPage = () => {
   const pillars = [
@@ -319,6 +320,7 @@ const BismarkMethodPage = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-gold-600 transition-colors">
+              <WireframePlaceholder aspectRatio="aspect-[4/3]" className="mb-6" label="Photo: Classroom or workshop setting" />
               <div className="w-20 h-20 bg-navy-900 flex items-center justify-center mb-6">
                 <BookOpen className="w-10 h-10 text-gold-600" />
               </div>
@@ -329,6 +331,7 @@ const BismarkMethodPage = () => {
             </div>
 
             <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-gold-600 transition-colors">
+              <WireframePlaceholder aspectRatio="aspect-[4/3]" className="mb-6" label="Photo: Team working on the floor / in the field" />
               <div className="w-20 h-20 bg-navy-900 flex items-center justify-center mb-6">
                 <Layers className="w-10 h-10 text-gold-600" />
               </div>
@@ -339,6 +342,7 @@ const BismarkMethodPage = () => {
             </div>
 
             <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-gold-600 transition-colors">
+              <WireframePlaceholder aspectRatio="aspect-[4/3]" className="mb-6" label="Photo: Leader presenting or running a meeting" />
               <div className="w-20 h-20 bg-navy-900 flex items-center justify-center mb-6">
                 <CheckCircle2 className="w-10 h-10 text-gold-600" />
               </div>

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
 import CalendlyButton from './CalendlyButton';
+import WireframePlaceholder from './WireframePlaceholder';
 import type { Industry } from '../data/industries';
 import { industries } from '../data/industries';
 
@@ -27,6 +28,11 @@ export default function IndustrySubPageLayout({ industry }: Props) {
           <p className="text-xl text-gray-300 max-w-3xl leading-relaxed">
             {industry.descriptor}
           </p>
+          <WireframePlaceholder
+            label={`Photo: ${industry.name} — operational setting`}
+            aspectRatio="aspect-[21/9]"
+            className="mt-10 opacity-80"
+          />
         </div>
       </section>
 
