@@ -24,6 +24,13 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-04-02 — Increase CONSULTING GROUP subtitle size in logo
+**Files Modified:**
+- src/components/layout/Logo.tsx
+
+**Summary:**
+Increased "CONSULTING GROUP" font size from 8px to 9.5px (~19% larger) for better readability. BISMARK size unchanged at 28px.
+
 ### 2026-04-02 — Replace PillarStaircase with PillarSequenceFlow horizontal diagram
 **Files Created:**
 - src/components/visuals/PillarSequenceFlow.tsx

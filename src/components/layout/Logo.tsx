@@ -34,7 +34,7 @@ export default function Logo({ variant = 'light' }: LogoProps) {
           className="font-logo"
           style={{
             fontWeight: 400,
-            fontSize: '8px',
+            fontSize: '9.5px',
             letterSpacing: '0.50em',
             paddingLeft: '0.50em',
             color: subtitleColor,
