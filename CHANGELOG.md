@@ -24,6 +24,13 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-04-01 — Convert logo SVG text to outlined vector paths
+**Files Modified:**
+- public/images/bismark-logo-white-bg.svg
+
+**Summary:**
+Converted logo SVG text to outlined vector paths — eliminates external font dependency (Cinzel via Google Fonts @import) that caused silent fallback to Times New Roman in most rendering contexts. Used opentype.js to convert "BISMARK" (Cinzel Black 900) and "CONSULTING GROUP" (Cinzel Regular 400) to <path> elements. Zero <text>, @import, or font-family references remain.
+
 ### 2026-04-01 — Add force-static export to all app/ page routes
 **Files Modified:**
 - app/page.tsx
