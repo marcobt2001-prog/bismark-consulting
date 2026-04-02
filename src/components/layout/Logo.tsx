@@ -16,7 +16,7 @@ export default function Logo({ variant = 'light' }: LogoProps) {
           className={`font-logo ${titleColor}`}
           style={{
             fontWeight: 700,
-            fontSize: 'clamp(28px, 4vw, 40px)',
+            fontSize: '24px',
             letterSpacing: '0.18em',
           }}
         >
@@ -27,16 +27,16 @@ export default function Logo({ variant = 'light' }: LogoProps) {
             width: '85%',
             height: '1px',
             background: 'linear-gradient(90deg, transparent, #c9a227, transparent)',
-            margin: '4px 0',
+            margin: '3px 0',
           }}
         />
         <span
           className="font-logo"
           style={{
             fontWeight: 400,
-            fontSize: 'clamp(8px, 1.1vw, 11px)',
-            letterSpacing: '0.52em',
-            paddingLeft: '0.52em',
+            fontSize: '7px',
+            letterSpacing: '0.50em',
+            paddingLeft: '0.50em',
             color: subtitleColor,
           }}
         >

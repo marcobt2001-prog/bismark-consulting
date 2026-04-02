@@ -24,6 +24,13 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-04-01 — Fix logo sizing
+**Files Modified:**
+- src/components/layout/Logo.tsx
+
+**Summary:**
+Fixed logo sizing — reduced from clamp(28-40px) to fixed 24px to fit navbar without displacing nav tabs. Subtitle reduced proportionally to 7px. Cinzel font loading already correct via Google Fonts link tag.
+
 ### 2026-04-01 — Add photo wireframe placeholders across remaining sections
 **Files Modified:**
 - src/views/AboutPage.tsx
