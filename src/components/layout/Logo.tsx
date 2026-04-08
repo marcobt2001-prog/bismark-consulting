@@ -11,7 +11,7 @@ export default function Logo({ variant = 'light' }: LogoProps) {
 
   return (
     <Link href="/" className="block">
-      <div className="flex flex-col items-center" style={{ lineHeight: 1 }}>
+      <div className={`flex flex-col items-center${isDark ? ' w-fit' : ''}`} style={{ lineHeight: 1 }}>
         <span
           className={`font-logo ${titleColor}`}
           style={{

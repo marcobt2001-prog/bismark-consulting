@@ -24,6 +24,13 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-04-07 — Add w-fit to dark variant logo wrapper
+**Files Modified:**
+- src/components/layout/Logo.tsx
+
+**Summary:**
+Added w-fit to the dark variant logo wrapper so the gold divider line collapses to the intrinsic width of the BISMARK text, matching navbar logo behavior.
+
 ### 2026-04-02 — Redesign TLM concepts list as numbered card grid
 **Files Modified:**
 - src/views/BismarkMethodPage.tsx
