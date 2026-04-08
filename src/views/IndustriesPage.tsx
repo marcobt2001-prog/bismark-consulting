@@ -38,12 +38,12 @@ const IndustriesPage = () => {
 
       {/* SECTION 2 — The Patterns Behind Every Operation */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-display text-4xl md:text-5xl text-navy-900 mb-6">
             THE PATTERNS BEHIND EVERY OPERATION
           </h2>
-          <div className="bg-gold-600 h-1 w-24 mb-8" />
-          <p className="text-lg text-gray-700 max-w-4xl leading-relaxed mb-12">
+          <div className="bg-gold-600 h-1 w-24 mb-8 mx-auto" />
+          <p className="text-lg text-gray-700 max-w-4xl leading-relaxed mb-12 mx-auto">
             Over two decades of transforming high-volume operations, we&rsquo;ve
             identified a set of repeating process patterns &mdash; archetypes
             &mdash; that generate nearly every transactional operation in the
@@ -57,7 +57,7 @@ const IndustriesPage = () => {
 
           <ArchetypeIconSet />
 
-          <p className="text-lg text-gray-700 max-w-4xl leading-relaxed mt-12">
+          <p className="text-lg text-gray-700 max-w-4xl leading-relaxed mt-12 mx-auto">
             These 12 archetypes aren&rsquo;t a framework we impose on your
             operation. They&rsquo;re the vocabulary we carry into every
             engagement &mdash; the reason a Bismark coach can walk your floor
@@ -69,21 +69,21 @@ const IndustriesPage = () => {
 
       {/* SECTION 3 — Industry Navigation Grid */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-display text-4xl md:text-5xl text-navy-900 mb-6">
             FIND YOUR OPERATION
           </h2>
-          <div className="bg-gold-600 h-1 w-24 mb-8" />
-          <p className="text-lg text-gray-700 max-w-4xl leading-relaxed mb-12">
+          <div className="bg-gold-600 h-1 w-24 mb-8 mx-auto" />
+          <p className="text-lg text-gray-700 max-w-4xl leading-relaxed mb-12 mx-auto">
             Select an industry to see its complete process map, active
             archetypes, and where The Bismark Method creates transformation.
           </p>
 
-          <div className="mt-12 mb-12">
+          <div className="mt-12 mb-12 text-left">
             <FindYourOperationMatrix />
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 text-left">
             {industries.map((industry) => (
               <Link
                 key={industry.slug}

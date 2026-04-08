@@ -196,12 +196,12 @@ const HomePage = () => {
 
       {/* ===================== SECTION 4 — INDUSTRY ROTATION DISPLAY ===================== */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-display text-4xl md:text-5xl text-navy-900 mb-12">
             PROVEN ACROSS INDUSTRIES. APPLIED AT THE PROCESS LEVEL.
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-12 text-left">
             {pairings.map((pairing, index) => (
               <div
                 key={index}
@@ -217,7 +217,7 @@ const HomePage = () => {
             ))}
           </div>
 
-          <p className="text-gray-700 leading-relaxed mb-8 max-w-4xl">
+          <p className="text-gray-700 leading-relaxed mb-8 max-w-4xl mx-auto">
             The Bismark Method works because operational excellence follows patterns, not industry boundaries. Claims adjudication in insurance and loan underwriting in banking are variations of the same archetype — authorization and verification under volume and time pressure. We see the pattern. We transform the process. We guarantee the result.
           </p>
 
@@ -406,31 +406,29 @@ const HomePage = () => {
 
       {/* ===================== SECTION 7 — WHO WE WORK WITH ===================== */}
       <section className="py-20 bg-navy-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl">
-            <h2 className="font-display text-4xl md:text-5xl mb-8">
-              BUILT FOR LEADERS WHO OWN OPERATIONAL OUTCOMES.
-            </h2>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-display text-4xl md:text-5xl mb-8">
+            BUILT FOR LEADERS WHO OWN OPERATIONAL OUTCOMES.
+          </h2>
 
-            <p className="text-gray-300 leading-relaxed mb-6">
-              The Bismark Method is designed for senior operations leaders — VPs, SVPs, COOs, and division heads — who are directly accountable for the performance of high-volume, transaction-intensive operations. These are leaders who know their operation should be performing better, who have the authority to commit to a transformation, and who are willing to invest in building lasting capability rather than buying temporary fixes.
-            </p>
-            <p className="text-gray-300 leading-relaxed">
-              Our clients have typically cycled through internal initiatives, Lean/Six Sigma programs, or traditional consulting engagements — and found that results either never materialized or didn't sustain. They're looking for something structurally different. That's what the Bismark Method delivers.
-            </p>
-          </div>
+          <p className="text-gray-300 leading-relaxed mb-6 max-w-4xl mx-auto">
+            The Bismark Method is designed for senior operations leaders — VPs, SVPs, COOs, and division heads — who are directly accountable for the performance of high-volume, transaction-intensive operations. These are leaders who know their operation should be performing better, who have the authority to commit to a transformation, and who are willing to invest in building lasting capability rather than buying temporary fixes.
+          </p>
+          <p className="text-gray-300 leading-relaxed max-w-4xl mx-auto">
+            Our clients have typically cycled through internal initiatives, Lean/Six Sigma programs, or traditional consulting engagements — and found that results either never materialized or didn't sustain. They're looking for something structurally different. That's what the Bismark Method delivers.
+          </p>
         </div>
       </section>
 
       {/* ===================== SECTION 8 — INSIGHTS PLACEHOLDER ===================== */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-display text-4xl md:text-5xl text-navy-900 mb-12">
             PERSPECTIVES ON OPERATIONAL TRANSFORMATION.
           </h2>
 
           <div className="bg-gray-100 border-2 border-gray-200 flex items-center justify-center" style={{ minHeight: '200px' }}>
-            <div className="text-center px-4">
+            <div className="px-4">
               <p className="font-display text-2xl text-gray-500 mb-2">INSIGHTS — COMING SOON</p>
               <p className="text-gray-400 text-sm">
                 Articles and perspectives on operational transformation. Content launching soon.

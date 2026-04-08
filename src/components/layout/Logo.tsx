@@ -33,10 +33,10 @@ export default function Logo({ variant = 'light' }: LogoProps) {
         <span
           className="font-logo"
           style={{
-            fontWeight: 400,
+            fontWeight: isDark ? 700 : 400,
             fontSize: '9.5px',
-            letterSpacing: '0.50em',
-            paddingLeft: '0.50em',
+            letterSpacing: isDark ? '0.22em' : '0.50em',
+            paddingLeft: isDark ? '0.22em' : '0.50em',
             color: subtitleColor,
           }}
         >

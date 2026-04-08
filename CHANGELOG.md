@@ -24,6 +24,15 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-04-07 — Bold footer logo subtitle, center text on HomePage and IndustriesPage
+**Files Modified:**
+- src/components/layout/Logo.tsx
+- src/views/HomePage.tsx
+- src/views/IndustriesPage.tsx
+
+**Summary:**
+Footer logo: made CONSULTING GROUP bold (weight 700) with tighter letter-spacing (0.22em) in dark variant to stay within BISMARK width. HomePage: centered text in Industry Rotation, Who We Work With, and Insights sections. IndustriesPage: centered headings and paragraphs in Patterns and Find Your Operation sections; card grids and matrix kept left-aligned.
+
 ### 2026-04-07 — Add w-fit to dark variant logo wrapper
 **Files Modified:**
 - src/components/layout/Logo.tsx
