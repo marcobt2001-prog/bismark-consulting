@@ -24,6 +24,14 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-04-08 — Revert HomePage hero centering, add gold label to Industries hero
+**Files Modified:**
+- src/views/HomePage.tsx
+- src/views/IndustriesPage.tsx
+
+**Summary:**
+Reverted hero text centering on HomePage (back to left-aligned). Added "OUR INDUSTRIES" gold label badge above the Industries page hero heading.
+
 ### 2026-04-08 — Center hero text on HomePage and IndustriesPage
 **Files Modified:**
 - src/views/HomePage.tsx

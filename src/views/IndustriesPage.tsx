@@ -12,6 +12,11 @@ const IndustriesPage = () => {
       <section className="relative bg-navy-900 text-white py-24 md:py-32">
         <div className="absolute inset-0 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 opacity-90" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-block mb-6">
+            <span className="bg-gold-600 text-navy-900 px-4 py-2 font-display text-sm tracking-wider">
+              OUR INDUSTRIES
+            </span>
+          </div>
           <h1 className="font-display text-5xl md:text-7xl mb-6 tracking-wide">
             WE DON&rsquo;T CONSULT TO INDUSTRIES.{' '}
             <span className="text-gold-600">WE TRANSFORM OPERATIONS.</span>
