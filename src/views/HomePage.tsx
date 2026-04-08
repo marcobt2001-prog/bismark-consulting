@@ -18,8 +18,8 @@ const HomePage = () => {
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-gold-600 rounded-full blur-3xl" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-4xl mx-auto">
             <h1 className="font-display text-5xl md:text-7xl lg:text-8xl mb-8 tracking-wide leading-tight">
               YOUR OPERATION IS UNDERPERFORMING. YOU ALREADY KNOW IT. THE QUESTION IS WHAT TO DO ABOUT IT.
             </h1>

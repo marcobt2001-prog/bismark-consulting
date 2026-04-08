@@ -24,6 +24,14 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-04-08 — Center hero text on HomePage and IndustriesPage
+**Files Modified:**
+- src/views/HomePage.tsx
+- src/views/IndustriesPage.tsx
+
+**Summary:**
+Centered hero section text on HomePage (text-center + mx-auto on inner container) and IndustriesPage (text-center on container, mx-auto on paragraph). No other sections changed.
+
 ### 2026-04-07 — Bold footer logo subtitle, center text on HomePage and IndustriesPage
 **Files Modified:**
 - src/components/layout/Logo.tsx
