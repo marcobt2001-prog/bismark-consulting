@@ -24,6 +24,13 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-04-09 — Increase navbar logo subtitle size and weight
+**Files Modified:**
+- src/components/layout/Logo.tsx
+
+**Summary:**
+Updated CONSULTING GROUP subtitle in the light (navbar) variant: fontSize 9.5px → 13px, fontWeight 400 → 700, letterSpacing 0.50em → 0.16em, paddingLeft 0.50em → 0.16em. Dark (footer) variant unchanged.
+
 ### 2026-04-09 — Build Insights section: index page + first article
 
 **Files Created:**
