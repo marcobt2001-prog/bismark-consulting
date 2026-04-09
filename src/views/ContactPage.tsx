@@ -11,11 +11,34 @@ const ContactPage = () => {
     company: '',
     message: ''
   });
+  const [isLoading, setIsLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic will be implemented later
-    alert('Thank you for your message. We will be in touch shortly.');
+    setIsLoading(true);
+    setSuccessMessage('');
+    setErrorMessage('');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setFormData({ name: '', email: '', company: '', message: '' });
+        setSuccessMessage('Your message has been sent. We\u2019ll be in touch within 24 hours.');
+      } else {
+        setErrorMessage('Something went wrong. Please email us directly at info@bismarkconsulting.net.');
+      }
+    } catch {
+      setErrorMessage('Something went wrong. Please email us directly at info@bismarkconsulting.net.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -139,11 +162,24 @@ const ContactPage = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-navy-900 text-white px-8 py-4 font-display text-lg hover:bg-navy-800 transition-colors flex items-center justify-center gap-2"
+                  disabled={isLoading}
+                  className="w-full bg-navy-900 text-white px-8 py-4 font-display text-lg hover:bg-navy-800 transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  SEND MESSAGE
-                  <ArrowRight className="w-5 h-5" />
+                  {isLoading ? 'SENDING\u2026' : 'SEND MESSAGE'}
+                  {!isLoading && <ArrowRight className="w-5 h-5" />}
                 </button>
+
+                {successMessage && (
+                  <div className="bg-[#f0fdf4] border border-green-200 text-green-800 rounded-lg px-4 py-3 text-sm">
+                    {successMessage}
+                  </div>
+                )}
+
+                {errorMessage && (
+                  <div className="bg-[#fef2f2] border border-red-200 text-red-800 rounded-lg px-4 py-3 text-sm">
+                    {errorMessage}
+                  </div>
+                )}
 
                 <p className="text-sm text-gray-600">
                   * Required fields. We respect your privacy and will never share your information.

@@ -24,6 +24,17 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-04-08 — Contact form wired to Resend with two-email confirmation system
+**Files Created:**
+- app/api/contact/route.ts
+
+**Files Modified:**
+- src/views/ContactPage.tsx
+- package.json (added resend)
+
+**Summary:**
+Wired contact form to Resend API. Sends internal notification to info@bismarkconsulting.net and branded confirmation email to submitter with Calendly link and Luis sign-off. Form shows loading state, inline success/error banners, and clears on success.
+
 ### 2026-04-08 — Revert HomePage hero centering, add gold label to Industries hero
 **Files Modified:**
 - src/views/HomePage.tsx
