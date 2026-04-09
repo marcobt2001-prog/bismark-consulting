@@ -24,6 +24,19 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-04-09 — Build Insights section: index page + first article
+
+**Files Created:**
+- src/data/insights.ts
+- app/insights/[slug]/page.tsx
+- src/views/insights/WhatHappensAfterConsultantsLeave.tsx
+
+**Files Modified:**
+- src/views/InsightsPage.tsx
+
+**Summary:**
+Replaced "coming soon" Insights placeholder with a working article index page and dynamic article route. Added insights.ts data file for article metadata. Created first article view: "What Happens After the Consultants Leave" by Luis Telleria-Xucla, with full prose rendering, section breaks, pull quotes, Related callouts, author bio strip, and Walkthrough CTA.
+
 ### 2026-04-08 — Contact form wired to Resend with two-email confirmation system
 **Files Created:**
 - app/api/contact/route.ts
