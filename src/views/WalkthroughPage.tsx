@@ -1,9 +1,9 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, Users, BarChart3, FileSearch, Presentation, Building, TrendingUp, BookOpen, Clock, Shield, Database, Brain } from 'lucide-react';
 
 import CalendlyButton from '../components/CalendlyButton';
 import WalkthroughProcessFlow from '../components/visuals/WalkthroughProcessFlow';
-import WireframePlaceholder from '../components/WireframePlaceholder';
 
 const WalkthroughPage = () => {
   const walkthroughPhases = [
@@ -12,6 +12,8 @@ const WalkthroughPage = () => {
       phase: 'Phase 1',
       title: 'Stakeholder Engagement',
       description: "We meet with executives, operations leaders, and frontline managers \u2014 not to pitch, but to listen. We need to understand your strategic objectives, the performance targets you're measured against, and the operational reality behind the reports. This is a deep discovery conversation, not a slideshow.",
+      photo: '/images/stock-watermarked/stock-photo-senior-older-indian-business-man-director-boss-ceo-leading-employees-team-meeting-presenting-2383724139.jpg',
+      photoAlt: 'Senior leader meeting with team during stakeholder engagement',
       activities: [
         'Executive and leadership interviews',
         'Strategic objective alignment',
@@ -24,6 +26,8 @@ const WalkthroughPage = () => {
       phase: 'Phase 2',
       title: 'Data & Documentation Analysis',
       description: "We dig into your operational data, performance metrics, and process documentation. We're looking for the patterns, disconnects, and bottlenecks that live in the gaps between what's reported and what's real. This is where the Bismark Method lens does its heaviest lifting \u2014 we know what to look for because we've seen it hundreds of times.",
+      photo: '/images/stock-watermarked/stock-photo-glasses-asian-woman-holding-pencil-and-thinking-beside-laptop-and-coffee-on-wooden-table-in-library-2662150007.jpg',
+      photoAlt: 'Analyst reviewing data and documentation',
       activities: [
         'Performance data review and validation',
         'Process flow and documentation analysis',
@@ -36,6 +40,8 @@ const WalkthroughPage = () => {
       phase: 'Phase 3',
       title: 'Operational Observation',
       description: "We go to the floor, the desks, the systems. We watch your operations in action and talk to the people doing the work. There is no substitute for direct observation \u2014 reports tell you what happened, observation tells you why.",
+      photo: '/images/stock-watermarked/stock-photo-manager-in-discussion-with-coworker-in-an-open-plan-office-314863934.jpg',
+      photoAlt: 'Manager in discussion with a coworker on the floor',
       activities: [
         'Process observation and time studies',
         'Frontline employee interviews',
@@ -48,6 +54,8 @@ const WalkthroughPage = () => {
       phase: 'Phase 4',
       title: 'Findings & Recommendation',
       description: "We deliver an Executive Summary with Data Exhibits \u2014 in both written and oral presentation to your leadership team. This is not a vague deck of observations. It includes quantified findings, specific improvement opportunities, and projected financial impact.",
+      photo: '/images/stock-watermarked/stock-photo-office-conference-room-meeting-presentation-black-businessman-talks-uses-tv-screen-to-show-2104457714.jpg',
+      photoAlt: 'Executive presenting findings to leadership team',
       activities: [
         'Executive Summary with Data Exhibits',
         'Quantified improvement opportunities',
@@ -204,10 +212,15 @@ const WalkthroughPage = () => {
               >
                 <div className="grid md:grid-cols-2 gap-10 items-start">
                   <div className={index % 2 === 1 ? 'md:order-last' : ''}>
-                    <WireframePlaceholder
-                      aspectRatio="aspect-[3/4]"
-                      label={`Photo: ${step.title} — field/operations context`}
-                    />
+                    <div className="relative w-full aspect-[3/4] overflow-hidden">
+                      <Image
+                        src={step.photo}
+                        alt={step.photoAlt}
+                        fill
+                        sizes="(min-width: 768px) 50vw, 100vw"
+                        className="object-cover"
+                      />
+                    </div>
                   </div>
                   <div>
                     <div className="flex flex-col md:flex-row gap-6">

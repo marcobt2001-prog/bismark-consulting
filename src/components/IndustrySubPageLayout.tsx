@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
 import CalendlyButton from './CalendlyButton';
 import WireframePlaceholder from './WireframePlaceholder';
@@ -22,11 +23,23 @@ export default function IndustrySubPageLayout({ industry }: Props) {
       {/* Header Bar */}
       <section className="bg-navy-900 text-white py-16 md:py-20 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <WireframePlaceholder
-            label={`Photo: ${industry.name} — operational setting`}
-            aspectRatio=""
-            className="w-full h-full"
-          />
+          {industry.heroImage ? (
+            <Image
+              src={industry.heroImage}
+              alt=""
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
+              aria-hidden="true"
+            />
+          ) : (
+            <WireframePlaceholder
+              label={`Photo: ${industry.name} — operational setting`}
+              aspectRatio=""
+              className="w-full h-full"
+            />
+          )}
         </div>
         <div className="absolute inset-0 z-10 bg-navy-900/75" />
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

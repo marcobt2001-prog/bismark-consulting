@@ -24,6 +24,46 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-04-28 — Remaining image placeholder pass (site-wide)
+
+**Files Modified:**
+- `src/components/IndustrySubPageLayout.tsx` — replaced the single `WireframePlaceholder` header background with `next/image` driven by `industry.heroImage` (covers all 10 dynamic `/industries/[slug]` pages). Kept `WireframePlaceholder` as a guarded fallback.
+- `src/views/HomePage.tsx` — replaced two placeholders:
+  - "Five Pillars" right-column 3:4 image → `stock-photo-a-diverse-group-of-smiling-industrial-professionals-collaborates-over-a-laptop-on-the-factory-floor-2455170065.jpg`
+  - "From First Conversation to Guaranteed Results" 16:7 wide image → `stock-photo-the-image-showcases-professionals-engaged-in-a-collaborative-meeting-highlighting-teamwork-2608768835.jpg`
+  - Dropped `WireframePlaceholder` import (no remaining usages on this page).
+- `src/views/AboutPage.tsx` — "Meet the Founder" 3:4 portrait → `stock-photo-solo-brainstorming-shot-of-a-mature-businessman-writing-notes-at-his-desk-in-the-office-2139544961.jpg`. **Note:** this is NOT actually Luis; placeholder pending real founder headshot. Dropped `WireframePlaceholder` import.
+- `src/views/BismarkMethodPage.tsx` — "Weekly Rhythm" 3 cards:
+  - Monday / Classroom → `stock-photo-experienced-female-teacher-who-specializes-in-adult-education-teaches-a-lesson-to-adult-students-2172691007.jpg`
+  - Tuesday-Thursday / Floor → `stock-photo-two-workers-wearing-safety-nets-and-white-lab-coats-observing-machinery-and-equipment-in-food-2575453649.jpg`
+  - Friday / Leader presenting → `stock-photo-happy-latin-business-man-company-executive-manager-giving-presentation-on-whiteboard-at-employees-2353374135.jpg`
+  - Dropped `WireframePlaceholder` import.
+- `src/views/WalkthroughPage.tsx` — added `photo` + `photoAlt` fields to each entry of the `walkthroughPhases` data array; replaced the single `WireframePlaceholder` inside the `.map()` with `next/image` reading from each phase. Per-phase images:
+  - Phase 1 Stakeholder Engagement → `stock-photo-senior-older-indian-business-man-director-boss-ceo-leading-employees-team-meeting-presenting-2383724139.jpg`
+  - Phase 2 Data & Documentation Analysis → `stock-photo-glasses-asian-woman-holding-pencil-and-thinking-beside-laptop-and-coffee-on-wooden-table-in-library-2662150007.jpg`
+  - Phase 3 Operational Observation → `stock-photo-manager-in-discussion-with-coworker-in-an-open-plan-office-314863934.jpg`
+  - Phase 4 Findings & Recommendation → `stock-photo-office-conference-room-meeting-presentation-black-businessman-talks-uses-tv-screen-to-show-2104457714.jpg`
+  - Dropped `WireframePlaceholder` import.
+
+**Files Created:**
+- (none)
+
+**Files Deleted:**
+- (none)
+
+**Data fields added:**
+- (none in `industries.ts` — the dynamic detail page only has one image slot, so `heroImage` was sufficient and a `secondaryImage` field would have been unused)
+- `walkthroughPhases` array in `WalkthroughPage.tsx` gained `photo` and `photoAlt` per entry.
+
+**Placeholders intentionally left in place (guarded fallbacks, never render):**
+- `src/views/IndustriesPage.tsx:109` — tile fallback when `tileImage` undefined.
+- `src/components/IndustrySubPageLayout.tsx` — header fallback when `heroImage` undefined.
+
+**Summary:**
+Replaced every remaining wireframe `WireframePlaceholder` rendering on the site with watermarked stock photos from the existing pool: 1 industry-detail-page header (covers 10 routes), 2 Home, 1 About, 3 Method, 4 Walkthrough. Photos are still watermarked placeholder previews pending final licensing. The About founder photo is a placeholder pending an actual portrait of Luis. Build passes clean (24 static pages, TypeScript ok).
+
+---
+
 ### 2026-04-28 — Stock photo integration (placeholder pass)
 
 **Files Modified:**

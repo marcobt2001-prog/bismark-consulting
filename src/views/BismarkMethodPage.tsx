@@ -16,7 +16,6 @@ import Image from 'next/image';
 import PillarSequenceFlow from '../components/visuals/PillarSequenceFlow';
 import WeeklyRhythmTimeline from '../components/visuals/WeeklyRhythmTimeline';
 import CalendlyButton from '../components/CalendlyButton';
-import WireframePlaceholder from '../components/WireframePlaceholder';
 
 const BismarkMethodPage = () => {
   const pillars = [
@@ -331,7 +330,15 @@ const BismarkMethodPage = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-gold-600 transition-colors">
-              <WireframePlaceholder aspectRatio="aspect-[4/3]" className="mb-6" label="Photo: Classroom or workshop setting" />
+              <div className="relative w-full aspect-[4/3] overflow-hidden mb-6">
+                <Image
+                  src="/images/stock-watermarked/stock-photo-experienced-female-teacher-who-specializes-in-adult-education-teaches-a-lesson-to-adult-students-2172691007.jpg"
+                  alt="Classroom training session"
+                  fill
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
               <div className="w-20 h-20 bg-navy-900 flex items-center justify-center mb-6">
                 <BookOpen className="w-10 h-10 text-gold-600" />
               </div>
@@ -342,7 +349,15 @@ const BismarkMethodPage = () => {
             </div>
 
             <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-gold-600 transition-colors">
-              <WireframePlaceholder aspectRatio="aspect-[4/3]" className="mb-6" label="Photo: Team working on the floor / in the field" />
+              <div className="relative w-full aspect-[4/3] overflow-hidden mb-6">
+                <Image
+                  src="/images/stock-watermarked/stock-photo-two-workers-wearing-safety-nets-and-white-lab-coats-observing-machinery-and-equipment-in-food-2575453649.jpg"
+                  alt="Team working on the floor observing machinery"
+                  fill
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
               <div className="w-20 h-20 bg-navy-900 flex items-center justify-center mb-6">
                 <Layers className="w-10 h-10 text-gold-600" />
               </div>
@@ -353,7 +368,15 @@ const BismarkMethodPage = () => {
             </div>
 
             <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-gold-600 transition-colors">
-              <WireframePlaceholder aspectRatio="aspect-[4/3]" className="mb-6" label="Photo: Leader presenting or running a meeting" />
+              <div className="relative w-full aspect-[4/3] overflow-hidden mb-6">
+                <Image
+                  src="/images/stock-watermarked/stock-photo-happy-latin-business-man-company-executive-manager-giving-presentation-on-whiteboard-at-employees-2353374135.jpg"
+                  alt="Leader giving a presentation to the team"
+                  fill
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
               <div className="w-20 h-20 bg-navy-900 flex items-center justify-center mb-6">
                 <CheckCircle2 className="w-10 h-10 text-gold-600" />
               </div>

@@ -1,6 +1,6 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
-import WireframePlaceholder from '../components/WireframePlaceholder';
 
 export default function AboutPage() {
   return (
@@ -86,10 +86,15 @@ export default function AboutPage() {
 
           <div className="grid md:grid-cols-3 gap-10 items-start">
             <div>
-              <WireframePlaceholder
-                label="Photo: Luis Telleria-Xucla — Founder & Managing Director"
-                aspectRatio="aspect-[3/4]"
-              />
+              <div className="relative w-full aspect-[3/4] overflow-hidden">
+                <Image
+                  src="/images/stock-watermarked/stock-photo-solo-brainstorming-shot-of-a-mature-businessman-writing-notes-at-his-desk-in-the-office-2139544961.jpg"
+                  alt="Founder portrait placeholder pending real headshot"
+                  fill
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
             </div>
             <div className="md:col-span-2">
               <div className="mb-8">

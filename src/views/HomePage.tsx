@@ -1,8 +1,8 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { getRandomPairings } from '../data/industryRotation';
 import CalendlyButton from '../components/CalendlyButton';
-import WireframePlaceholder from '../components/WireframePlaceholder';
 
 const HomePage = () => {
   const pairings = getRandomPairings(5);
@@ -153,10 +153,15 @@ const HomePage = () => {
 
               {/* RIGHT — photo placeholder */}
               <div>
-                <WireframePlaceholder
-                  label="Photo: Luis or leadership team in the field"
-                  aspectRatio="aspect-[3/4]"
-                />
+                <div className="relative w-full aspect-[3/4] overflow-hidden">
+                  <Image
+                    src="/images/stock-watermarked/stock-photo-a-diverse-group-of-smiling-industrial-professionals-collaborates-over-a-laptop-on-the-factory-floor-2455170065.jpg"
+                    alt="Bismark coaches working with operations team on the factory floor"
+                    fill
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
               </div>
 
             </div>
@@ -228,11 +233,15 @@ const HomePage = () => {
               FROM FIRST CONVERSATION TO GUARANTEED RESULTS — HERE'S HOW IT WORKS.
             </h2>
 
-            <WireframePlaceholder
-              label="Photo: Engagement pathway — from first conversation to results"
-              aspectRatio="aspect-[16/7]"
-              className="w-full"
-            />
+            <div className="relative w-full aspect-[16/7] overflow-hidden mb-12">
+              <Image
+                src="/images/stock-watermarked/stock-photo-the-image-showcases-professionals-engaged-in-a-collaborative-meeting-highlighting-teamwork-2608768835.jpg"
+                alt="Professionals collaborating on operational engagement"
+                fill
+                sizes="(min-width: 1280px) 1024px, 100vw"
+                className="object-cover"
+              />
+            </div>
 
             {/* Step 1 */}
             <div className="mb-16">
