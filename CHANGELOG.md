@@ -24,6 +24,27 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-04-28 — Stock photo integration (placeholder pass)
+
+**Files Modified:**
+- `src/data/industries.ts` — added optional `heroImage` and `tileImage` fields to the `Industry` type and populated both for all 10 industries with watermarked stock photo paths.
+- `src/views/IndustriesPage.tsx` — replaced the wide hero placeholder with `<IndustryHeroCarousel />`; rebuilt the grid tiles to layer `next/image` backgrounds with a navy gradient overlay, white text, and a hover treatment that deepens the overlay and scales the image only.
+- `src/views/HomePage.tsx` — Three Reasons section converted to a white-background section: removed the `WireframePlaceholder` background layer and the `bg-navy-900/80` overlay, switched headings to `text-navy-900` and body copy to `text-navy-800/80`, kept gold accents and existing padding/typography untouched.
+
+**Files Created:**
+- `src/components/IndustryHeroCarousel.tsx` — auto-cycling industry hero carousel (6s interval, 300ms crossfade, dot navigation, pause on hover/focus, full-slide `<Link>` to industry page). No new dependencies; uses `useState` + `useEffect` + `setInterval`.
+
+**Files Deleted:**
+- (none)
+
+**Folder Renames:**
+- `public/images/stock photos watermark/` → `public/images/stock-watermarked/` (49 watermarked stock photos). Note: the source folder was untracked, so a regular `mv` was used in place of `git mv` — there was no git history to preserve.
+
+**Summary:**
+Replaced wireframe placeholders on the Industries page (hero + grid tiles) with watermarked stock photos and converted the Home page "Three Reasons" section from a dark photo-background treatment to a white background. All photos are watermarked placeholder previews pending final licensing — final licensed versions will be swapped in later. `npm run build` passes clean (24 static pages, TypeScript OK). `npm run lint` is non-functional in this repo (Next 16 removed `next lint` and there is no `eslint.config.js` — pre-existing condition, not introduced by this change).
+
+---
+
 ### 2026-04-09 — Increase navbar logo subtitle size and weight
 **Files Modified:**
 - src/components/layout/Logo.tsx

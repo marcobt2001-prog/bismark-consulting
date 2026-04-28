@@ -1,9 +1,11 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import CalendlyButton from '../components/CalendlyButton';
 import { industries } from '../data/industries';
 import ArchetypeIconSet from '../components/visuals/ArchetypeIconSet';
 import FindYourOperationMatrix from '../components/FindYourOperationMatrix';
 import WireframePlaceholder from '../components/WireframePlaceholder';
+import IndustryHeroCarousel from '../components/IndustryHeroCarousel';
 
 const IndustriesPage = () => {
   return (
@@ -34,11 +36,7 @@ const IndustriesPage = () => {
       </section>
 
       <div className="w-full">
-        <WireframePlaceholder
-          label="Photo: Operations environment — wide industrial or professional setting"
-          aspectRatio="aspect-[21/9]"
-          className="w-full"
-        />
+        <IndustryHeroCarousel />
       </div>
 
       {/* SECTION 2 — The Patterns Behind Every Operation */}
@@ -93,17 +91,38 @@ const IndustriesPage = () => {
               <Link
                 key={industry.slug}
                 href={`/industries/${industry.slug}`}
-                className="block border-2 p-8 transition-all border-gray-200 hover:border-gold-600"
+                className="group relative block overflow-hidden border-2 p-8 transition-all border-gray-200 hover:border-gold-600 min-h-[220px]"
               >
-                <h3 className="font-display text-2xl text-navy-900 mb-2">
-                  {industry.name}
-                </h3>
-                <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                  {industry.descriptor}
-                </p>
-                <p className="text-sm font-medium text-navy-700">
-                  {industry.processCount} processes
-                </p>
+                {industry.tileImage ? (
+                  <>
+                    <Image
+                      src={industry.tileImage}
+                      alt=""
+                      fill
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      aria-hidden="true"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy-900/85 via-navy-900/60 to-navy-900/30 transition-colors duration-300 group-hover:from-navy-900/95 group-hover:via-navy-900/75" />
+                  </>
+                ) : (
+                  <WireframePlaceholder
+                    label={`Photo: ${industry.name}`}
+                    aspectRatio=""
+                    className="absolute inset-0"
+                  />
+                )}
+                <div className="relative z-10">
+                  <h3 className="font-display text-2xl text-white mb-2">
+                    {industry.name}
+                  </h3>
+                  <p className="text-gray-100 text-sm leading-relaxed mb-4">
+                    {industry.descriptor}
+                  </p>
+                  <p className="text-sm font-medium text-gold-400">
+                    {industry.processCount} processes
+                  </p>
+                </div>
               </Link>
             ))}
           </div>

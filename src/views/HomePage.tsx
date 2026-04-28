@@ -54,54 +54,43 @@ const HomePage = () => {
       </section>
 
       {/* ===================== SECTION 2 — THE PROBLEM WE SOLVE ===================== */}
-      <section className="py-20 bg-white relative">
-        {/* Photo placeholder layer */}
-        <div className="absolute inset-0 z-0">
-          <WireframePlaceholder
-            label="Photo: Boardroom presentation or leadership session"
-            aspectRatio=""
-            className="w-full h-full"
-          />
-        </div>
-        {/* Dark overlay */}
-        <div className="absolute inset-0 z-10 bg-navy-900/80" />
-        {/* Existing content */}
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
-            <h2 className="font-display text-4xl md:text-5xl text-white mb-12">
+            <h2 className="font-display text-4xl md:text-5xl text-navy-900 mb-12">
               THREE REASONS OPERATIONAL TRANSFORMATIONS FAIL. WE DESIGNED A METHOD THAT ELIMINATES ALL THREE.
             </h2>
 
             <div className="space-y-8 mb-12">
               <div className="border-l-4 border-gold-600 pl-6">
-                <h3 className="font-display text-xl text-white mb-3">THE KNOWLEDGE DOESN'T TRANSFER.</h3>
-                <p className="text-gray-300 leading-relaxed">
+                <h3 className="font-display text-xl text-navy-900 mb-3">THE KNOWLEDGE DOESN'T TRANSFER.</h3>
+                <p className="text-navy-800/80 leading-relaxed">
                   Traditional consulting firms send smart people to analyze your operation, build a set of recommendations, and hand them off. Your team gets a deliverable — but not the thinking behind it. When conditions change, they can't adapt the solution because they didn't build it. The expertise walks out the door with the consultants.
                 </p>
               </div>
 
               <div className="border-l-4 border-gold-600 pl-6">
-                <h3 className="font-display text-xl text-white mb-3">THE LEADERSHIP DOESN'T SHIFT.</h3>
-                <p className="text-gray-300 leading-relaxed">
+                <h3 className="font-display text-xl text-navy-900 mb-3">THE LEADERSHIP DOESN'T SHIFT.</h3>
+                <p className="text-navy-800/80 leading-relaxed">
                   Most engagements treat leadership development and operational improvement as separate workstreams — if they address leadership at all. But operational transformation requires leaders who think differently about how work gets designed, measured, and managed. Without that shift, every improvement is temporary. The operation reverts to its prior state because the management system hasn't changed.
                 </p>
               </div>
 
               <div className="border-l-4 border-gold-600 pl-6">
-                <h3 className="font-display text-xl text-white mb-3">THE IMPROVEMENT DOESN'T SUSTAIN.</h3>
-                <p className="text-gray-300 leading-relaxed">
+                <h3 className="font-display text-xl text-navy-900 mb-3">THE IMPROVEMENT DOESN'T SUSTAIN.</h3>
+                <p className="text-navy-800/80 leading-relaxed">
                   Even when a consulting engagement produces real gains, those gains typically erode within 12–18 months. The reason is structural: the organization hasn't built the capability to continuously improve on its own. Without that capability — the skills, the systems, the management discipline — entropy wins. Results decay. And the cycle starts over.
                 </p>
               </div>
             </div>
 
-            <p className="text-gray-300 leading-relaxed mb-8">
+            <p className="text-navy-800/80 leading-relaxed mb-8">
               The Bismark Method addresses all three simultaneously — not sequentially, not optionally. That's why we can guarantee results.
             </p>
 
             <Link
               href="/method"
-              className="inline-flex items-center gap-2 text-white font-display hover:text-gold-600 transition-colors"
+              className="inline-flex items-center gap-2 text-navy-900 font-display hover:text-gold-600 transition-colors"
             >
               LEARN ABOUT THE BISMARK METHOD
               <ArrowRight className="w-5 h-5" />
