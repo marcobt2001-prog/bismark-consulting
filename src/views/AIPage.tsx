@@ -22,11 +22,11 @@ export default function AIPage() {
         </div>
       </section>
 
-      {/* SECTION 2 — THE SUSTAINABILITY GAP */}
+      {/* SECTION 2 — HOW WE THINK ABOUT AI */}
       <section className="py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-4xl md:text-5xl text-navy-900 mb-6">
-            THE SUSTAINABILITY GAP
+            HOW WE THINK ABOUT AI
           </h2>
           <div className="bg-gold-600 h-1 w-24 mb-8" />
           <div className="space-y-6 text-lg text-gray-700 leading-relaxed">

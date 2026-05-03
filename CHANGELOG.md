@@ -24,6 +24,16 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-05-03 — AI page Section 2 heading rename
+
+**Files Modified:**
+- `src/views/AIPage.tsx`
+
+**Summary:**
+Renamed Section 2 heading on the AI page from "THE SUSTAINABILITY GAP" to "HOW WE THINK ABOUT AI". Section comment updated to match. Body copy and styling unchanged.
+
+---
+
 ### 2026-05-03 — AI page content updates
 
 **Files Modified:**
