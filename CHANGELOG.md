@@ -24,6 +24,25 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-05-03 — Home Insights section + Industries carousel arrows + image swaps
+
+**Files Modified:**
+- `src/views/HomePage.tsx` — replaced "INSIGHTS — COMING SOON" placeholder with a real Insights section rendering all articles via the new `InsightCard` (single-column list, `max-w-4xl`, `space-y-8`, mirroring `/insights`). Heading set to `INSIGHTS`. Added `View all insights →` link in gold-600. Resized the Five Pillars right-column image from `aspect-[3/4]` filling the column (~50vw) to `max-w-[200px]` so the rendered height (~267px) sits a few percent above the pillars list (~252px).
+- `src/views/InsightsPage.tsx` — refactored the inline article-row JSX to use the shared `InsightCard` component. No visual change.
+- `src/components/IndustryHeroCarousel.tsx` — interval `SLIDE_INTERVAL_MS` 6000 → **3000ms**. Added `clearTimer` / `startTimer` helpers via `useCallback`; `goTo` and the new `goPrev`/`goNext` now reset and restart the timer (previously dot clicks killed the auto-advance permanently). Added overlaid prev/next arrow buttons at the left/right edges (`72px` wide, full height, `z-20`); `lucide-react` `ChevronLeft`/`ChevronRight` icons start at `opacity-0` and fade in with a subtle dark gradient on hover and focus-visible. Focus-visible ring uses the gold token. Dot indicator container received `pointer-events-none` (with dot buttons themselves opting back in via `pointer-events-auto`) so the arrow hit areas remain clickable in the bottom strip.
+- `src/data/industries.ts` — Industrial Technology `heroImage` swapped to `industrial-ball-mill...copper-2659599515.jpg` (this single field drives BOTH the carousel slide AND the industry detail page header — they share the field by design, satisfying Tasks 4 and 7 with one edit). Industrial Technology `tileImage` set to `ev-production-line...electric-car-manufacturing-2374438937.jpg` per the Task 6 table. Mining & Metals `tileImage` → `work-of-heavy-equipment-in-an-open-pit-for-gold-ore-mining...1951657093.jpg`. Manufacturing `tileImage` → `medical-ampoule-production-line-at-modern-modern-pharmaceutical-factory...2229913173.jpg`. Distribution & Logistics `tileImage` → `trains-at-railroad-yard-at-station-district-aerial-in-netherlands-1228227193.jpg`. No other industry's image fields were touched.
+
+**Files Created:**
+- `src/components/InsightCard.tsx` — extracted the article-row JSX from `InsightsPage` into a shared component. Used by both `/insights` and the home-page Insights section so they stay in sync.
+
+**Files Deleted:**
+- (none)
+
+**Summary:**
+Replaced the home-page Insights placeholder with a real Insights section using a newly-extracted `InsightCard` shared with `/insights`. Resized the Five Pillars right-column image so it sits a few percent above the pillars list (was previously dominating). Industries hero carousel now auto-advances every 3 seconds and exposes prev/next arrow controls that are invisible at rest, fade in on hover/focus-visible, navigate with wraparound, reset the auto-advance timer, and are keyboard-reachable. Industrial Technology slide and detail page hero both swapped to the ball-mill image (shared field). Mining & Metals, Manufacturing, Industrial Technology, and Distribution & Logistics tile images updated per spec; the other six industries' images were not touched.
+
+---
+
 ### 2026-04-28 — Remaining image placeholder pass (site-wide)
 
 **Files Modified:**

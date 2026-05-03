@@ -69,7 +69,7 @@ The Bismark Method exposes these patterns by mapping every process against its a
   {
     slug: 'distribution-logistics',
     heroImage: '/images/stock-watermarked/stock-photo-ostrava-czech-republic-sept-container-trains-transport-freight-to-and-from-a-shipping-2736633411.jpg',
-    tileImage: '/images/stock-watermarked/stock-photo-a-warehouse-manager-guiding-a-diverse-team-during-an-inspection-pointing-out-details-while-staff-2512193885.jpg',
+    tileImage: '/images/stock-watermarked/stock-photo-trains-at-railroad-yard-at-station-district-aerial-in-netherlands-1228227193.jpg',
     name: 'Distribution & Logistics',
     descriptor: 'Receiving dock through last-mile delivery and freight settlement',
     processCount: 14,
@@ -232,8 +232,8 @@ The Bismark Method maps food production at the archetype level \u2014 exposing w
   // 6. Industrial Technology
   {
     slug: 'industrial-technology',
-    heroImage: '/images/stock-watermarked/stock-photo-ev-production-line-on-advanced-automated-smart-factory-high-performance-electric-car-manufacturing-2374438937.jpg',
-    tileImage: '/images/stock-watermarked/stock-photo-engineer-and-technician-including-a-female-professional-engage-in-precise-measurement-and-data-2524747207.jpg',
+    heroImage: '/images/stock-watermarked/stock-photo-industrial-ball-mill-grinds-ore-at-mining-and-concentrating-plant-concentration-factory-for-copper-2659599515.jpg',
+    tileImage: '/images/stock-watermarked/stock-photo-ev-production-line-on-advanced-automated-smart-factory-high-performance-electric-car-manufacturing-2374438937.jpg',
     name: 'Industrial Technology',
     descriptor: 'Equipment manufacturing through field service and maintenance contracts',
     processCount: 14,
@@ -318,7 +318,7 @@ The Bismark Method maps every insurance operation against its archetypes \u2014 
   {
     slug: 'manufacturing',
     heroImage: '/images/stock-watermarked/stock-photo--d-render-modern-manufacturing-plant-with-advanced-robotic-arms-operating-on-an-assembly-line-with-2445629951.jpg',
-    tileImage: '/images/stock-watermarked/stock-photo-business-professionals-and-workers-in-safety-gear-discuss-operations-on-the-manufacturing-floor-of-2682848161.jpg',
+    tileImage: '/images/stock-watermarked/stock-photo-medical-ampoule-production-line-at-modern-modern-pharmaceutical-factory-glass-ampoules-are-being-2229913173.jpg',
     name: 'Manufacturing',
     descriptor: 'Production planning through final quality release',
     processCount: 16,
@@ -361,7 +361,7 @@ The Bismark Method maps every manufacturing process against its archetypes \u201
   {
     slug: 'mining-metals',
     heroImage: '/images/stock-watermarked/stock-photo-quarry-excavator-works-at-night-loading-ore-open-pit-mine-2635969119.jpg',
-    tileImage: '/images/stock-watermarked/stock-photo-industrial-ball-mill-grinds-ore-at-mining-and-concentrating-plant-concentration-factory-for-copper-2659599515.jpg',
+    tileImage: '/images/stock-watermarked/stock-photo-work-of-heavy-equipment-in-an-open-pit-for-gold-ore-mining-soft-focus-1951657093.jpg',
     name: 'Mining & Metals',
     descriptor: 'Exploration through refining, maintenance, and environmental compliance',
     processCount: 14,

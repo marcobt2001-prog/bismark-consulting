@@ -2,10 +2,11 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { industries } from '../data/industries';
 
-const SLIDE_INTERVAL_MS = 6000;
+const SLIDE_INTERVAL_MS = 3000;
 
 export default function IndustryHeroCarousel() {
   const slides = industries.filter((i) => i.heroImage);
@@ -14,24 +15,43 @@ export default function IndustryHeroCarousel() {
 
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  useEffect(() => {
-    if (isPaused || slides.length <= 1) return;
-
-    intervalRef.current = setInterval(() => {
-      setIndex((prev) => (prev + 1) % slides.length);
-    }, SLIDE_INTERVAL_MS);
-
-    return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-    };
-  }, [isPaused, slides.length]);
-
-  const goTo = (next: number) => {
-    setIndex(next);
+  const clearTimer = useCallback(() => {
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
       intervalRef.current = null;
     }
+  }, []);
+
+  const startTimer = useCallback(() => {
+    if (isPaused || slides.length <= 1) return;
+    clearTimer();
+    intervalRef.current = setInterval(() => {
+      setIndex((prev) => (prev + 1) % slides.length);
+    }, SLIDE_INTERVAL_MS);
+  }, [clearTimer, isPaused, slides.length]);
+
+  useEffect(() => {
+    startTimer();
+    return clearTimer;
+  }, [startTimer, clearTimer]);
+
+  const goTo = (next: number) => {
+    setIndex(next);
+    startTimer();
+  };
+
+  const goPrev = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIndex((prev) => (prev - 1 + slides.length) % slides.length);
+    startTimer();
+  };
+
+  const goNext = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIndex((prev) => (prev + 1) % slides.length);
+    startTimer();
   };
 
   if (slides.length === 0) return null;
@@ -81,7 +101,31 @@ export default function IndustryHeroCarousel() {
         );
       })}
 
-      <div className="absolute bottom-4 left-0 right-0 z-20 flex justify-center gap-2">
+      {/* Prev arrow */}
+      <button
+        type="button"
+        onClick={goPrev}
+        aria-label="Previous industry"
+        className="group absolute left-0 top-0 bottom-0 z-20 flex items-center justify-start w-[72px] cursor-pointer bg-transparent hover:bg-gradient-to-r hover:from-black/40 hover:to-transparent focus-visible:bg-gradient-to-r focus-visible:from-black/40 focus-visible:to-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-600 transition-all duration-200"
+      >
+        <ChevronLeft
+          className="ml-3 w-8 h-8 text-white opacity-0 drop-shadow-md transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100"
+        />
+      </button>
+
+      {/* Next arrow */}
+      <button
+        type="button"
+        onClick={goNext}
+        aria-label="Next industry"
+        className="group absolute right-0 top-0 bottom-0 z-20 flex items-center justify-end w-[72px] cursor-pointer bg-transparent hover:bg-gradient-to-l hover:from-black/40 hover:to-transparent focus-visible:bg-gradient-to-l focus-visible:from-black/40 focus-visible:to-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-600 transition-all duration-200"
+      >
+        <ChevronRight
+          className="mr-3 w-8 h-8 text-white opacity-0 drop-shadow-md transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100"
+        />
+      </button>
+
+      <div className="absolute bottom-4 left-0 right-0 z-20 flex justify-center gap-2 pointer-events-none">
         {slides.map((industry, i) => (
           <button
             key={industry.slug}
@@ -93,7 +137,7 @@ export default function IndustryHeroCarousel() {
             }}
             aria-label={`Go to slide ${i + 1} — ${industry.name}`}
             aria-current={i === index}
-            className={`h-2 rounded-full transition-all duration-300 ${
+            className={`pointer-events-auto h-2 rounded-full transition-all duration-300 ${
               i === index ? 'w-8 bg-gold-600' : 'w-2 bg-white/60 hover:bg-white/90'
             }`}
           />

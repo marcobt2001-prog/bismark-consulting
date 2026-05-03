@@ -2,7 +2,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { getRandomPairings } from '../data/industryRotation';
+import { insights } from '../data/insights';
 import CalendlyButton from '../components/CalendlyButton';
+import InsightCard from '../components/InsightCard';
 
 const HomePage = () => {
   const pairings = getRandomPairings(5);
@@ -152,13 +154,13 @@ const HomePage = () => {
               </div>
 
               {/* RIGHT — photo placeholder */}
-              <div>
-                <div className="relative w-full aspect-[3/4] overflow-hidden">
+              <div className="flex md:justify-end">
+                <div className="relative w-full max-w-[200px] aspect-[3/4] overflow-hidden">
                   <Image
                     src="/images/stock-watermarked/stock-photo-a-diverse-group-of-smiling-industrial-professionals-collaborates-over-a-laptop-on-the-factory-floor-2455170065.jpg"
                     alt="Bismark coaches working with operations team on the factory floor"
                     fill
-                    sizes="(min-width: 768px) 50vw, 100vw"
+                    sizes="200px"
                     className="object-cover"
                   />
                 </div>
@@ -418,28 +420,25 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* ===================== SECTION 8 — INSIGHTS PLACEHOLDER ===================== */}
+      {/* ===================== SECTION 8 — INSIGHTS ===================== */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-4xl md:text-5xl text-navy-900 mb-12">
-            PERSPECTIVES ON OPERATIONAL TRANSFORMATION.
+            INSIGHTS
           </h2>
 
-          <div className="bg-gray-100 border-2 border-gray-200 flex items-center justify-center" style={{ minHeight: '200px' }}>
-            <div className="px-4">
-              <p className="font-display text-2xl text-gray-500 mb-2">INSIGHTS — COMING SOON</p>
-              <p className="text-gray-400 text-sm">
-                Articles and perspectives on operational transformation. Content launching soon.
-              </p>
-            </div>
+          <div className="space-y-8">
+            {insights.map((article) => (
+              <InsightCard key={article.slug} article={article} />
+            ))}
           </div>
 
-          <div className="mt-8">
+          <div className="mt-10">
             <Link
               href="/insights"
-              className="inline-flex items-center gap-2 text-navy-900 font-display hover:text-gold-600 transition-colors"
+              className="inline-flex items-center gap-2 text-gold-600 font-display hover:text-gold-400 transition-colors"
             >
-              VISIT INSIGHTS
+              View all insights
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
