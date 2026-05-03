@@ -24,6 +24,22 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-05-03 — Replace Non-Negotiable Order callout with static diagram image
+
+**Files Created:**
+- (none)
+
+**Files Modified:**
+- `src/views/BismarkMethodPage.tsx`
+
+**Files Deleted:**
+- (none)
+
+**Summary:**
+Bismark Method page: replaced the entire gold-bordered "WHY THE ORDER IS NON-NEGOTIABLE" callout (heading, `PillarCircularFlow` SVG, three body paragraphs) with a single `next/image` embed of `/content/why-the-order-is-non-negotiable.png` (1672 × 941) — a self-contained designed asset that includes its own heading, circular five-pillar diagram, "Most firms start here" callout, and explanatory body text. Removed the now-unused `PillarCircularFlow` import. The `PillarCircularFlow.tsx` and `PillarSequenceFlow.tsx` component files are intentionally left in place as orphans (not referenced anywhere). The hand image swap from the previous run (`/images/the-bismark-method-hand.png`) is unchanged.
+
+---
+
 ### 2026-05-03 — Swap hand image and rebuild Non-Negotiable Order diagram
 
 **Files Created:**

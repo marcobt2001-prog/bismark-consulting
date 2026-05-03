@@ -13,7 +13,6 @@ import {
   Eye
 } from 'lucide-react';
 import Image from 'next/image';
-import PillarCircularFlow from '../components/visuals/PillarCircularFlow';
 import WeeklyRhythmTimeline from '../components/visuals/WeeklyRhythmTimeline';
 import CalendlyButton from '../components/CalendlyButton';
 
@@ -292,24 +291,14 @@ const BismarkMethodPage = () => {
             ))}
           </div>
 
-          {/* Non-Negotiable Order Callout */}
-          <div className="bg-gold-50 border-2 border-gold-600 rounded-lg p-8 md:p-10">
-            <h3 className="font-display text-2xl text-navy-900 mb-4">
-              WHY THE ORDER IS NON-NEGOTIABLE
-            </h3>
-
-            <PillarCircularFlow />
-
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Most organizations &mdash; especially those with internal improvement teams &mdash; instinctively start with the org chart. They restructure teams before understanding how customers actually experience their processes, and before the processes themselves have been redesigned. The result is predictable: rework, misalignment, and a cycle of reorganizations that never quite solve the underlying problem.
-            </p>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              The Bismark Method is designed to move in order and repeat as a disciplined cycle. You begin at Pillar 1 and move sequentially through all five pillars. You understand the customer before you redesign the process. You redesign the process before you restructure the organization. Each pillar stands on the foundation of the one before it.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              Continuous Improvement is the only legitimate re-entry point. When a signal emerges that something needs to change, you do not jump into the middle. You re-enter through Pillar 5, loop back to Pillar 1, and move through the cycle again. Never mid-cycle. Never from the middle. That discipline is what separates a method from a collection of tools.
-            </p>
-          </div>
+          {/* Why The Order Is Non-Negotiable */}
+          <Image
+            src="/content/why-the-order-is-non-negotiable.png"
+            alt="Why the order of the five pillars is non-negotiable: customers first, then process, then organization, then measurement, then continuous improvement — with continuous improvement as the only legitimate re-entry point"
+            width={1672}
+            height={941}
+            className="w-full h-auto rounded-lg"
+          />
         </div>
       </section>
 
