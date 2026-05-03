@@ -195,9 +195,8 @@ const ContactPage = () => {
             </h2>
             <div className="bg-gold-600 h-1 w-24 mx-auto mb-8" />
             <p className="text-xl text-gray-700 leading-relaxed mb-12">
-              While headquartered in Miami, Florida, we serve clients nationwide and
-              internationally. The Bismark Method requires on-site engagement, and
-              we travel to you.
+              While headquartered in Miami, Florida, we serve clients internationally.
+              The Bismark Method requires on-site engagement, and we travel to you.
             </p>
 
             <div className="grid md:grid-cols-3 gap-8">

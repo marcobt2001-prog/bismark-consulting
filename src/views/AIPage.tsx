@@ -7,18 +7,11 @@ export default function AIPage() {
       <section className="relative bg-navy-900 text-white py-24 md:py-32">
         <div className="absolute inset-0 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 opacity-90" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-block mb-6">
-            <span className="bg-gold-600 text-navy-900 px-4 py-2 font-display text-sm tracking-wider">
-              COMING 2026
-            </span>
-          </div>
+          <p className="font-display font-bold text-gold-600 tracking-wider mb-6 text-6xl md:text-9xl">COMING 2026</p>
           <h1 className="font-display text-5xl md:text-6xl mb-6 tracking-wide">
             REAL AI LEVERAGE STARTS WITH OPERATIONAL DEPTH.
           </h1>
           <div className="bg-gold-600 h-1 w-24 mx-auto mb-8" />
-          <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-            Bismark is developing a proprietary AI system designed for one purpose: to protect and sustain the operational gains our clients achieve during a Bismark Method engagement &mdash; long after our team has left the building.
-          </p>
         </div>
       </section>
 

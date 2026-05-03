@@ -24,6 +24,18 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-05-03 — Navbar capitalization, contact reach text, AI page hero polish
+
+**Files Modified:**
+- `src/components/layout/Navbar.tsx`
+- `src/views/ContactPage.tsx`
+- `src/views/AIPage.tsx`
+
+**Summary:**
+Navbar: capitalized "M" in "meeting" on the Schedule button (both desktop and mobile, kept identical) so it now reads "Schedule a Meeting". Contact page WHERE WE WORK section: dropped "nationwide and" so the sentence now reads "we serve clients internationally." AI page hero: deleted the subhead paragraph ("Bismark is developing a proprietary AI system…"); replaced the "COMING 2026" gold pill with large bold gold text (text-6xl mobile / text-9xl desktop, font-bold, no background) sized to roughly span the width of the H1's first line. Gold divider below H1 left in place.
+
+---
+
 ### 2026-05-03 — AI page Section 2 heading rename
 
 **Files Modified:**
