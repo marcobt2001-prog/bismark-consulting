@@ -24,6 +24,16 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-05-03 — AI page hero: remove bold from COMING 2026
+
+**Files Modified:**
+- `src/views/AIPage.tsx`
+
+**Summary:**
+Removed `font-bold` from the COMING 2026 hero label on the AI page. Size, color, font family, tracking, and margin unchanged.
+
+---
+
 ### 2026-05-03 — Navbar capitalization, contact reach text, AI page hero polish
 
 **Files Modified:**

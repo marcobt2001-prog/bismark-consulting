@@ -7,7 +7,7 @@ export default function AIPage() {
       <section className="relative bg-navy-900 text-white py-24 md:py-32">
         <div className="absolute inset-0 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 opacity-90" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="font-display font-bold text-gold-600 tracking-wider mb-6 text-6xl md:text-9xl">COMING 2026</p>
+          <p className="font-display text-gold-600 tracking-wider mb-6 text-6xl md:text-9xl">COMING 2026</p>
           <h1 className="font-display text-5xl md:text-6xl mb-6 tracking-wide">
             REAL AI LEVERAGE STARTS WITH OPERATIONAL DEPTH.
           </h1>
