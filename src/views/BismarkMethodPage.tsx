@@ -13,7 +13,7 @@ import {
   Eye
 } from 'lucide-react';
 import Image from 'next/image';
-import PillarSequenceFlow from '../components/visuals/PillarSequenceFlow';
+import PillarCircularFlow from '../components/visuals/PillarCircularFlow';
 import WeeklyRhythmTimeline from '../components/visuals/WeeklyRhythmTimeline';
 import CalendlyButton from '../components/CalendlyButton';
 
@@ -153,7 +153,7 @@ const BismarkMethodPage = () => {
             <div className="bg-gray-50 border-2 border-gray-200 rounded-lg p-8 md:p-12 hover:border-gold-600 transition-colors">
               <div className="flex flex-col items-center text-center">
                 <Image
-                  src="/images/image004.jpg"
+                  src="/images/the-bismark-method-hand.png"
                   alt="The Bismark Method — Five Pillars and Transformative Leadership Mastery"
                   width={520}
                   height={520}
@@ -298,16 +298,16 @@ const BismarkMethodPage = () => {
               WHY THE ORDER IS NON-NEGOTIABLE
             </h3>
 
-            <PillarSequenceFlow />
+            <PillarCircularFlow />
 
             <p className="text-gray-700 leading-relaxed mb-4">
               Most organizations &mdash; especially those with internal improvement teams &mdash; instinctively start with the org chart. They restructure teams before understanding how customers actually experience their processes, and before the processes themselves have been redesigned. The result is predictable: rework, misalignment, and a cycle of reorganizations that never quite solve the underlying problem.
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
-              The Bismark Method is designed to go through once &mdash; starting at Pillar 1 and moving sequentially. You understand the customer before you redesign the process. You redesign the process before you restructure the organization. Each pillar stands on the foundation of the one before it.
+              The Bismark Method is designed to move in order and repeat as a disciplined cycle. You begin at Pillar 1 and move sequentially through all five pillars. You understand the customer before you redesign the process. You redesign the process before you restructure the organization. Each pillar stands on the foundation of the one before it.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              The only legitimate re-entry point is through Pillar 5 &mdash; Continuous Improvement. When a signal emerges that something needs to change, you go back to Pillar 1 and start again. Never mid-cycle. Never from the middle. That discipline is what separates a method from a collection of tools.
+              Continuous Improvement is the only legitimate re-entry point. When a signal emerges that something needs to change, you do not jump into the middle. You re-enter through Pillar 5, loop back to Pillar 1, and move through the cycle again. Never mid-cycle. Never from the middle. That discipline is what separates a method from a collection of tools.
             </p>
           </div>
         </div>

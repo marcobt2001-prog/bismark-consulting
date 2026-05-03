@@ -24,6 +24,22 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-05-03 — Swap hand image and rebuild Non-Negotiable Order diagram
+
+**Files Created:**
+- `src/components/visuals/PillarCircularFlow.tsx`
+
+**Files Modified:**
+- `src/views/BismarkMethodPage.tsx`
+
+**Files Deleted:**
+- (none)
+
+**Summary:**
+Two Tracks, One Method section: replaced hand image src from `/images/image004.jpg` to the new `/images/the-bismark-method-hand.png` (alt, dimensions, className unchanged). Non-Negotiable Order Callout: replaced horizontal `PillarSequenceFlow` SVG with new `PillarCircularFlow` component — five pillar nodes arranged in a clockwise pentagon connected by curved gold arrows, with red "Most firms start here" callout pointing at Pillar 03. Body text in the callout updated from single paragraph to three paragraphs covering the disciplined cycle and Continuous Improvement as the only legitimate re-entry point. Old `PillarSequenceFlow.tsx` and `image004.jpg` files left in place untouched.
+
+---
+
 ### 2026-05-03 — AI page hero: remove bold from COMING 2026
 
 **Files Modified:**
