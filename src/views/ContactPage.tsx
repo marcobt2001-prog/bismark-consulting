@@ -1,8 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { ArrowRight, Mail, Phone, MapPin, Building } from 'lucide-react';
-import { openCalendlyPopup } from '../utils/openCalendlyPopup';
+import { ArrowRight, Phone, MapPin, Building } from 'lucide-react';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -71,19 +70,17 @@ const ContactPage = () => {
 
       {/* Main Contact Section */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Left Column - Contact Form */}
-            <div>
-              <h2 className="font-display text-3xl md:text-4xl text-navy-900 mb-6">
-                SEND US A MESSAGE
-              </h2>
-              <p className="text-gray-700 mb-8 leading-relaxed">
-                Tell us about your operational challenges, and we'll get back to you within
-                24 hours to discuss how the Bismark Method can help.
-              </p>
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div>
+            <h2 className="font-display text-3xl md:text-4xl text-navy-900 mb-6">
+              SEND US A MESSAGE
+            </h2>
+            <p className="text-gray-700 mb-8 leading-relaxed">
+              Tell us about your operational challenges, and we'll get back to you within
+              24 hours to discuss how the Bismark Method can help.
+            </p>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label
                     htmlFor="name"
@@ -184,94 +181,7 @@ const ContactPage = () => {
                 <p className="text-sm text-gray-600">
                   * Required fields. We respect your privacy and will never share your information.
                 </p>
-              </form>
-            </div>
-
-            {/* Right Column - Info & Calendly */}
-            <div className="space-y-8">
-              {/* Company Info */}
-              <div className="bg-gray-50 border-2 border-gray-200 rounded-lg p-8">
-                <h3 className="font-display text-2xl text-navy-900 mb-6">
-                  BISMARK CONSULTING GROUP
-                </h3>
-
-                <div className="space-y-4 mb-8">
-                  <div className="flex items-start gap-3">
-                    <Mail className="w-5 h-5 text-gold-600 flex-shrink-0 mt-1" />
-                    <div>
-                      <p className="text-sm text-gray-600 mb-1">Email</p>
-                      <a
-                        href="mailto:info@bismarkconsulting.net"
-                        className="text-navy-900 hover:text-gold-600 transition-colors font-medium"
-                      >
-                        info@bismarkconsulting.net
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-gold-600 flex-shrink-0 mt-1" />
-                    <div>
-                      <p className="text-sm text-gray-600 mb-1">Headquarters</p>
-                      <p className="text-navy-900 font-medium">
-                        Miami, Florida
-                      </p>
-                      <p className="text-sm text-gray-600 mt-1">
-                        We work on-site nationally and internationally
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <Building className="w-5 h-5 text-gold-600 flex-shrink-0 mt-1" />
-                    <div>
-                      <p className="text-sm text-gray-600 mb-1">Founded</p>
-                      <p className="text-navy-900 font-medium">1998</p>
-                      <p className="text-sm text-gray-600 mt-1">
-                        25+ years of operational excellence
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white border-2 border-gold-600 rounded-lg p-6">
-                  <p className="text-sm font-medium text-navy-900 mb-2">
-                    BUSINESS HOURS
-                  </p>
-                  <p className="text-gray-700">
-                    Monday - Friday: 8:00 AM - 6:00 PM EST
-                  </p>
-                </div>
-              </div>
-
-              {/* Schedule Walkthrough CTA */}
-              <div>
-                <h3 className="font-display text-xl text-navy-900 mb-4">
-                  SCHEDULE A WALKTHROUGH
-                </h3>
-                <p className="text-gray-700 text-sm mb-6">
-                  Schedule a walkthrough directly and we&rsquo;ll discuss your complimentary on-site assessment.
-                </p>
-                <button
-                  onClick={openCalendlyPopup}
-                  className="block w-full bg-gold-600 text-navy-900 px-6 py-4 font-display text-center text-lg hover:bg-gold-500 transition-colors"
-                >
-                  SCHEDULE A WALKTHROUGH
-                </button>
-              </div>
-
-              {/* Engagement Note */}
-              <div className="bg-gold-600 rounded-lg p-6">
-                <h4 className="font-display text-xl text-navy-900 mb-3">
-                  MINIMUM ENGAGEMENT
-                </h4>
-                <p className="text-navy-900 leading-relaxed">
-                  We focus on transformation engagements of <strong>$1M+</strong> where
-                  the scale and complexity justify the rigor of the Bismark Method. Our
-                  typical clients see 5-10x ROI within the first year.
-                </p>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </section>

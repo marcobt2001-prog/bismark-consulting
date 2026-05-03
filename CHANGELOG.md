@@ -24,6 +24,43 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-05-03 — CTA rename + contact page layout
+
+**Files Modified:**
+- `src/components/CalendlyButton.tsx` — default `label` prop value changed from `'SCHEDULE A WALKTHROUGH'` to `'SCHEDULE A MEETING'`. Component still uses the same prop pattern; no API change.
+- `src/components/layout/Navbar.tsx` — both gold CTA buttons (desktop nav at line 48, mobile nav at line 78) changed from `Schedule a Walkthrough` to `Schedule a meeting` (sentence case, intentional deviation from the site-wide uppercase button convention). No `uppercase` utility class needed to be removed — these buttons use `text-sm font-semibold` only and render their source string verbatim, so the previous "Schedule a Walkthrough" was already rendering in the case of its source. The "Walkthrough" link inside `navigation.map(...)` (the actual nav menu link to `/walkthrough`) was intentionally left unchanged.
+- `src/views/HomePage.tsx` — both `<CalendlyButton>` callsites updated (`label="SCHEDULE A WALKTHROUGH"` → `label="SCHEDULE A MEETING"`).
+- `src/views/IndustriesPage.tsx` — single `<CalendlyButton>` callsite updated.
+- `src/views/BismarkMethodPage.tsx` — both `<CalendlyButton>` callsites updated.
+- `src/views/AIPage.tsx` — single `<CalendlyButton>` callsite updated.
+- `src/components/IndustrySubPageLayout.tsx` — single `<CalendlyButton>` callsite updated (drives the CTA on all 10 dynamic `/industries/[slug]` pages).
+- `src/views/insights/WhatHappensAfterConsultantsLeave.tsx` — `<CalendlyButton>` callsite at the article footer updated.
+- `src/views/insights/WhyImprovementTeamStartsAtOrgChart.tsx` — `<CalendlyButton>` callsite at the article footer updated.
+- `src/views/ContactPage.tsx` — deleted the entire right-column block: the `BISMARK CONSULTING GROUP` info card (email, headquarters, founded blocks) plus the `BUSINESS HOURS` strip; the `SCHEDULE A WALKTHROUGH` heading + descriptive sentence + plain `<button>` CTA card; and the `MINIMUM ENGAGEMENT` $1M+ / 5–10x ROI gold card. Replaced the wrapping `<div className="grid md:grid-cols-2 gap-12">` 2-column grid + outer `<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">` with a single centered `<div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">` container. The form's outer `<section className="py-20">` vertical padding is preserved. Form fields, validation, submit handler against `/api/contact`, success/error UI states, and the `SEND US A MESSAGE` heading + intro paragraph above the form are unchanged. Removed two now-unused imports: `Mail` from `lucide-react` (was only used in the deleted company-info card) and the entire `openCalendlyPopup` import from `../utils/openCalendlyPopup` (was only used by the deleted plain-`<button>` walkthrough CTA).
+
+**Files Created:**
+- (none)
+
+**Files Deleted:**
+- (none)
+
+**Build verification:**
+- `npm run build` clean — 25 static pages generated, TypeScript ok with strict unused-import checking enabled. No console warnings introduced.
+- Verification grep run after the rename: zero remaining hits for `Schedule a Walkthrough` / `SCHEDULE A WALKTHROUGH` in any category-A button-label context. Remaining hits are all intentionally preserved page metadata (`<title>`/OG titles in `app/walkthrough/page.tsx` and `app/schedule/page.tsx`), the `<h1>` page heading on `src/views/SchedulePage.tsx`, and the email-template button text inside `app/api/contact/route.ts` (left untouched per the explicit "DO NOT CHANGE: The Resend API route" guard).
+
+**Summary:**
+Renamed all Calendly CTA button labels site-wide. Default label is now `SCHEDULE A MEETING` (uppercase, matching the site's button convention). The single exception is the nav-bar CTA, which renders as `Schedule a meeting` in sentence case — a deliberate visual deviation. The button's destination is the Calendly booking flow, which schedules a 30-minute virtual intro meeting; the on-site Walkthrough is then scheduled from that meeting. Section headings, body copy describing the Walkthrough, the `/walkthrough` page name, and the Calendly URL slug were intentionally left unchanged — they describe the actual on-site engagement, which is unchanged.
+
+Contact page: removed the right-side info column entirely (company details, business hours, walkthrough CTA card, minimum engagement card) and centered the contact form in the available space (single `max-w-2xl mx-auto` container).
+
+**Known follow-up needed:**
+- `<h1>SCHEDULE A WALKTHROUGH</h1>` on `src/views/SchedulePage.tsx` and the page `<title>`/OG metadata on `app/walkthrough/page.tsx` and `app/schedule/page.tsx` still say "Walkthrough" — they sit directly above buttons that now read "SCHEDULE A MEETING". Copy-consistency review pending.
+- Body copy describing the Walkthrough as a "complimentary, on-site assessment" / "3–5 day on-site" appears on multiple views (HomePage, AIPage, BismarkMethodPage, IndustrySubPageLayout, insight articles) and may need reconciliation with the new "schedule a meeting" CTA framing — though the spec frames the new CTA as scheduling the *intro virtual meeting* that leads into the on-site Walkthrough, so this body copy may still be correct.
+- `app/api/contact/route.ts:74` — the `SCHEDULE A WALKTHROUGH` button inside the Resend confirmation email HTML template was intentionally NOT renamed; the spec's "DO NOT CHANGE: The Resend API route" guard applied. End users receiving the confirmation email will see this CTA in the old wording until that template is also updated.
+- No analytics event names referencing "walkthrough" were found in this codebase (`openCalendlyPopup` triggers Calendly's own popup without any custom analytics dispatch). Nothing to preserve.
+
+---
+
 ### 2026-05-03 — Insights: revised existing article + added new "Org Chart" article
 
 **Files Modified:**

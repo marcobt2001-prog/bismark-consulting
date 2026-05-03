@@ -45,7 +45,7 @@ export default function Navbar() {
               onClick={openCalendlyPopup}
               className="bg-gold-600 text-navy-900 px-6 py-2 text-sm font-semibold hover:bg-gold-500 transition-colors"
             >
-              Schedule a Walkthrough
+              Schedule a meeting
             </button>
           </div>
 
@@ -75,7 +75,7 @@ export default function Navbar() {
               onClick={() => { setIsOpen(false); openCalendlyPopup(); }}
               className="block w-full text-center bg-gold-600 text-navy-900 px-6 py-2 text-base font-semibold hover:bg-gold-500 mt-4"
             >
-              Schedule a Walkthrough
+              Schedule a meeting
             </button>
           </div>
         </div>

@@ -128,7 +128,7 @@ export default function IndustrySubPageLayout({ industry }: Props) {
             where we examine your operations with the same rigor we bring to a
             full engagement.
           </p>
-          <CalendlyButton label="Schedule a Walkthrough" className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-12 py-5 font-display text-xl hover:bg-gold-500 transition-colors" />
+          <CalendlyButton label="SCHEDULE A MEETING" className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-12 py-5 font-display text-xl hover:bg-gold-500 transition-colors" />
         </div>
       </section>
 
