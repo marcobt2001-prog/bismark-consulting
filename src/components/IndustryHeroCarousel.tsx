@@ -11,7 +11,6 @@ const SLIDE_INTERVAL_MS = 3000;
 export default function IndustryHeroCarousel() {
   const slides = industries.filter((i) => i.heroImage);
   const [index, setIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
 
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
@@ -23,12 +22,12 @@ export default function IndustryHeroCarousel() {
   }, []);
 
   const startTimer = useCallback(() => {
-    if (isPaused || slides.length <= 1) return;
+    if (slides.length <= 1) return;
     clearTimer();
     intervalRef.current = setInterval(() => {
       setIndex((prev) => (prev + 1) % slides.length);
     }, SLIDE_INTERVAL_MS);
-  }, [clearTimer, isPaused, slides.length]);
+  }, [clearTimer, slides.length]);
 
   useEffect(() => {
     startTimer();
@@ -62,10 +61,6 @@ export default function IndustryHeroCarousel() {
       aria-roledescription="carousel"
       aria-label="Featured industries"
       className="relative w-full aspect-[4/3] md:aspect-[21/9] overflow-hidden bg-navy-900"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-      onFocus={() => setIsPaused(true)}
-      onBlur={() => setIsPaused(false)}
     >
       {slides.map((industry, i) => {
         const isActive = i === index;

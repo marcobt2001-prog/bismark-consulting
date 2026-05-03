@@ -88,8 +88,8 @@ export default function AboutPage() {
             <div>
               <div className="relative w-full aspect-[3/4] overflow-hidden">
                 <Image
-                  src="/images/stock-watermarked/stock-photo-solo-brainstorming-shot-of-a-mature-businessman-writing-notes-at-his-desk-in-the-office-2139544961.jpg"
-                  alt="Founder portrait placeholder pending real headshot"
+                  src="/images/Luis-Telleria-Professional-Photo.png"
+                  alt="Luis Telleria-Xucla — Founder & Managing Director, Bismark Consulting Group"
                   fill
                   sizes="(min-width: 768px) 33vw, 100vw"
                   className="object-cover"

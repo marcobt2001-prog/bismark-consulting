@@ -24,6 +24,24 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-05-03 — Reverts, carousel pause removal, founder photo
+
+**Files Modified:**
+- `src/views/HomePage.tsx` — reverted the Five Pillars right-column image sizing to its pre-resize state (parent commit `2f4cee9`): outer `<div>` no longer has `flex md:justify-end`, inner `<div>` no longer has `max-w-[200px]`, and `sizes` is restored to `"(min-width: 768px) 50vw, 100vw"`. Insights section, carousel-arrows commit, and image swaps from `0aa137b` are all preserved — only the resize portion was undone via manual line restore.
+- `src/components/IndustryHeroCarousel.tsx` — removed pause-on-hover. Dropped the `isPaused` state and its setter, the `if (isPaused || …)` gate inside `startTimer`, and the `onMouseEnter` / `onMouseLeave` / `onFocus` / `onBlur` handlers from the carousel container. The carousel now advances every 3s unconditionally. Arrow controls and their reset-and-restart timer behavior are unchanged.
+- `src/views/AboutPage.tsx` — swapped the Luis headshot slot's image `src` to `/images/Luis-Telleria-Professional-Photo.png` and updated `alt` to `Luis Telleria-Xucla — Founder & Managing Director, Bismark Consulting Group`. The wrapper (`<div className="relative w-full aspect-[3/4] overflow-hidden">`) and `<Image fill … />` structure were already in place from the earlier placeholder pass — only `src` and `alt` changed.
+
+**Files Created:**
+- (none)
+
+**Files Deleted:**
+- (none)
+
+**Summary:**
+Reverted the home-page Five Pillars adjacent image to its prior size. Removed pause-on-hover from the industries hero carousel — it now advances every 3s regardless of mouse position. Arrow controls and their interval-reset behavior preserved. Added the real founder photo to the About page; other wireframes elsewhere on the site remain as placeholders pending sourced imagery.
+
+---
+
 ### 2026-05-03 — Home Insights section + Industries carousel arrows + image swaps
 
 **Files Modified:**

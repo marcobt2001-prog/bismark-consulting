@@ -154,13 +154,13 @@ const HomePage = () => {
               </div>
 
               {/* RIGHT — photo placeholder */}
-              <div className="flex md:justify-end">
-                <div className="relative w-full max-w-[200px] aspect-[3/4] overflow-hidden">
+              <div>
+                <div className="relative w-full aspect-[3/4] overflow-hidden">
                   <Image
                     src="/images/stock-watermarked/stock-photo-a-diverse-group-of-smiling-industrial-professionals-collaborates-over-a-laptop-on-the-factory-floor-2455170065.jpg"
                     alt="Bismark coaches working with operations team on the factory floor"
                     fill
-                    sizes="200px"
+                    sizes="(min-width: 768px) 50vw, 100vw"
                     className="object-cover"
                   />
                 </div>
