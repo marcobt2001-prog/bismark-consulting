@@ -24,6 +24,27 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-05-03 — Insights: revised existing article + added new "Org Chart" article
+
+**Files Modified:**
+- `src/views/insights/WhatHappensAfterConsultantsLeave.tsx` — aligned the rendered prose with the revised v2 markdown at `public/content/what-happens-after-consultants-leave.md`. Removed two stale `<RelatedCallout>` blocks (and the now-unused `RelatedCallout` component definition) that referenced articles not present in the revised source. Updated the author bio strip to read "Founder & Managing Director of Bismark Consulting" (was "Bismark Consulting Group") to match the bio text in the revised markdown. Section structure (opening → Condition → Mercenary Model → Survive Until They Leave → Maintenance Trap → Grand Misperception → The Objections I Know You're Thinking → What Has to Be Structurally Different → closing → bio → CTA), the "Grand Misperception" pull quote, and the five bolded objection sub-headings were already present and verified against the markdown.
+- `src/data/insights.ts` — appended a second `InsightMeta` entry for the new article (`slug: 'org-chart-guarantees-rework'`, title "Why Your Improvement Team Starts at the Org Chart", subtitle "And Why That Guarantees Rework", author Luis Telleria-Xucla, `publishedDate: '2026-05-03'`, `readingTimeMinutes: 18`, plus the spec-mandated excerpt). Existing entry untouched.
+- `app/insights/[slug]/page.tsx` — imported the new `WhyImprovementTeamStartsAtOrgChart` view and added the `'org-chart-guarantees-rework'` key to the `articleComponents` map so the dynamic route resolves the new slug. `generateStaticParams` already iterates `insights`, so the new slug is statically generated automatically.
+
+**Files Created:**
+- `src/views/insights/WhyImprovementTeamStartsAtOrgChart.tsx` — new article view, mirroring the structural pattern of `WhatHappensAfterConsultantsLeave.tsx` (hero block, `SectionBreak` component, `border-l-4 border-gold-600` pull quotes, bolded objection sub-headings, gray-50 author bio strip with gold top border, navy-900 CTA strip with `CalendlyButton`). 11 prose sections (opening + 10 named) plus bio and CTA, three pull quotes (one inside "The Way Companies Are Actually Built", one closing "The Sequence That Actually Matters", one inside "The Deeper Problem"), six bolded objection sub-headings inside "The Objections I Know Are Coming". Prose copied verbatim from the markdown source — emphasis preserved (`*italic*` → `<em>`, `**bold**` → `<strong className="text-navy-900">`).
+
+**Files Deleted:**
+- (none — the markdown sources at `public/content/what-happens-after-consultants-leave.md` and `public/content/org-chart-guarantees-rework.md` were placed by the user prior to this session and are retained as the authoritative prose source.)
+
+**Build verification:**
+- `npm run build` clean — 25 static pages generated. Both insight URLs (`/insights/what-happens-after-consultants-leave` and `/insights/org-chart-guarantees-rework`) listed under the SSG `/insights/[slug]` route. TypeScript ok, zero compile errors, zero warnings from our code (the inferred-workspace-root warning about the parent `package-lock.json` is pre-existing and unrelated to this change). Home page Insights section auto-pulls from `src/data/insights.ts` via the shared `InsightCard`, so the new article appears on `/` and `/insights` without any further wiring.
+
+**Summary:**
+Aligned the existing "What Happens After the Consultants Leave" article view with its revised v2 markdown (removed stale Related callouts, fixed author bio firm name) and added a new full-length insight article "Why Your Improvement Team Starts at the Org Chart" at `/insights/org-chart-guarantees-rework`, mirroring the existing article's hero, section, pull-quote, and CTA treatments. Both articles now expose objection sub-headings in the same bolded inline style.
+
+---
+
 ### 2026-05-03 — Reverts, carousel pause removal, founder photo
 
 **Files Modified:**

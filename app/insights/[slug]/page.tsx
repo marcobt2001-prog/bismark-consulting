@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { insights } from '@/data/insights';
 import WhatHappensAfterConsultantsLeave from '@/views/insights/WhatHappensAfterConsultantsLeave';
+import WhyImprovementTeamStartsAtOrgChart from '@/views/insights/WhyImprovementTeamStartsAtOrgChart';
 
 export const dynamic = 'force-static';
 
@@ -26,6 +27,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 const articleComponents: Record<string, React.ComponentType> = {
   'what-happens-after-consultants-leave': WhatHappensAfterConsultantsLeave,
+  'org-chart-guarantees-rework': WhyImprovementTeamStartsAtOrgChart,
 };
 
 export default async function InsightArticle({ params }: { params: Promise<{ slug: string }> }) {

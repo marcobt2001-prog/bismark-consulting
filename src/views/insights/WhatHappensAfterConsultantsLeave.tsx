@@ -7,12 +7,6 @@ const SectionBreak = () => (
   </div>
 );
 
-const RelatedCallout = ({ children }: { children: React.ReactNode }) => (
-  <div className="bg-amber-50 border-l-4 border-gold-600 pl-6 pr-4 py-4 my-8 text-sm italic text-gray-600">
-    {children}
-  </div>
-);
-
 export default function WhatHappensAfterConsultantsLeave() {
   return (
     <div className="bg-white">
@@ -376,13 +370,6 @@ export default function WhatHappensAfterConsultantsLeave() {
           And in twelve months, leadership will be looking at the org chart again.
         </p>
 
-        <RelatedCallout>
-          Related: &ldquo;Why Your Improvement Team Starts at the Org Chart, And
-          Why That Guarantees Rework&rdquo; explores why the restructure-first
-          instinct is the most common and most costly entry point error in
-          operational transformation.
-        </RelatedCallout>
-
         <SectionBreak />
 
         {/* The Objections */}
@@ -545,13 +532,6 @@ export default function WhatHappensAfterConsultantsLeave() {
           process.
         </p>
 
-        <RelatedCallout>
-          Related: &ldquo;The Guarantee Nobody Believes Until They See the
-          Structure Behind It&rdquo; examines why sustainable results require a
-          structural commitment from executive leadership, and why the guarantee
-          is conditional on it.
-        </RelatedCallout>
-
         <p className="text-lg text-gray-700 leading-relaxed mb-6">
           I&rsquo;ve coached over eighty clients through this model across ten
           industries and three continents. The ones where the results sustained,
@@ -595,7 +575,7 @@ export default function WhatHappensAfterConsultantsLeave() {
             Luis Telleria-Xucla
           </p>
           <p className="text-gray-700 leading-relaxed">
-            Founder &amp; Managing Director of Bismark Consulting Group, which he
+            Founder &amp; Managing Director of Bismark Consulting, which he
             established in 1998. He created The Bismark Method&trade; in 2007 after
             nine years of watching consulting results fade. He has personally
             coached over 80 clients through operational transformations across ten
