@@ -24,6 +24,26 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-05-04 — Add llms.txt for AI agent navigation
+
+**Files Created:**
+- app/llms.txt/route.ts
+
+**Files Modified:**
+- (none)
+
+**Summary:**
+Added dynamically-generated /llms.txt route. The file is a curated,
+structured markdown map of the site intended for AI agents and language
+models, following the llmstxt.org spec. Content includes site description,
+core pages, industry portfolio (auto-generated from industries.ts), all
+published insights (auto-generated from insights.ts, sorted newest first),
+key concept glossary (Bismark Method, TLM, Five Pillars, Apprentice Model,
+Walkthrough, 16-Week Engagement), and contact info. Industry and insight
+lists stay in sync automatically with the data files. Site URLs use
+SITE_URL from src/lib/site-config.ts. Marked force-static so it's
+pre-rendered at build time.
+
 ### 2026-05-04 — JSON-LD structured data, canonicals, Article OG metadata
 
 **Files Modified:**
