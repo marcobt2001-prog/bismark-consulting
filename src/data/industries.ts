@@ -25,8 +25,8 @@ export const industries: Industry[] = [
   // 1. Banking & Lending
   {
     slug: 'banking-lending',
-    heroImage: '/images/stock-watermarked/stock-photo-businessman-stamping-approved-on-real-estate-contract-concept-of-property-agreement-mortgage-2623011873.jpg',
-    tileImage: '/images/stock-watermarked/stock-photo-close-up-of-hand-stamping-a-contract-clipboard-contracts-and-the-final-stages-of-a-business-2663071951.jpg',
+    heroImage: '/images/businessman-stamping-approved-on-real-estate-contract-concept-of-property-agreement-mortgage-2623011873.jpg',
+    tileImage: '/images/close-up-of-hand-stamping-a-contract-clipboard-contracts-and-the-final-stages-of-a-business-2663071951.jpg',
     name: 'Banking & Lending',
     descriptor: 'Account opening through collections, recovery, and regulatory compliance',
     processCount: 16,
@@ -68,8 +68,8 @@ The Bismark Method exposes these patterns by mapping every process against its a
   // 2. Distribution & Logistics
   {
     slug: 'distribution-logistics',
-    heroImage: '/images/stock-watermarked/stock-photo-ostrava-czech-republic-sept-container-trains-transport-freight-to-and-from-a-shipping-2736633411.jpg',
-    tileImage: '/images/stock-watermarked/stock-photo-trains-at-railroad-yard-at-station-district-aerial-in-netherlands-1228227193.jpg',
+    heroImage: '/images/ostrava-czech-republic-sept-container-trains-transport-freight-to-and-from-a-shipping-2736633411.jpg',
+    tileImage: '/images/trains-at-railroad-yard-at-station-district-aerial-in-netherlands-1228227193.jpg',
     name: 'Distribution & Logistics',
     descriptor: 'Receiving dock through last-mile delivery and freight settlement',
     processCount: 14,
@@ -109,8 +109,8 @@ The Bismark Method maps these operations at the archetype level, exposing where 
   // 3. Enterprise Technology
   {
     slug: 'enterprise-technology',
-    heroImage: '/images/stock-watermarked/stock-photo-system-administration-and-machine-learning-engineer-programming-at-his-workstation-man-plans-and-2136788185.jpg',
-    tileImage: '/images/stock-watermarked/stock-photo-young-diverse-people-working-at-computers-call-center-office-men-and-women-in-headsets-talking-2231810853.jpg',
+    heroImage: '/images/system-administration-and-machine-learning-engineer-programming-at-his-workstation-man-plans-and-2136788185.jpg',
+    tileImage: '/images/young-diverse-people-working-at-computers-call-center-office-men-and-women-in-headsets-talking-2231810853.jpg',
     name: 'Enterprise Technology',
     descriptor: 'Account provisioning through incident response and support operations',
     processCount: 14,
@@ -149,8 +149,8 @@ The Bismark Method maps every customer-facing operation against its archetypes, 
   // 4. Financial Processors
   {
     slug: 'financial-processors',
-    heroImage: '/images/stock-watermarked/stock-photo-spreadsheet-document-information-financial-startup-concept-data-and-graphs-in-spreadsheet-2569398921.jpg',
-    tileImage: '/images/stock-watermarked/stock-photo-business-man-laptop-and-documents-with-reading-scroll-and-thinking-with-finance-review-budget-or-2383286421.jpg',
+    heroImage: '/images/spreadsheet-document-information-financial-startup-concept-data-and-graphs-in-spreadsheet-2569398921.jpg',
+    tileImage: '/images/business-man-laptop-and-documents-with-reading-scroll-and-thinking-with-finance-review-budget-or-2383286421.jpg',
     name: 'Financial Processors',
     descriptor: 'Payment processing, credit reporting, servicing, and reconciliation',
     processCount: 16,
@@ -192,8 +192,8 @@ The Bismark Method maps every process against its archetypes, exposing where Aut
   // 5. Food Production
   {
     slug: 'food-production',
-    heroImage: '/images/stock-watermarked/stock-photo-conveyor-line-for-production-cookies-at-confectionery-factory-modern-plant-for-biscuit-2385950087.jpg',
-    tileImage: '/images/stock-watermarked/stock-photo-food-industry-biscuit-production-in-factory-on-conveyor-belt-modern-line-for-bakery-cookies-2395896913.jpg',
+    heroImage: '/images/conveyor-line-for-production-cookies-at-confectionery-factory-modern-plant-for-biscuit-2385950087.jpg',
+    tileImage: '/images/food-industry-biscuit-production-in-factory-on-conveyor-belt-modern-line-for-bakery-cookies-2395896913.jpg',
     name: 'Food Production',
     descriptor: 'Ingredient intake through shelf life and regulatory compliance',
     processCount: 14,
@@ -232,8 +232,8 @@ The Bismark Method maps food production at the archetype level, exposing where I
   // 6. Industrial Technology
   {
     slug: 'industrial-technology',
-    heroImage: '/images/stock-watermarked/stock-photo-industrial-ball-mill-grinds-ore-at-mining-and-concentrating-plant-concentration-factory-for-copper-2659599515.jpg',
-    tileImage: '/images/stock-watermarked/stock-photo-ev-production-line-on-advanced-automated-smart-factory-high-performance-electric-car-manufacturing-2374438937.jpg',
+    heroImage: '/images/industrial-ball-mill-grinds-ore-at-mining-and-concentrating-plant-concentration-factory-for-copper-2659599515.jpg',
+    tileImage: '/images/ev-production-line-on-advanced-automated-smart-factory-high-performance-electric-car-manufacturing-2374438937.jpg',
     name: 'Industrial Technology',
     descriptor: 'Equipment manufacturing through field service and maintenance contracts',
     processCount: 14,
@@ -272,8 +272,8 @@ The Bismark Method maps these interconnected operations at the archetype level, 
   // 7. Insurance
   {
     slug: 'insurance',
-    heroImage: '/images/stock-watermarked/stock-photo-senior-businessman-signing-a-contract-during-a-team-meeting-in-a-modern-office-surrounded-by-2601004763.jpg',
-    tileImage: '/images/stock-watermarked/stock-photo-group-of-businesspeople-meeting-around-boardroom-table-284522282.jpg',
+    heroImage: '/images/senior-businessman-signing-a-contract-during-a-team-meeting-in-a-modern-office-surrounded-by-2601004763.jpg',
+    tileImage: '/images/group-of-businesspeople-meeting-around-boardroom-table-284522282.jpg',
     name: 'Insurance',
     descriptor: 'Policy application through claims payment, subrogation, and reinsurance',
     processCount: 16,
@@ -317,8 +317,8 @@ The Bismark Method maps every insurance operation against its archetypes, exposi
   // 8. Manufacturing
   {
     slug: 'manufacturing',
-    heroImage: '/images/stock-watermarked/stock-photo--d-render-modern-manufacturing-plant-with-advanced-robotic-arms-operating-on-an-assembly-line-with-2445629951.jpg',
-    tileImage: '/images/stock-watermarked/stock-photo-medical-ampoule-production-line-at-modern-modern-pharmaceutical-factory-glass-ampoules-are-being-2229913173.jpg',
+    heroImage: '/images/-d-render-modern-manufacturing-plant-with-advanced-robotic-arms-operating-on-an-assembly-line-with-2445629951.jpg',
+    tileImage: '/images/medical-ampoule-production-line-at-modern-modern-pharmaceutical-factory-glass-ampoules-are-being-2229913173.jpg',
     name: 'Manufacturing',
     descriptor: 'Production planning through final quality release',
     processCount: 16,
@@ -360,8 +360,8 @@ The Bismark Method maps every manufacturing process against its archetypes, expo
   // 9. Mining & Metals
   {
     slug: 'mining-metals',
-    heroImage: '/images/stock-watermarked/stock-photo-quarry-excavator-works-at-night-loading-ore-open-pit-mine-2635969119.jpg',
-    tileImage: '/images/stock-watermarked/stock-photo-work-of-heavy-equipment-in-an-open-pit-for-gold-ore-mining-soft-focus-1951657093.jpg',
+    heroImage: '/images/quarry-excavator-works-at-night-loading-ore-open-pit-mine-2635969119.jpg',
+    tileImage: '/images/work-of-heavy-equipment-in-an-open-pit-for-gold-ore-mining-soft-focus-1951657093.jpg',
     name: 'Mining & Metals',
     descriptor: 'Exploration through refining, maintenance, and environmental compliance',
     processCount: 14,
@@ -402,8 +402,8 @@ The Bismark Method maps these operations at the archetype level, exposing where 
   // 10. Oil & Gas
   {
     slug: 'oil-gas',
-    heroImage: '/images/stock-watermarked/stock-photo-aerial-view-of-offshore-jack-up-drilling-rig-during-sunset-oil-and-gas-industry-2649447229.jpg',
-    tileImage: '/images/stock-watermarked/stock-photo-power-station-clean-modern-factory-petroleum-petrochemical-industry-building-outdoors-landscape-2264383115.jpg',
+    heroImage: '/images/aerial-view-of-offshore-jack-up-drilling-rig-during-sunset-oil-and-gas-industry-2649447229.jpg',
+    tileImage: '/images/power-station-clean-modern-factory-petroleum-petrochemical-industry-building-outdoors-landscape-2264383115.jpg',
     name: 'Oil & Gas',
     descriptor: 'Upstream exploration through downstream distribution and regulatory reporting',
     processCount: 14,

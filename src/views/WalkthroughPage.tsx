@@ -12,7 +12,7 @@ const WalkthroughPage = () => {
       phase: 'Phase 1',
       title: 'Stakeholder Engagement',
       description: "We meet with executives, operations leaders, and frontline managers. Not to pitch, but to listen. We need to understand your strategic objectives, the performance targets you're measured against, and the operational reality behind the reports. This is a deep discovery conversation, not a slideshow.",
-      photo: '/images/stock-watermarked/stock-photo-senior-older-indian-business-man-director-boss-ceo-leading-employees-team-meeting-presenting-2383724139.jpg',
+      photo: '/images/senior-older-indian-business-man-director-boss-ceo-leading-employees-team-meeting-presenting-2383724139.jpg',
       photoAlt: 'Senior leader meeting with team during stakeholder engagement',
       activities: [
         'Executive and leadership interviews',
@@ -26,7 +26,7 @@ const WalkthroughPage = () => {
       phase: 'Phase 2',
       title: 'Data & Documentation Analysis',
       description: "We dig into your operational data, performance metrics, and process documentation. We're looking for the patterns, disconnects, and bottlenecks that live in the gaps between what's reported and what's real. This is where the Bismark Method lens does its heaviest lifting. We know what to look for because we've seen it hundreds of times.",
-      photo: '/images/stock-watermarked/stock-photo-glasses-asian-woman-holding-pencil-and-thinking-beside-laptop-and-coffee-on-wooden-table-in-library-2662150007.jpg',
+      photo: '/images/glasses-asian-woman-holding-pencil-and-thinking-beside-laptop-and-coffee-on-wooden-table-in-library-2662150007.jpg',
       photoAlt: 'Analyst reviewing data and documentation',
       activities: [
         'Performance data review and validation',
@@ -40,7 +40,7 @@ const WalkthroughPage = () => {
       phase: 'Phase 3',
       title: 'Operational Observation',
       description: "We go to the floor, the desks, the systems. We watch your operations in action and talk to the people doing the work. There is no substitute for direct observation. Reports tell you what happened, observation tells you why.",
-      photo: '/images/stock-watermarked/stock-photo-manager-in-discussion-with-coworker-in-an-open-plan-office-314863934.jpg',
+      photo: '/images/manager-in-discussion-with-coworker-in-an-open-plan-office-314863934.jpg',
       photoAlt: 'Manager in discussion with a coworker on the floor',
       activities: [
         'Process observation and time studies',
@@ -54,7 +54,7 @@ const WalkthroughPage = () => {
       phase: 'Phase 4',
       title: 'Findings & Recommendation',
       description: "We deliver an Executive Summary with Data Exhibits, in both written and oral presentation to your leadership team. This is not a vague deck of observations. It includes quantified findings, specific improvement opportunities, and projected financial impact.",
-      photo: '/images/stock-watermarked/stock-photo-office-conference-room-meeting-presentation-black-businessman-talks-uses-tv-screen-to-show-2104457714.jpg',
+      photo: '/images/office-conference-room-meeting-presentation-black-businessman-talks-uses-tv-screen-to-show-2104457714.jpg',
       photoAlt: 'Executive presenting findings to leadership team',
       activities: [
         'Executive Summary with Data Exhibits',

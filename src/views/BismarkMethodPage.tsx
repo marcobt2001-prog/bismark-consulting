@@ -321,7 +321,7 @@ const BismarkMethodPage = () => {
             <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-gold-600 transition-colors">
               <div className="relative w-full aspect-[4/3] overflow-hidden mb-6">
                 <Image
-                  src="/images/stock-watermarked/stock-photo-experienced-female-teacher-who-specializes-in-adult-education-teaches-a-lesson-to-adult-students-2172691007.jpg"
+                  src="/images/experienced-female-teacher-who-specializes-in-adult-education-teaches-a-lesson-to-adult-students-2172691007.jpg"
                   alt="Classroom training session"
                   fill
                   sizes="(min-width: 768px) 33vw, 100vw"
@@ -340,7 +340,7 @@ const BismarkMethodPage = () => {
             <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-gold-600 transition-colors">
               <div className="relative w-full aspect-[4/3] overflow-hidden mb-6">
                 <Image
-                  src="/images/stock-watermarked/stock-photo-two-workers-wearing-safety-nets-and-white-lab-coats-observing-machinery-and-equipment-in-food-2575453649.jpg"
+                  src="/images/two-workers-wearing-safety-nets-and-white-lab-coats-observing-machinery-and-equipment-in-food-2575453649.jpg"
                   alt="Team working on the floor observing machinery"
                   fill
                   sizes="(min-width: 768px) 33vw, 100vw"
@@ -359,7 +359,7 @@ const BismarkMethodPage = () => {
             <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-gold-600 transition-colors">
               <div className="relative w-full aspect-[4/3] overflow-hidden mb-6">
                 <Image
-                  src="/images/stock-watermarked/stock-photo-happy-latin-business-man-company-executive-manager-giving-presentation-on-whiteboard-at-employees-2353374135.jpg"
+                  src="/images/happy-latin-business-man-company-executive-manager-giving-presentation-on-whiteboard-at-employees-2353374135.jpg"
                   alt="Leader giving a presentation to the team"
                   fill
                   sizes="(min-width: 768px) 33vw, 100vw"

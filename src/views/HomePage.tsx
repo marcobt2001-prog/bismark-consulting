@@ -163,7 +163,7 @@ const HomePage = () => {
               <div>
                 <div className="relative w-full aspect-[3/4] overflow-hidden">
                   <Image
-                    src="/images/stock-watermarked/stock-photo-a-diverse-group-of-smiling-industrial-professionals-collaborates-over-a-laptop-on-the-factory-floor-2455170065.jpg"
+                    src="/images/a-diverse-group-of-smiling-industrial-professionals-collaborates-over-a-laptop-on-the-factory-floor-2455170065.jpg"
                     alt="Bismark coaches working with operations team on the factory floor"
                     fill
                     sizes="(min-width: 768px) 50vw, 100vw"
@@ -243,7 +243,7 @@ const HomePage = () => {
 
             <div className="relative w-full aspect-[16/7] overflow-hidden mb-12">
               <Image
-                src="/images/stock-watermarked/stock-photo-the-image-showcases-professionals-engaged-in-a-collaborative-meeting-highlighting-teamwork-2608768835.jpg"
+                src="/images/the-image-showcases-professionals-engaged-in-a-collaborative-meeting-highlighting-teamwork-2608768835.jpg"
                 alt="Professionals collaborating on operational engagement"
                 fill
                 sizes="(min-width: 1280px) 1024px, 100vw"
