@@ -25,11 +25,11 @@ const IndustriesPage = () => {
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             The Bismark Method works because operational processes follow
-            patterns &mdash; regardless of industry. A loan application and an
+            patterns, regardless of industry. A loan application and an
             insurance claim move through the same structural archetypes. A
             warehouse pick-and-pack and a well workover face the same scheduling
             and fulfillment physics. We don&rsquo;t need to &ldquo;learn your
-            industry.&rdquo; We need to see your operation &mdash; because
+            industry.&rdquo; We need to see your operation, because
             we&rsquo;ve already seen the pattern underneath it.
           </p>
         </div>
@@ -48,14 +48,13 @@ const IndustriesPage = () => {
           <div className="bg-gold-600 h-1 w-24 mb-8 mx-auto" />
           <p className="text-lg text-gray-700 max-w-4xl leading-relaxed mb-12 mx-auto">
             Over two decades of transforming high-volume operations, we&rsquo;ve
-            identified a set of repeating process patterns &mdash; archetypes
-            &mdash; that generate nearly every transactional operation in the
-            world. Our deep understanding of these archetypes, combined with our
-            knowledge of the specific processes inside each industry, is what
-            allows us to design a tailored 16-week curriculum for any operation
-            we walk into. We don&rsquo;t map your processes to a template. We
-            read the operation and build the program around what it actually
-            needs.
+            identified a set of repeating process patterns (archetypes) that
+            generate nearly every transactional operation in the world. Our
+            deep understanding of these archetypes, combined with our knowledge
+            of the specific processes inside each industry, is what allows us
+            to design a tailored 16-week curriculum for any operation we walk
+            into. We don&rsquo;t map your processes to a template. We read the
+            operation and build the program around what it actually needs.
           </p>
 
           <ArchetypeIconSet />
@@ -63,9 +62,9 @@ const IndustriesPage = () => {
           <p className="text-lg text-gray-700 max-w-4xl leading-relaxed mt-12 mx-auto">
             These 12 archetypes aren&rsquo;t a framework we impose on your
             operation. They&rsquo;re the vocabulary we carry into every
-            engagement &mdash; the reason a Bismark coach can walk your floor
-            and see the improvement opportunities within days, regardless of
-            your industry.
+            engagement, the reason a Bismark coach can walk your floor and see
+            the improvement opportunities within days, regardless of your
+            industry.
           </p>
         </div>
       </section>
@@ -140,7 +139,7 @@ const IndustriesPage = () => {
             The process maps above show you what your operation does. The
             Walkthrough shows you what it costs, where it breaks, and what
             it&rsquo;s capable of becoming. It&rsquo;s a complimentary 3&ndash;5
-            day on-site assessment &mdash; no theory, no pitch deck, just your
+            day on-site assessment: no theory, no pitch deck, just your
             operations examined with the same rigor we bring to a full
             engagement.
           </p>

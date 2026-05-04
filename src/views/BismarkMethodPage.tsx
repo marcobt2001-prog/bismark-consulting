@@ -22,7 +22,7 @@ const BismarkMethodPage = () => {
       icon: Users,
       number: '01',
       title: 'Customer Profile',
-      description: "Your apprentices learn to generate Precise Generalized Information (PGI) about how customers interact with your processes. They map every touchpoint, decision point, and pain point \u2014 building a comprehensive picture of the customer journey that most organizations think they have but don't.",
+      description: "Your apprentices learn to generate Precise Generalized Information (PGI) about how customers interact with your processes. They map every touchpoint, decision point, and pain point, building a comprehensive picture of the customer journey that most organizations think they have but don't.",
       keyPoints: [
         'PGI development and customer journey mapping',
         'Touchpoint and decision point analysis',
@@ -34,7 +34,7 @@ const BismarkMethodPage = () => {
       icon: Cog,
       number: '02',
       title: 'Process Design & Engineering',
-      description: "Your subject matter experts become process designers. Apprentices learn how to engineer processes that are efficient, scalable, and aligned with what the customer profile revealed \u2014 not just document what exists today.",
+      description: "Your subject matter experts become process designers. Apprentices learn how to engineer processes that are efficient, scalable, and aligned with what the customer profile revealed, not just document what exists today.",
       keyPoints: [
         'End-to-end process engineering',
         'Efficiency and scalability design',
@@ -46,7 +46,7 @@ const BismarkMethodPage = () => {
       icon: Building2,
       number: '03',
       title: 'Organizational Strategy',
-      description: "Structure follows process. Apprentices redesign organizational alignment \u2014 teams, roles, reporting structures \u2014 to support the new operating model rather than the old one.",
+      description: "Structure follows process. Apprentices redesign organizational alignment (teams, roles, reporting structures) to support the new operating model rather than the old one.",
       keyPoints: [
         'Organizational alignment to new processes',
         'Team and role redesign',
@@ -85,13 +85,13 @@ const BismarkMethodPage = () => {
       number: '01',
       title: 'Foundation',
       weeks: 'Weeks 1\u20134',
-      description: 'TLM executive track launches. SMART goals are set with leadership. Apprentices begin Customer Profile and Process Design. The Stake occurs at Week 4 \u2014 goals are validated and the guarantee is anchored.'
+      description: 'TLM executive track launches. SMART goals are set with leadership. Apprentices begin Customer Profile and Process Design. The Stake occurs at Week 4: goals are validated and the guarantee is anchored.'
     },
     {
       number: '02',
       title: 'Build',
       weeks: 'Weeks 5\u20138',
-      description: 'TLM executive track concludes. Apprentices complete Organizational Strategy and Measurement. The operating system is taking shape \u2014 new processes, new structures, new metrics, all built by your people.'
+      description: 'TLM executive track concludes. Apprentices complete Organizational Strategy and Measurement. The operating system is taking shape: new processes, new structures, new metrics, all built by your people.'
     },
     {
       number: '03',
@@ -122,7 +122,7 @@ const BismarkMethodPage = () => {
             A CONSULTING METHOD DESIGNED TO LEAVE
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-10">
-            The Bismark Method is a 16-week &ldquo;Learn and Do&rdquo; engagement that transforms your internal teams into the people who improve your operations &mdash; not consultants who do it for you. When it&rsquo;s done right, we guarantee the results.
+            The Bismark Method is a 16-week &ldquo;Learn and Do&rdquo; engagement that transforms your internal teams into the people who improve your operations, not consultants who do it for you. When it&rsquo;s done right, we guarantee the results.
           </p>
           <CalendlyButton label="SCHEDULE A MEETING" className="inline-block bg-gold-600 text-navy-900 px-10 py-4 font-display text-lg hover:bg-gold-500 transition-colors" showArrow={false} />
         </div>
@@ -132,7 +132,7 @@ const BismarkMethodPage = () => {
       <section className="bg-navy-900 text-white py-16 border-t border-navy-800">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xl text-gray-300 leading-relaxed text-center">
-            Most consulting engagements produce a deliverable &mdash; a report, a recommendation, a redesign. Then the consultants leave and the organization is left holding a binder full of ideas and no capability to execute them. Results erode. The dependency cycle starts again. The Bismark Method was built to break that cycle. We don&rsquo;t deliver recommendations. We build the people and the operating system that make results inevitable &mdash;{' '}
+            Most consulting engagements produce a deliverable: a report, a recommendation, a redesign. Then the consultants leave and the organization is left holding a binder full of ideas and no capability to execute them. Results erode. The dependency cycle starts again. The Bismark Method was built to break that cycle. We don&rsquo;t deliver recommendations. We build the people and the operating system that make results inevitable,{' '}
             <span className="text-gold-600 font-semibold">and sustainable.</span>
           </p>
         </div>
@@ -159,7 +159,7 @@ const BismarkMethodPage = () => {
                   className="object-contain mx-auto"
                 />
                 <p className="text-xl md:text-2xl text-navy-900 leading-relaxed font-light mt-8">
-                  Think of it as a hand. The 5 Pillars are the fingers &mdash; they do the work, they touch the operations, they execute. Transformative Leadership Mastery is the palm &mdash; it connects everything, gives the fingers stability and coordination. <span className="font-semibold">A hand without a palm is just disconnected digits. You need both.</span>
+                  Think of it as a hand. The 5 Pillars are the fingers: they do the work, they touch the operations, they execute. Transformative Leadership Mastery is the palm: it connects everything, gives the fingers stability and coordination. <span className="font-semibold">A hand without a palm is just disconnected digits. You need both.</span>
                 </p>
               </div>
             </div>
@@ -188,10 +188,10 @@ const BismarkMethodPage = () => {
 
             <div className="mb-8">
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                TLM doesn&rsquo;t teach management techniques. It shifts how your leaders relate to performance, language, and accountability &mdash; so they can hold the results your teams create.
+                TLM doesn&rsquo;t teach management techniques. It shifts how your leaders relate to performance, language, and accountability, so they can hold the results your teams create.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                The curriculum is built on three core principles &mdash; how performance follows perception, how reality arises in language, and how committed language transforms what&rsquo;s possible. Through these, your leaders work through concepts including:
+                The curriculum is built on three core principles: how performance follows perception, how reality arises in language, and how committed language transforms what&rsquo;s possible. Through these, your leaders work through concepts including:
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
@@ -223,7 +223,7 @@ const BismarkMethodPage = () => {
                 WHY TLM MATTERS FOR THE GUARANTEE
               </h3>
               <p className="text-gray-300 leading-relaxed">
-                TLM is the structural foundation. Without it, operational improvements are real but fragile &mdash; they depend on conditions staying favorable. With it, your leadership team has the capacity to sustain and extend results through whatever comes next. This is why the guarantee requires full executive participation in TLM.
+                TLM is the structural foundation. Without it, operational improvements are real but fragile; they depend on conditions staying favorable. With it, your leadership team has the capacity to sustain and extend results through whatever comes next. This is why the guarantee requires full executive participation in TLM.
               </p>
             </div>
           </div>
@@ -240,14 +240,14 @@ const BismarkMethodPage = () => {
             <div className="bg-gold-600 h-1 w-24 mx-auto mb-8" />
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <span className="bg-gold-600 text-navy-900 px-4 py-2 font-display text-sm tracking-wider">
-                WHO: YOUR APPRENTICES &mdash; DEDICATED, FULL-TIME RESOURCES
+                WHO: YOUR APPRENTICES (DEDICATED, FULL-TIME RESOURCES)
               </span>
               <span className="bg-gold-600 text-navy-900 px-4 py-2 font-display text-sm tracking-wider">
                 MINIMUM: ONE PER IMPROVEMENT GOAL OR PROCESS
               </span>
             </div>
             <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
-              Five interconnected principles, taught in sequence and applied immediately to your real operations. Your apprentices don&rsquo;t study these in theory &mdash; they use them to redesign how your organization works, while learning the discipline to keep doing it after we leave.
+              Five interconnected principles, taught in sequence and applied immediately to your real operations. Your apprentices don&rsquo;t study these in theory. They use them to redesign how your organization works, while learning the discipline to keep doing it after we leave.
             </p>
           </div>
 
@@ -331,9 +331,9 @@ const BismarkMethodPage = () => {
               <div className="w-20 h-20 bg-navy-900 flex items-center justify-center mb-6">
                 <BookOpen className="w-10 h-10 text-gold-600" />
               </div>
-              <h3 className="font-display text-xl text-navy-900 mb-2">MONDAY &mdash; LEARN</h3>
+              <h3 className="font-display text-xl text-navy-900 mb-2">MONDAY: LEARN</h3>
               <p className="text-gray-700 leading-relaxed">
-                In-class training sessions led by 1&ndash;2 Bismark coaches. TLM principles are woven throughout all 16 Mondays. The 5 Pillars are taught in order &mdash; Pillars 1 through 4 across the first 8 weeks, Pillar 5 across the final 8. Each session sets up what your apprentices will apply that week.
+                In-class training sessions led by 1&ndash;2 Bismark coaches. TLM principles are woven throughout all 16 Mondays. The 5 Pillars are taught in order: Pillars 1 through 4 across the first 8 weeks, Pillar 5 across the final 8. Each session sets up what your apprentices will apply that week.
               </p>
             </div>
 
@@ -350,9 +350,9 @@ const BismarkMethodPage = () => {
               <div className="w-20 h-20 bg-navy-900 flex items-center justify-center mb-6">
                 <Layers className="w-10 h-10 text-gold-600" />
               </div>
-              <h3 className="font-display text-xl text-navy-900 mb-2">TUESDAY&ndash;THURSDAY &mdash; DO</h3>
+              <h3 className="font-display text-xl text-navy-900 mb-2">TUESDAY&ndash;THURSDAY: DO</h3>
               <p className="text-gray-700 leading-relaxed">
-                Bismark coaches work side-by-side with your apprentices, applying what was taught on Monday directly to your operations. This isn&rsquo;t observation or advising &mdash; it&rsquo;s hands-on execution with real-time coaching. Your processes are being redesigned, your measurements rebuilt, your organizational alignment challenged and improved &mdash; all by your own people, with our coaches right there.
+                Bismark coaches work side-by-side with your apprentices, applying what was taught on Monday directly to your operations. This isn&rsquo;t observation or advising. It&rsquo;s hands-on execution with real-time coaching. Your processes are being redesigned, your measurements rebuilt, your organizational alignment challenged and improved, all by your own people, with our coaches right there.
               </p>
             </div>
 
@@ -369,9 +369,9 @@ const BismarkMethodPage = () => {
               <div className="w-20 h-20 bg-navy-900 flex items-center justify-center mb-6">
                 <CheckCircle2 className="w-10 h-10 text-gold-600" />
               </div>
-              <h3 className="font-display text-xl text-navy-900 mb-2">FRIDAY &mdash; OWN</h3>
+              <h3 className="font-display text-xl text-navy-900 mb-2">FRIDAY: OWN</h3>
               <p className="text-gray-700 leading-relaxed">
-                Our coaches go home. Your apprentices keep working. They have assignments that feed into the following Monday&rsquo;s session &mdash; work that can only be done independently, by people who are learning to operate without us. Every Friday is a rehearsal for life after the 16 weeks. By the end of the engagement, Friday is just another day &mdash; because your team doesn&rsquo;t need us anymore.
+                Our coaches go home. Your apprentices keep working. They have assignments that feed into the following Monday&rsquo;s session. Work that can only be done independently, by people who are learning to operate without us. Every Friday is a rehearsal for life after the 16 weeks. By the end of the engagement, Friday is just another day, because your team doesn&rsquo;t need us anymore.
               </p>
             </div>
           </div>
@@ -395,10 +395,10 @@ const BismarkMethodPage = () => {
 
             <div className="bg-navy-900 text-white p-8 md:p-10 rounded-lg mb-10">
               <h3 className="font-display text-2xl text-gold-600 mb-4">
-                WEEK 4 &mdash; THE STAKE
+                WEEK 4: THE STAKE
               </h3>
               <p className="text-gray-300 leading-relaxed">
-                Four weeks in, your apprentices present back to the executive team. They&rsquo;ve been inside the operations. They&rsquo;ve seen the data. They&rsquo;ve started mapping the reality. At The Stake, they either confirm the original goals or propose adjusted targets &mdash; refining the magnitude or timing based on what they&rsquo;ve discovered. This is the moment the guarantee is anchored. The goals validated at The Stake become the goals Bismark guarantees.
+                Four weeks in, your apprentices present back to the executive team. They&rsquo;ve been inside the operations. They&rsquo;ve seen the data. They&rsquo;ve started mapping the reality. At The Stake, they either confirm the original goals or propose adjusted targets, refining the magnitude or timing based on what they&rsquo;ve discovered. This is the moment the guarantee is anchored. The goals validated at The Stake become the goals Bismark guarantees.
               </p>
             </div>
 
@@ -408,7 +408,7 @@ const BismarkMethodPage = () => {
                   WHAT&rsquo;S BEING GUARANTEED
                 </h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  If the agreed-upon goals from The Stake are not achieved by the end of the engagement, the Bismark coaching leader returns and continues working with your team &mdash; consulting fees waived &mdash; until those goals are met.*
+                  If the agreed-upon goals from The Stake are not achieved by the end of the engagement, the Bismark coaching leader returns and continues working with your team (consulting fees waived) until those goals are met.*
                 </p>
                 <p className="text-sm text-gray-500 italic">
                   *The guarantee covers consulting fees only. Standard travel and lodging expenses for on-site coaching remain the client&rsquo;s responsibility.
@@ -420,7 +420,7 @@ const BismarkMethodPage = () => {
                   WHAT ACTIVATES THE GUARANTEE
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  The guarantee requires that your executive leadership team attends all TLM sessions (or completes make-up sessions within the first 8 weeks). Full participation in TLM is not optional for the guarantee &mdash; it&rsquo;s the structural condition that makes sustained results possible.
+                  The guarantee requires that your executive leadership team attends all TLM sessions (or completes make-up sessions within the first 8 weeks). Full participation in TLM is not optional for the guarantee. It&rsquo;s the structural condition that makes sustained results possible.
                 </p>
               </div>
             </div>
@@ -440,7 +440,7 @@ const BismarkMethodPage = () => {
             </div>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              Some clients choose to engage with the 5 Pillars without the TLM executive track. The operational transformation is still real &mdash; your apprentices still learn and do, your processes are still redesigned, your team still builds the capability to improve independently.
+              Some clients choose to engage with the 5 Pillars without the TLM executive track. The operational transformation is still real: your apprentices still learn and do, your processes are still redesigned, your team still builds the capability to improve independently.
             </p>
 
             <div className="bg-navy-900 text-white p-8 md:p-10 rounded-lg mb-8">
@@ -450,7 +450,7 @@ const BismarkMethodPage = () => {
             </div>
 
             <p className="text-lg text-gray-700 leading-relaxed text-center">
-              It&rsquo;s not a lesser engagement &mdash; it&rsquo;s an incomplete methodology, by design. The full Bismark Method includes both tracks because that&rsquo;s what it takes to guarantee outcomes.
+              It&rsquo;s not a lesser engagement. It&rsquo;s an incomplete methodology, by design. The full Bismark Method includes both tracks because that&rsquo;s what it takes to guarantee outcomes.
             </p>
           </div>
         </div>
@@ -495,7 +495,7 @@ const BismarkMethodPage = () => {
             </h2>
             <div className="bg-gold-600 h-1 w-24 mx-auto mb-8" />
             <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              The Bismark Method asks more of you than traditional consulting. That&rsquo;s by design &mdash; because you&rsquo;re getting more back.
+              The Bismark Method asks more of you than traditional consulting. That&rsquo;s by design, because you&rsquo;re getting more back.
             </p>
           </div>
 
@@ -506,7 +506,7 @@ const BismarkMethodPage = () => {
               </div>
               <h3 className="font-display text-xl text-navy-900 mb-4">DEDICATED APPRENTICES</h3>
               <p className="text-gray-700 leading-relaxed">
-                At least one full-time resource per improvement goal or process being tackled. These aren&rsquo;t people doing this on the side of their day job. They&rsquo;re fully dedicated to the engagement for 16 weeks. This is non-negotiable &mdash; it&rsquo;s what makes the transfer real.
+                At least one full-time resource per improvement goal or process being tackled. These aren&rsquo;t people doing this on the side of their day job. They&rsquo;re fully dedicated to the engagement for 16 weeks. This is non-negotiable. It&rsquo;s what makes the transfer real.
               </p>
             </div>
 
@@ -526,7 +526,7 @@ const BismarkMethodPage = () => {
               </div>
               <h3 className="font-display text-xl text-navy-900 mb-4">ACCESS AND OPENNESS</h3>
               <p className="text-gray-700 leading-relaxed">
-                Floor access, system access, data access. We need your apprentices and our coaches to be where the work happens. And we need leadership willing to hear what the data says &mdash; even when it&rsquo;s uncomfortable.
+                Floor access, system access, data access. We need your apprentices and our coaches to be where the work happens. And we need leadership willing to hear what the data says, even when it&rsquo;s uncomfortable.
               </p>
             </div>
           </div>
@@ -552,7 +552,7 @@ const BismarkMethodPage = () => {
                 <div className="flex items-start gap-6">
                   <div className="font-display text-4xl text-gold-600 flex-shrink-0">01</div>
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    The knowledge transfers because your people do the work. We don&rsquo;t hand you a playbook. Your apprentices build it &mdash; process by process, pillar by pillar, week by week. By Week 16, there&rsquo;s nothing to &ldquo;hand off&rdquo; because nothing was ever taken away.
+                    The knowledge transfers because your people do the work. We don&rsquo;t hand you a playbook. Your apprentices build it: process by process, pillar by pillar, week by week. By Week 16, there&rsquo;s nothing to &ldquo;hand off&rdquo; because nothing was ever taken away.
                   </p>
                 </div>
               </div>
@@ -561,7 +561,7 @@ const BismarkMethodPage = () => {
                 <div className="flex items-start gap-6">
                   <div className="font-display text-4xl text-gold-600 flex-shrink-0">02</div>
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    The results sustain because leadership is transformed first. TLM isn&rsquo;t a nice-to-have bolted onto an operational engagement. It&rsquo;s the foundation that makes everything else hold. Leaders who understand how performance occurs &mdash; who can use committed language to shift context &mdash; don&rsquo;t need consultants to maintain momentum.
+                    The results sustain because leadership is transformed first. TLM isn&rsquo;t a nice-to-have bolted onto an operational engagement. It&rsquo;s the foundation that makes everything else hold. Leaders who understand how performance occurs (who can use committed language to shift context) don&rsquo;t need consultants to maintain momentum.
                   </p>
                 </div>
               </div>

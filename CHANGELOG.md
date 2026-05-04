@@ -24,6 +24,42 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-05-03 — Apply cleaned copy across HomePage, AboutPage, BismarkMethodPage, WalkthroughPage, IndustriesPage, FAQ, and industries data
+
+**Files Modified:**
+- `src/views/HomePage.tsx` — body copy across all 9 sections aligned to cleaned-copy punctuation rhythm (em-dashes converted to commas/colons/parens/periods per the cleaned-copy editorial style); replaced `getRandomPairings(5)` with a static 5-item array of curated industry/operation pairings (Food Production & Distribution / Enterprise Technology / Industrial Technology / Healthcare / Financial Processing). Note: HEALTHCARE and FINANCIAL PROCESSING are intentional marketing-display variants and are not links to industry sub-pages. Removed `getRandomPairings` import. Section headings, JSX scaffolding, image references, links, Calendly buttons, and the Insights teaser data import were all preserved.
+- `src/views/AboutPage.tsx` — body copy in "Our Origin", "What We Believe", founder bio, "The Team Behind the Method", bridge CTA, and final CTA aligned to cleaned-copy punctuation rhythm. Hero, credentials list (4 items in same order), and section structure unchanged.
+- `src/views/BismarkMethodPage.tsx` — hero subhead, "The Problem" body, hand-metaphor body, TLM body + "Why TLM Matters", 5 Pillar lede + all 5 pillar `description` fields in the in-file `pillars[]` array, Weekly Rhythm card subheaders (e.g., `MONDAY: LEARN`), Weekly Rhythm card bodies, "The Stake" copy + WHAT'S BEING GUARANTEED + WHAT ACTIVATES THE GUARANTEE, "Engaging With the 5 Pillars Alone" body, "What Your Organization Needs to Commit" lede + 3 commitment bodies, "Why It Works" lede + 3 numbered bodies, and final CTA all aligned to cleaned-copy punctuation. The 6 TLM concepts list, the in-file `phases[]` array (em-dash → colon in Phase 1 + Phase 2 descriptions), and the Stake™ trademark symbol all preserved.
+- `src/views/WalkthroughPage.tsx` — hero subhead, "What the Walkthrough Actually Is" trailing paragraph, all 4 `walkthroughPhases` `description` and `activities` fields, the trailing forward-paths line ("...We don't decide in advance. The data does."), `walkthroughIs[3]` colon → comma, all 4 `idealCandidates` bodies, all 4 `preparationItems` bodies, idealCandidates trailing paragraph, and "Ready to Start?" lede aligned to cleaned-copy punctuation. The "THE WALKTHROUGH EXPERIENCE" eyebrow pill was intentionally preserved (cleaned copy is silent on it).
+- `src/views/IndustriesPage.tsx` — hero subhead, "Patterns Behind Every Operation" body + trailing line, and final CTA body aligned to cleaned-copy punctuation. The 12 archetypes are rendered by `<ArchetypeIconSet />` in `src/components/visuals/` (out-of-scope per "Do Not Touch") so the archetype labels themselves were not modified. The matrix legend ("Active archetype", "Not active", "Hover to highlight") inside `<FindYourOperationMatrix />` was also not touched per the "Do Not Touch" guard. No new "Industries We Serve" section was added — the existing grid already renders the 10 industry/descriptor pairs.
+- `src/data/industries.ts` — 89 em-dash escapes (`—`) converted to commas across all 10 industry records, with targeted follow-up fixes converting 27 specific cases to colons (e.g., "across channels: broker, direct, digital, correspondent"), parens (e.g., "Gathering required documentation (income, assets, identity, property) and validating..."), or periods (Industrial Tech transformationSummary). All 10 industry records' `slug`, `name`, `descriptor`, `processCount`, `activeArchetypes`, `prev`/`next`, `heroImage`, and `tileImage` fields preserved. Process counts (16/14/14/16/14/14/16/16/14/14) match the cleaned copy exactly. Process record order, archetype activation flags, and the `Industry`/`Process` types are unchanged.
+- `src/data/faq.ts` — 51 em-dash escapes converted to commas across all 4 clusters' `answer` fields, with targeted follow-up fixes converting specific cases to em-dashes (the 5 pillar definitions: `Pillar 1: Customer Profile — Defining...`), parens (`without TLM (and some clients do) but the hand`), and periods ("...built in a lab. It was built in operations..." / "right tools in the right situations. And through that coaching..."). Cluster count (4), cluster order (Understanding Bismark / Evaluating the Method / Planning the Engagement / Assessing Risk and Results), question order (4/5/8/6 questions per cluster), and the `FAQItem`/`FAQCluster` types are unchanged.
+- `CHANGELOG.md` — this entry.
+
+**Files Created:**
+- (none)
+
+**Files Deleted:**
+- `src/data/industryRotation.ts` — orphan after HomePage was switched from random rotation to a static 5-item array. No other consumers (verified via grep).
+
+**Build verification:**
+- `npx tsc --noEmit` clean — zero errors.
+- `npm run build` clean — 25 static pages generated, TypeScript ok with strict unused-import checking. No console warnings from this change.
+
+**Pre-flight gaps that required user decisions (all confirmed by Marco before editing):**
+- **G1 (em-dash normalization):** Cleaned copy uses commas/colons/parens/periods in place of em-dashes throughout. Followed cleaned copy character-for-character; did not preserve `&mdash;` for "stylistic emphasis."
+- **G3 (industry rotation):** Replaced random `getRandomPairings(5)` with a static 5-item array per cleaned copy. `industryRotation.ts` deleted as orphan. HEALTHCARE and FINANCIAL PROCESSING in the static array are intentional marketing-display variants (not links to `industries.ts` sub-pages).
+- **G10 (Industries We Serve list):** No new section added — the existing grid already renders the 10 industry/descriptor pairs. Cleaned copy's "Industries We Serve" block is documentation of where descriptors live.
+- **G7 (image stands in for the "non-negotiable order" line):** Left alone (alt text on `/content/why-the-order-is-non-negotiable.png` already carries the line, and the image is in the "Do Not Touch" image-references list).
+- **G9 ("THE WALKTHROUGH EXPERIENCE" eyebrow):** Left alone (cleaned copy is silent on it; silence = leave alone per Step 4 rule #1).
+- **G11 (`<ArchetypeIconSet />`):** Left alone (lives in `src/components/visuals/**`, hard "Do Not Touch").
+- **G13/G14 (FAQ hero, FAQ closing CTA):** Already correct in code — no change needed.
+
+**Known follow-up:**
+The em-dash → comma global replace inside `faq.ts` produced ~50 comma-separated clauses where the cleaned copy might have used a different punctuation choice in 5–10 individual cases (period split, paren wrap, or colon). The dominant editorial pattern (comma) was applied; targeted follow-up fixes covered the most awkward cases. A future copy-consistency pass against the cleaned copy can resolve any remaining individual-clause readability issues.
+
+---
+
 ### 2026-05-03 — Refresh CTAs, contact copy, industry nav, hand image, and AI page copy
 
 **Files Modified:**

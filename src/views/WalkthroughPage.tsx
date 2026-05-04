@@ -11,27 +11,27 @@ const WalkthroughPage = () => {
       icon: Users,
       phase: 'Phase 1',
       title: 'Stakeholder Engagement',
-      description: "We meet with executives, operations leaders, and frontline managers \u2014 not to pitch, but to listen. We need to understand your strategic objectives, the performance targets you're measured against, and the operational reality behind the reports. This is a deep discovery conversation, not a slideshow.",
+      description: "We meet with executives, operations leaders, and frontline managers. Not to pitch, but to listen. We need to understand your strategic objectives, the performance targets you're measured against, and the operational reality behind the reports. This is a deep discovery conversation, not a slideshow.",
       photo: '/images/stock-watermarked/stock-photo-senior-older-indian-business-man-director-boss-ceo-leading-employees-team-meeting-presenting-2383724139.jpg',
       photoAlt: 'Senior leader meeting with team during stakeholder engagement',
       activities: [
         'Executive and leadership interviews',
         'Strategic objective alignment',
-        'Stakeholder mapping \u2014 who owns what, who influences what',
-        "Current state framing \u2014 what you believe is working, what you know isn't"
+        'Stakeholder mapping: who owns what, who influences what',
+        "Current state framing: what you believe is working, what you know isn't"
       ]
     },
     {
       icon: BarChart3,
       phase: 'Phase 2',
       title: 'Data & Documentation Analysis',
-      description: "We dig into your operational data, performance metrics, and process documentation. We're looking for the patterns, disconnects, and bottlenecks that live in the gaps between what's reported and what's real. This is where the Bismark Method lens does its heaviest lifting \u2014 we know what to look for because we've seen it hundreds of times.",
+      description: "We dig into your operational data, performance metrics, and process documentation. We're looking for the patterns, disconnects, and bottlenecks that live in the gaps between what's reported and what's real. This is where the Bismark Method lens does its heaviest lifting. We know what to look for because we've seen it hundreds of times.",
       photo: '/images/stock-watermarked/stock-photo-glasses-asian-woman-holding-pencil-and-thinking-beside-laptop-and-coffee-on-wooden-table-in-library-2662150007.jpg',
       photoAlt: 'Analyst reviewing data and documentation',
       activities: [
         'Performance data review and validation',
         'Process flow and documentation analysis',
-        "Metric gap identification \u2014 what's measured vs. what matters",
+        "Metric gap identification: what's measured vs. what matters",
         'Benchmarking against industry and cross-industry standards'
       ]
     },
@@ -39,7 +39,7 @@ const WalkthroughPage = () => {
       icon: FileSearch,
       phase: 'Phase 3',
       title: 'Operational Observation',
-      description: "We go to the floor, the desks, the systems. We watch your operations in action and talk to the people doing the work. There is no substitute for direct observation \u2014 reports tell you what happened, observation tells you why.",
+      description: "We go to the floor, the desks, the systems. We watch your operations in action and talk to the people doing the work. There is no substitute for direct observation. Reports tell you what happened, observation tells you why.",
       photo: '/images/stock-watermarked/stock-photo-manager-in-discussion-with-coworker-in-an-open-plan-office-314863934.jpg',
       photoAlt: 'Manager in discussion with a coworker on the floor',
       activities: [
@@ -53,7 +53,7 @@ const WalkthroughPage = () => {
       icon: Presentation,
       phase: 'Phase 4',
       title: 'Findings & Recommendation',
-      description: "We deliver an Executive Summary with Data Exhibits \u2014 in both written and oral presentation to your leadership team. This is not a vague deck of observations. It includes quantified findings, specific improvement opportunities, and projected financial impact.",
+      description: "We deliver an Executive Summary with Data Exhibits, in both written and oral presentation to your leadership team. This is not a vague deck of observations. It includes quantified findings, specific improvement opportunities, and projected financial impact.",
       photo: '/images/stock-watermarked/stock-photo-office-conference-room-meeting-presentation-black-businessman-talks-uses-tv-screen-to-show-2104457714.jpg',
       photoAlt: 'Executive presenting findings to leadership team',
       activities: [
@@ -69,7 +69,7 @@ const WalkthroughPage = () => {
     'A structured operational assessment using the Bismark Method lens',
     '3\u20135 days on-site with your team, your data, your operations',
     "Led by senior practitioners who've run these operations",
-    "An honest read of where you are \u2014 including what's working"
+    "An honest read of where you are, including what's working"
   ];
 
   const walkthroughIsnt = [
@@ -88,7 +88,7 @@ const WalkthroughPage = () => {
     {
       icon: Users,
       title: 'Executive Sponsorship',
-      description: "Someone at the C-suite or senior VP level is driving this. Not because they're the only stakeholder \u2014 but because the Bismark Method requires enterprise-wide visibility and the authority to act on what we find. This can't live in a single department."
+      description: "Someone at the C-suite or senior VP level is driving this. Not because they're the only stakeholder, but because the Bismark Method requires enterprise-wide visibility and the authority to act on what we find. This can't live in a single department."
     },
     {
       icon: TrendingUp,
@@ -111,17 +111,17 @@ const WalkthroughPage = () => {
     {
       icon: Database,
       title: 'Operational Data',
-      description: "Share what you can in advance \u2014 we'll send a specific data request after the discovery call, but the basics include: current performance dashboards and KPI reports, process documentation or workflow maps (whatever exists \u2014 perfection not required), org charts for the operational areas in scope, and any recent audit, assessment, or consulting reports."
+      description: "Share what you can in advance. We'll send a specific data request after the discovery call, but the basics include: current performance dashboards and KPI reports, process documentation or workflow maps (whatever exists, perfection not required), org charts for the operational areas in scope, and any recent audit, assessment, or consulting reports."
     },
     {
       icon: Shield,
       title: 'Physical & System Access',
-      description: "We need to be where the work happens. That means floor access, desk access, and ideally observer-level access to the systems your teams use daily. Visitor badging, NDAs, and security requirements \u2014 we're used to all of it."
+      description: "We need to be where the work happens. That means floor access, desk access, and ideally observer-level access to the systems your teams use daily. Visitor badging, NDAs, and security requirements. We're used to all of it."
     },
     {
       icon: Brain,
       title: 'An Open Mind',
-      description: "The walkthrough works best when leaders are genuinely curious about what we'll find \u2014 including the uncomfortable parts. We're not here to confirm what you already believe. We're here to show you what you can't see from the inside."
+      description: "The walkthrough works best when leaders are genuinely curious about what we'll find, including the uncomfortable parts. We're not here to confirm what you already believe. We're here to show you what you can't see from the inside."
     }
   ];
 
@@ -140,7 +140,7 @@ const WalkthroughPage = () => {
             SEE IT BEFORE YOU BUY IT
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
-            Most consulting firms ask you to trust their track record. We'd rather show you what we can do &mdash; on your floor, with your team, on your data. The Walkthrough is a 3&ndash;5 day operational assessment that delivers real findings before any engagement begins.
+            Most consulting firms ask you to trust their track record. We'd rather show you what we can do, on your floor, with your team, on your data. The Walkthrough is a 3&ndash;5 day operational assessment that delivers real findings before any engagement begins.
           </p>
           <p className="text-sm text-gray-400 max-w-2xl mx-auto">
             Complimentary consulting fees. Client covers travel-related expenses.*
@@ -186,7 +186,7 @@ const WalkthroughPage = () => {
             </div>
 
             <p className="text-lg text-gray-700 leading-relaxed text-center max-w-4xl mx-auto">
-              We've conducted these assessments for over 25 years. We've never completed one without identifying significant, quantifiable improvement opportunities. Not because we're looking for problems &mdash; because operational complexity always creates them.
+              We've conducted these assessments for over 25 years. We've never completed one without identifying significant, quantifiable improvement opportunities. Not because we're looking for problems, but because operational complexity always creates them.
             </p>
           </div>
         </div>
@@ -279,13 +279,13 @@ const WalkthroughPage = () => {
                   <h3 className="font-display text-xl text-gold-600">PATH B &mdash; DIRECT TO IMPLEMENTATION (DTI)</h3>
                 </div>
                 <p className="text-gray-300 leading-relaxed">
-                  When the walkthrough reveals that the operational picture is clear enough &mdash; the diagnosis is confirmed, the organization has the foundation, and the path is evident. A DTI engagement skips the extended discovery phase and moves directly into implementation design and deployment. This isn't a shortcut. It's a recognition that some organizations are further along than they realize.
+                  When the walkthrough reveals that the operational picture is clear enough: the diagnosis is confirmed, the organization has the foundation, and the path is evident. A DTI engagement skips the extended discovery phase and moves directly into implementation design and deployment. This isn't a shortcut. It's a recognition that some organizations are further along than they realize.
                 </p>
               </div>
             </div>
 
             <p className="text-center text-gray-400 mt-8 text-lg">
-              The walkthrough always tells us which path is right. We don't decide in advance &mdash; the data does.
+              The walkthrough always tells us which path is right. We don't decide in advance. The data does.
             </p>
           </div>
         </div>
@@ -324,7 +324,7 @@ const WalkthroughPage = () => {
           </div>
 
           <p className="text-gray-700 leading-relaxed text-center max-w-4xl mx-auto">
-            The method is built around operational processes, not industry labels. If your organization runs claims processing, policy administration, customer service operations, payment processing, loan origination, compliance workflows, or contact center operations &mdash; the walkthrough will find value.{' '}
+            The method is built around operational processes, not industry labels. If your organization runs claims processing, policy administration, customer service operations, payment processing, loan origination, compliance workflows, or contact center operations, the walkthrough will find value.{' '}
             <Link href="/industries" className="text-gold-600 hover:text-gold-700 font-medium">
               Industries & Services &rarr;
             </Link>
@@ -377,7 +377,7 @@ const WalkthroughPage = () => {
               READY TO START?
             </h2>
             <p className="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
-              The first step is a 30&ndash;45 minute call where we discuss your operational landscape, confirm mutual fit, and schedule your on-site walkthrough. This isn't a sales call &mdash; it's the same rigor in miniature. Come ready to talk about your operations, and we'll come ready to listen.
+              The first step is a 30&ndash;45 minute call where we discuss your operational landscape, confirm mutual fit, and schedule your on-site walkthrough. This isn't a sales call. It's the same rigor in miniature. Come ready to talk about your operations, and we'll come ready to listen.
             </p>
           </div>
 
