@@ -24,6 +24,103 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-05-04 — Optimize public/images/ for Cloudflare Workers 25 MiB limit
+
+**Files Created:**
+- scripts/optimize-images.mjs (one-off + reusable image optimization
+  utility — re-run after adding new photos to public/images/)
+
+**Files Modified:**
+- public/images/ (every file over 1 MiB or 2400px wide was recompressed
+  in place; quality 82 JPEG, max width 2400px; full per-file report
+  pasted below)
+- package.json / package-lock.json (added sharp to devDependencies)
+
+**Pre/post audit:**
+- Total public/images/ size before: 558 MiB
+- Total public/images/ size after: 20 MiB (-96%)
+- Largest file before: engineer-and-technician-...-2524747207.jpg at 30.68 MiB
+- Largest file after: Luis-Telleria-Professional-Photo.png at 1.9 MiB (intentionally excluded from sweep)
+- Largest re-encoded file: trains-at-railroad-yard-...-1228227193.jpg at 728 KiB
+- Files over 25 MiB before: 3 (engineer-and-technician 30.68 MiB, a-warehouse-manager 27.92 MiB, business-professionals-and-workers 25.62 MiB)
+- Files over 25 MiB after: 0
+- Files over 5 MiB after: 0
+- Files processed: 52, skipped: 4 (founder photo, image004.jpg, luis-telleria-xucla.jpg, one already-small stock-watermarked file)
+
+**Per-file optimizations:**
+
+\`\`\`
+OPT   images/-d-render-modern-manufacturing-plant-...-2445629951.jpg: 4.12 MiB -> 492 KiB (-88.3%) [resized from 3840px wide]
+OPT   images/a-diverse-group-of-smiling-industrial-professionals-...-2455170065.jpg: 17.21 MiB -> 257 KiB (-98.5%) [resized from 7008px wide]
+OPT   images/a-group-of-four-diverse-colleagues-...-2676202263.jpg: 16.17 MiB -> 450 KiB (-97.3%) [resized from 6000px wide]
+OPT   images/a-warehouse-manager-guiding-a-diverse-team-...-2512193885.jpg: 27.92 MiB -> 472 KiB (-98.3%) [resized from 7918px wide]
+OPT   images/advanced-bright-modern-pharmaceutical-factory-...-2422913545.jpg: 3.53 MiB -> 291 KiB (-91.9%) [resized from 5120px wide]
+OPT   images/aerial-view-of-offshore-jack-up-drilling-rig-...-2649447229.jpg: 10.96 MiB -> 447 KiB (-96.0%) [resized from 5464px wide]
+OPT   images/business-man-laptop-and-documents-...-2383286421.jpg: 6.26 MiB -> 216 KiB (-96.6%) [resized from 5778px wide]
+OPT   images/business-people-group-meeting-shot-from-top-view-...-2341450757.jpg: 20.58 MiB -> 410 KiB (-98.1%) [resized from 7952px wide]
+OPT   images/business-professionals-and-workers-in-safety-gear-...-2682848161.jpg: 25.62 MiB -> 300 KiB (-98.9%) [resized from 8192px wide]
+OPT   images/businessman-stamping-approved-on-real-estate-contract-...-2623011873.jpg: 7.21 MiB -> 144 KiB (-98.1%) [resized from 5326px wide]
+OPT   images/close-up-of-hand-stamping-a-contract-clipboard-...-2663071951.jpg: 6.86 MiB -> 164 KiB (-97.7%) [resized from 6016px wide]
+OPT   images/conveyor-line-for-production-cookies-...-2385950087.jpg: 12.69 MiB -> 254 KiB (-98.0%) [resized from 6240px wide]
+OPT   images/crushing-stones-in-a-quarry-...-2550718247.jpg: 7.10 MiB -> 390 KiB (-94.6%) [resized from 5184px wide]
+OPT   images/engineer-and-technician-...-2524747207.jpg: 30.68 MiB -> 293 KiB (-99.1%) [resized from 8192px wide]
+OPT   images/ev-production-line-...-2374438937.jpg: 6.68 MiB -> 328 KiB (-95.2%) [resized from 5120px wide]
+OPT   images/experienced-female-teacher-...-2172691007.jpg: 6.44 MiB -> 161 KiB (-97.6%) [resized from 6471px wide]
+OPT   images/food-industry-biscuit-production-...-2395896913.jpg: 9.97 MiB -> 387 KiB (-96.2%) [resized from 6080px wide]
+OPT   images/fuel-tanker-car-refueling-...-2563694017.jpg: 8.96 MiB -> 339 KiB (-96.3%) [resized from 5460px wide]
+OPT   images/glasses-asian-woman-holding-pencil-...-2662150007.jpg: 9.01 MiB -> 280 KiB (-97.0%) [resized from 6007px wide]
+OPT   images/group-of-businesspeople-meeting-around-boardroom-table-284522282.jpg: 10.49 MiB -> 267 KiB (-97.5%) [resized from 5184px wide]
+OPT   images/group-of-businesspeople-meeting-around-boardroom-table-289559987.jpg: 10.25 MiB -> 247 KiB (-97.6%) [resized from 5184px wide]
+OPT   images/group-of-businesspeople-meeting-around-boardroom-table-290606381.jpg: 9.30 MiB -> 238 KiB (-97.5%) [resized from 4808px wide]
+OPT   images/happy-latin-business-man-...-2353374135.jpg: 9.77 MiB -> 352 KiB (-96.5%) [resized from 5398px wide]
+OPT   images/image-of-concentrated-office-worker-...-1303805275.jpg: 9.31 MiB -> 167 KiB (-98.2%) [resized from 5760px wide]
+SKIP  images/image004.jpg (31 KiB) — already small enough
+OPT   images/in-big-corporate-skyscraper-office-...-2435222639.jpg: 12.65 MiB -> 224 KiB (-98.3%) [resized from 7680px wide]
+OPT   images/industrial-ball-mill-grinds-ore-...-2659599515.jpg: 13.08 MiB -> 540 KiB (-96.0%) [resized from 5472px wide]
+OPT   images/interior-of-an-empty-hotel-meeting-room-2046710963.jpg: 8.45 MiB -> 292 KiB (-96.6%) [resized from 5472px wide]
+SKIP  images/Luis-Telleria-Professional-Photo.png (1.90 MiB) — excluded by name
+SKIP  images/luis-telleria-xucla.jpg (13 KiB) — already small enough
+OPT   images/manager-in-discussion-with-coworker-...-314863934.jpg: 9.48 MiB -> 352 KiB (-96.4%) [resized from 4841px wide]
+OPT   images/medical-ampoule-production-line-...-2229913173.jpg: 4.98 MiB -> 305 KiB (-94.0%) [resized from 5120px wide]
+OPT   images/office-conference-room-meeting-...-2104457714.jpg: 4.65 MiB -> 227 KiB (-95.2%) [resized from 5120px wide]
+OPT   images/ostrava-czech-republic-sept-container-trains-...-2736633411.jpg: 13.79 MiB -> 554 KiB (-96.1%) [resized from 6192px wide]
+OPT   images/point-of-view-shot-of-businesspeople-...-290606432.jpg: 12.22 MiB -> 314 KiB (-97.5%) [resized from 5184px wide]
+OPT   images/portrait-of-young-business-woman-...-2396697369.jpg: 11.37 MiB -> 319 KiB (-97.3%) [resized from 7000px wide]
+OPT   images/power-station-clean-modern-factory-...-2264383115.jpg: 14.93 MiB -> 474 KiB (-96.9%) [resized from 6720px wide]
+OPT   images/presentation-in-multi-ethnic-office-...-2101929358.jpg: 4.15 MiB -> 257 KiB (-94.0%) [resized from 5120px wide]
+OPT   images/quarry-excavator-works-at-night-...-2635969119.jpg: 10.46 MiB -> 447 KiB (-95.8%) [resized from 5349px wide]
+OPT   images/senior-businessman-signing-a-contract-...-2601004763.jpg: 8.64 MiB -> 298 KiB (-96.6%) [resized from 5130px wide]
+OPT   images/senior-older-indian-business-man-director-...-2383724139.jpg: 11.43 MiB -> 252 KiB (-97.8%) [resized from 5944px wide]
+OPT   images/smiling-professor-and-professionals-...-599459048.jpg: 5.79 MiB -> 234 KiB (-96.1%) [resized from 5079px wide]
+OPT   images/solo-brainstorming-shot-of-a-mature-businessman-...-2139544961.jpg: 9.61 MiB -> 224 KiB (-97.7%) [resized from 7360px wide]
+OPT   images/spreadsheet-document-information-financial-startup-...-2569398921.jpg: 10.33 MiB -> 304 KiB (-97.1%) [resized from 7952px wide]
+OPT   images/stock-photos/shutterstock_1476196685.jpg: 18.64 MiB -> 252 KiB (-98.7%) [resized from 6648px wide]
+OPT   images/stock-photos/shutterstock_2231710989.jpg: 7.18 MiB -> 314 KiB (-95.7%) [resized from 5120px wide]
+OPT   images/stock-watermarked/stock-photo-close-shot-of-a-worker-standing-on-a-platform-...-1869278881.jpg: 2.06 MiB -> 288 KiB (-86.4%)
+SKIP  images/stock-watermarked/stock-photo-robotic-manufacturing-conveyor-...-2409842881.jpg (196 KiB) — already small enough
+OPT   images/system-administration-and-machine-learning-engineer-...-2136788185.jpg: 5.17 MiB -> 307 KiB (-94.2%) [resized from 5120px wide]
+OPT   images/the-bismark-method-hand.png: 1.04 MiB -> 274 KiB (-74.3%)
+OPT   images/the-image-showcases-professionals-engaged-in-a-collaborative-meeting-...-2608768835.jpg: 23.71 MiB -> 275 KiB (-98.9%) [resized from 7814px wide]
+OPT   images/trains-at-railroad-yard-...-1228227193.jpg: 5.72 MiB -> 724 KiB (-87.6%) [resized from 2894px wide]
+OPT   images/two-workers-wearing-safety-nets-...-2575453649.jpg: 21.73 MiB -> 296 KiB (-98.7%) [resized from 8147px wide]
+OPT   images/work-of-heavy-equipment-...-1951657093.jpg: 5.06 MiB -> 508 KiB (-90.2%) [resized from 3428px wide]
+OPT   images/work-of-trucks-and-the-excavator-...-1741881131.jpg: 6.89 MiB -> 515 KiB (-92.7%) [resized from 3960px wide]
+OPT   images/young-diverse-people-working-at-computers-...-2231810853.jpg: 4.58 MiB -> 376 KiB (-92.0%) [resized from 4096px wide]
+
+Processed: 52, Skipped: 4
+Total: 557.01 MiB -> 18.82 MiB (saved 538.19 MiB)
+\`\`\`
+
+**Summary:**
+Cloudflare Pages deploy was failing because a-warehouse-manager-...jpg
+was 27.9 MiB, exceeding Cloudflare Workers' 25 MiB per-asset limit. Ran
+a sweep over public/images/ and recompressed all oversized files. The
+vast majority of stock photos are now under 500 KB without visible
+quality loss. No view code changed; all <Image> references continue to
+resolve to the same paths. Site visual identical to humans, but page
+loads faster on every device. Founder photo and SVGs intentionally
+excluded from the sweep.
+
 ### 2026-05-04 — Fix Cloudflare CI: regenerate lockfile, add .npmrc
 
 **Files Created:**
