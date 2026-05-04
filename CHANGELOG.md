@@ -24,6 +24,28 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-05-04 — SEO/AEO foundation: sitemap, robots.txt, Organization JSON-LD
+
+**Files Created:**
+- src/lib/site-config.ts
+- app/sitemap.ts
+- app/robots.ts
+
+**Files Modified:**
+- app/layout.tsx
+
+**Summary:**
+Added SEO/AEO foundation. New src/lib/site-config.ts exports SITE_URL
+(defaulting to https://bismarkconsulting.net, overridable via
+NEXT_PUBLIC_SITE_URL env var) and SITE_NAME as the single source of truth
+for production URL references. Generated sitemap covers all static routes
+plus dynamic industry and insight slugs. robots.txt explicitly allows major
+search and AI crawlers (Googlebot, Bingbot, GPTBot, ClaudeBot, PerplexityBot,
+Google-Extended, OAI-SearchBot, CCBot, anthropic-ai). Root layout now emits
+Organization (ProfessionalService) JSON-LD with founder, founding date,
+Miami HQ, and 12 areas of expertise. metadataBase and openGraph.url in
+app/layout.tsx now read from SITE_URL.
+
 ### 2026-05-04 — Contact page: drop "U.S." from international markets line
 
 **Files Modified:**
