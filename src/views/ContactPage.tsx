@@ -206,7 +206,7 @@ const ContactPage = () => {
                 </div>
                 <h3 className="font-display text-lg text-navy-900 mb-2">INTERNATIONALLY</h3>
                 <p className="text-gray-600 text-sm">
-                  Active client engagements across all major U.S. markets
+                  Active client engagements across all major markets
                 </p>
               </div>
 

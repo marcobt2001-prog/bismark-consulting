@@ -24,6 +24,22 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-05-04 — Contact page: drop "U.S." from international markets line
+
+**Files Modified:**
+- src/views/ContactPage.tsx
+
+**Files Created:**
+- (none)
+
+**Files Deleted:**
+- (none)
+
+**Summary:**
+Changed "Active client engagements across all major U.S. markets" to "Active client engagements across all major markets" on the Contact page. Aligns the body with the section's "INTERNATIONALLY" framing.
+
+---
+
 ### 2026-05-04 — Align all page CTAs with Walkthrough-page CTA pattern; fix Contact page phrasing
 
 **Files Modified:**
