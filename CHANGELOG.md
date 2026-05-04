@@ -24,6 +24,39 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-05-04 — JSON-LD structured data, canonicals, Article OG metadata
+
+**Files Modified:**
+- app/layout.tsx (no functional change — already had Organization schema)
+- app/page.tsx
+- app/about/page.tsx
+- app/method/page.tsx
+- app/industries/page.tsx
+- app/industries/[slug]/page.tsx
+- app/walkthrough/page.tsx
+- app/faq/page.tsx
+- app/insights/page.tsx
+- app/insights/[slug]/page.tsx
+- app/contact/page.tsx
+- app/ai/page.tsx
+- app/schedule/page.tsx
+
+**Files Created:**
+- (none)
+
+**Summary:**
+Added canonical URL to every route's metadata via alternates.canonical,
+using SITE_URL from src/lib/site-config.ts. Added Person JSON-LD on About
+page (Luis: credentials, languages, alma mater, expertise). Added FAQPage
+JSON-LD on FAQ page, flattening all faqClusters into a Question/Answer
+array. Added Article JSON-LD on each insight page (headline, author,
+publisher, datePublished, mainEntityOfPage). Added BreadcrumbList JSON-LD
+on every industry sub-page (Home → Industries → Industry name). Upgraded
+insight openGraph metadata from default 'website' to 'article' type with
+publishedTime, authors, and section fields. All JSON-LD injected via
+dangerouslySetInnerHTML in server components — no client-side hydration,
+no visual changes. Build clean, 25 static pages, TypeScript ok.
+
 ### 2026-05-04 — SEO/AEO foundation: sitemap, robots.txt, Organization JSON-LD
 
 **Files Created:**

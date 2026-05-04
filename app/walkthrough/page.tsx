@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
 import WalkthroughPage from '@/views/WalkthroughPage';
+import { SITE_URL } from '@/lib/site-config';
 
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: 'Schedule a Walkthrough | Bismark Consulting Group',
   description: 'A complimentary 3-5 day on-site operational assessment. See our rigor firsthand before any engagement begins.',
+  alternates: { canonical: `${SITE_URL}/walkthrough` },
   openGraph: {
     title: 'Schedule a Walkthrough | Bismark Consulting Group',
     description: 'A complimentary 3-5 day on-site operational assessment. See our rigor firsthand before any engagement begins.',
