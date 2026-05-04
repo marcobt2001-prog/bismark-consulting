@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
+import CalendlyButton from '../components/CalendlyButton';
 
 export default function AboutPage() {
   return (
@@ -195,17 +196,28 @@ export default function AboutPage() {
           <h2 className="font-display text-4xl md:text-5xl text-white mb-6">
             SEE IT FOR YOURSELF
           </h2>
-          <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-3xl mx-auto">
-            The best way to understand how we work is to experience it firsthand. Our complimentary Walkthrough puts Bismark coaches on-site in your operation for 3&ndash;5 days, long enough to show you what we see, how we think, and what&rsquo;s possible.
+          <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
+            The first step is a 30&ndash;45 minute call where we discuss your operational landscape, confirm mutual fit, and schedule your on-site Walkthrough. It&rsquo;s not a sales call. It&rsquo;s the same rigor in miniature, and it&rsquo;s the most direct way to understand how we actually work.
           </p>
 
-          <Link
-            href="/walkthrough"
-            className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-12 py-5 font-display text-xl hover:bg-gold-500 transition-colors"
-          >
-            Learn About the Walkthrough
-            <ArrowRight className="w-5 h-5" />
-          </Link>
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
+            Click below to choose a time that works for you.
+          </p>
+
+          <CalendlyButton
+            label="SCHEDULE A MEETING"
+            className="inline-flex items-center justify-center gap-2 bg-gold-600 text-navy-900 px-12 py-5 font-display text-xl hover:bg-gold-500 transition-colors"
+          />
+
+          <p className="text-sm text-gray-400 mt-6">
+            Prefer email? Reach us at{' '}
+            <a
+              href="mailto:info@bismarkconsulting.net"
+              className="text-gold-600 hover:text-gold-400 underline transition-colors"
+            >
+              info@bismarkconsulting.net
+            </a>
+          </p>
         </div>
       </section>
     </div>

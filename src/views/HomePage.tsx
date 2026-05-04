@@ -456,20 +456,21 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-display text-4xl md:text-5xl mb-8">
-              SEE WHAT WE SEE. SCHEDULE YOUR WALKTHROUGH.
+              SEE WHAT WE SEE. START WITH A CONVERSATION.
             </h2>
 
-            <p className="text-gray-300 leading-relaxed mb-6">
-              The best way to evaluate the Bismark Method isn't a brochure or a reference call. It's watching us work on your operation. The Walkthrough is a complimentary, on-site engagement where our team spends 3–5 days embedded in your operation, analyzing processes, interviewing your people, and identifying quantified opportunities for improvement.
+            <p className="text-gray-300 leading-relaxed mb-8">
+              The first step is a 30&ndash;45 minute call where we discuss your operational landscape, confirm mutual fit, and schedule your on-site Walkthrough. It&rsquo;s not a sales call. It&rsquo;s the same rigor in miniature, and it&rsquo;s the conversation every client we&rsquo;ve ever engaged started with.
             </p>
-            <p className="text-gray-300 leading-relaxed mb-10">
-              There's no obligation to move forward. But every client who has engaged us started here, and most will tell you the Walkthrough alone changed how they saw their operation.
+
+            <p className="text-gray-300 leading-relaxed mb-8">
+              Click below to choose a time that works for you.
             </p>
 
             <CalendlyButton label="SCHEDULE A MEETING" className="inline-flex items-center justify-center gap-2 bg-gold-600 text-navy-900 px-8 py-4 font-display text-lg hover:bg-gold-500 transition-colors" />
 
             <p className="text-gray-400 text-sm mt-6">
-              Prefer email?{' '}
+              Prefer email? Reach us at{' '}
               <a href="mailto:info@bismarkconsulting.net" className="text-gold-600 hover:text-gold-400 underline transition-colors">
                 info@bismarkconsulting.net
               </a>

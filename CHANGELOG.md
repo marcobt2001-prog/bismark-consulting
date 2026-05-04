@@ -24,6 +24,28 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-05-04 — Align all page CTAs with Walkthrough-page CTA pattern; fix Contact page phrasing
+
+**Files Modified:**
+- src/views/HomePage.tsx
+- src/views/AboutPage.tsx
+- src/views/BismarkMethodPage.tsx
+- src/views/IndustriesPage.tsx
+- src/views/FAQPage.tsx
+- src/views/ContactPage.tsx
+- src/components/IndustrySubPageLayout.tsx
+
+**Files Created:**
+- (none)
+
+**Files Deleted:**
+- (none)
+
+**Summary:**
+After renaming the primary CTA button from "Schedule a Walkthrough" to "Schedule a Meeting", the surrounding CTA copy on six pages still described the Walkthrough rather than the meeting. Aligned every CTA section to mirror the Walkthrough page's "READY TO START?" pattern: a short body framing the meeting as the first step toward a Walkthrough, a "Click below to choose a time that works for you." line, the SCHEDULE A MEETING button (component unchanged on five pages, swapped on the About page where it replaced a redundant "Learn About the Walkthrough" button), and the "Prefer email?" fallback line. Also corrected one stale "schedule a walkthrough" phrase on the Contact page to "schedule a meeting." No structural, image, link, or component changes outside the About page button swap.
+
+---
+
 ### 2026-05-03 — Align footer logo subtitle with nav bar logo
 
 **Files Modified:**

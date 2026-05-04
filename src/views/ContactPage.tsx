@@ -285,7 +285,7 @@ const ContactPage = () => {
             READY TO START THE CONVERSATION?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Whether you choose to send a message or schedule a walkthrough,
+            Whether you choose to send a message or schedule a meeting,
             you'll connect with an experienced Bismark Consulting Group operational consultant.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

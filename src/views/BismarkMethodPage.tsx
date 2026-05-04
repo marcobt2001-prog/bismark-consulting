@@ -585,11 +585,25 @@ const BismarkMethodPage = () => {
           <h2 className="font-display text-4xl md:text-5xl mb-6">
             SEE WHAT THE BISMARK METHOD LOOKS LIKE IN YOUR OPERATIONS
           </h2>
-          <p className="text-xl text-gray-300 mb-10 leading-relaxed">
-            The Walkthrough is a complimentary 3&ndash;5 day on-site assessment where we evaluate your operations and show you exactly where The Bismark Method would apply. No theory. No pitch deck. Just your operations, examined with the same rigor we bring to a full engagement.
+          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            The first step is a 30&ndash;45 minute call where we discuss your operational landscape, confirm mutual fit, and schedule your on-site Walkthrough. It&rsquo;s not a sales call. It&rsquo;s the same rigor in miniature. Come ready to talk about your operations, and we&rsquo;ll come ready to listen.
           </p>
 
-          <CalendlyButton label="SCHEDULE A MEETING" className="inline-block bg-gold-600 text-navy-900 px-12 py-5 font-display text-xl hover:bg-gold-500 transition-colors mb-6" showArrow={false} />
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+            Click below to choose a time that works for you.
+          </p>
+
+          <CalendlyButton label="SCHEDULE A MEETING" className="inline-block bg-gold-600 text-navy-900 px-12 py-5 font-display text-xl hover:bg-gold-500 transition-colors" showArrow={false} />
+
+          <p className="text-sm text-gray-400 mt-6 mb-8">
+            Prefer email? Reach us at{' '}
+            <a
+              href="mailto:info@bismarkconsulting.net"
+              className="text-gold-600 hover:text-gold-400 underline transition-colors"
+            >
+              info@bismarkconsulting.net
+            </a>
+          </p>
 
           <div>
             <Link

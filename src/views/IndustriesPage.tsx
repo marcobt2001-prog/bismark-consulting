@@ -135,15 +135,22 @@ const IndustriesPage = () => {
             YOU&rsquo;VE SEEN YOUR PROCESSES. NOW SEE WHAT&rsquo;S HIDDEN
             INSIDE THEM.
           </h2>
-          <p className="text-xl text-gray-300 mb-10 leading-relaxed">
-            The process maps above show you what your operation does. The
-            Walkthrough shows you what it costs, where it breaks, and what
-            it&rsquo;s capable of becoming. It&rsquo;s a complimentary 3&ndash;5
-            day on-site assessment: no theory, no pitch deck, just your
-            operations examined with the same rigor we bring to a full
-            engagement.
+          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            The first step is a 30&ndash;45 minute call where we discuss your operational landscape, confirm mutual fit, and schedule your on-site Walkthrough. It&rsquo;s not a sales call. It&rsquo;s the same rigor in miniature.
+          </p>
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+            Click below to choose a time that works for you.
           </p>
           <CalendlyButton label="SCHEDULE A MEETING" className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-12 py-5 font-display text-xl hover:bg-gold-500 transition-colors" />
+          <p className="text-sm text-gray-400 mt-6">
+            Prefer email? Reach us at{' '}
+            <a
+              href="mailto:info@bismarkconsulting.net"
+              className="text-gold-600 hover:text-gold-400 underline transition-colors"
+            >
+              info@bismarkconsulting.net
+            </a>
+          </p>
         </div>
       </section>
     </div>

@@ -29,10 +29,12 @@ const FAQPage = () => {
           <h2 className="font-display text-4xl md:text-5xl mb-6">
             STILL HAVE QUESTIONS?
           </h2>
-          <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-3xl mx-auto">
-            The fastest way to get answers is a conversation. Schedule a 30&ndash;45 minute
-            discovery call and bring every question on your list. This isn&rsquo;t a sales
-            pitch &mdash; it&rsquo;s the same rigor in miniature.
+          <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
+            The first step is a 30&ndash;45 minute call where we discuss your operational landscape, confirm mutual fit, and schedule your on-site Walkthrough. Bring every question on your list. It&rsquo;s not a sales call. It&rsquo;s the same rigor in miniature.
+          </p>
+
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
+            Click below to choose a time that works for you.
           </p>
 
           <CalendlyButton />
