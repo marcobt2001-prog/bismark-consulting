@@ -1,23 +1,13 @@
-import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, ArrowLeft } from 'lucide-react';
 import CalendlyButton from './CalendlyButton';
 import WireframePlaceholder from './WireframePlaceholder';
 import type { Industry } from '../data/industries';
-import { industries } from '../data/industries';
 
 type Props = {
   industry: Industry;
 };
 
 export default function IndustrySubPageLayout({ industry }: Props) {
-  const prevIndustry = industry.prev
-    ? industries.find((i) => i.slug === industry.prev)
-    : null;
-  const nextIndustry = industry.next
-    ? industries.find((i) => i.slug === industry.next)
-    : null;
-
   return (
     <div className="bg-white">
       {/* Header Bar */}
@@ -129,44 +119,6 @@ export default function IndustrySubPageLayout({ industry }: Props) {
             full engagement.
           </p>
           <CalendlyButton label="SCHEDULE A MEETING" className="inline-flex items-center gap-2 bg-gold-600 text-navy-900 px-12 py-5 font-display text-xl hover:bg-gold-500 transition-colors" />
-        </div>
-      </section>
-
-      {/* Sub-page Navigation */}
-      <section className="py-12 bg-gray-50 border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-6">
-              {prevIndustry && (
-                <Link
-                  href={`/industries/${prevIndustry.slug}`}
-                  className="flex items-center gap-2 text-navy-700 hover:text-gold-600 transition-colors font-medium"
-                >
-                  <ArrowLeft className="w-4 h-4" />
-                  {prevIndustry.name}
-                </Link>
-              )}
-            </div>
-
-            <Link
-              href="/industries"
-              className="text-navy-700 hover:text-gold-600 transition-colors font-medium"
-            >
-              &larr; Back to Industries
-            </Link>
-
-            <div className="flex items-center gap-6">
-              {nextIndustry && (
-                <Link
-                  href={`/industries/${nextIndustry.slug}`}
-                  className="flex items-center gap-2 text-navy-700 hover:text-gold-600 transition-colors font-medium"
-                >
-                  {nextIndustry.name}
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              )}
-            </div>
-          </div>
         </div>
       </section>
     </div>

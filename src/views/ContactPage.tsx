@@ -204,7 +204,7 @@ const ContactPage = () => {
                 <div className="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <MapPin className="w-6 h-6 text-gold-600" />
                 </div>
-                <h3 className="font-display text-lg text-navy-900 mb-2">NATIONWIDE</h3>
+                <h3 className="font-display text-lg text-navy-900 mb-2">INTERNATIONALLY</h3>
                 <p className="text-gray-600 text-sm">
                   Active client engagements across all major U.S. markets
                 </p>

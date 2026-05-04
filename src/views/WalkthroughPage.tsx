@@ -389,7 +389,7 @@ const WalkthroughPage = () => {
 
           <div className="flex justify-center">
             <CalendlyButton
-              label="SELECT A DATE & TIME"
+              label="SCHEDULE A MEETING"
               className="inline-flex items-center justify-center gap-3 bg-gold-600 text-navy-900 px-10 py-5 font-display text-xl hover:bg-gold-500 transition-colors shadow-lg"
             />
           </div>

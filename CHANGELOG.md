@@ -24,6 +24,31 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-05-03 — Refresh CTAs, contact copy, industry nav, hand image, and AI page copy
+
+**Files Modified:**
+- `src/views/WalkthroughPage.tsx` — CalendlyButton label changed from `SELECT A DATE & TIME` to `SCHEDULE A MEETING`.
+- `src/views/ContactPage.tsx` — `WHERE WE WORK` section's first card label changed from `NATIONWIDE` to `INTERNATIONALLY` (preserved uppercase). The card's body copy ("Active client engagements across all major U.S. markets") was left untouched per scope.
+- `src/components/IndustrySubPageLayout.tsx` — removed the `{/* Sub-page Navigation */}` `<section>` block that rendered the prev/next industry links and the "Back to Industries" link above the footer on every dynamic `/industries/[slug]` page. Removed the now-unused `prevIndustry`/`nextIndustry` lookup logic and the now-unused imports: `Link` from `next/link`, `ArrowLeft`/`ArrowRight` from `lucide-react`, and the `industries` named import from `../data/industries`. Kept `Image`, `CalendlyButton`, `WireframePlaceholder`, the `Industry` type import, and the `ArrowRight`-unrelated remaining icons all unchanged. The `prev` / `next` fields on individual `Industry` entries in `src/data/industries.ts` are now dead data (no consumer) but were intentionally left in place per scope.
+- `src/views/AIPage.tsx` — `HOW WE THINK ABOUT AI` section paragraph 1: changed `automation only works on operations that have been seen clearly first` to `automation only works on operations that have been optimized`. Paragraph 2: changed `holding gains, catching drift, and monitoring what matters` to `holding gains, monitoring what matters and understanding where change is needed`. The closing `The engagement ends; the results shouldn't.` (with curly apostrophe via `&rsquo;`) is unchanged.
+- `public/images/the-bismark-method-hand.png` — cropped from 1162 × 1354 to 1162 × 1224 (removed the bottom 130px / 9.6% of height). The cropped strip held the `MANUFACTURING THE BACK OFFICE: THE BISMARK METHOD™` two-line text band and a thin white footer bar. Saved back to the same filename so all existing references continue to work without source changes. No `@2x` or other variant exists.
+
+**Files Created:**
+- (none)
+
+**Files Deleted:**
+- (none — `IndustrySubPageLayout.tsx` is still the right component; only the prev/next section inside it was removed.)
+
+**Build verification:**
+- `npm run build` clean — 25 static pages generated, TypeScript ok with strict unused-import checking. Static-HTML grep confirmed: `walkthrough.html` shows `SCHEDULE A MEETING` × 1 and `SELECT A DATE` × 0; `contact.html` shows `INTERNATIONALLY` and `NATIONWIDE` × 0; `ai.html` shows `have been optimized` and `understanding where change is needed` and `seen clearly first` × 0 and `catching drift` × 0; `industries/banking-lending.html` shows `Back to Industries` × 0. Hand image was viewed after cropping — text band confirmed gone, hand silhouette and all five labels intact, navy padding balanced top and bottom.
+
+**Decisions and notes:**
+- **Task 1 (`virtual meeting` → `walkthrough`):** Grep returned no live code hits — only one historical mention inside `CHANGELOG.md` describing the *previous* short-lived rename. Per project standard, CHANGELOG history is immutable. **No code change made.** The `SCHEDULE A MEETING` button label site-wide is unrelated to this grep target.
+- **Task 2 (`Select a Date and Time`):** Grep found exactly one in-code hit in `WalkthroughPage.tsx` (case A — a `CalendlyButton` `label` prop on our side). Renamed. The text **also** appears inside Calendly's hosted iframe (case B), which we cannot modify cross-origin per project standard. Flagged: *"Select a Date and Time" lives in Calendly's iframe and must be changed in Calendly event settings, not in code* — applies to the booking widget itself once it loads.
+- **Task 5 (hand image):** Chose **crop**, not paint-over. The text band sits at the bottom edge of the canvas, separated from the hand wrist by a clean ~40px navy gap, with no overlap on the hand or any of the five pillar labels. Cropping at y=1224 produced a tighter composition with balanced navy padding above and below the hand; painting over would have left an awkward solid navy strip below the wrist and made the canvas feel artificially padded.
+
+---
+
 ### 2026-05-03 — Replace Non-Negotiable Order callout with static diagram image
 
 **Files Created:**

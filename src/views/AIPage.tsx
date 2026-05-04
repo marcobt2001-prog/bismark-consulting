@@ -24,10 +24,10 @@ export default function AIPage() {
           <div className="bg-gold-600 h-1 w-24 mb-8" />
           <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
             <p>
-              Functioning workflows are not imported; they are uncovered. The Bismark Method is built around that: walking your operation, sitting with your people, and surfacing how the work actually gets done. Twenty-five years of doing this has taught us one thing: automation only works on operations that have been seen clearly first. The Bismark Method comes first. Automation comes second.
+              Functioning workflows are not imported; they are uncovered. The Bismark Method is built around that: walking your operation, sitting with your people, and surfacing how the work actually gets done. Twenty-five years of doing this has taught us one thing: automation only works on operations that have been optimized. The Bismark Method comes first. Automation comes second.
             </p>
             <p>
-              Once an operation has been rebuilt the right way, the next question is keeping it that way: holding gains, catching drift, and monitoring what matters. The engagement ends; the results shouldn&rsquo;t.
+              Once an operation has been rebuilt the right way, the next question is keeping it that way: holding gains, monitoring what matters and understanding where change is needed. The engagement ends; the results shouldn&rsquo;t.
             </p>
           </div>
         </div>
