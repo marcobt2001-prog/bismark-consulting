@@ -24,6 +24,30 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-05-04 — Fix Cloudflare CI: regenerate lockfile, add .npmrc
+
+**Files Created:**
+- .npmrc (legacy-peer-deps=true)
+
+**Files Modified:**
+- package-lock.json (regenerated to match current package.json — picks up
+  wrangler@^4.86.0 and the next@16.2.4 dep tree)
+
+**Summary:**
+Cloudflare's first build failed at `npm clean-install` because
+package-lock.json was out of sync with package.json (wrangler was added
+to package.json by manual JSON edit without running `npm install`, and
+the next dep tree had drifted from 16.2.2 to 16.2.4). Regenerated the
+lockfile and added .npmrc with legacy-peer-deps=true so both local
+installs and Cloudflare CI handle the OpenNext/Next 16 peer-dep conflict
+consistently and silently. The local `npm install` was run with
+--ignore-scripts (workerd's postinstall throws on win32-arm64 — same
+limitation documented in the prior entry; --ignore-scripts skips that
+crash without affecting lockfile content, since lockfile contents
+describe the dep graph, not postinstall behavior). `npm run build`
+passes clean: 28 routes, no regressions. Cloudflare CI on Linux x64 will
+run all postinstalls normally. Ready to retry the Cloudflare build.
+
 ### 2026-05-04 — Switch Cloudflare adapter to @opennextjs/cloudflare
 
 **Files Created:**
