@@ -24,6 +24,23 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-05-03 — Align footer logo subtitle with nav bar logo
+
+**Files Modified:**
+- `src/components/layout/Logo.tsx`
+
+**Summary:**
+Aligned footer logo subtitle typography with nav bar logo (dark `Logo` variant). The "CONSULTING GROUP" subtitle on the dark variant now matches the light variant's typography, so the wordmark looks consistent in the navy footer and the white navbar. Old → new values for the dark variant subtitle:
+
+- font-size: `9.5px` → `13px`
+- font-weight: `700` → `700` (no change; the prior `isDark ? 700 : 700` ternary collapsed to a single value)
+- letter-spacing: `0.22em` → `0.16em`
+- paddingLeft: `0.22em` → `0.16em` (kept paired with letter-spacing for optical centering)
+
+Light variant untouched. Gold divider, BISMARK wordmark sizing, color tokens (`titleColor`, `subtitleColor`), and the Cinzel `font-logo` font family all unchanged.
+
+---
+
 ### 2026-05-03 — Swap licensed stock photos in and rename for consistency
 
 **Summary:**
