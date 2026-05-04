@@ -16,6 +16,11 @@ dist-ssr
 .next/
 out/
 
+# Cloudflare / OpenNext
+.open-next/
+.wrangler/
+.vercel/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

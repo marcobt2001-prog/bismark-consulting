@@ -24,6 +24,41 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-05-04 — Switch Cloudflare adapter to @opennextjs/cloudflare
+
+**Files Created:**
+- open-next.config.ts
+- wrangler.toml
+
+**Files Modified:**
+- package.json (added @opennextjs/cloudflare and wrangler to devDependencies; added cf:build and cf:preview scripts)
+- .gitignore (added .open-next/, .wrangler/, .vercel/)
+
+**Summary:**
+Phase 1 of Cloudflare Pages migration. The originally-planned adapter
+@cloudflare/next-on-pages does not support Next 16 (peer range
+>=14.3.0 <=15.5.2 vs. our next@16.2.4), so we switched to
+@opennextjs/cloudflare, the actively-maintained adapter Cloudflare now
+recommends for newer Next.js versions. OpenNext supports Next 16.
+Configuration uses open-next.config.ts plus wrangler.toml that points
+main to .open-next/worker.js with an [assets] block binding the static
+asset directory to ASSETS. No changes were needed to the contact route —
+OpenNext + nodejs_compat runs Node.js-runtime API routes natively, so the
+edge runtime override that the prior abandoned attempt would have added
+was never introduced. Vercel deployment remains fully functional;
+`npm run build` produces 28 routes cleanly, no TypeScript errors.
+
+Local-verification limitation: `cf:build` and `cf:preview` cannot be run
+on this Windows-ARM64 development machine. The OpenNext CLI imports
+`wrangler` at runtime (not just as a peer for type-checking), and
+`wrangler` pulls in `workerd`, which has no published binary for
+win32-arm64 (its postinstall throws "Unsupported platform: win32 arm64
+LE"). The adapter was installed with --legacy-peer-deps to skip the
+auto-install of wrangler/workerd; wrangler is listed in devDependencies
+manually so Cloudflare CI (Linux x64) installs it normally. End-to-end
+Cloudflare build verification will happen in Cloudflare Pages CI in
+Phase 2 (account setup, Pages project connection, DNS cutover).
+
 ### 2026-05-04 — Add llms.txt for AI agent navigation
 
 **Files Created:**
