@@ -119,7 +119,7 @@ const BismarkMethodPage = () => {
             </span>
           </div>
           <h1 className="font-display text-5xl md:text-7xl mb-6 tracking-wide">
-            A CONSULTING METHOD DESIGNED TO LEAVE
+            A CONSULTING METHOD DESIGNED TO SUSTAIN RESULTS AND LEAVE A MARK ON YOUR BUSINESS
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-10">
             The Bismark Method is a 16-week &ldquo;Learn and Do&rdquo; engagement that transforms your internal teams into the people who improve your operations, not consultants who do it for you. When it&rsquo;s done right, we guarantee the results.
