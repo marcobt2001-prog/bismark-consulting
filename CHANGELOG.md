@@ -24,6 +24,15 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-05-06 — Revert Bismark Method hero H1 shortening
+
+**Files Modified:**
+- src/views/BismarkMethodPage.tsx
+- CHANGELOG.md
+
+**Summary:**
+Reverted commit d9b8db4 ("shorten H1 to 'A consulting method designed to sustain results'"). H1 is back to the longer form ("A CONSULTING METHOD DESIGNED TO SUSTAIN RESULTS AND LEAVE A MARK ON YOUR BUSINESS") from commit bb5dde6. Used git revert (not reset) to preserve the public history that was already pushed to origin/main.
+
 ### 2026-05-06 — Bismark Method hero H1 extended
 
 **Files Modified:**
