@@ -24,15 +24,6 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
-### 2026-05-06 — Bismark Method hero H1 shortened
-
-**Files Modified:**
-- src/views/BismarkMethodPage.tsx
-- CHANGELOG.md
-
-**Summary:**
-Bismark Method page Section 1 (Hero): shortened the H1 from "A CONSULTING METHOD DESIGNED TO SUSTAIN RESULTS AND LEAVE A MARK ON YOUR BUSINESS" to "A CONSULTING METHOD DESIGNED TO SUSTAIN RESULTS". H1 className, font, size, tracking, margin, surrounding gold pill, subhead paragraph, and CTA button all unchanged.
-
 ### 2026-05-06 — Bismark Method hero H1 extended
 
 **Files Modified:**
