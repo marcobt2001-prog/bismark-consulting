@@ -24,6 +24,17 @@ One or two sentences describing what the session accomplished.
 
 <!-- Entries below this line are added chronologically, newest first -->
 
+### 2026-05-12 — Replace OG preview image with logo on navy
+**Files Modified:**
+- public/images/og-default.jpg
+
+**Summary:**
+Replaced the homepage-hero-based OG preview image with a Bismark logo on
+navy background (1200x630). When the site URL is shared on LinkedIn, iMessage,
+WhatsApp, or other platforms, the preview now displays brand identity instead
+of a generic stock photo. No metadata or code changes required — the file
+path /images/og-default.jpg was already referenced site-wide.
+
 ### 2026-05-06 — Revert Bismark Method hero H1 shortening
 
 **Files Modified:**
